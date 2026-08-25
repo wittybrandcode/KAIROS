@@ -1,0 +1,25 @@
+.kairos-ticker { overflow: hidden; white-space: nowrap; background: var(--kairos-bg-deep); border: var(--kairos-border-base) solid var(--kairos-border-muted); padding: var(--kairos-ticker-padding-y) 0; }
+.kairos-ticker-track { display: inline-flex; gap: var(--kairos-ticker-track-gap); animation: kairos-ticker-scroll var(--kairos-ticker-normal-speed) linear infinite; }
+.kairos-ticker-track:hover { animation-play-state: paused; }
+.kairos-ticker-item { display: inline-flex; align-items: center; gap: var(--kairos-ticker-item-gap); font-size: var(--kairos-text-sm); color: var(--kairos-text-muted); font-family: var(--kairos-font-mono); white-space: nowrap; }
+.kairos-ticker-item::after { content: '◆'; color: var(--kairos-border); margin-left: var(--kairos-ticker-item-margin);   font-size: var(--kairos-ticker-diamond-size); }
+.kairos-ticker-item.pgm { color: var(--kairos-status-pgm); }
+.kairos-ticker-item.pvw { color: var(--kairos-status-pvw); }
+.kairos-ticker-item.warning { color: var(--kairos-status-warning); }
+
+@keyframes kairos-ticker-scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+.kairos-ticker.fast .kairos-ticker-track { animation-duration: var(--kairos-ticker-fast-speed); }
+.kairos-ticker.slow .kairos-ticker-track { animation-duration: var(--kairos-ticker-slow-speed); }
+.kairos-ticker.reversed .kairos-ticker-track { animation-direction: reverse; }
+
+.kairos-ticker-label { display: inline-flex; align-items: center; gap: var(--kairos-ticker-label-gap); padding: 0 var(--kairos-ticker-label-padding-x); font-size: var(--kairos-text-sm); text-transform: uppercase; letter-spacing: var(--kairos-tracking-widest); color: var(--kairos-status-pvw); flex-shrink: 0; border-right: var(--kairos-border-base) solid var(--kairos-border-muted); }
+
+.kairos-marquee { overflow: hidden; white-space: nowrap; background: var(--kairos-bg-deep); border: var(--kairos-border-base) solid var(--kairos-border-muted); padding: var(--kairos-marquee-padding); }
+.kairos-marquee-text { display: inline-block; animation: kairos-marquee-scroll var(--kairos-marquee-normal-speed) linear infinite; padding-right: var(--kairos-marquee-text-padding-right); font-size: var(--kairos-text-md); color: var(--kairos-text); }
+.kairos-marquee-text::after { content: ' ··· '; color: var(--kairos-status-pvw); font-weight: var(--kairos-weight-bold); }
+.kairos-marquee:hover .kairos-marquee-text { animation-play-state: paused; }
+@keyframes kairos-marquee-scroll { 0% { transform: translateX(100vw); } 100% { transform: translateX(-100%); } }
+.kairos-marquee.fast .kairos-marquee-text { animation-duration: var(--kairos-marquee-fast-speed); }
+.kairos-marquee.slow .kairos-marquee-text { animation-duration: var(--kairos-marquee-slow-speed); }
+

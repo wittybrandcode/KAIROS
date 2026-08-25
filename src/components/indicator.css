@@ -1,0 +1,25 @@
+/* ═══════════════════════════════════════════════════
+   Kairos v01 — Indicator (Feedback Primitive)
+   ═══════════════════════════════════════════════════ */
+
+.kairos-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--kairos-indicator-gap);
+  font-family: var(--kairos-font-mono);
+  font-size: var(--kairos-text-sm);
+  color: var(--kairos-text);
+}
+.kairos-indicator::before {
+  content: '';
+  display: block;
+  width: var(--kairos-size-dot-md);
+  height: var(--kairos-size-dot-md);
+  border-radius: 0;
+  background: var(--kairos-border-muted);
+}
+.kairos-indicator.pgm::before { background: var(--kairos-status-pgm); }
+.kairos-indicator.pvw::before { background: var(--kairos-status-pvw); }
+.kairos-indicator.warn::before { background: var(--kairos-status-warning); }
+.kairos-indicator.info::before { background: var(--kairos-status-info); }
+

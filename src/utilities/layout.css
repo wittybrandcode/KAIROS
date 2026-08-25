@@ -1,0 +1,87 @@
+/* ═══════════════════════════════════════════════════
+   Kairos v01 — Layout
+   أبعاد الشبكة التخطيطية الكبرى
+   نظام مستقل عن spacing (padding/margin/gap)
+   نظام مستقل عن sizes (component heights/widths)
+   يدير: عرض الألواح الرئيسية، أقل أبعاد قابلة للاستخدام
+   يتبع منهج Material 3 و IBM Carbon و Shopify Polaris
+   ═══════════════════════════════════════════════════ */
+
+:root {
+
+  /* ═══════════════════════════════════════════════════
+     PANEL WIDTHS — عرض الألواح في الـ shell
+     أبعاد ثابتة لألواح الواجهة الرئيسية
+     ═══════════════════════════════════════════════════ */
+
+  --kairos-layout-panel-side: 260px;  /* عرض اللوحات الجانبية (sources, scenes) */
+  --kairos-layout-panel-main: 280px;  /* عرض اللوحة الرئيسية (preview, program) */
+
+
+  /* ═══════════════════════════════════════════════════
+     CANVAS — أبعاد الـ canvas ككل
+     أقل عرض/أرتفاع مقبول قبل تفعيل overflow
+     ═══════════════════════════════════════════════════ */
+
+  --kairos-layout-canvas-min: 320px;  /* أقل عرض canvas — أقل من هذا يظهر scroll */
+
+
+  /* ═══════════════════════════════════════════════════
+     GRID — أعمدة الشبكة (للمستقبل)
+     عدد الأعمدة المتاحة في اللوحة الواحدة
+     ═══════════════════════════════════════════════════ */
+
+  --kairos-layout-grid-cols: 12;   /* عدد الأعمدة المرجعية */
+
+
+  /* ملاحظة: أبعاد الألواح (panel-side, panel-main) هي قيم افتراضية
+      يمكن تجاوزها في صفحات معينة (مثل routing matrix تحتاج panel أكبر).
+      الـ canvas-min هو الحد الأدنى الذي يجب أن يبقى فيه التصميم مريحاً. */
+
+}
+
+/* ═══════════════════════════════════════════════════
+   COMPONENT CLASSES — كلاسات التخطيط
+   ═══════════════════════════════════════════════════ */
+
+/* ─── App Shell Grid ─── */
+.kairos-app-shell {
+  display: grid;
+  grid-template-rows: var(--kairos-control-xl) 1fr 210px var(--kairos-control-sm);
+  height: 100vh;
+  overflow: hidden;
+}
+.kairos-main-body {
+  display: flex;
+  overflow: hidden;
+  min-height: 0;
+}
+
+/* ─── Panels ─── */
+.kairos-panel-left { width: var(--kairos-layout-panel-side); min-width: var(--kairos-layout-panel-side); flex-shrink: 0; }
+.kairos-panel-main { flex: 1; min-width: 0; }
+.kairos-panel-right { width: var(--kairos-layout-panel-main); min-width: var(--kairos-layout-panel-main); flex-shrink: 0; }
+
+/* ─── Resize Handle ─── */
+.kairos-resize-handle {
+  width: var(--kairos-space-3xs);
+  cursor: col-resize;
+  background: transparent;
+  position: relative;
+  flex-shrink: 0;
+  z-index: var(--kairos-z-sticky);
+  transition: background var(--kairos-motion-normal) var(--kairos-easing-ease);
+}
+.kairos-resize-handle:hover,
+.kairos-resize-handle.active { background: var(--kairos-border-active); }
+.kairos-resize-handle::after {
+  content: '';
+  position: absolute;
+  left: -3px;
+  right: -3px;
+  top: 0;
+  bottom: 0;
+}
+
+/* ─── Monitoring Grid ─── */
+.kairos-mon-grid { display: grid; gap: var(--kairos-space-xs); }

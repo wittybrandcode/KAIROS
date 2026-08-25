@@ -1,0 +1,96 @@
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   Kairos v01 â€” Cool Steel Color System
+   Ù…ÙˆØ¬Ø© Ù„ÙˆÙ†ÙŠØ© Ø¨Ø§Ø±Ø¯Ø© ÙˆØ§Ø­Ø¯Ø© â€” ÙƒÙ„ Ø§Ù„Ø£Ù„ÙˆØ§Ù† Ù…Ø´ØªÙ‚Ø© Ù…Ù† Ù‡Ø°Ø§ Ø§Ù„Ù…Ù‚ÙŠØ§Ø³
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+
+/* ---------------------------------------------------
+   Kairos v01 - Cool Steel Color System
+   --------------------------------------------------- */
+
+:root {
+  /* --- Cool Steel Gray Scale (Strictly mapped to MASTER-INVENTORY) --- */
+  --kairos-cs-950: #07080B;
+  --kairos-cs-900: #090A0E; /* bg-deep */
+  --kairos-cs-850: #0D0F13; /* bg-input */
+  --kairos-cs-800: #0F1116; /* bg-deep-alt */
+  --kairos-cs-750: #12141A;
+  --kairos-cs-700: #15171E; /* bg-surface */
+  --kairos-cs-650: #171A21;
+  --kairos-cs-600: #1A1C24; /* bg-surface-alt */
+  --kairos-cs-550: #1E212A;
+  --kairos-cs-500: #232630; /* bg-hover */
+  --kairos-cs-450: #272B35;
+  --kairos-cs-400: #2B2F3B; /* bg-selected */
+  --kairos-cs-350: #3A4155;
+  --kairos-cs-300: #4A5568;
+  --kairos-cs-250: #5A6578;
+  --kairos-cs-200: #718096;
+  --kairos-cs-150: #8896A8;
+  --kairos-cs-100: #A0AEC0;
+  --kairos-cs-50:  #CBD5E0;
+  --kairos-cs-0:   #FFFFFF;
+  --kairos-cs-1000: #000000;
+
+  /* --- Background Hierarchy --- */
+  --kairos-bg-deep:       var(--kairos-cs-900);
+  --kairos-bg-input:      var(--kairos-cs-850);
+  --kairos-bg-deep-alt:   var(--kairos-cs-800);
+  --kairos-bg-surface:    var(--kairos-cs-700);
+  --kairos-bg-surface-alt: var(--kairos-cs-600);
+  --kairos-bg-hover:      var(--kairos-cs-500);
+  --kairos-bg-selected:   var(--kairos-cs-400);
+
+  /* ─── Border Hierarchy ─── */
+  --kairos-border-muted:  var(--kairos-cs-600);
+  --kairos-border:        var(--kairos-cs-500);
+  --kairos-border-active: var(--kairos-cs-450);
+  --kairos-border-focus:  var(--kairos-cs-300);
+
+  /* ─── Text Hierarchy ─── */
+  --kairos-text:          var(--kairos-cs-0);
+  --kairos-text-secondary: var(--kairos-cs-100);
+  --kairos-text-muted:    var(--kairos-cs-150);
+  --kairos-text-placeholder: var(--kairos-cs-300);
+  --kairos-text-disabled: var(--kairos-cs-500);
+  --kairos-text-inverse:  var(--kairos-cs-1000);   /* black text on bright status backgrounds */
+
+  /* â”€â”€â”€ Status Colors â”€â”€â”€ */
+  /* Professional broadcast colors â€” low saturation, high legibility */
+
+  --kairos-status-pgm:    #FF3B30;    /* PGM / On Air / Error */
+  --kairos-border-error:  var(--kairos-status-pgm);
+  --kairos-status-pvw:    #22C55E;    /* PVW / Preview / Success */
+  --kairos-status-warning: #EAB308;   /* Warning / Caution */
+  --kairos-status-info:   #3B82F6;    /* Info / Link / Signal */
+  --kairos-status-offline: var(--kairos-cs-300); /* Offline / Disconnected */
+
+  /* â”€â”€â”€ Status Backgrounds â”€â”€â”€ */
+  --kairos-pgm-bg:        #1F181B;
+  --kairos-pvw-bg:        #0A1A0E;
+  --kairos-warning-bg:    #1A150A;
+  --kairos-error-bg:      #1F181B;
+
+  /* â”€â”€â”€ Interactive States â”€â”€â”€ */
+  --kairos-interactive-hover:   var(--kairos-cs-650);
+  --kairos-interactive-selected: var(--kairos-cs-400);
+  --kairos-interactive-focus:   var(--kairos-cs-350);
+
+  /* â”€â”€â”€ Opacity Variants (for overlays, active states) â”€â”€â”€ */
+  --kairos-pgm-alpha-10: rgba(255, 59, 48, 0.063);
+  --kairos-pgm-alpha-15: rgba(255, 59, 48, 0.082);
+  --kairos-pgm-alpha-20: rgba(255, 59, 48, 0.125);
+  --kairos-pgm-alpha-30: rgba(255, 59, 48, 0.188);
+  --kairos-pgm-bright:  #FF5045;   /* brighter PGM for hover (take button) */
+  --kairos-pvw-alpha-0:  rgba(34, 197, 94, 0);
+  --kairos-pvw-alpha-10: rgba(34, 197, 94, 0.063);
+  --kairos-pvw-alpha-15: rgba(34, 197, 94, 0.082);
+  --kairos-pvw-alpha-20: rgba(34, 197, 94, 0.125);
+  --kairos-pvw-alpha-30: rgba(34, 197, 94, 0.3);
+  --kairos-pvw-alpha-40: rgba(34, 197, 94, 0.251);
+  --kairos-pvw-bright:   #2ED16A;   /* brighter PVW for hover (primary btn) */
+  --kairos-pvw-alpha-80: rgba(34, 197, 94, 0.502);
+  --kairos-overlay:      rgba(9, 10, 14, 0.8);
+  --kairos-overlay-dark:  rgba(0, 0, 0, 0.4);
+}
+
+

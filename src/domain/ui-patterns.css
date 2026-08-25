@@ -1,0 +1,55 @@
+/* ═══════════════════════════════════════════════════
+   Kairos v01 — UI Patterns (remaining)
+   Key button group, timeline, faders, breadcrumb,
+   pagination, router card, empty state, settings form
+   ═══════════════════════════════════════════════════ */
+
+/* ─── Key button group ─── */
+.kairos-k-btn-group { display: flex; gap: var(--kairos-key-btn-gap); }
+.kairos-k-btn { padding: var(--kairos-key-btn-padding); background: var(--kairos-bg-input); border: var(--kairos-border-base) solid var(--kairos-border); color: var(--kairos-text-muted); font-family: var(--kairos-font-mono); font-size: var(--kairos-text-sm); font-weight: var(--kairos-weight-bold); cursor: pointer; min-width: var(--kairos-icon-md); text-align: center; }
+.kairos-k-btn:hover { background: var(--kairos-bg-hover); color: var(--kairos-text); }
+.kairos-k-btn.on { background: var(--kairos-status-pvw); color: var(--kairos-bg-deep); border-color: var(--kairos-status-pvw); }
+.kairos-k-btn:focus-visible { outline: var(--kairos-focus-base) solid var(--kairos-focus-ring-color); outline-offset: var(--kairos-focus-ring-offset); }
+.kairos-kbd { display: inline-block; padding: var(--kairos-kbd-padding-y) var(--kairos-kbd-padding-x); background: var(--kairos-bg-deep); border: var(--kairos-border-base) solid var(--kairos-border-muted); font-family: var(--kairos-font-mono); font-size: var(--kairos-text-sm); color: var(--kairos-text-muted); }
+.kairos-tooltip-group { display: flex; gap: var(--kairos-tooltip-group-gap); }
+
+/* ─── Timeline ─── */
+.kairos-timeline { display: flex; flex-direction: column; gap: var(--kairos-timeline-track-gap); padding: var(--kairos-form-field-gap); background: var(--kairos-bg-deep); border-top: var(--kairos-border-base) solid var(--kairos-border-muted); }
+.kairos-timeline-seg { flex: 1; background: var(--kairos-bg-surface); border: var(--kairos-border-base) solid var(--kairos-border-muted); padding: var(--kairos-timeline-seg-padding-y) var(--kairos-timeline-seg-padding-x); font-size: var(--kairos-text-sm); color: var(--kairos-text); display: flex; align-items: center; justify-content: center; }
+.kairos-timeline-seg.pgm { background: var(--kairos-pgm-bg); border-color: var(--kairos-status-pgm); color: var(--kairos-status-pgm); }
+.kairos-timeline-seg.pvw { background: var(--kairos-pvw-bg); border-color: var(--kairos-status-pvw); color: var(--kairos-status-pvw); }
+
+/* ─── Faders ─── */
+.kairos-fader-row { display: flex; gap: var(--kairos-fader-group-gap); padding: var(--kairos-form-field-gap); background: var(--kairos-bg-deep); align-items: flex-end; }
+.kairos-fader { display: flex; flex-direction: column; align-items: center; gap: var(--kairos-fader-label-gap); }
+.kairos-fader-label { font-size: var(--kairos-text-sm); color: var(--kairos-text-placeholder); text-transform: uppercase; letter-spacing: var(--kairos-tracking-wider); }
+.kairos-fader-value { font-family: var(--kairos-font-mono); font-size: var(--kairos-text-sm); color: var(--kairos-text-muted); }
+.kairos-fader-master .kairos-fader-value { color: var(--kairos-status-pvw); }
+.kairos-fader-master .kairos-fader-label { color: var(--kairos-status-pgm); }
+
+/* ─── Breadcrumb ─── */
+.kairos-breadcrumb { display: flex; align-items: center; gap: var(--kairos-breadcrumb-item-gap); padding: var(--kairos-breadcrumb-padding) var(--kairos-form-field-gap); font-size: var(--kairos-text-sm); color: var(--kairos-text-muted); }
+.kairos-breadcrumb-sep { color: var(--kairos-text-placeholder); }
+.kairos-breadcrumb-current { color: var(--kairos-text); }
+
+/* ─── Pagination ─── */
+.kairos-pagination { display: flex; align-items: center; gap: var(--kairos-pagination-item-gap); padding: var(--kairos-pagination-padding) var(--kairos-form-field-gap); }
+.kairos-page-btn { padding: var(--kairos-pagination-padding) var(--kairos-pagination-padding); background: var(--kairos-bg-input); border: var(--kairos-border-base) solid var(--kairos-border); color: var(--kairos-text-muted); font-family: var(--kairos-font-mono); font-size: var(--kairos-text-sm); min-width: var(--kairos-icon-md); text-align: center; cursor: pointer; }
+.kairos-page-btn:hover { background: var(--kairos-bg-hover); color: var(--kairos-text); }
+.kairos-page-btn.active { background: var(--kairos-status-pvw); color: var(--kairos-bg-deep); border-color: var(--kairos-status-pvw); }
+.kairos-page-btn:focus-visible { outline: var(--kairos-focus-base) solid var(--kairos-focus-ring-color); outline-offset: var(--kairos-focus-ring-offset); }
+
+/* ─── Router Card ─── */
+.kairos-router-card { background: var(--kairos-bg-surface); border: var(--kairos-border-base) solid var(--kairos-border-muted); padding: var(--kairos-router-card-padding); display: flex; flex-direction: column; gap: var(--kairos-router-card-section-gap); }
+.kairos-router-card-head { display: flex; align-items: center; justify-content: space-between; gap: var(--kairos-card-header-gap); }
+.kairos-router-card-title { font-size: var(--kairos-text-sm); text-transform: uppercase; letter-spacing: var(--kairos-tracking-wider); color: var(--kairos-text); font-weight: var(--kairos-weight-bold); }
+.kairos-channel-label { padding: var(--kairos-channel-label-padding) var(--kairos-channel-label-padding); background: var(--kairos-bg-deep); border: var(--kairos-border-base) solid var(--kairos-border-muted); font-family: var(--kairos-font-mono); font-size: var(--kairos-text-sm); color: var(--kairos-status-pvw); }
+
+/* ─── Empty State ─── */
+.kairos-empty-state { padding: var(--kairos-empty-state-padding); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: var(--kairos-empty-state-gap); text-align: center;   min-height: var(--kairos-empty-state-min-height); }
+.kairos-empty-state i { font-size: var(--kairos-text-2xl); color: var(--kairos-text-placeholder); }
+.kairos-empty-state-msg { font-size: var(--kairos-text-sm); color: var(--kairos-text-muted); }
+
+/* ─── Settings form ─── */
+.kairos-settings-form { padding: var(--kairos-form-section-gap); display: flex; flex-direction: column; gap: var(--kairos-form-section-gap); }
+.kairos-form-section-title { font-size: var(--kairos-text-sm); text-transform: uppercase; letter-spacing: var(--kairos-tracking-widest); color: var(--kairos-status-pvw); padding-bottom: var(--kairos-card-section-gap); border-bottom: var(--kairos-border-base) solid var(--kairos-border-muted); }

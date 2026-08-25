@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+.cache/
+.vite/
+
+# Test artifacts
+test-results/
+playwright-report/
+coverage/
+*.log
+
+# OS junk
+.DS_Store
+Thumbs.db
+Desktop.ini
+nul
+
+# Editors
+.vscode/*
+!.vscode/extensions.json
+.idea/

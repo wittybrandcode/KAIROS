@@ -1,0 +1,112 @@
+/* ═══════════════════════════════════════════════════
+   Kairos v01 — Buttons (Kairos v01)
+   جميع الأزرار في النظام — مخصصة البث + أزرار عامة
+   ═══════════════════════════════════════════════════ */
+
+/* ═══════════════════════════════════════════════════
+   GENERAL-PURPOSE BUTTONS — .kairos-btn
+   أزرار عامة: primary، secondary، danger، ghost
+   ═══════════════════════════════════════════════════ */
+
+.kairos-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--kairos-btn-icon-gap);
+  padding: var(--kairos-comp-padding-y, var(--kairos-btn-padding-y)) var(--kairos-comp-padding-x, var(--kairos-btn-padding-x));
+  font-size: var(--kairos-comp-font-size, var(--kairos-text-sm));
+  font-family: var(--kairos-font-mono);
+  text-transform: uppercase;
+  letter-spacing: var(--kairos-tracking-ultra);
+  border: var(--kairos-border-base) solid var(--kairos-comp-current-border, var(--kairos-border));
+  background: var(--kairos-comp-current-bg, transparent);
+  color: var(--kairos-comp-current-text, var(--kairos-text));
+  cursor: pointer;
+  transition: background var(--kairos-motion-fast) var(--kairos-easing-ease), color var(--kairos-motion-fast) var(--kairos-easing-ease), border-color var(--kairos-motion-fast) var(--kairos-easing-ease), opacity var(--kairos-motion-fast) var(--kairos-easing-ease);
+  user-select: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.kairos-btn:hover:not(:disabled) {
+  background: var(--kairos-comp-current-bg-hover, var(--kairos-bg-hover));
+  border-color: var(--kairos-comp-border-hover, var(--kairos-border-active));
+}
+.kairos-btn:focus-visible {
+  outline: var(--kairos-border-thick) solid var(--kairos-border-focus);
+  outline-offset: var(--kairos-focus-ring-offset);
+}
+.kairos-btn:disabled {
+  opacity: var(--kairos-opacity-disabled);
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Block — عرض كامل */
+.kairos-btn-block {
+  display: flex;
+  width: 100%;
+}
+
+/* Button Group */
+.kairos-btn-group {
+  display: flex;
+  gap: var(--kairos-border-base);
+}
+.kairos-btn-group .kairos-btn:not(:first-child):not(:last-child) {
+  border-radius: 0;
+}
+.kairos-btn-group .kairos-btn:first-child:not(:last-child) {
+  border-right: none;
+}
+.kairos-btn-group .kairos-btn:last-child:not(:first-child) {
+  border-left: none;
+}
+
+
+/* ─── Icon Button ─── */
+.kairos-icon-btn {
+  border: var(--kairos-border-thick) solid var(--kairos-text-placeholder);
+  padding: var(--kairos-icon-btn-padding);
+  color: var(--kairos-text-muted);
+  cursor: pointer;
+  transition: border-color var(--kairos-motion-fast) var(--kairos-easing-ease), color var(--kairos-motion-fast) var(--kairos-easing-ease), background var(--kairos-motion-fast) var(--kairos-easing-ease);
+  background: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+.kairos-icon-btn:hover { border-color: var(--kairos-text); color: var(--kairos-text); background: var(--kairos-bg-surface); }
+.kairos-icon-btn:focus-visible { outline: var(--kairos-focus-base) solid var(--kairos-border-focus); outline-offset: var(--kairos-focus-ring-offset); }
+
+/* ─── Settings Select ─── */
+.kairos-set-select {
+  background: var(--kairos-bg-input);
+  border: var(--kairos-border-base) solid var(--kairos-border);
+  padding: var(--kairos-set-select-padding-y) var(--kairos-set-select-padding-x);
+  font-size: var(--kairos-text-sm);
+  font-family: var(--kairos-font-mono);
+  color: var(--kairos-text);
+  cursor: pointer;
+  transition: border-color var(--kairos-motion-fast) var(--kairos-easing-ease);
+}
+.kairos-set-select:focus {
+  border-color: var(--kairos-border-active);
+  outline: none;
+}
+.kairos-set-select:focus-visible {
+  outline: var(--kairos-border-thick) solid var(--kairos-border-focus);
+  outline-offset: var(--kairos-focus-ring-offset);
+}
+.kairos-select-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--kairos-select-group-gap);
+}
+.kairos-select-group label {
+  font-family: var(--kairos-font-mono);
+  font-size: var(--kairos-text-sm);
+  color: var(--kairos-text-placeholder);
+  text-transform: uppercase;
+  letter-spacing: var(--kairos-tracking-ultra);
+}

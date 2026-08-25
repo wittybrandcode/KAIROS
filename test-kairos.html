@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kairos Pure HTML Test</title>
+  <link rel="stylesheet" href="dist/kairos.css" />
+</head>
+
+<body class="kairos-bg-deep kairos-text-color kairos-p-extra-loose">
+  
+  <!-- استخدام كلاس kairos-mx-auto بدلاً من margin: 0 auto المدمج -->
+  <div class="kairos-flex kairos-col kairos-gap-extra-loose kairos-mx-auto">
+    
+    <!-- 1. TEXT -->
+    <div class="kairos-flex kairos-col kairos-gap-compact">
+      <h1 class="kairos-text-xl kairos-font-bold">1. TEXT</h1>
+      <p class="kairos-text-sm kairos-text-color-secondary">
+        هذا النص يعتمد كلياً على مقاسات وألوان كايروس الأصلية من ملفات (utilities.css و typography.css).
+      </p>
+    </div>
+
+    <!-- فاصل باستخدام كلاسات كايروس الأصلية بدلاً من ستايل مدمج -->
+    <div class="kairos-w-full kairos-border-t kairos-border-color-muted kairos-my-0"></div>
+
+    <!-- 2. COLORS -->
+    <div class="kairos-flex kairos-col kairos-gap-compact">
+      <h2 class="kairos-text-lg kairos-font-bold">2. COLORS</h2>
+      <div class="kairos-flex kairos-gap-standard">
+        <!-- استخدام كلاسات ألوان النصوص من utilities.css -->
+        <div class="kairos-text-color-pgm kairos-font-bold kairos-text-lg">PGM COLOR</div>
+        <div class="kairos-text-color-pvw kairos-font-bold kairos-text-lg">PVW COLOR</div>
+        <div class="kairos-text-color-warning kairos-font-bold kairos-text-lg">WARN COLOR</div>
+        <div class="kairos-text-color-info kairos-font-bold kairos-text-lg">INFO COLOR</div>
+      </div>
+    </div>
+
+    <!-- فاصل -->
+    <div class="kairos-w-full kairos-border-t kairos-border-color-muted kairos-my-0"></div>
+
+    <!-- 3. BUTTONS -->
+    <div class="kairos-flex kairos-col kairos-gap-compact">
+      <h2 class="kairos-text-lg kairos-font-bold">3. BUTTONS</h2>
+      <div class="kairos-flex kairos-gap-standard kairos-wrap">
+        <!-- أزرار تعتمد على components.css -->
+        <button class="kairos-btn kairos-intent-neutral kairos-variant-solid">NEUTRAL</button>
+        <button class="kairos-btn kairos-intent-pgm kairos-variant-solid">PROGRAM</button>
+        <button class="kairos-btn kairos-intent-pvw kairos-variant-solid">PREVIEW</button>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="dist/kairos.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+/* ---------------------------------------------------
+   Kairos v01 � Sizes
+   ??? ??????? ??????? (Semantic Size Scale)
+   --------------------------------------------------- */
+
+:root {
+  /* --- Control Heights (The Master Scale) --- */
+  --kairos-control-xs: 24px;
+  --kairos-control-sm: 32px;
+  --kairos-control-md: 36px;
+  --kairos-control-lg: 48px;
+  --kairos-control-xl: 56px;
+
+  /* --- Icon Size Scale --- */
+  --kairos-icon-xs: 16px;
+  --kairos-icon-sm: 24px;
+  --kairos-icon-md: 32px;
+  --kairos-icon-lg: 56px;
+  --kairos-icon-xl: 128px;
+
+  /* --- Legacy Aliases (to prevent breakage) --- */
+  --kairos-size-control-xs: var(--kairos-control-xs);
+  --kairos-size-control-sm: var(--kairos-control-sm);
+  --kairos-size-control-md: var(--kairos-control-md);
+  --kairos-size-control-lg: var(--kairos-control-lg);
+  --kairos-size-control-xl: var(--kairos-control-xl);
+
+  /* Other required aliases */
+  --kairos-size-button-sm: var(--kairos-control-sm);
+  --kairos-size-button-md: var(--kairos-control-md);
+  --kairos-size-button-lg: var(--kairos-control-lg);
+  --kairos-size-input:     var(--kairos-control-md);
+  --kairos-size-tab:       var(--kairos-control-lg);
+  --kairos-size-toggle:    var(--kairos-control-lg);
+  --kairos-size-avatar:    var(--kairos-control-md);
+  --kairos-size-tally:     6px;
+  --kairos-size-scrollbar: 6px;
+  --kairos-size-dot:       6px;
+  --kairos-size-dot-sm:    6px;
+  --kairos-size-dot-md:    8px;
+  --kairos-size-dot-lg:    12px;
+  --kairos-size-indicator: 4px;
+  --kairos-size-status-bar: var(--kairos-control-sm);
+  --kairos-size-menu-bar:   var(--kairos-control-lg);
+  --kairos-size-top-bar:    var(--kairos-control-xl);
+}
+

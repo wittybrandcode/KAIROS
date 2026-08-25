@@ -1,0 +1,835 @@
+/* ═══════════════════════════════════════════════════
+   Kairos v01 — Component Spacing Contracts
+   عقد الـ Spacing لكل مكوّن
+
+   المكوّن هو المالك الشرعي للـ spacing الخاص به.
+   كل عقد يسحب من النظام الخماسي (extra-tight → extra-loose)
+   في src/foundation/spacing.css.
+
+   المنهج: IBM Carbon · Material 3 · Lightning DS
+   المكوّن يصدّر عقد spacing ولا يستعمل --kairos-space-* مباشرةً
+   ═══════════════════════════════════════════════════ */
+
+:root {
+
+  /* ═══════════════════════════════════════════════════
+     1. BUTTONS — الأزرار
+     ═══════════════════════════════════════════════════ */
+
+  --kairos-btn-padding-y:    var(--kairos-space-xs);     /* 6px  */
+  --kairos-btn-padding-x:    var(--kairos-space-md);     /* 12px */
+  --kairos-btn-icon-gap:     var(--kairos-space-2xs);    /* 4px  */
+  --kairos-btn-group-gap:    var(--kairos-space-xs);     /* 6px  */
+
+  /* Size variants */
+  --kairos-btn-sm-padding-y: var(--kairos-space-3xs);    /* 2px  */
+  --kairos-btn-sm-padding-x: var(--kairos-space-xs);     /* 6px  */
+  --kairos-btn-lg-padding-y: var(--kairos-space-md);     /* 12px */
+  --kairos-btn-lg-padding-x: var(--kairos-space-xl);     /* 24px */
+
+  /* Key button (broadcast hotkeys) */
+  --kairos-key-btn-padding-y:  var(--kairos-space-xs);     /* 6px  */
+  --kairos-key-btn-padding-x:  var(--kairos-space-md);     /* 12px */
+  --kairos-key-btn-padding:    var(--kairos-space-3xs);    /* 2px — square/hotkey */
+  --kairos-key-btn-gap:        var(--kairos-space-3xs);    /* 2px  */
+  --kairos-key-btn-tiny-padding-y: var(--kairos-space-3xs); /* 2px */
+  --kairos-key-btn-tiny-padding-x: var(--kairos-space-xs);  /* 6px */
+
+  /* Source button */
+  --kairos-src-btn-padding-y: var(--kairos-space-xs);      /* 6px  */
+  --kairos-src-btn-padding-x: var(--kairos-space-xs);      /* 6px  */
+  --kairos-src-btn-gap:       var(--kairos-space-xs);      /* 6px  */
+
+  /* Transition button (cut/auto) */
+  --kairos-trans-btn-padding-y: var(--kairos-space-xs);    /* 6px  */
+  --kairos-trans-btn-padding-x: var(--kairos-space-xl);    /* 24px */
+
+  /* Transport button (play/stop/rec) */
+  --kairos-tp-btn-padding-y: var(--kairos-space-xs);       /* 6px  */
+  --kairos-tp-btn-padding-x: var(--kairos-space-xs);       /* 6px  */
+  --kairos-tp-btn-gap:       var(--kairos-space-3xs);      /* 2px  */
+
+  /* Buffer button */
+  --kairos-buf-btn-padding-y: var(--kairos-space-xs);      /* 6px  */
+  --kairos-buf-btn-padding-x: var(--kairos-space-md);      /* 12px */
+
+  /* Salvo button */
+  --kairos-salvo-btn-padding-y: var(--kairos-space-xs);    /* 6px  */
+  --kairos-salvo-btn-padding-x: var(--kairos-space-md);    /* 12px */
+
+  /* Angle button */
+  --kairos-angle-btn-padding-y: var(--kairos-space-xs);    /* 6px  */
+  --kairos-angle-btn-padding-x: var(--kairos-space-md);    /* 12px */
+  --kairos-angle-btn-gap:       var(--kairos-space-xs);    /* 6px  */
+
+  /* Icon button (square) */
+  --kairos-icon-btn-padding: var(--kairos-space-xs);       /* 6px  */
+
+  /* Settings select */
+  --kairos-set-select-padding-y: var(--kairos-space-xs);   /* 6px  */
+  --kairos-set-select-padding-x: var(--kairos-space-xs);   /* 6px  */
+  --kairos-select-group-gap:     var(--kairos-space-3xs);  /* 2px */
+  --kairos-select-chevron-size:  var(--kairos-space-lg);   /* 16px chevron icon */
+
+
+  /* ═══════════════════════════════════════════════════
+     2. INPUTS / FORMS — حقول الإدخال
+     ═══════════════════════════════════════════════════ */
+
+  --kairos-input-padding-y:    var(--kairos-space-xs);      /* 6px  */
+  --kairos-input-padding-x:    var(--kairos-space-md);      /* 12px */
+  --kairos-label-input-gap:    var(--kairos-space-3xs);     /* 2px  */
+  --kairos-input-help-gap:     var(--kairos-space-3xs);     /* 2px  */
+  --kairos-form-field-gap:     var(--kairos-space-md);      /* 12px between fields */
+  --kairos-form-section-gap:   var(--kairos-space-xl);      /* 24px between sections */
+  --kairos-opacity-disabled:   0.32;                             /* disabled fields */
+  --kairos-opacity-bypassed:   0.5;                              /* bypassed filter item */
+  --kairos-opacity-locked:     0.4;                              /* locked/latched state */
+  --kairos-opacity-subtle:     0.7;                              /* secondary/subtle text */
+  --kairos-textarea-min-height: 80px;                           /* textarea default */
+
+  /* Settings row */
+  --kairos-set-row-padding-y:  var(--kairos-space-xs);      /* 6px  */
+  /* Settings input */
+  --kairos-set-input-padding-y: var(--kairos-space-3xs);    /* 2px  */
+  --kairos-set-input-padding-x: var(--kairos-space-xs);     /* 6px  */
+  --kairos-set-input-width:     200px;                             /* default */
+  --kairos-set-input-num-width: 80px;                              /* numeric */
+  --kairos-set-input-sm-width:  100px;                             /* small */
+  --kairos-set-desc-margin-top: var(--kairos-space-3xs);           /* 2px */
+  /* Hotkey input */
+  --kairos-hk-input-padding-y: var(--kairos-space-3xs);     /* 2px  */
+  --kairos-hk-input-padding-x: var(--kairos-space-xs);      /* 6px  */
+  --kairos-hk-input-width:      120px;                             /* hotkey width */
+  /* Checkbox size */
+  --kairos-chk-size:           var(--kairos-space-lg);       /* 16px */
+  --kairos-chk-mark-width:     var(--kairos-space-2xs);       /* 4px checkmark */
+  --kairos-chk-mark-height:    var(--kairos-space-sm);       /* 8px checkmark height */
+
+  /* Radio — size / border / padding (all from foundation tokens) */
+  --kairos-radio-size-sm:      calc(var(--kairos-space-sm) + var(--kairos-space-3xs));  /* 10px */
+  --kairos-radio-border-sm:    var(--kairos-border-base);      /* 1px */
+  --kairos-radio-padding-sm:   var(--kairos-space-extra-tight);/* 2px */
+  --kairos-radio-size:         var(--kairos-space-lg);         /* 16px — md default */
+  --kairos-radio-border:       var(--kairos-border-thick);     /* 2px */
+  --kairos-radio-padding:      var(--kairos-space-extra-tight);/* 2px */
+  --kairos-radio-size-lg:      var(--kairos-space-xl);         /* 24px */
+  --kairos-radio-border-lg:    var(--kairos-border-thick);     /* 2px */
+  --kairos-radio-padding-lg:   var(--kairos-space-2xs);        /* 4px */
+
+
+  /* ═══════════════════════════════════════════════════
+     3. MENU / DROPDOWN — القوائم
+     ═══════════════════════════════════════════════════ */
+
+  --kairos-menu-item-padding-y:  var(--kairos-space-3xs); /* 2px  */
+  --kairos-menu-item-padding-x:  var(--kairos-space-xs);     /* 6px  */
+  --kairos-menu-item-gap:        var(--kairos-space-3xs); /* 2px  */
+  --kairos-menu-section-gap:     var(--kairos-space-xs);     /* 6px  */
+
+  --kairos-dropdown-item-padding-y: var(--kairos-space-xs);     /* 6px  */
+  --kairos-dropdown-item-padding-x: var(--kairos-space-md);    /* 12px */
+  --kairos-dropdown-item-gap:       var(--kairos-space-3xs); /* 2px  */
+
+
+  /* ═══════════════════════════════════════════════════
+     4. TABS — الألسنة
+     ═══════════════════════════════════════════════════ */
+
+  --kairos-tab-padding-y:    var(--kairos-space-xs);     /* 6px  */
+  --kairos-tab-padding-x:    var(--kairos-space-md);    /* 12px */
+  --kairos-tab-gap:          var(--kairos-space-3xs); /* 2px  */
+  --kairos-tab-content-gap:  var(--kairos-space-md);    /* 12px tab to content */
+
+
+  /* ═══════════════════════════════════════════════════
+     5. CARDS / PANELS — البطاقات واللوحات
+     ═══════════════════════════════════════════════════ */
+
+  --kairos-card-padding:        var(--kairos-space-md);   /* 12px */
+  --kairos-card-header-body:    var(--kairos-space-xs);     /* 6px  */
+  --kairos-card-section-gap:    var(--kairos-space-md);   /* 12px within card */
+  --kairos-card-gap:            var(--kairos-space-xl);       /* 24px between cards */
+
+  --kairos-panel-header-padding-y: var(--kairos-space-3xs); /* 2px  */
+  --kairos-panel-header-padding-x: var(--kairos-space-xs);     /* 6px  */
+
+
+  /* ═══════════════════════════════════════════════════
+     6. MODAL / DIALOG — النوافذ
+     ═══════════════════════════════════════════════════ */
+
+  --kairos-modal-padding:     var(--kairos-space-xl);       /* 24px */
+  --kairos-modal-section-gap: var(--kairos-space-md);    /* 12px */
+  --kairos-modal-action-gap:  var(--kairos-space-xs);     /* 6px  */
+  --kairos-modal-max-width-sm: 400px;                        /* small modal */
+  --kairos-modal-max-width-md: 600px;                        /* medium modal */
+  --kairos-modal-max-width-lg: 800px;                        /* large modal */
+  --kairos-modal-head-min-height: 32px;                      /* header min-height */
+  --kairos-modal-foot-min-height: 40px;                      /* footer min-height */
+
+
+  /* ═══════════════════════════════════════════════════
+     7. TOOLTIPS / POPOVERS — التلميحات
+     ═══════════════════════════════════════════════════ */
+
+  --kairos-tooltip-padding-y: var(--kairos-space-3xs); /* 2px  */
+  --kairos-tooltip-padding-x: var(--kairos-space-xs);     /* 6px  */
+  --kairos-tooltip-trigger-gap: var(--kairos-space-3xs); /* 2px  */
+
+  --kairos-popover-head-padding-y:  var(--kairos-space-md);    /* 12px */
+  --kairos-popover-head-padding-x:  var(--kairos-space-xl);       /* 24px */
+  --kairos-popover-body-padding:    var(--kairos-space-xl);       /* 24px */
+  --kairos-popover-foot-padding-y:  var(--kairos-space-md);    /* 12px */
+  --kairos-popover-foot-padding-x:  var(--kairos-space-xl);       /* 24px */
+  --kairos-popover-action-gap:      var(--kairos-space-xs);     /* 6px  */
+  --kairos-popover-close-padding:   var(--kairos-space-3xs); /* 2px  */
+  --kairos-popover-translate-y:     var(--kairos-space-2xs); /* 4px entrance slide */
+  --kairos-popover-menu-item-gap:   var(--kairos-space-xs);     /* 6px  */
+  --kairos-popover-divider-margin:  var(--kairos-space-3xs); /* 2px  */
+
+
+  /* ═══════════════════════════════════════════════════
+     8. TOAST / ALERT — الإشعارات
+     ═══════════════════════════════════════════════════ */
+
+  --kairos-toast-padding-y:   var(--kairos-space-xs);     /* 6px  */
+  --kairos-toast-padding-x:   var(--kairos-space-md);    /* 12px */
+  --kairos-toast-icon-gap:    var(--kairos-space-3xs); /* 2px  */
+  --kairos-toast-icon-size:   64px;                          /* toast status icon */
+  --kairos-toast-translate-y: 10px;                          /* initial slide offset */
+  --kairos-toast-gap:             var(--kairos-space-xs);     /* 6px between toasts */
+  --kairos-toast-viewport-margin: var(--kairos-space-xl);       /* 24px universal margin from viewport edges */
+
+  --kairos-alert-padding:     var(--kairos-space-md);    /* 12px */
+  --kairos-alert-icon-gap:    var(--kairos-space-3xs); /* 2px  */
+  --kairos-alert-action-gap:  var(--kairos-space-md);    /* 12px */
+  --kairos-alert-msg-gap:     var(--kairos-space-3xs); /* 2px  title to message */
+
+
+  /* ═══════════════════════════════════════════════════
+     9. BADGES / TAGS — الشارات
+     ═══════════════════════════════════════════════════ */
+
+  --kairos-badge-padding-y:   var(--kairos-space-3xs); /* 2px  */
+  --kairos-badge-padding-x:   var(--kairos-space-xs);     /* 6px  */
+  --kairos-badge-gap:         var(--kairos-space-3xs); /* 2px  */
+
+
+  /* ═══════════════════════════════════════════════════
+     10. TABLES — الجداول
+     ═══════════════════════════════════════════════════ */
+
+  --kairos-table-cell-padding-y:  var(--kairos-space-xs);     /* 6px  */
+  --kairos-table-cell-padding-x:  var(--kairos-space-md);    /* 12px */
+  --kairos-table-row-gap:         var(--kairos-space-3xs); /* 2px  (visual: borders) */
+  --kairos-table-header-data-gap: var(--kairos-space-xs);     /* 6px  */
+
+
+  /* ═══════════════════════════════════════════════════
+     11. BARS (status / top / menu) — الأشرطة
+     ═══════════════════════════════════════════════════ */
+
+  --kairos-status-bar-padding-y: var(--kairos-space-3xs); /* 2px  */
+  --kairos-status-bar-padding-x: var(--kairos-space-md);    /* 12px */
+  --kairos-status-bar-gap:       var(--kairos-space-md);    /* 12px between items */
+
+  --kairos-top-bar-padding-x:    var(--kairos-space-md);    /* 12px */
+  --kairos-top-bar-gap:          var(--kairos-space-md);    /* 12px between items */
+
+  --kairos-menu-bar-item-gap:    var(--kairos-space-xs);     /* 6px  */
+
+
+  /* ═══════════════════════════════════════════════════
+     12. SIDEBAR / NAVIGATION — الشريط الجانبي
+     ═══════════════════════════════════════════════════ */
+
+  --kairos-sidebar-width: 240px;                                  /* sidebar width */
+  --kairos-sidebar-item-padding-y: var(--kairos-space-xs);     /* 6px  */
+  --kairos-sidebar-item-padding-x: var(--kairos-space-md);    /* 12px */
+  --kairos-sidebar-item-gap:       var(--kairos-space-3xs); /* 2px  */
+  --kairos-sidebar-section-gap:    var(--kairos-space-md);    /* 12px */
+
+
+  /* ═══════════════════════════════════════════════════
+     13. LISTS — القوائم
+     ═══════════════════════════════════════════════════ */
+
+  --kairos-list-item-padding-y: var(--kairos-space-xs);     /* 6px  */
+  --kairos-list-item-padding-x: var(--kairos-space-md);    /* 12px */
+  --kairos-list-item-gap:       var(--kairos-space-3xs); /* 2px  */
+  --kairos-list-section-gap:    var(--kairos-space-xs);     /* 6px  */
+
+
+
+  /* ═══════════════════════════════════════════════════
+     15. SWITCH / CHECKBOX / RADIO — أدوات التبديل
+     ═══════════════════════════════════════════════════ */
+
+  --kairos-control-label-gap:  var(--kairos-space-3xs); /* 2px  */
+  --kairos-control-group-gap:  var(--kairos-space-xs);     /* 6px  between options */
+  --kairos-switch-width:       36px;                          /* switch track width */
+  --kairos-switch-height:      18px;                          /* switch track height */
+  --kairos-switch-thumb-size:  14px;                          /* switch thumb diameter */
+
+
+
+  /* ═══════════════════════════════════════════════════
+     18. DIVIDER / SEPARATOR — الفواصل
+     ═══════════════════════════════════════════════════ */
+
+  --kairos-divider-gap:         var(--kairos-space-md);    /* 12px around divider */
+
+
+  /* ═══════════════════════════════════════════════════
+     19. SECTION LABEL — عناوين الأقسام
+     ═══════════════════════════════════════════════════ */
+
+  --kairos-section-label-gap:   var(--kairos-space-3xs); /* 2px  */
+  --kairos-section-label-margin-bottom: var(--kairos-space-xs); /* 6px  */
+
+
+  /* ═══════════════════════════════════════════════════
+     20. TIMELINE / PROGRAM TRACK — المسار الزمني
+     ═══════════════════════════════════════════════════ */
+
+  --kairos-timeline-track-padding: var(--kairos-space-3xs); /* 2px  */
+  --kairos-timeline-segment-gap:   var(--kairos-space-3xs); /* 2px  */
+  --kairos-timeline-track-gap:     var(--kairos-space-xs);     /* 6px  between tracks */
+
+
+  /* ═══════════════════════════════════════════════════
+     21. FADER — مُنزلق الصوت
+     ═══════════════════════════════════════════════════ */
+
+  --kairos-fader-label-gap:     var(--kairos-space-3xs); /* 2px  */
+  --kairos-fader-group-gap:     var(--kairos-space-xs);     /* 6px  between faders */
+
+
+  /* ═══════════════════════════════════════════════════
+     22. AUDIO METER — مقياس الصوت
+     ═══════════════════════════════════════════════════ */
+
+  --kairos-meter-padding-y:     var(--kairos-space-3xs); /* 2px  */
+  --kairos-meter-label-gap:     var(--kairos-space-3xs); /* 2px  */
+  --kairos-meter-group-gap:     var(--kairos-space-xs);     /* 6px  */
+
+
+  /* ═══════════════════════════════════════════════════
+     23. MACRO BUTTON — أزرار الماكرو
+     ═══════════════════════════════════════════════════ */
+
+  --kairos-macro-padding-y:     var(--kairos-space-xs);     /* 6px  */
+  --kairos-macro-padding-x:     var(--kairos-space-md);    /* 12px */
+  --kairos-macro-icon-gap:      var(--kairos-space-3xs); /* 2px  */
+  --kairos-macro-grid-gap:      var(--kairos-space-xs);     /* 6px  */
+
+
+  /* ═══════════════════════════════════════════════════
+     24. ROUTER DESTINATION CARD — بطاقة وجهة الراوتر
+     ═══════════════════════════════════════════════════ */
+
+  --kairos-router-card-padding:     var(--kairos-space-md);   /* 12px */
+  --kairos-router-card-section-gap: var(--kairos-space-xs);     /* 6px  */
+  --kairos-router-card-gap:         var(--kairos-space-xl);       /* 24px between cards */
+
+
+  /* ═══════════════════════════════════════════════════
+     25. PGM / PVW BUTTONS — أزرار البث الحي
+     ═══════════════════════════════════════════════════ */
+
+  --kairos-pgm-pvw-gap:           var(--kairos-space-3xs); /* 2px  — حرج بصريًا */
+  --kairos-pgm-pvw-padding-y:     var(--kairos-space-3xs); /* 2px  */
+  --kairos-pgm-pvw-padding-x:     var(--kairos-space-xs);     /* 6px  */
+  --kairos-pgm-btn-min-height:    100px;                          /* PGM/PVW button */
+  --kairos-src-grid-btn-min-height: 60px;                         /* source grid button */
+
+
+  /* ═══════════════════════════════════════════════════
+     26. SOURCE BUTTON — زر المصدر
+     ═══════════════════════════════════════════════════ */
+
+  --kairos-src-btn-icon-gap:      var(--kairos-space-3xs); /* 2px  */
+  --kairos-src-grid-gap:          var(--kairos-space-3xs); /* 2px  */
+
+
+  /* ═══════════════════════════════════════════════════
+     27. TALLY INDICATOR — مؤشر الإضاءة
+     ═══════════════════════════════════════════════════ */
+
+  --kairos-tally-label-gap:       var(--kairos-space-3xs); /* 2px  */
+  --kairos-tally-group-gap:       var(--kairos-space-xs);     /* 6px  */
+
+
+  /* ═══════════════════════════════════════════════════
+     28. CHANNEL LABEL — تسمية القناة
+     ═══════════════════════════════════════════════════ */
+
+  --kairos-channel-label-padding: var(--kairos-space-3xs); /* 2px  */
+  --kairos-channel-label-gap:     var(--kairos-space-3xs); /* 2px  */
+
+
+  /* ═══════════════════════════════════════════════════
+     29. CHECKBOX / RADIO GROUP — مجموعات الاختيار
+     ═══════════════════════════════════════════════════ */
+
+  --kairos-choice-group-gap:      var(--kairos-space-xs);     /* 6px  between options */
+
+
+  /* ═══════════════════════════════════════════════════
+     30. SCROLLBAR (utilities) — شريط التمرير
+     ═══════════════════════════════════════════════════ */
+
+  --kairos-scrollbar-size:        var(--kairos-space-xs);     /* 6px  */
+
+
+  /* ═══════════════════════════════════════════════════
+     31. KEYBOARD SHORTCUT BADGE — شارة اختصار لوحة المفاتيح
+     ═══════════════════════════════════════════════════ */
+
+  --kairos-kbd-padding-y:         var(--kairos-space-3xs); /* 2px  */
+  --kairos-kbd-padding-x:         var(--kairos-space-xs);     /* 6px  */
+
+
+  /* ═══════════════════════════════════════════════════
+     32. TOOLTIP GROUP — مجموعة التلميحات
+     ═══════════════════════════════════════════════════ */
+
+  --kairos-tooltip-group-gap:     var(--kairos-space-xs);     /* 6px  */
+
+
+
+  /* ═══════════════════════════════════════════════════
+     18. DOMAIN COMPONENTS — مكونات النطاق (البث)
+     ═══════════════════════════════════════════════════ */
+
+  /* UI Patterns */
+  --kairos-timeline-seg-padding-y: var(--kairos-space-3xs);
+  --kairos-timeline-seg-padding-x: var(--kairos-space-xs);
+
+  /* Shell */
+  --kairos-src-row-gap:           var(--kairos-space-3xs);
+  --kairos-events-cell-padding-y: var(--kairos-space-3xs);
+  --kairos-events-cell-padding-x: var(--kairos-space-xs);
+
+  /* Ticker & Marquee */
+  --kairos-ticker-padding-y:           var(--kairos-space-xs);
+  --kairos-ticker-track-gap:           var(--kairos-space-xl);
+  --kairos-ticker-item-gap:            var(--kairos-space-md);
+  --kairos-ticker-item-margin:         var(--kairos-space-xl);
+  --kairos-ticker-label-gap:           var(--kairos-space-xs);
+  --kairos-ticker-label-padding-x:     var(--kairos-space-md);
+  --kairos-marquee-padding:            var(--kairos-space-md);
+  --kairos-marquee-text-padding-right: var(--kairos-space-xl);
+
+  /* Rundown */
+  --kairos-rundown-item-gap:          var(--kairos-space-md);
+  --kairos-rundown-item-padding-y:    var(--kairos-space-xs);
+  --kairos-rundown-item-padding-x:    var(--kairos-space-md);
+  --kairos-rundown-compact-padding-y: var(--kairos-space-3xs);
+  --kairos-rundown-compact-padding-x: var(--kairos-space-xs);
+
+  /* Segment */
+  --kairos-segment-btn-padding-y: var(--kairos-space-xs);
+  --kairos-segment-btn-padding-x: var(--kairos-space-md);
+  --kairos-segment-sm-padding-y:  var(--kairos-space-3xs);
+  --kairos-segment-sm-padding-x:  var(--kairos-space-xs);
+
+  /* Production */
+  --kairos-prod-cell-padding-y:    var(--kairos-space-3xs);
+  --kairos-prod-cell-padding-x:    var(--kairos-space-xs);
+  --kairos-prod-indicator-pos:     var(--kairos-space-3xs);
+  --kairos-prod-thumb-offset:      calc(-1 * var(--kairos-space-xs));
+  --kairos-prod-thumb-width:       var(--kairos-space-md);
+  --kairos-prod-thumb-height:      var(--kairos-space-xs);
+  --kairos-vu-seg-width:           var(--kairos-space-3xs);
+  --kairos-vu-channel-gap:         var(--kairos-space-3xs);
+  --kairos-vu-meter-height:        80px;                           /* VU meter height */
+  --kairos-viewport-width:         200px;                          /* preview viewport */
+  --kairos-viewport-height:        120px;                          /* preview viewport */
+  --kairos-meter-min-height:       80px;                           /* audio meter */
+
+  /* Multiview */
+  --kairos-mv-label-gap:           var(--kairos-space-3xs);
+  --kairos-mv-label-padding-y:     var(--kairos-space-3xs);
+  --kairos-mv-label-padding-x:     var(--kairos-space-xs);
+  --kairos-mv-tally-pos:           var(--kairos-space-3xs);
+  --kairos-mv-sm-label-padding-x:  var(--kairos-space-3xs);
+
+  /* Property */
+  --kairos-prop-gap:               var(--kairos-space-md);
+  --kairos-prop-padding-y:         var(--kairos-space-xs);
+  --kairos-prop-compact-gap:       var(--kairos-space-3xs);
+  --kairos-prop-compact-padding-y: var(--kairos-space-3xs);
+  --kairos-prop-inline-gap:        var(--kairos-space-3xs);
+
+  /* Source Tag */
+  --kairos-src-tag-gap:            var(--kairos-space-3xs);
+
+  /* Bus */
+  --kairos-bus-btn-content-gap:     var(--kairos-space-3xs);
+  --kairos-bus-trans-btn-padding-x: var(--kairos-space-md);
+
+  /* ─── Auto-generated Component Contracts ─── */
+  --kairos-accordion-trigger-gap: var(--kairos-space-md);
+  --kairos-accordion-trigger-padding: var(--kairos-space-md);
+  --kairos-accordion-panel-padding: var(--kairos-space-md);
+  --kairos-accordion-trigger-compact-padding-y: var(--kairos-space-xs);
+  --kairos-accordion-trigger-compact-padding-x: var(--kairos-space-md);
+  --kairos-accordion-panel-compact-padding-y: var(--kairos-space-xs);
+  --kairos-accordion-panel-compact-padding-x: var(--kairos-space-md);
+  --kairos-keyer-head-gap: var(--kairos-space-md);
+  --kairos-keyer-head-padding: var(--kairos-space-md);
+  --kairos-keyer-body-padding: var(--kairos-space-md);
+  --kairos-keyer-body-gap: var(--kairos-space-md);
+  --kairos-keyer-row-gap: var(--kairos-space-md);
+  --kairos-keyer-swatches-gap: var(--kairos-space-3xs);
+  --kairos-crosspoint-dest-padding-y: var(--kairos-space-3xs);
+  --kairos-crosspoint-dest-padding-x: var(--kairos-space-xs);
+  --kairos-aux-padding: var(--kairos-space-3xs);
+  --kairos-aux-label-gap: var(--kairos-space-3xs);
+  --kairos-countdown-gap: var(--kairos-space-xs);
+  --kairos-countdown-padding: var(--kairos-space-md);
+  --kairos-tc-gap: var(--kairos-space-3xs);
+  --kairos-tc-padding-y: var(--kairos-space-xs);
+  --kairos-tc-padding-x: var(--kairos-space-md);
+  --kairos-tc-sm-padding-y: var(--kairos-space-3xs);
+  --kairos-tc-sm-padding-x: var(--kairos-space-xs);
+  --kairos-device-card-gap: var(--kairos-space-md);
+  --kairos-device-card-padding: var(--kairos-space-md);
+  --kairos-device-body-gap: var(--kairos-space-3xs);
+  --kairos-device-meta-gap: var(--kairos-space-xs);
+  --kairos-device-status-gap: var(--kairos-space-3xs);
+  --kairos-scene-item-gap: var(--kairos-space-xs);
+  --kairos-scene-item-padding-y: var(--kairos-space-xs);
+  --kairos-scene-item-padding-x: var(--kairos-space-md);
+  --kairos-scene-children-indent: var(--kairos-space-xl);
+  --kairos-scene-item-indent-base: var(--kairos-space-md);
+  --kairos-scene-item-indent-increment: var(--kairos-space-xl);
+  --kairos-scene-item-indent-base-2: var(--kairos-space-md);
+  --kairos-scene-item-indent-increment-2: var(--kairos-space-xl);
+  --kairos-filter-item-gap: var(--kairos-space-md);
+  --kairos-filter-item-padding-y: var(--kairos-space-xs);
+  --kairos-filter-item-padding-x: var(--kairos-space-md);
+  --kairos-filter-params-gap: var(--kairos-space-3xs);
+  --kairos-event-item-gap: var(--kairos-space-md);
+  --kairos-event-item-padding-y: var(--kairos-space-xs);
+  --kairos-event-item-padding-x: var(--kairos-space-md);
+  --kairos-slider-input-gap: var(--kairos-space-md);
+  --kairos-slider-input-sm-gap: var(--kairos-space-xs);
+  --kairos-source-item-gap: var(--kairos-space-xs);
+  --kairos-source-item-padding-y: var(--kairos-space-3xs);
+  --kairos-hl-item-gap: var(--kairos-space-xs);
+  --kairos-hl-item-padding-y: var(--kairos-space-xs);
+  --kairos-hl-item-padding-x: var(--kairos-space-xs);
+  --kairos-hl-border-height: var(--kairos-space-xl);
+  --kairos-io-label-padding-y: var(--kairos-space-xs);
+  --kairos-io-label-padding-x: var(--kairos-space-xs);
+  --kairos-io-label-gap: var(--kairos-space-xs);
+  --kairos-dest-label-padding-y: var(--kairos-space-xs);
+  --kairos-dest-label-padding-x: var(--kairos-space-xs);
+  --kairos-dest-label-gap: var(--kairos-space-xs);
+  --kairos-dest-row-gap: var(--kairos-space-3xs);
+  --kairos-dest-row-padding: var(--kairos-space-xs);
+  --kairos-flow-node-padding-y: var(--kairos-space-xs);
+  --kairos-flow-node-padding-x: var(--kairos-space-xs);
+  --kairos-flow-row-gap: var(--kairos-space-xs);
+  --kairos-log-entry-gap: var(--kairos-space-xs);
+  --kairos-log-entry-padding-y: var(--kairos-space-xs);
+  --kairos-log-entry-padding-x: var(--kairos-space-xs);
+  --kairos-log-entry-margin-bottom: var(--kairos-space-3xs);
+  --kairos-toast-fixed-bottom: var(--kairos-space-md);
+  --kairos-toast-fixed-right: var(--kairos-space-md);
+  --kairos-toast-fixed-icon-gap: var(--kairos-space-xs);
+  --kairos-toast-fixed-padding-y: var(--kairos-space-xs);
+  --kairos-toast-fixed-padding-x: var(--kairos-space-md);
+  --kairos-flash-content-padding-y: var(--kairos-space-xl);
+  --kairos-flash-content-padding-x: var(--kairos-space-xl);
+  --kairos-log-filter-bar-gap: var(--kairos-space-xs);
+  --kairos-log-filter-bar-margin-bottom: var(--kairos-space-md);
+  --kairos-skeleton-text-margin-bottom: var(--kairos-space-xs);
+  --kairos-skeleton-title-margin-bottom: var(--kairos-space-md);
+  --kairos-tab-panel-padding: var(--kairos-space-md);
+  --kairos-dropdown-divider-margin-y: var(--kairos-space-3xs);
+  --kairos-status-item-gap: var(--kairos-space-3xs);
+  --kairos-status-sep-height: var(--kairos-space-md);
+  --kairos-nav-item-gap: var(--kairos-space-xs);
+  --kairos-nav-item-padding-y: var(--kairos-space-xs);
+  --kairos-nav-item-padding-x: var(--kairos-space-md);
+  --kairos-slider-thumb-outset-y: var(--kairos-space-xs);
+  --kairos-slider-thumb-width: var(--kairos-space-md);
+  --kairos-slider-thumb-height-extra: var(--kairos-space-md);
+  --kairos-slider-v-thumb-outset-x: var(--kairos-space-xs);
+  --kairos-slider-v-thumb-width-extra: var(--kairos-space-md);
+  --kairos-slider-v-thumb-height: var(--kairos-space-md);
+  --kairos-slider-v-height: 100px;                         /* vertical slider track height */
+
+  --kairos-split-grid-gap: var(--kairos-space-3xs);
+  --kairos-split-grid-padding: var(--kairos-space-3xs);
+  --kairos-split-grid-cell-label-padding-y: var(--kairos-space-3xs);
+  --kairos-split-grid-cell-label-padding-x: var(--kairos-space-xs);
+  --kairos-split-panel-pane-padding: var(--kairos-space-md);
+  --kairos-split-divider-width: var(--kairos-space-xs);
+  --kairos-split-divider-height: var(--kairos-space-xs);
+  --kairos-split-pane-label-margin-bottom: var(--kairos-space-md);
+  --kairos-stepper-input-padding-y: var(--kairos-space-xs);
+  --kairos-stepper-sm-input-padding-y: var(--kairos-space-3xs);
+  --kairos-stepper-unit-padding-y: var(--kairos-space-xs);
+  --kairos-stepper-unit-padding-x: var(--kairos-space-md);
+  --kairos-table-th-padding-y: var(--kairos-space-xs);
+  --kairos-table-th-padding-x: var(--kairos-space-md);
+  --kairos-table-td-padding-y: var(--kairos-space-xs);
+  --kairos-table-td-padding-x: var(--kairos-space-md);
+  --kairos-tag-input-gap: var(--kairos-space-xs);
+  --kairos-tag-input-padding-y: var(--kairos-space-xs);
+  --kairos-tag-input-padding-x: var(--kairos-space-md);
+  --kairos-tag-input-min-width: 80px;
+  --kairos-tag-gap: var(--kairos-space-3xs);
+  --kairos-tag-padding-y: var(--kairos-space-3xs);
+  --kairos-tag-padding-x: var(--kairos-space-xs);
+  --kairos-tag-input-sm-padding-y: var(--kairos-space-3xs);
+  --kairos-tag-input-sm-padding-x: var(--kairos-space-xs);
+
+
+  /* ═══════════════════════════════════════════════════
+     34. BUS BAR — أزرار المصادر (Source Bus)
+     ═══════════════════════════════════════════════════ */
+
+  --kairos-bus-row-gap:          var(--kairos-space-3xs); /* 2px  between rows */
+  --kairos-bus-btn-gap:          var(--kairos-space-3xs); /* 2px  between buttons */
+  --kairos-bus-btn-padding-y:    var(--kairos-space-3xs); /* 2px  */
+  --kairos-bus-btn-padding-x:    var(--kairos-space-xs);     /* 6px  */
+  --kairos-bus-label-w:          48px;                           /* width of PGM/PVW label */
+  --kairos-bus-label-padding:    var(--kairos-space-3xs); /* 2px  */
+
+
+  /* ═══════════════════════════════════════════════════
+     REFERENCE PAGE PATTERNS — أنماط صفحات التوثيق
+     مستخدمة في colors.html · typography.html · spacing.html
+     ═══════════════════════════════════════════════════ */
+
+  --kairos-ref-header-gap:         var(--kairos-space-xs);     /* 6px  between icon, title, back */
+  --kairos-ref-header-icon-size:   32px;                          /* حجم أيقونة العنوان */
+  --kairos-ref-header-back-gap:    var(--kairos-space-3xs); /* 2px  arrow to text */
+
+  --kairos-ref-divider-margin:     var(--kairos-space-xs);     /* 6px  top/bottom of divider */
+
+  --kairos-section-title-gap:      var(--kairos-space-3xs); /* 2px  between icon/num/text */
+  --kairos-section-title-margin:   var(--kairos-space-xl);       /* 24px between sections */
+
+  --kairos-lede-margin:            var(--kairos-space-xs);     /* 6px  margin-bottom of lede */
+
+  --kairos-specimen-padding-y:     var(--kairos-space-xs);     /* 6px  */
+  --kairos-specimen-padding-x:     var(--kairos-space-md);    /* 12px */
+  --kairos-specimen-gap:           var(--kairos-space-xl);       /* 24px between label, value, role */
+
+  --kairos-card-margin:            var(--kairos-space-xs);     /* 6px  margin-bottom between cards */
+  --kairos-card-header-padding-y:  var(--kairos-space-md);    /* 12px */
+  --kairos-card-header-padding-x:  var(--kairos-space-xl);       /* 24px */
+  --kairos-card-header-gap:        var(--kairos-space-xs);     /* 6px  between title, subtitle */
+  --kairos-card-body-padding:      var(--kairos-space-xl);       /* 24px */
+
+  --kairos-token-badge-padding:    var(--kairos-space-3xs) var(--kairos-space-xs); /* 2px 6px */
+
+  --kairos-usage-cell-gap:         var(--kairos-space-3xs); /* 2px  */
+  --kairos-usage-cell-padding-y:   var(--kairos-space-3xs); /* 2px  */
+  --kairos-usage-cell-padding-x:   var(--kairos-space-xs);     /* 6px  */
+
+  --kairos-swatch-size:            48px;                          /* swatch default */
+  --kairos-swatch-sm-size:         24px;                          /* swatch small */
+  --kairos-swatch-dot-size:        12px;                          /* swatch dot */
+
+
+  /* ═══════════════════════════════════════════════════
+     35. SOURCE TAG — شارة المصدر
+     ═══════════════════════════════════════════════════ */
+
+  --kairos-source-tag-gap:         var(--kairos-space-3xs); /* 2px  */
+
+
+  /* ═══════════════════════════════════════════════════
+     36. PROPERTY ROW — صف الخاصية
+     ═══════════════════════════════════════════════════ */
+
+  --kairos-prop-label-w:           100px;                          /* label min-width */
+
+
+  /* ═══════════════════════════════════════════════════
+     37. MULTIVIEWER — خلية المعاينة
+     ═══════════════════════════════════════════════════ */
+
+  --kairos-mv-tally-size:          8px;                            /* tally dot */
+  --kairos-mv-min-height:          60px;                           /* multiview cell */
+  --kairos-mv-sm-min-height:       40px;                           /* small multiview */
+
+
+  /* ═══════════════════════════════════════════════════
+      38. SEGMENTED CONTROL — الاختيار المتعدد
+      ═══════════════════════════════════════════════════ */
+
+
+
+  /* ═══════════════════════════════════════════════════
+     39. NUMERIC STEPPER — الإدخال الرقمي
+     ═══════════════════════════════════════════════════ */
+
+  --kairos-stepper-btn-w:          24px;                           /* ± button width */
+  --kairos-stepper-input-w:        48px;                           /* input width */
+
+
+  /* ═══════════════════════════════════════════════════
+     40. RUNDOWN / PLAYLIST — قائمة البث
+     ═══════════════════════════════════════════════════ */
+
+  --kairos-rundown-tc-w:           60px;                           /* timecode width */
+
+
+
+  /* ═══════════════════════════════════════════════════
+     42. TICKER / MARQUEE — شريط الأخبار المتحرك
+     ═══════════════════════════════════════════════════ */
+
+  --kairos-ticker-speed:           20s;                            /* default scroll duration */
+  --kairos-ticker-gap:             var(--kairos-space-xl);      /* between items */
+
+
+  /* ═══════════════════════════════════════════════════
+     43. ACCORDION — الأكورديون
+     ═══════════════════════════════════════════════════ */
+
+  --kairos-accordion-padding:      var(--kairos-space-md);   /* 12px */
+  --kairos-accordion-gap:          var(--kairos-border-base);     /* between items */
+
+
+  /* ═══════════════════════════════════════════════════
+     44. TAG INPUT / CHIP INPUT — إدخال العلامات
+     ═══════════════════════════════════════════════════ */
+
+  --kairos-tag-remove-w:           var(--kairos-size-dot-lg);     /* 12px remove button */
+
+
+  /* ═══════════════════════════════════════════════════
+     45. SPLIT PANEL — اللوحة المقسمة
+     ═══════════════════════════════════════════════════ */
+
+  --kairos-split-divider-w:        var(--kairos-space-xs);    /* 6px draggable handle */
+  --kairos-split-grid-cell-font-size: 10px;
+  --kairos-split-grid-cell-label-font-size: 10px;
+  --kairos-split-grid-pip-width: 80px;
+  --kairos-split-grid-side-min-height: 120px;
+
+
+  /* ═══════════════════════════════════════════════════
+      46. SPLIT SCREEN GRID — شبكة تقسيم الشاشة
+      ═══════════════════════════════════════════════════ */
+
+
+
+  /* ═══════════════════════════════════════════════════
+     47. KEYER — لوحة الكي (Chroma Key)
+     ═══════════════════════════════════════════════════ */
+
+  --kairos-keyer-swatch-size:      var(--kairos-control-sm);  /* 32px */
+  --kairos-keyer-label-w:          80px;                           /* label min-width */
+
+
+  /* ═══════════════════════════════════════════════════
+     48. CROSSPOINT — شبكة التوجيه (Router Matrix)
+     ═══════════════════════════════════════════════════ */
+
+  --kairos-crosspoint-cell-size:   var(--kairos-control-md);     /* 36px */
+
+
+  /* ═══════════════════════════════════════════════════
+     49. COUNTDOWN / TIMER — عداد العد التنازلي
+     ═══════════════════════════════════════════════════ */
+
+  --kairos-countdown-font-size:    var(--kairos-text-2xl);    /* 32px digit */
+
+
+  /* ═══════════════════════════════════════════════════
+     50. TIMECODE — عرض التايم كود
+     ═══════════════════════════════════════════════════ */
+
+
+
+  /* ═══════════════════════════════════════════════════
+     51. DEVICE CARD — بطاقة الجهاز
+     ═══════════════════════════════════════════════════ */
+
+  --kairos-device-icon-size:       var(--kairos-control-md);     /* 36px */
+
+
+  /* ═══════════════════════════════════════════════════
+     52. SCENE TREE — شجرة المشاهد
+     ═══════════════════════════════════════════════════ */
+
+  --kairos-scene-indent:           var(--kairos-space-xl);      /* 24px per level */
+
+
+  /* ═══════════════════════════════════════════════════
+     53. FILTER STACK — سلسلة التأثيرات
+     ═══════════════════════════════════════════════════ */
+
+
+
+  /* ═══════════════════════════════════════════════════
+     54. EVENT HISTORY — سجل الأحداث
+     ═══════════════════════════════════════════════════ */
+
+  --kairos-event-time-w:           7ch;                            /* timestamp width */
+
+  /* ─── Sprint 1 Generated Component Contracts ─── */
+  --kairos-command-padding: var(--kairos-space-md);
+  --kairos-command-gap: var(--kairos-space-xs);
+  --kairos-command-padding-lg: var(--kairos-space-xl);
+  --kairos-command-gap-sm: var(--kairos-space-3xs);
+  --kairos-command-max-width: 600px;
+  --kairos-command-max-height: 300px;
+  --kairos-command-key-font-size: 10px;
+  --kairos-form-padding: var(--kairos-space-md);
+  --kairos-form-gap: var(--kairos-space-xs);
+  --kairos-layout-gap-sm: var(--kairos-space-xs);
+  --kairos-layout-gap-md: var(--kairos-space-md);
+  --kairos-layout-gap-lg: var(--kairos-space-xl);
+  --kairos-sidebar-padding: var(--kairos-space-md);
+  --kairos-sidebar-gap-lg: var(--kairos-space-xl);
+  --kairos-sidebar-gap-sm: var(--kairos-space-xs);
+  --kairos-tab-padding: var(--kairos-space-md);
+  --kairos-tree-padding: var(--kairos-space-xs);
+  --kairos-tree-padding-x: var(--kairos-space-md);
+  --kairos-tree-indent: var(--kairos-space-xl);
+  --kairos-indicator-gap: var(--kairos-space-xs);
+  --kairos-paragraph-margin: var(--kairos-space-md);
+  --kairos-popover-offset: var(--kairos-space-xs);
+  --kairos-progress-height: var(--kairos-space-xs);
+  --kairos-separator-margin: var(--kairos-space-md);
+  --kairos-code-padding: var(--kairos-space-3xs);
+
+  /* ═══════════════════════════════════════════════════
+     UNIFIED COMPONENT CONTRACT — Size paddings
+     مستهلكة في contracts.css عبر .kairos-size-sm/md/lg
+     ═══════════════════════════════════════════════════ */
+  --kairos-comp-padding-sm-y: var(--kairos-space-3xs);   /* 2px  */
+  --kairos-comp-padding-sm-x: var(--kairos-space-xs);    /* 6px  */
+  --kairos-comp-padding-md-y: var(--kairos-space-xs);    /* 6px  */
+  --kairos-comp-padding-md-x: var(--kairos-space-md);    /* 12px */
+  --kairos-comp-padding-lg-y: var(--kairos-space-md);    /* 12px */
+  --kairos-comp-padding-lg-x: var(--kairos-space-xl);    /* 24px */
+  --kairos-empty-state-min-height: 200px;
+  --kairos-empty-state-padding: var(--kairos-space-xl);
+  --kairos-empty-state-gap: var(--kairos-space-md);
+  --kairos-event-history-max-height: 300px;
+  --kairos-event-type-min-width: 6ch;
+  --kairos-property-compact-min-width: 60px;
+  --kairos-fader-thumb-offset-x: 4px;
+  --kairos-ticker-diamond-size: 8px;
+  --kairos-ticker-normal-speed: 20s;
+  --kairos-ticker-fast-speed: 10s;
+  --kairos-ticker-slow-speed: 40s;
+  --kairos-marquee-normal-speed: 15s;
+  --kairos-marquee-fast-speed: 8s;
+  --kairos-marquee-slow-speed: 30s;
+}
+
+

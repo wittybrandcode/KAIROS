@@ -1,0 +1,27 @@
+.kairos-divider { display: flex; align-items: center; gap: var(--kairos-divider-gap); margin: var(--kairos-divider-gap) 0; color: var(--kairos-text-placeholder); font-size: var(--kairos-text-sm); text-transform: uppercase; letter-spacing: var(--kairos-tracking-widest); user-select: none; }
+.kairos-divider::before, .kairos-divider::after { content: ''; flex: 1; height: var(--kairos-border-base); background: var(--kairos-border-muted); }
+.kairos-divider-label { color: var(--kairos-text-placeholder); white-space: nowrap; }
+
+.kairos-divider.h { display: block; height: var(--kairos-border-base); background: var(--kairos-border-muted); margin: var(--kairos-divider-gap) 0; }
+.kairos-divider.h::before, .kairos-divider.h::after { display: none; }
+.kairos-divider.dashed { background: transparent; border-top: var(--kairos-border-base) dashed var(--kairos-border-muted); height: 0; }
+.kairos-divider.dotted { background: transparent; border-top: var(--kairos-border-base) dotted var(--kairos-border-muted); height: 0; }
+.kairos-divider.thick { height: var(--kairos-border-thick); }
+.kairos-divider.thick.dashed { border-top-width: var(--kairos-border-thick); }
+.kairos-divider.thick.dotted { border-top-width: var(--kairos-border-thick); }
+
+.kairos-divider.v { display: inline-flex; width: var(--kairos-border-base); height: 1em; background: var(--kairos-border-muted); margin: 0 var(--kairos-divider-gap); vertical-align: middle; }
+.kairos-divider.v::before, .kairos-divider.v::after { display: none; }
+.kairos-divider.v.dashed { background: transparent; border-left: var(--kairos-border-base) dashed var(--kairos-border-muted); width: 0; height: 1em; }
+.kairos-divider.v.dotted { background: transparent; border-left: var(--kairos-border-base) dotted var(--kairos-border-muted); width: 0; height: 1em; }
+.kairos-divider.v.thick { width: var(--kairos-border-thick); }
+.kairos-divider.v.thick.dashed { border-left-width: var(--kairos-border-thick); }
+.kairos-divider.v.thick.dotted { border-left-width: var(--kairos-border-thick); }
+
+.kairos-divider.pgm::before, .kairos-divider.pgm::after { background: var(--kairos-status-pgm); }
+.kairos-divider.pvw::before, .kairos-divider.pvw::after { background: var(--kairos-status-pvw); }
+.kairos-divider.pgm.h { background: var(--kairos-status-pgm); }
+.kairos-divider.pvw.h { background: var(--kairos-status-pvw); }
+.kairos-divider.pgm.v { background: var(--kairos-status-pgm); }
+.kairos-divider.pvw.v { background: var(--kairos-status-pvw); }
+

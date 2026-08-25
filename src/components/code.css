@@ -1,0 +1,12 @@
+/* ═══════════════════════════════════════════════════
+   Kairos v01 — Code (Content Primitive)
+   ═══════════════════════════════════════════════════ */
+
+.kairos-code {
+  font-family: var(--kairos-font-mono);
+  font-size: var(--kairos-text-sm);
+  color: var(--kairos-text-secondary);
+  background: var(--kairos-bg-surface);
+  padding: 0 var(--kairos-code-padding);
+}
+

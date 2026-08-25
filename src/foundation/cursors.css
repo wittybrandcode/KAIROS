@@ -1,0 +1,16 @@
+/* ═══════════════════════════════════════════════════
+   Kairos v01 — Cursor Utilities
+   مؤشرات الفأرة حسب السياق
+   ═══════════════════════════════════════════════════ */
+
+.kairos-cursor-pointer      { cursor: pointer; }
+.kairos-cursor-grab         { cursor: grab; }
+.kairos-cursor-grabbing     { cursor: grabbing; }
+.kairos-cursor-col-resize   { cursor: col-resize; }
+.kairos-cursor-row-resize   { cursor: row-resize; }
+.kairos-cursor-text         { cursor: text; }
+.kairos-cursor-not-allowed  { cursor: not-allowed; }
+.kairos-cursor-wait         { cursor: wait; }
+.kairos-cursor-crosshair    { cursor: crosshair; }
+.kairos-cursor-zoom-in      { cursor: zoom-in; }
+.kairos-cursor-zoom-out     { cursor: zoom-out; }

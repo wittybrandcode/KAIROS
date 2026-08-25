@@ -1,0 +1,142 @@
+/* ═══════════════════════════════════════════════════
+   Kairos v01 — Form Validation
+   حالات التحقق من الحقول
+   ═══════════════════════════════════════════════════ */
+
+
+
+.kairos-field,
+.kairos-textarea,
+.kairos-select {
+  appearance: none;
+  -webkit-appearance: none;
+  border: var(--kairos-border-base) solid var(--kairos-comp-current-border, var(--kairos-border));
+  color: var(--kairos-comp-current-text, var(--kairos-text));
+  background: var(--kairos-comp-current-bg, var(--kairos-bg-input));
+  padding: var(--kairos-comp-padding-y, var(--kairos-form-padding)) var(--kairos-comp-padding-x, var(--kairos-form-padding));
+  font-size: var(--kairos-comp-font-size, var(--kairos-text-sm));
+  font-family: var(--kairos-font-sans);
+  width: 100%;
+  transition: border-color var(--kairos-motion-fast) var(--kairos-easing-ease-out),
+              box-shadow var(--kairos-motion-fast) var(--kairos-easing-ease-out);
+}
+.kairos-textarea {
+  resize: vertical;
+  min-height: var(--kairos-textarea-min-height);
+}
+.kairos-select {
+  padding-right: calc(var(--kairos-form-padding) * 2 + var(--kairos-select-chevron-size));
+  background-color: var(--kairos-text-muted);
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: right var(--kairos-form-padding) center;
+  mask-position: right var(--kairos-form-padding) center;
+}
+.kairos-label {
+  display: block;
+  font-size: var(--kairos-text-sm);
+  color: var(--kairos-text-muted);
+  margin-bottom: var(--kairos-form-gap);
+  font-weight: var(--kairos-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--kairos-tracking-wider);
+}
+.kairos-fieldset {
+  border: var(--kairos-border-base) solid var(--kairos-border-muted);
+  padding: var(--kairos-form-padding);
+  margin: 0;
+}
+.kairos-legend {
+  font-size: var(--kairos-text-sm);
+  color: var(--kairos-text);
+  padding: 0 var(--kairos-form-gap);
+  font-weight: var(--kairos-weight-bold);
+  text-transform: uppercase;
+}
+.kairos-field:disabled { opacity: var(--kairos-opacity-disabled); cursor: not-allowed; pointer-events: none; }
+.kairos-field:disabled .kairos-field-border { border-color: var(--kairos-border-muted); }
+.kairos-field:hover:not(:disabled) .kairos-field-border { border-color: var(--kairos-border-active); }
+
+.kairos-field[aria-invalid="true"],
+.kairos-textarea[aria-invalid="true"],
+.kairos-select[aria-invalid="true"] {
+  border-color: var(--kairos-status-pgm);
+}
+.kairos-field[aria-invalid="true"]:focus-visible,
+.kairos-textarea[aria-invalid="true"]:focus-visible,
+.kairos-select[aria-invalid="true"]:focus-visible {
+  outline-color: var(--kairos-status-pgm);
+}
+
+.kairos-field-message {
+  font-size: var(--kairos-text-sm);
+  margin-top: var(--kairos-input-help-gap);
+  letter-spacing: var(--kairos-tracking-wide);
+}
+.kairos-field-message.error   { color: var(--kairos-status-pgm); }
+.kairos-field-message.success { color: var(--kairos-status-pvw); }
+.kairos-field-message.warning { color: var(--kairos-status-warning); }
+
+/* ─── Settings Row ─── */
+.kairos-set-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--kairos-set-row-padding-y) 0;
+  border-bottom: var(--kairos-border-base) solid var(--kairos-border-muted);
+}
+.kairos-set-label {
+  font-size: var(--kairos-text-sm);
+  font-family: var(--kairos-font-mono);
+  color: var(--kairos-text-muted);
+}
+.kairos-set-desc {
+  font-size: var(--kairos-text-sm);
+  color: var(--kairos-text-placeholder);
+  margin-top: var(--kairos-set-desc-margin-top);
+}
+
+/* ─── Settings Input ─── */
+.kairos-set-input {
+  background: var(--kairos-bg-input);
+  border: var(--kairos-border-base) solid var(--kairos-border);
+  padding: var(--kairos-set-input-padding-y) var(--kairos-set-input-padding-x);
+  font-size: var(--kairos-text-sm);
+  font-family: var(--kairos-font-mono);
+  color: var(--kairos-text);
+  width: var(--kairos-set-input-width);
+  transition: border-color var(--kairos-motion-fast) var(--kairos-easing-ease);
+}
+.kairos-set-input:focus { border-color: var(--kairos-text); outline: none; }
+.kairos-set-input.kairos-num { width: var(--kairos-set-input-num-width); text-align: center; }
+.kairos-set-input.small { width: var(--kairos-set-input-sm-width); }
+.kairos-set-input:focus-visible { outline: var(--kairos-focus-base) solid var(--kairos-focus-ring-color); outline-offset: var(--kairos-focus-ring-offset); }
+
+
+
+/* ─── Hotkey Input ─── */
+.kairos-hk-input {
+  background: var(--kairos-bg-input);
+  border: var(--kairos-border-base) solid var(--kairos-border);
+  padding: var(--kairos-hk-input-padding-y) var(--kairos-hk-input-padding-x);
+  font-size: var(--kairos-text-sm);
+  font-family: var(--kairos-font-mono);
+  color: var(--kairos-text);
+  width: var(--kairos-hk-input-width);
+  text-align: center;
+  cursor: pointer;
+  transition: border-color var(--kairos-motion-fast) var(--kairos-easing-ease);
+}
+.kairos-hk-input:hover { border-color: var(--kairos-text-muted); }
+.kairos-hk-input.recording { border-color: var(--kairos-status-pgm); animation: kairos-pulse 300ms infinite; }
+.kairos-hk-input:focus-visible { outline: var(--kairos-focus-base) solid var(--kairos-focus-ring-color); outline-offset: var(--kairos-focus-ring-offset); }
+
+/* ─── Section Panel (settings toggle) ─── */
+.kairos-section-panel { display: block; }
+.kairos-section-panel.hidden { display: none; }
+
+
+
+

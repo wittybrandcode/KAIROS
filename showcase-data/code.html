@@ -1,0 +1,37 @@
+<div class="kairos-flex kairos-col kairos-gap-loose">
+  <div class="kairos-flex kairos-col kairos-gap-extra-tight">
+    <h1 class="kairos-text-3xl kairos-font-bold">Code (الأكواد)</h1>
+    <p class="kairos-text-color-secondary">Inline code and code block displays for broadcast system logs and labels.</p>
+  </div>
+
+  <div class="kairos-bg-surface kairos-border kairos-border-color-muted kairos-p-loose kairos-flex kairos-col kairos-gap-standard">
+    <h3 class="kairos-text-sm kairos-text-color-muted kairos-tracking-widest kairos-uppercase">Inline Code (كود ضمن النص)</h3>
+    <p class="kairos-text-md kairos-text-color-secondary">
+      Press <code class="kairos-code">Ctrl+T</code> to take selected source or
+      type <code class="kairos-code">SET_PGM 3</code> in the command palette.
+      Check log at <code class="kairos-code">/var/log/broadcast/</code>.
+    </p>
+    <p class="kairos-text-md kairos-text-color-secondary">
+      System status: <code class="kairos-code kairos-text-color-pvw">ONLINE</code>
+      Signal: <code class="kairos-code kairos-text-color-pgm">LOST</code>
+      Mode: <code class="kairos-code kairos-text-color-warning">STANDBY</code>
+    </p>
+  </div>
+
+  <div class="kairos-bg-surface kairos-border kairos-border-color-muted kairos-p-loose kairos-flex kairos-col kairos-gap-standard">
+    <h3 class="kairos-text-sm kairos-text-color-muted kairos-tracking-widest kairos-uppercase">Code Blocks (كتل برمجية)</h3>
+    <pre class="kairos-bg-deep kairos-border kairos-border-color-muted kairos-p-standard kairos-font-mono kairos-text-sm kairos-text-color-muted kairos-overflow-x-auto"><code>  { "source": "CAM-01", "status": "pgm", "signal": "1080p60" }
+  { "source": "VTR-03", "status": "pvw", "signal": "1080i30" }
+  { "source": "GFX-02", "status": "stby", "signal": "2160p60" }
+  </code></pre>
+  </div>
+
+  <div class="kairos-bg-surface kairos-border kairos-border-color-muted kairos-p-loose kairos-flex kairos-col kairos-gap-standard">
+    <h3 class="kairos-text-sm kairos-text-color-muted kairos-tracking-widest kairos-uppercase">System Logs (سجلات النظام)</h3>
+    <pre class="kairos-bg-deep kairos-border kairos-border-color-muted kairos-p-standard kairos-font-mono kairos-text-sm kairos-overflow-x-auto"><code>  <span class="kairos-text-color-pvw">[10:23:45]</span> <span class="kairos-text-color-muted">ROUTER: matrix crosspoint set — CAM-01 → PGM</span>
+  <span class="kairos-text-color-pgm">[10:23:46]</span> <span class="kairos-text-color-muted">ERROR: SRC-03 signal timeout — check SDI cable</span>
+  <span class="kairos-text-color-warning">[10:23:47]</span> <span class="kairos-text-color-muted">WARN: genlock offset exceeds threshold (12μs)</span>
+  <span class="kairos-text-color-info">[10:23:48]</span> <span class="kairos-text-color-muted">INFO: multiview layout updated — grid 4x4</span>
+  </code></pre>
+  </div>
+</div>

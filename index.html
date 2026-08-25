@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kairos Framework — Core Showcase</title>
+  <link rel="stylesheet" href="src/kairos.css" />
+  <script type="module" src="src/kairos.ts"></script>
+</head>
+<body class="kairos-bg-deep kairos-text-color kairos-overflow-hidden">
+
+  <!-- 1. The Stage (App Wrapper) -->
+  <div class="kairos-stage">
+
+    <!-- TOP BAR -->
+    <header class="kairos-flex kairos-items-center kairos-justify-between kairos-px-standard kairos-bg-surface-alt kairos-border-b kairos-border-color-muted">
+      <!-- Logo / Title -->
+      <div class="kairos-flex kairos-items-center kairos-gap-compact">
+        <i class="kairos-icon-circles-four kairos-icon-md kairos-icon-pvw"></i>
+        <span class="kairos-font-bold kairos-tracking-wider kairos-uppercase">KAIROS FRAMEWORK v01</span>
+      </div>
+      
+      <!-- Right Side Actions -->
+      <div class="kairos-flex kairos-items-center kairos-gap-standard">
+        <button class="kairos-btn kairos-size-sm kairos-intent-neutral kairos-variant-outline" id="reset-tokens">RESET TOKENS</button>
+      </div>
+    </header>
+
+    <!-- MAIN SHELL: Left Panel + Center Panel + Right Panel -->
+    <div class="kairos-shell">
+      
+      <!-- LEFT PANEL: Navigation Inventory -->
+      <aside class="kairos-sidebar">
+        <div class="kairos-sidebar-header">
+          <div class="kairos-search-input">
+            <i class="ph ph-magnifying-glass"></i>
+            <input type="text" placeholder="Search Components...">
+          </div>
+        </div>
+
+        <div class="kairos-sidebar-content" id="sidebar-nav">
+          <!-- Populated dynamically by showcase.js -->
+        </div>
+      </aside>
+
+      <!-- CENTER PANEL: Dynamic Content Viewer -->
+      <main class="kairos-center kairos-bg-deep-alt kairos-overflow-y-auto kairos-p-extra-loose kairos-border-none" id="main-viewer">
+        <!-- Content will be injected here -->
+      </main>
+
+      <!-- RIGHT PANEL: Omni-Token Controller -->
+      <aside class="kairos-right-panel kairos-border-l kairos-border-color-muted">
+        
+        <div class="kairos-p-standard kairos-border-b kairos-border-color-muted kairos-bg-surface-alt">
+          <span class="kairos-text-sm kairos-font-bold kairos-tracking-widest kairos-uppercase">Live Token Override</span>
+        </div>
+
+        <div class="kairos-right-scroll kairos-p-standard kairos-flex kairos-col kairos-gap-loose">
+          
+          <!-- Status Colors -->
+          <div class="kairos-flex kairos-col kairos-gap-compact">
+            <span class="kairos-text-xs kairos-text-color-placeholder kairos-uppercase kairos-tracking-widest">Status Colors</span>
+            
+            <div class="kairos-flex kairos-items-center kairos-justify-between kairos-bg-surface kairos-p-compact kairos-border kairos-border-color-muted">
+              <label class="kairos-text-xs kairos-font-mono kairos-text-color-pgm">PGM</label>
+              <input type="color" data-token="--kairos-status-pgm" value="#FF3B30" class="kairos-color-input">
+            </div>
+            <div class="kairos-flex kairos-items-center kairos-justify-between kairos-bg-surface kairos-p-compact kairos-border kairos-border-color-muted">
+              <label class="kairos-text-xs kairos-font-mono kairos-text-color-pvw">PVW</label>
+              <input type="color" data-token="--kairos-status-pvw" value="#22C55E" class="kairos-color-input">
+            </div>
+            <div class="kairos-flex kairos-items-center kairos-justify-between kairos-bg-surface kairos-p-compact kairos-border kairos-border-color-muted">
+              <label class="kairos-text-xs kairos-font-mono kairos-text-color-warning">WARNING</label>
+              <input type="color" data-token="--kairos-status-warning" value="#EAB308" class="kairos-color-input">
+            </div>
+            <div class="kairos-flex kairos-items-center kairos-justify-between kairos-bg-surface kairos-p-compact kairos-border kairos-border-color-muted">
+              <label class="kairos-text-xs kairos-font-mono kairos-text-color-info">INFO</label>
+              <input type="color" data-token="--kairos-status-info" value="#3B82F6" class="kairos-color-input">
+            </div>
+          </div>
+
+          <!-- Backgrounds -->
+          <div class="kairos-flex kairos-col kairos-gap-compact">
+            <span class="kairos-text-xs kairos-text-color-placeholder kairos-uppercase kairos-tracking-widest">Backgrounds</span>
+            
+            <div class="kairos-flex kairos-items-center kairos-justify-between kairos-bg-surface kairos-p-compact kairos-border kairos-border-color-muted">
+              <label class="kairos-text-xs kairos-font-mono kairos-text-color">Deep</label>
+              <input type="color" data-token="--kairos-bg-deep" value="#090A0E" class="kairos-color-input">
+            </div>
+            <div class="kairos-flex kairos-items-center kairos-justify-between kairos-bg-surface kairos-p-compact kairos-border kairos-border-color-muted">
+              <label class="kairos-text-xs kairos-font-mono kairos-text-color">Surface</label>
+              <input type="color" data-token="--kairos-bg-surface" value="#15171E" class="kairos-color-input">
+            </div>
+            <div class="kairos-flex kairos-items-center kairos-justify-between kairos-bg-surface kairos-p-compact kairos-border kairos-border-color-muted">
+              <label class="kairos-text-xs kairos-font-mono kairos-text-color">Surface Alt</label>
+              <input type="color" data-token="--kairos-bg-surface-alt" value="#1A1C24" class="kairos-color-input">
+            </div>
+          </div>
+
+          <!-- Borders & Text -->
+          <div class="kairos-flex kairos-col kairos-gap-compact">
+            <span class="kairos-text-xs kairos-text-color-placeholder kairos-uppercase kairos-tracking-widest">Borders & Text</span>
+            
+            <div class="kairos-flex kairos-items-center kairos-justify-between kairos-bg-surface kairos-p-compact kairos-border kairos-border-color-muted">
+              <label class="kairos-text-xs kairos-font-mono kairos-text-color">Text Main</label>
+              <input type="color" data-token="--kairos-text" value="#FFFFFF" class="kairos-color-input">
+            </div>
+            <div class="kairos-flex kairos-items-center kairos-justify-between kairos-bg-surface kairos-p-compact kairos-border kairos-border-color-muted">
+              <label class="kairos-text-xs kairos-font-mono kairos-text-color">Border Base</label>
+              <input type="color" data-token="--kairos-border" value="#232630" class="kairos-color-input">
+            </div>
+          </div>
+
+        </div>
+      </aside>
+
+    </div> <!-- End Shell -->
+
+  </div> <!-- End Stage -->
+
+  <!-- Load Main App Logic -->
+  <script src="showcase.js"></script>
+</body>
+</html>

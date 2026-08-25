@@ -1,0 +1,162 @@
+<div class="kairos-flex kairos-col kairos-gap-loose">
+  <div class="kairos-flex kairos-col kairos-gap-extra-tight">
+    <h1 class="kairos-text-3xl kairos-font-bold">Data Display (عرض البيانات)</h1>
+    <p class="kairos-text-color-secondary">Source lists, highlight items, I/O labels, destinations, flow nodes, and log entries.</p>
+  </div>
+
+  <!-- 1. Source List -->
+  <div class="kairos-bg-surface kairos-border kairos-border-color-muted kairos-p-loose kairos-flex kairos-col kairos-gap-standard">
+    <h3 class="kairos-text-sm kairos-text-color-muted kairos-tracking-widest kairos-uppercase">Source List (قائمة المصادر)</h3>
+    <div class="kairos-source-list">
+      <div class="kairos-source-item active">
+        <i class="kairos-icon-video-camera kairos-icon-sm kairos-icon-pgm"></i>
+        <span class="kairos-text-sm kairos-font-bold kairos-text-color">CAM-01</span>
+        <span class="kairos-text-sm kairos-text-color-muted kairos-ml-auto">PGM</span>
+      </div>
+      <div class="kairos-source-item">
+        <i class="kairos-icon-video-camera kairos-icon-sm kairos-icon-pvw"></i>
+        <span class="kairos-text-sm kairos-font-bold kairos-text-color">CAM-02</span>
+        <span class="kairos-text-sm kairos-text-color-muted kairos-ml-auto">PVW</span>
+      </div>
+      <div class="kairos-source-item">
+        <i class="kairos-icon-film-strip kairos-icon-sm kairos-icon-muted"></i>
+        <span class="kairos-text-sm kairos-font-bold kairos-text-color">VTR-03</span>
+        <span class="kairos-text-sm kairos-text-color-muted kairos-ml-auto">STBY</span>
+      </div>
+      <div class="kairos-source-item">
+        <i class="kairos-icon-presentation kairos-icon-sm kairos-icon-muted"></i>
+        <span class="kairos-text-sm kairos-font-bold kairos-text-color">GFX-01</span>
+        <span class="kairos-text-sm kairos-text-color-muted kairos-ml-auto">STBY</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Highlight List -->
+  <div class="kairos-bg-surface kairos-border kairos-border-color-muted kairos-p-loose kairos-flex kairos-col kairos-gap-standard">
+    <h3 class="kairos-text-sm kairos-text-color-muted kairos-tracking-widest kairos-uppercase">Highlight List (قائمة التمييز)</h3>
+    <div class="kairos-hl-list">
+      <div class="kairos-hl-item active">
+        <div class="kairos-hl-border kairos-bg-pgm"></div>
+        <i class="kairos-icon-broadcast kairos-icon-sm kairos-icon-pgm"></i>
+        <span class="kairos-flex kairos-col kairos-gap-extra-tight">
+          <span class="kairos-text-sm kairos-font-bold">Camera 01 — Live</span>
+          <span class="kairos-text-xs kairos-text-color-muted">1080p60 · HDR</span>
+        </span>
+        <span class="kairos-hl-time">00:12:34</span>
+      </div>
+      <div class="kairos-hl-item">
+        <div class="kairos-hl-border kairos-bg-pvw"></div>
+        <i class="kairos-icon-eye kairos-icon-sm kairos-icon-pvw"></i>
+        <span class="kairos-flex kairos-col kairos-gap-extra-tight">
+          <span class="kairos-text-sm kairos-font-bold">VTR 03 — Preview</span>
+          <span class="kairos-text-xs kairos-text-color-muted">1080i30 · SDR</span>
+        </span>
+        <span class="kairos-hl-time">00:15:22</span>
+      </div>
+      <div class="kairos-hl-item">
+        <div class="kairos-hl-border kairos-bg-muted"></div>
+        <i class="kairos-icon-film-strip kairos-icon-sm kairos-icon-muted"></i>
+        <span class="kairos-flex kairos-col kairos-gap-extra-tight">
+          <span class="kairos-text-sm kairos-font-bold">GFX 02 — Standby</span>
+          <span class="kairos-text-xs kairos-text-color-muted">2160p60 · HDR</span>
+        </span>
+        <span class="kairos-hl-time">00:00:00</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. I/O Labels -->
+  <div class="kairos-bg-surface kairos-border kairos-border-color-muted kairos-p-loose kairos-flex kairos-col kairos-gap-standard">
+    <h3 class="kairos-text-sm kairos-text-color-muted kairos-tracking-widest kairos-uppercase">I/O Labels (تسميات المدخل/المخرج)</h3>
+    <div class="kairos-io-list">
+      <div class="kairos-io-label">
+        <span class="kairos-text-xs kairos-text-color-muted kairos-font-mono">IN-01</span>
+        <span class="kairos-text-sm kairos-font-bold">Camera 01</span>
+        <span class="kairos-text-xs kairos-text-color-muted kairos-ml-auto">SDI-1</span>
+      </div>
+      <div class="kairos-io-label active">
+        <span class="kairos-text-xs kairos-text-color-muted kairos-font-mono">IN-02</span>
+        <span class="kairos-text-sm kairos-font-bold">Camera 02</span>
+        <span class="kairos-text-xs kairos-text-color-muted kairos-ml-auto">SDI-2</span>
+      </div>
+      <div class="kairos-io-label">
+        <span class="kairos-text-xs kairos-text-color-muted kairos-font-mono">IN-03</span>
+        <span class="kairos-text-sm kairos-font-bold">VTR 03</span>
+        <span class="kairos-text-xs kairos-text-color-muted kairos-ml-auto">SDI-3</span>
+      </div>
+      <div class="kairos-io-label">
+        <span class="kairos-text-xs kairos-text-color-muted kairos-font-mono">OUT-01</span>
+        <span class="kairos-text-sm kairos-font-bold">PGM Feed</span>
+        <span class="kairos-text-xs kairos-text-color-muted kairos-ml-auto">SDI-4</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. Destination Row -->
+  <div class="kairos-bg-surface kairos-border kairos-border-color-muted kairos-p-loose kairos-flex kairos-col kairos-gap-standard">
+    <h3 class="kairos-text-sm kairos-text-color-muted kairos-tracking-widest kairos-uppercase">Destinations (الوجهات)</h3>
+    <div class="kairos-dest-row">
+      <div class="kairos-dest-label active">
+        <span class="kairos-text-sm kairos-font-bold">PGM</span>
+        <span class="kairos-text-xs kairos-text-color-pgm">●</span>
+      </div>
+      <div class="kairos-dest-label">
+        <span class="kairos-text-sm kairos-font-bold">PVW</span>
+        <span class="kairos-text-xs kairos-text-color-pvw">●</span>
+      </div>
+      <div class="kairos-dest-label">
+        <span class="kairos-text-sm kairos-font-bold">AUX-1</span>
+      </div>
+      <div class="kairos-dest-label">
+        <span class="kairos-text-sm kairos-font-bold">AUX-2</span>
+      </div>
+      <div class="kairos-dest-label">
+        <span class="kairos-text-sm kairos-font-bold">DSK</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. Flow Row -->
+  <div class="kairos-bg-surface kairos-border kairos-border-color-muted kairos-p-loose kairos-flex kairos-col kairos-gap-standard">
+    <h3 class="kairos-text-sm kairos-text-color-muted kairos-tracking-widest kairos-uppercase">Flow (التدفق)</h3>
+    <div class="kairos-flow-row">
+      <div class="kairos-flow-node active">CAM-01</div>
+      <div class="kairos-flow-arrow"><i class="kairos-icon-arrow-right kairos-icon-sm"></i></div>
+      <div class="kairos-flow-node">ROUTER-A</div>
+      <div class="kairos-flow-arrow"><i class="kairos-icon-arrow-right kairos-icon-sm"></i></div>
+      <div class="kairos-flow-node">MIX-EFFECT</div>
+      <div class="kairos-flow-arrow"><i class="kairos-icon-arrow-right kairos-icon-sm"></i></div>
+      <div class="kairos-flow-node">PGM</div>
+    </div>
+    <div class="kairos-flow-row kairos-mt-compact">
+      <div class="kairos-flow-node">VTR-03</div>
+      <div class="kairos-flow-arrow"><i class="kairos-icon-arrow-right kairos-icon-sm"></i></div>
+      <div class="kairos-flow-node">ROUTER-B</div>
+      <div class="kairos-flow-arrow"><i class="kairos-icon-arrow-right kairos-icon-sm"></i></div>
+      <div class="kairos-flow-node">PVW</div>
+    </div>
+  </div>
+
+  <!-- 6. Log Entries -->
+  <div class="kairos-bg-surface kairos-border kairos-border-color-muted kairos-p-loose kairos-flex kairos-col kairos-gap-standard">
+    <h3 class="kairos-text-sm kairos-text-color-muted kairos-tracking-widest kairos-uppercase">Log (السجلات)</h3>
+    <div class="kairos-log-list">
+      <div class="kairos-log-entry">
+        <span class="kairos-log-time">10:23:45</span>
+        <span>Router matrix crosspoint set: CAM-01 → PGM</span>
+      </div>
+      <div class="kairos-log-entry err">
+        <span class="kairos-log-time">10:23:46</span>
+        <span>SRC-03 signal timeout — check SDI cable</span>
+      </div>
+      <div class="kairos-log-entry warn">
+        <span class="kairos-log-time">10:23:47</span>
+        <span>Genlock offset exceeds threshold (12μs)</span>
+      </div>
+      <div class="kairos-log-entry info">
+        <span class="kairos-log-time">10:23:48</span>
+        <span>Multiview layout updated — grid 4x4</span>
+      </div>
+    </div>
+  </div>
+</div>

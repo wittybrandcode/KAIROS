@@ -1,0 +1,357 @@
+/* ═══════════════════════════════════════════════════
+   Kairos v01 — Utilities (Kairos v01)
+   كلاسات مساعدة عامة — display, flex, gap, overflow, positioning, spacing, typography, colors
+   المصدر الوحيد لاستبدال Tailwind — كل كلاس هنا يعادل kairos-*
+   ═══════════════════════════════════════════════════ */
+
+/* ─── Display ─── */
+.kairos-flex { display: flex; }
+.kairos-inline-flex { display: inline-flex; }
+.kairos-grid { display: grid; }
+.kairos-block { display: block; }
+.kairos-inline { display: inline; }
+.kairos-inline-block { display: inline-block; }
+.kairos-hidden { display: none; }
+
+/* ─── Flex Direction ─── */
+.kairos-row { flex-direction: row; }
+.kairos-col { flex-direction: column; }
+.kairos-row-reverse { flex-direction: row-reverse; }
+.kairos-col-reverse { flex-direction: column-reverse; }
+
+/* ─── Flex Wrap ─── */
+.kairos-wrap { flex-wrap: wrap; }
+.kairos-nowrap { flex-wrap: nowrap; }
+.kairos-wrap-reverse { flex-wrap: wrap-reverse; }
+
+/* ─── Align Items ─── */
+.kairos-items-center { align-items: center; }
+.kairos-items-start { align-items: flex-start; }
+.kairos-items-end { align-items: flex-end; }
+.kairos-items-stretch { align-items: stretch; }
+.kairos-items-baseline { align-items: baseline; }
+
+/* ─── Justify Content ─── */
+.kairos-justify-center { justify-content: center; }
+.kairos-justify-start { justify-content: flex-start; }
+.kairos-justify-end { justify-content: flex-end; }
+.kairos-justify-between { justify-content: space-between; }
+.kairos-justify-around { justify-content: space-around; }
+.kairos-justify-evenly { justify-content: space-evenly; }
+
+/* ─── Flex Grow / Shrink ─── */
+.kairos-flex-1 { flex: 1; }
+.kairos-grow { flex-grow: 1; }
+.kairos-shrink-0 { flex-shrink: 0; }
+.kairos-shrink { flex-shrink: 1; }
+
+/* ─── Gap (matching spacing system) ─── */
+.kairos-gap-extra-tight { gap: var(--kairos-space-3xs); }
+.kairos-gap-compact { gap: var(--kairos-space-xs); }
+.kairos-gap-standard { gap: var(--kairos-space-md); }
+.kairos-gap-loose { gap: var(--kairos-space-xl); }
+.kairos-gap-extra-loose { gap: var(--kairos-space-3xl); }
+
+/* ─── Overflow ─── */
+.kairos-overflow-hidden { overflow: hidden; }
+.kairos-overflow-auto { overflow: auto; }
+.kairos-overflow-scroll { overflow: scroll; }
+.kairos-overflow-visible { overflow: visible; }
+.kairos-overflow-x-auto { overflow-x: auto; }
+.kairos-overflow-y-auto { overflow-y: auto; }
+.kairos-overflow-x-hidden { overflow-x: hidden; }
+.kairos-overflow-y-hidden { overflow-y: hidden; }
+
+/* ─── Position ─── */
+.kairos-relative { position: relative; }
+.kairos-absolute { position: absolute; }
+.kairos-fixed { position: fixed; }
+.kairos-sticky { position: sticky; }
+
+/* ─── Width / Height ─── */
+.kairos-w-full { width: 100%; }
+.kairos-w-auto { width: auto; }
+.kairos-w-side-panel { width: var(--kairos-layout-panel-side, 260px); }
+.kairos-h-full { height: 100%; }
+.kairos-h-auto { height: auto; }
+.kairos-w-screen { width: 100vw; }
+.kairos-h-screen { height: 100vh; }
+
+/* ─── Inset ─── */
+.kairos-inset-0 { inset: 0; }
+
+/* ─── Object Fit ─── */
+.kairos-object-cover { object-fit: cover; }
+.kairos-object-contain { object-fit: contain; }
+.kairos-object-fill { object-fit: fill; }
+
+/* ─── Text Alignment ─── */
+.kairos-text-left { text-align: left; }
+.kairos-text-center { text-align: center; }
+.kairos-text-right { text-align: right; }
+
+/* ─── Opacity ─── */
+.kairos-opacity-0 { opacity: 0; }
+.kairos-opacity-25 { opacity: 0.25; }
+.kairos-opacity-50 { opacity: 0.5; }
+.kairos-opacity-75 { opacity: 0.75; }
+.kairos-opacity-100 { opacity: 1; }
+
+/* ─── Pointer Events ─── */
+.kairos-pointer-events-none { pointer-events: none; }
+.kairos-pointer-events-auto { pointer-events: auto; }
+
+/* ─── User Select ─── */
+.kairos-select-none { user-select: none; }
+.kairos-select-text { user-select: text; }
+.kairos-select-all { user-select: all; }
+
+/* ─── Visibility ─── */
+.kairos-visible { visibility: visible; }
+.kairos-invisible { visibility: hidden; }
+
+/* ─── Screen Reader Only ─── */
+.kairos-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ─── Appearance ─── */
+.kairos-appearance-none { appearance: none; }
+
+/* ─── Whitespace ─── */
+.kairos-whitespace-nowrap { white-space: nowrap; }
+.kairos-whitespace-pre { white-space: pre; }
+
+/* ─── Border ─── */
+.kairos-border-thin { border-width: var(--kairos-border-base); }
+.kairos-border-none { border: none; }
+
+/* ─── Border Direction (single-side, uses border token by default) ─── */
+.kairos-border-t { border-top: var(--kairos-border-base) solid var(--kairos-border); }
+.kairos-border-b { border-bottom: var(--kairos-border-base) solid var(--kairos-border); }
+.kairos-border-r { border-right: var(--kairos-border-base) solid var(--kairos-border); }
+.kairos-border-l { border-left: var(--kairos-border-base) solid var(--kairos-border); }
+.kairos-border-t-muted { border-top-color: var(--kairos-border-muted); }
+.kairos-border-b-muted { border-bottom-color: var(--kairos-border-muted); }
+
+/* ─── Border Color ─── */
+.kairos-border-color-muted { border-color: var(--kairos-border-muted); }
+.kairos-border-color-active { border-color: var(--kairos-border-active); }
+
+/* ═══════════════════════════════════════════════════
+   TYPOGRAPHY UTILITIES
+   ═══════════════════════════════════════════════════ */
+
+/* Font Family */
+.kairos-font-sans { font-family: var(--kairos-font-sans); }
+.kairos-font-mono { font-family: var(--kairos-font-mono); }
+
+/* Font Size — يتبع سلم typography.css (13px base) */
+.kairos-text-xs   { font-size: var(--kairos-text-xs); }
+.kairos-text-sm   { font-size: var(--kairos-text-sm); }
+.kairos-text-md   { font-size: var(--kairos-text-md); }
+.kairos-text-lg   { font-size: var(--kairos-text-lg); }
+.kairos-text-xl   { font-size: var(--kairos-text-xl); }
+.kairos-text-2xl  { font-size: var(--kairos-text-2xl); }
+.kairos-text-3xl  { font-size: var(--kairos-text-3xl); }
+.kairos-text-4xl  { font-size: var(--kairos-text-4xl); }
+
+/* Font Weight */
+.kairos-font-light { font-weight: var(--kairos-weight-light); }
+.kairos-font-normal { font-weight: var(--kairos-weight-normal); }
+.kairos-font-medium { font-weight: var(--kairos-weight-medium); }
+.kairos-font-bold   { font-weight: var(--kairos-weight-bold); }
+.kairos-font-heavy   { font-weight: var(--kairos-weight-heavy); }
+
+/* Letter Spacing */
+.kairos-tracking-tight       { letter-spacing: var(--kairos-tracking-tight); }
+.kairos-tracking-normal      { letter-spacing: var(--kairos-tracking-normal); }
+.kairos-tracking-wide        { letter-spacing: var(--kairos-tracking-wide); }
+.kairos-tracking-wider       { letter-spacing: var(--kairos-tracking-wider); }
+.kairos-tracking-widest      { letter-spacing: var(--kairos-tracking-widest); }
+.kairos-tracking-extra-wide  { letter-spacing: var(--kairos-tracking-extra-wide); }
+.kairos-tracking-ultra       { letter-spacing: var(--kairos-tracking-ultra); }
+.kairos-tracking-max         { letter-spacing: var(--kairos-tracking-max); }
+.kairos-tracking-super-wide  { letter-spacing: var(--kairos-tracking-super-wide); }
+
+/* ═══════════════════════════════════════════════════
+   FLEX / GRID UTILITIES
+   ═══════════════════════════════════════════════════ */
+/* wrap/nowrap موجودة في قسم Flex Wrap أعلاه — kairos-wrap، kairos-nowrap */
+
+/* CSS Grid */
+.kairos-grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
+.kairos-grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
+.kairos-grid-cols-4 { grid-template-columns: repeat(4, 1fr); }
+.kairos-grid-cols-5 { grid-template-columns: repeat(5, 1fr); }
+.kairos-grid-cols-6 { grid-template-columns: repeat(6, 1fr); }
+.kairos-grid-cols-8 { grid-template-columns: repeat(8, 1fr); }
+.kairos-grid-cols-9 { grid-template-columns: repeat(9, 1fr); }
+.kairos-col-span-2 { grid-column: span 2; }
+.kairos-col-span-3 { grid-column: span 3; }
+
+/* ═══════════════════════════════════════════════════
+   PADDING UTILITIES — 5 مستويات من spacing.css
+   ═══════════════════════════════════════════════════ */
+.kairos-p-extra-tight { padding: var(--kairos-space-3xs); }
+.kairos-p-compact     { padding: var(--kairos-space-xs); }
+.kairos-p-standard    { padding: var(--kairos-space-md); }
+.kairos-p-loose       { padding: var(--kairos-space-xl); }
+.kairos-p-extra-loose { padding: var(--kairos-space-3xl); }
+
+.kairos-px-extra-tight { padding-left: var(--kairos-space-3xs); padding-right: var(--kairos-space-3xs); }
+.kairos-px-compact     { padding-left: var(--kairos-space-xs); padding-right: var(--kairos-space-xs); }
+.kairos-px-standard    { padding-left: var(--kairos-space-md); padding-right: var(--kairos-space-md); }
+.kairos-px-loose       { padding-left: var(--kairos-space-xl); padding-right: var(--kairos-space-xl); }
+.kairos-px-extra-loose { padding-left: var(--kairos-space-3xl); padding-right: var(--kairos-space-3xl); }
+
+.kairos-py-extra-tight { padding-top: var(--kairos-space-3xs); padding-bottom: var(--kairos-space-3xs); }
+.kairos-py-compact     { padding-top: var(--kairos-space-xs); padding-bottom: var(--kairos-space-xs); }
+.kairos-py-standard    { padding-top: var(--kairos-space-md); padding-bottom: var(--kairos-space-md); }
+.kairos-py-loose       { padding-top: var(--kairos-space-xl); padding-bottom: var(--kairos-space-xl); }
+.kairos-py-extra-loose { padding-top: var(--kairos-space-3xl); padding-bottom: var(--kairos-space-3xl); }
+
+.kairos-pt-extra-tight { padding-top: var(--kairos-space-3xs); }
+.kairos-pt-compact     { padding-top: var(--kairos-space-xs); }
+.kairos-pt-standard    { padding-top: var(--kairos-space-md); }
+.kairos-pt-loose       { padding-top: var(--kairos-space-xl); }
+.kairos-pt-extra-loose { padding-top: var(--kairos-space-3xl); }
+
+.kairos-pr-extra-tight { padding-right: var(--kairos-space-3xs); }
+.kairos-pr-compact     { padding-right: var(--kairos-space-xs); }
+.kairos-pr-standard    { padding-right: var(--kairos-space-md); }
+.kairos-pr-loose       { padding-right: var(--kairos-space-xl); }
+.kairos-pr-extra-loose { padding-right: var(--kairos-space-3xl); }
+
+.kairos-pb-extra-tight { padding-bottom: var(--kairos-space-3xs); }
+.kairos-pb-compact     { padding-bottom: var(--kairos-space-xs); }
+.kairos-pb-standard    { padding-bottom: var(--kairos-space-md); }
+.kairos-pb-loose       { padding-bottom: var(--kairos-space-xl); }
+.kairos-pb-extra-loose { padding-bottom: var(--kairos-space-3xl); }
+
+.kairos-pl-extra-tight { padding-left: var(--kairos-space-3xs); }
+.kairos-pl-compact     { padding-left: var(--kairos-space-xs); }
+.kairos-pl-standard    { padding-left: var(--kairos-space-md); }
+.kairos-pl-loose       { padding-left: var(--kairos-space-xl); }
+.kairos-pl-extra-loose { padding-left: var(--kairos-space-3xl); }
+
+/* ═══════════════════════════════════════════════════
+   MARGIN UTILITIES — 5 مستويات + auto
+   ═══════════════════════════════════════════════════ */
+.kairos-m-extra-tight { margin: var(--kairos-space-3xs); }
+.kairos-m-compact     { margin: var(--kairos-space-xs); }
+.kairos-m-standard    { margin: var(--kairos-space-md); }
+.kairos-m-loose       { margin: var(--kairos-space-xl); }
+.kairos-m-extra-loose { margin: var(--kairos-space-3xl); }
+
+.kairos-mx-extra-tight { margin-left: var(--kairos-space-3xs); margin-right: var(--kairos-space-3xs); }
+.kairos-mx-compact     { margin-left: var(--kairos-space-xs); margin-right: var(--kairos-space-xs); }
+.kairos-mx-standard    { margin-left: var(--kairos-space-md); margin-right: var(--kairos-space-md); }
+.kairos-mx-loose       { margin-left: var(--kairos-space-xl); margin-right: var(--kairos-space-xl); }
+.kairos-mx-extra-loose { margin-left: var(--kairos-space-3xl); margin-right: var(--kairos-space-3xl); }
+.kairos-mx-auto        { margin-left: auto; margin-right: auto; }
+
+.kairos-my-extra-tight { margin-top: var(--kairos-space-3xs); margin-bottom: var(--kairos-space-3xs); }
+.kairos-my-compact     { margin-top: var(--kairos-space-xs); margin-bottom: var(--kairos-space-xs); }
+.kairos-my-standard    { margin-top: var(--kairos-space-md); margin-bottom: var(--kairos-space-md); }
+.kairos-my-loose       { margin-top: var(--kairos-space-xl); margin-bottom: var(--kairos-space-xl); }
+.kairos-my-extra-loose { margin-top: var(--kairos-space-3xl); margin-bottom: var(--kairos-space-3xl); }
+.kairos-my-0           { margin-top: 0; margin-bottom: 0; }
+
+.kairos-mt-extra-tight { margin-top: var(--kairos-space-3xs); }
+.kairos-mt-compact     { margin-top: var(--kairos-space-xs); }
+.kairos-mt-standard    { margin-top: var(--kairos-space-md); }
+.kairos-mt-loose       { margin-top: var(--kairos-space-xl); }
+.kairos-mt-extra-loose { margin-top: var(--kairos-space-3xl); }
+
+.kairos-mr-extra-tight { margin-right: var(--kairos-space-3xs); }
+.kairos-mr-compact     { margin-right: var(--kairos-space-xs); }
+.kairos-mr-standard    { margin-right: var(--kairos-space-md); }
+.kairos-mr-loose       { margin-right: var(--kairos-space-xl); }
+.kairos-mr-extra-loose { margin-right: var(--kairos-space-3xl); }
+.kairos-mr-auto        { margin-right: auto; }
+
+.kairos-mb-extra-tight { margin-bottom: var(--kairos-space-3xs); }
+.kairos-mb-compact     { margin-bottom: var(--kairos-space-xs); }
+.kairos-mb-standard    { margin-bottom: var(--kairos-space-md); }
+.kairos-mb-loose       { margin-bottom: var(--kairos-space-xl); }
+.kairos-mb-extra-loose { margin-bottom: var(--kairos-space-3xl); }
+
+.kairos-ml-extra-tight { margin-left: var(--kairos-space-3xs); }
+.kairos-ml-compact     { margin-left: var(--kairos-space-xs); }
+.kairos-ml-standard    { margin-left: var(--kairos-space-md); }
+.kairos-ml-loose       { margin-left: var(--kairos-space-xl); }
+.kairos-ml-extra-loose { margin-left: var(--kairos-space-3xl); }
+.kairos-ml-auto        { margin-left: auto; }
+
+/* ═══════════════════════════════════════════════════
+   BACKGROUND COLOR UTILITIES
+   ═══════════════════════════════════════════════════ */
+.kairos-bg-deep       { background: var(--kairos-bg-deep); }
+.kairos-bg-deep-alt   { background: var(--kairos-bg-deep-alt); }
+.kairos-bg-input      { background: var(--kairos-bg-input); }
+.kairos-bg-surface    { background: var(--kairos-bg-surface); }
+.kairos-bg-surface-alt { background: var(--kairos-bg-surface-alt); }
+.kairos-bg-hover      { background: var(--kairos-bg-hover); }
+.kairos-bg-selected   { background: var(--kairos-bg-selected); }
+.kairos-bg-transparent { background: transparent; }
+.kairos-bg-muted      { background: var(--kairos-border-muted); }
+.kairos-bg-pgm        { background: var(--kairos-status-pgm); }
+.kairos-bg-pvw        { background: var(--kairos-status-pvw); }
+.kairos-bg-warning    { background: var(--kairos-status-warning); }
+.kairos-bg-info       { background: var(--kairos-status-info); }
+
+/* ═══════════════════════════════════════════════════
+   TEXT COLOR UTILITIES
+   (مكمّلة لـ icons.css — kairos-text-muted-color إلخ)
+   ═══════════════════════════════════════════════════ */
+.kairos-text-color         { color: var(--kairos-text); }
+.kairos-text-color-secondary { color: var(--kairos-text-secondary); }
+.kairos-text-color-muted   { color: var(--kairos-text-muted); }
+.kairos-text-color-info    { color: var(--kairos-status-info); }
+.kairos-text-color-warning { color: var(--kairos-status-warning); }
+.kairos-text-color-pgm     { color: var(--kairos-status-pgm); }
+.kairos-text-color-pvw     { color: var(--kairos-status-pvw); }
+
+/* ═══════════════════════════════════════════════════
+   SIZING UTILITIES — أبعاد مخصصة
+   ═══════════════════════════════════════════════════ */
+.kairos-min-w-0 { min-width: 0; }
+.kairos-min-h-0 { min-height: 0; }
+
+.kairos-w-auto   { width: auto; }
+.kairos-h-auto   { height: auto; }
+
+/* ═══════════════════════════════════════════════════
+   TRANSITION UTILITIES
+   ═══════════════════════════════════════════════════ */
+.kairos-transition-colors { transition: color var(--kairos-motion-fast) var(--kairos-easing-ease), background var(--kairos-motion-fast) var(--kairos-easing-ease), border-color var(--kairos-motion-fast) var(--kairos-easing-ease); }
+.kairos-transition-opacity { transition: opacity var(--kairos-motion-fast) var(--kairos-easing-ease); }
+
+/* ═══════════════════════════════════════════════════
+    MISC UTILITIES
+    ═══════════════════════════════════════════════════ */
+.kairos-outline-none { outline: none; }
+.kairos-gap-0 { gap: 0; }
+.kairos-min-h-screen { min-height: 100vh; }
+.kairos-w-min { width: min-content; }
+
+/* ═══════════════════════════════════════════════════
+    COLOR INPUT — Color picker swatch
+    ═══════════════════════════════════════════════════ */
+.kairos-color-input {
+  width: var(--kairos-swatch-sm-size);
+  height: var(--kairos-swatch-sm-size);
+  cursor: pointer;
+  padding: 0;
+  border: none;
+}
+

@@ -1,0 +1,113 @@
+/* ═══════════════════════════════════════════════════════════════
+   Kairos v01 — Rundown / Playlist / Event List
+   قائمة الأحداث (جدول البث)
+   ═══════════════════════════════════════════════════════════════ */
+
+.kairos-rundown {
+  display: flex;
+  flex-direction: column;
+  border: var(--kairos-border-base) solid var(--kairos-border-muted);
+  background: var(--kairos-bg-deep);
+}
+
+.kairos-rundown-item {
+  display: flex;
+  align-items: center;
+  gap: var(--kairos-rundown-item-gap);
+  padding: var(--kairos-rundown-item-padding-y) var(--kairos-rundown-item-padding-x);
+  border-bottom: var(--kairos-border-base) solid var(--kairos-border-muted);
+  background: var(--kairos-bg-surface);
+  transition: background var(--kairos-motion-fast) var(--kairos-easing-ease);
+}
+.kairos-rundown-item:last-child {
+  border-bottom: none;
+}
+.kairos-rundown-item:hover {
+  background: var(--kairos-bg-hover);
+}
+
+/* ─── Status Dot ─── */
+.kairos-rundown-status {
+  width: var(--kairos-size-tally);
+  height: var(--kairos-size-tally);
+  flex-shrink: 0;
+}
+.kairos-rundown-status.done {
+  background: var(--kairos-status-pvw);
+}
+.kairos-rundown-status.live {
+  background: var(--kairos-status-pgm);
+}
+.kairos-rundown-status.next {
+  background: var(--kairos-text-placeholder);
+}
+.kairos-rundown-status.prep {
+  background: var(--kairos-status-info);
+}
+
+/* ─── Timecode ─── */
+.kairos-rundown-tc {
+  font-family: var(--kairos-font-mono);
+  font-size: var(--kairos-text-sm);
+  color: var(--kairos-text-muted);
+  min-width: var(--kairos-rundown-tc-w);
+  flex-shrink: 0;
+}
+.kairos-rundown-item.live .kairos-rundown-tc {
+  color: var(--kairos-status-pgm);
+}
+
+/* ─── Content ─── */
+.kairos-rundown-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  min-width: 0;
+}
+.kairos-rundown-title {
+  font-size: var(--kairos-text-sm);
+  color: var(--kairos-text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.kairos-rundown-notes {
+  font-size: var(--kairos-text-2xs);
+  color: var(--kairos-text-placeholder);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ─── Duration ─── */
+.kairos-rundown-dur {
+  font-family: var(--kairos-font-mono);
+  font-size: var(--kairos-text-sm);
+  color: var(--kairos-text-placeholder);
+  flex-shrink: 0;
+}
+
+/* ─── Live item highlight ─── */
+.kairos-rundown-item.live {
+  background: var(--kairos-pgm-bg);
+  border-left: calc(var(--kairos-border-thick) + var(--kairos-border-base)) solid var(--kairos-status-pgm);
+}
+.kairos-rundown-item.live .kairos-rundown-title {
+  color: var(--kairos-status-pgm);
+  font-weight: var(--kairos-weight-bold);
+}
+
+/* ─── Compact variant ─── */
+.kairos-rundown.compact .kairos-rundown-item {
+  padding: var(--kairos-rundown-compact-padding-y) var(--kairos-rundown-compact-padding-x);
+}
+.kairos-rundown.compact .kairos-rundown-tc,
+.kairos-rundown.compact .kairos-rundown-dur {
+  font-size: var(--kairos-text-2xs);
+  min-width: 40px;
+}
+.kairos-rundown.compact .kairos-rundown-title {
+  font-size: var(--kairos-text-2xs);
+}
+

@@ -1,0 +1,62 @@
+/* ═══════════════════════════════════════════════════════════════
+   Kairos v01 — Property Row (Label + Value)
+   صف خاصية — تسمية وقيمة
+   ═══════════════════════════════════════════════════════════════ */
+
+.kairos-prop {
+  display: flex;
+  align-items: center;
+  gap: var(--kairos-prop-gap);
+  padding: var(--kairos-prop-padding-y) 0;
+  border-bottom: var(--kairos-border-base) solid var(--kairos-border-muted);
+}
+.kairos-prop:last-child {
+  border-bottom: none;
+}
+
+.kairos-prop-label {
+  font-size: var(--kairos-text-sm);
+  color: var(--kairos-text-placeholder);
+  text-transform: uppercase;
+  letter-spacing: var(--kairos-tracking-wider);
+  min-width: var(--kairos-prop-label-w);
+  flex-shrink: 0;
+}
+
+.kairos-prop-value {
+  font-family: var(--kairos-font-mono);
+  font-size: var(--kairos-text-sm);
+  color: var(--kairos-text);
+}
+
+/* ─── Compact Variant ─── */
+.kairos-prop.compact {
+  gap: var(--kairos-prop-compact-gap);
+  padding: var(--kairos-prop-compact-padding-y) 0;
+}
+.kairos-prop.compact .kairos-prop-label {
+  font-size: var(--kairos-text-2xs);
+  min-width: var(--kairos-property-compact-min-width);
+}
+.kairos-prop.compact .kairos-prop-value {
+  font-size: var(--kairos-text-2xs);
+}
+
+/* ─── Inline Variant (side-by-side in one line) ─── */
+.kairos-prop-inline {
+  display: flex;
+  align-items: baseline;
+  gap: var(--kairos-prop-inline-gap);
+}
+.kairos-prop-inline .kairos-prop-label {
+  font-size: var(--kairos-text-sm);
+  color: var(--kairos-text-placeholder);
+  text-transform: uppercase;
+  letter-spacing: var(--kairos-tracking-wider);
+}
+.kairos-prop-inline .kairos-prop-value {
+  font-family: var(--kairos-font-mono);
+  font-size: var(--kairos-text-sm);
+  color: var(--kairos-text);
+}
+

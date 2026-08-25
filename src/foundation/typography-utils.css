@@ -1,0 +1,35 @@
+/* ---------------------------------------------------
+   Kairos v01 — Typography Utilities
+   --------------------------------------------------- */
+
+.kairos-weight-light { font-weight: var(--kairos-weight-light); }
+.kairos-weight-normal { font-weight: var(--kairos-weight-normal); }
+.kairos-weight-medium { font-weight: var(--kairos-weight-medium); }
+.kairos-weight-bold { font-weight: var(--kairos-weight-bold); }
+.kairos-weight-heavy { font-weight: var(--kairos-weight-heavy); }
+
+.kairos-text-ltr { direction: ltr; text-align: left; }
+.kairos-text-rtl { direction: rtl; text-align: right; }
+
+.kairos-text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Simple uppercase — no tracking override, use kairos-tracking-* separately */
+.kairos-uppercase {
+  text-transform: uppercase;
+}
+
+/* Composite: uppercase + ultra tracking for condensed labels */
+.kairos-text-uppercase {
+  text-transform: uppercase;
+  letter-spacing: var(--kairos-tracking-ultra);
+}
+
+.kairos-text-code {
+  font-family: var(--kairos-font-mono);
+  letter-spacing: var(--kairos-tracking-wide);
+}
+

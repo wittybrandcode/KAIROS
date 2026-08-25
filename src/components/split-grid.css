@@ -1,0 +1,15 @@
+.kairos-split-grid { display: grid; gap: var(--kairos-split-grid-gap); background: var(--kairos-bg-deep); padding: var(--kairos-split-grid-padding); }
+.kairos-split-grid-cell { position: relative; aspect-ratio: 16 / 9; background: var(--kairos-bg-surface); border: var(--kairos-border-base) solid var(--kairos-border-muted); display: flex; align-items: center; justify-content: center; font-size: var(--kairos-split-grid-cell-font-size); color: var(--kairos-text-placeholder); font-family: var(--kairos-font-mono); overflow: hidden; }
+.kairos-split-grid-cell.active { border-color: var(--kairos-status-pvw); border-width: var(--kairos-border-thick); }
+
+.kairos-split-grid-cell-label { position: absolute; bottom: 0; left: 0; right: 0; padding: var(--kairos-split-grid-cell-label-padding-y) var(--kairos-split-grid-cell-label-padding-x); background: var(--kairos-bg-deep); font-size: var(--kairos-split-grid-cell-label-font-size); color: var(--kairos-text-muted); font-family: var(--kairos-font-mono); }
+
+.kairos-split-grid.one { grid-template-columns: 1fr; }
+.kairos-split-grid.two { grid-template-columns: 1fr 1fr; }
+.kairos-split-grid.three { grid-template-columns: 1fr 1fr 1fr; }
+.kairos-split-grid.four { grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; }
+.kairos-split-grid.pip { grid-template-columns: 1fr var(--kairos-split-grid-pip-width); grid-template-rows: 1fr; }
+.kairos-split-grid.pip .kairos-split-grid-cell:last-child { aspect-ratio: auto; }
+.kairos-split-grid.side-by-side { grid-template-columns: 1fr 1fr; grid-template-rows: 1fr; }
+.kairos-split-grid.side-by-side .kairos-split-grid-cell { aspect-ratio: auto; min-height: var(--kairos-split-grid-side-min-height); }
+

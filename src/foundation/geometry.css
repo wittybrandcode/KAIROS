@@ -1,0 +1,18 @@
+/* ---------------------------------------------------
+   Kairos v01 — Geometry
+   ??????? ???????? (Borders, Radius, Focus)
+   --------------------------------------------------- */
+
+:root {
+  --kairos-radius-none: 0;
+  --kairos-border-none: 0;
+  --kairos-border-base: 1px;
+  --kairos-border-thick: 2px;
+  --kairos-focus-base: 2px;
+
+  /* Legacy aliases until full migration */
+  --kairos-border-width: var(--kairos-border-base);
+  --kairos-border-width-thick: var(--kairos-border-thick);
+  --kairos-focus-ring-width: var(--kairos-focus-base);
+}
+

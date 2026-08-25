@@ -1,0 +1,18 @@
+/* ═══════════════════════════════════════════════════
+   Kairos v01 — Status Dot (Feedback Primitive)
+   ═══════════════════════════════════════════════════ */
+
+.kairos-status-dot {
+  width: var(--kairos-size-dot-md);
+  height: var(--kairos-size-dot-md);
+  border-radius: 0;
+  flex-shrink: 0;
+  border: var(--kairos-border-base) solid var(--kairos-comp-current-border, var(--kairos-text-placeholder));
+  background: var(--kairos-comp-current-bg, transparent);
+}
+.kairos-status-dot.pgm { background: var(--kairos-status-pgm); border-color: var(--kairos-status-pgm); }
+.kairos-status-dot.pvw { background: var(--kairos-status-pvw); border-color: var(--kairos-status-pvw); }
+.kairos-status-dot.warn { background: var(--kairos-status-warning); border-color: var(--kairos-status-warning); }
+.kairos-status-dot.info { background: var(--kairos-status-info); border-color: var(--kairos-status-info); }
+.kairos-status-dot.kairos-offline { background: var(--kairos-border-muted); border-color: var(--kairos-text-placeholder); }
+

@@ -1,0 +1,29 @@
+/* ═══════════════════════════════════════════════════
+   Kairos v01 — Progress Bar Component
+   أشرطة التقدم
+   ═══════════════════════════════════════════════════ */
+
+.kairos-progress-track { height: var(--kairos-size-indicator); background: var(--kairos-bg-input); overflow: hidden; }
+.kairos-progress-fill { height: 100%; background: var(--kairos-status-pvw); transition: width var(--kairos-motion-normal) var(--kairos-easing-ease); }
+.kairos-progress-fill.ok { background: var(--kairos-status-pvw); }
+.kairos-progress-fill.warn { background: var(--kairos-status-warning); }
+.kairos-progress-fill.err { background: var(--kairos-status-pgm); }
+
+.kairos-progress {
+  width: 100%;
+  height: var(--kairos-comp-padding-y, var(--kairos-progress-height));
+  background: var(--kairos-bg-input);
+  border: var(--kairos-border-base) solid var(--kairos-border);
+  overflow: hidden;
+  position: relative;
+}
+.kairos-progress-bar {
+  height: 100%;
+  background: var(--kairos-comp-current-bg, var(--kairos-status-pvw));
+  transition: width var(--kairos-motion-normal) var(--kairos-easing-ease-out);
+}
+.kairos-progress[data-state="loading"] .kairos-progress-bar {
+  width: 50%;
+  animation: kairos-pulse 300ms ease-in-out infinite;
+}
+

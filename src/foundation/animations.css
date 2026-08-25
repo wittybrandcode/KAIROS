@@ -1,0 +1,22 @@
+/* ═══════════════════════════════════════════════════
+   Kairos v01 — Animations & Keyframes
+   جميع الـ @keyframes في النظام — بادئة kairos- فقط
+   ═══════════════════════════════════════════════════ */
+
+/* ─── Pulse (opacity blink) ─── */
+@keyframes kairos-pulse {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0.5; }
+}
+
+/* ─── Shimmer (skeleton loading) ─── */
+@keyframes kairos-shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* ─── Spin (rotating loader) ─── */
+@keyframes kairos-spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}

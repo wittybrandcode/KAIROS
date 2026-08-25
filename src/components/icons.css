@@ -1,0 +1,26 @@
+/* ═══════════════════════════════════════════════════
+   Kairos v01 — Icon Utilities (SVG)
+   ═══════════════════════════════════════════════════ */
+
+/* Base — ensures SVG fills its container exactly */
+svg.kairos-icon-pgm         { color: var(--kairos-status-pgm); }
+svg.kairos-icon-pvw         { color: var(--kairos-status-pvw); }
+svg.kairos-icon-warn        { color: var(--kairos-status-warning); }
+svg.kairos-icon-info        { color: var(--kairos-status-info); }
+svg.kairos-icon-muted       { color: var(--kairos-text-muted); }
+svg.kairos-icon-placeholder { color: var(--kairos-text-placeholder); }
+
+svg.kairos-icon-xs          { width: var(--kairos-icon-xs); height: var(--kairos-icon-xs); }
+svg.kairos-icon-sm          { width: var(--kairos-icon-sm); height: var(--kairos-icon-sm); }
+svg.kairos-icon-md          { width: var(--kairos-icon-md); height: var(--kairos-icon-md); }
+svg.kairos-icon-lg          { width: var(--kairos-icon-lg); height: var(--kairos-icon-lg); }
+svg.kairos-icon-xl          { width: var(--kairos-icon-xl); height: var(--kairos-icon-xl); }
+
+svg.kairos-icon-clickable   { cursor: pointer; transition: color var(--kairos-motion-fast) var(--kairos-easing-ease); }
+svg.kairos-icon-clickable:hover { color: var(--kairos-text); }
+
+.kairos-text-muted-color       { color: var(--kairos-text-muted); }
+.kairos-text-placeholder-color { color: var(--kairos-text-placeholder); }
+.kairos-text-pvw-color         { color: var(--kairos-status-pvw); }
+.kairos-text-pgm-color         { color: var(--kairos-status-pgm); }
+.kairos-text-warn-color        { color: var(--kairos-status-warning); }

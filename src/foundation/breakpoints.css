@@ -1,0 +1,53 @@
+/* ═══════════════════════════════════════════════════
+   Kairos v01 — Breakpoints & Container Queries
+   نقاط التوقف — قيم مرجعية للمكونات والـ CSS
+   ═══════════════════════════════════════════════════ */
+
+:root {
+  --kairos-bp-xs:  360px;
+  --kairos-bp-sm:  480px;
+  --kairos-bp-md:  768px;
+  --kairos-bp-lg:  1024px;
+  --kairos-bp-xl:  1280px;
+}
+
+/* ═══════════════════════════════════════════════════
+   MEDIA QUERY UTILITIES — كلاسات hide/show
+   ═══════════════════════════════════════════════════ */
+
+@media (max-width: 360px)  { .kairos-hide-xs  { display: none !important; } }
+@media (max-width: 480px)  { .kairos-hide-sm  { display: none !important; } }
+@media (max-width: 768px)  { .kairos-hide-md  { display: none !important; } }
+@media (min-width: 1024px) { .kairos-show-lg  { display: revert !important; } }
+@media (min-width: 1280px) { .kairos-show-xl  { display: revert !important; } }
+
+@media (max-width: 360px) { .kairos-show-xs { display: none !important; } }
+@media (max-width: 480px) { .kairos-show-sm { display: none !important; } }
+@media (max-width: 768px) { .kairos-show-md { display: none !important; } }
+
+/* ═══════════════════════════════════════════════════
+   CONTAINER QUERIES — استعلامات الحاوية
+   نظام container queries بديل عن media queries
+   للاستجابة داخل المكون نفسه وليس viewport
+   ═══════════════════════════════════════════════════ */
+
+/* ─── Container type classes ─── */
+.kairos-container { container-type: inline-size; }
+.kairos-container-normal { container-type: normal; }
+.kairos-container-size { container-type: size; }
+
+/* ─── Container name defaults ─── */
+.kairos-container-panel { container-type: inline-size; container-name: panel; }
+.kairos-container-sidebar { container-type: inline-size; container-name: sidebar; }
+.kairos-container-main { container-type: inline-size; container-name: main; }
+
+/* ─── Container query utilities ─── */
+@container (max-width: 360px)  { .kairos-c-hide-xs  { display: none !important; } }
+@container (max-width: 480px)  { .kairos-c-hide-sm  { display: none !important; } }
+@container (max-width: 768px)  { .kairos-c-hide-md  { display: none !important; } }
+@container (min-width: 1024px) { .kairos-c-show-lg  { display: revert !important; } }
+@container (min-width: 1280px) { .kairos-c-show-xl  { display: revert !important; } }
+
+@container (max-width: 360px) { .kairos-c-show-xs { display: none !important; } }
+@container (max-width: 480px) { .kairos-c-show-sm { display: none !important; } }
+@container (max-width: 768px) { .kairos-c-show-md { display: none !important; } }

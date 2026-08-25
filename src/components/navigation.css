@@ -1,0 +1,80 @@
+/* ═══════════════════════════════════════════════════
+   Kairos v01 — Navigation Components
+   قائمة التنقل — الشريط العلوي، الألسن، القوائم المنسدلة
+   ═══════════════════════════════════════════════════ */
+
+/* ─── Top Bar ─── */
+.kairos-top-bar { display: flex; align-items: center; padding: 0 var(--kairos-top-bar-padding-x); background: var(--kairos-bg-surface-alt); border-bottom: var(--kairos-border-base) solid var(--kairos-border); gap: var(--kairos-top-bar-gap); height: var(--kairos-size-top-bar); flex-shrink: 0; }
+.kairos-brand { display: flex; align-items: center; gap: var(--kairos-btn-icon-gap); color: var(--kairos-text); font-weight: var(--kairos-weight-bold); font-size: var(--kairos-text-sm); letter-spacing: var(--kairos-tracking-wider); }
+.kairos-brand-mark { width: var(--kairos-icon-md); height: var(--kairos-icon-md); background: var(--kairos-status-pgm); display: flex; align-items: center; justify-content: center; color: var(--kairos-bg-deep); font-size: var(--kairos-text-sm); font-weight: var(--kairos-weight-bold); flex-shrink: 0; }
+.kairos-menu { display: flex; align-items: center; gap: var(--kairos-menu-bar-item-gap); margin-left: var(--kairos-form-field-gap); }
+.kairos-top-status { display: flex; align-items: center; gap: var(--kairos-status-bar-gap); margin-left: auto; }
+.kairos-top-status-item { display: flex; align-items: center; gap: var(--kairos-btn-icon-gap); font-size: var(--kairos-text-sm); color: var(--kairos-text-muted); font-family: var(--kairos-font-mono); }
+.kairos-user-chip { display: flex; align-items: center; gap: var(--kairos-avatar-name-gap); cursor: pointer; }
+.kairos-user-info { display: flex; flex-direction: column; gap: var(--kairos-name-role-gap); }
+.kairos-user-name { color: var(--kairos-text); font-size: var(--kairos-text-sm); font-weight: var(--kairos-weight-bold); }
+.kairos-user-role { color: var(--kairos-text-muted); font-size: var(--kairos-text-sm); text-transform: uppercase; letter-spacing: var(--kairos-tracking-wider); }
+.kairos-rec-indicator { display: flex; align-items: center; gap: var(--kairos-btn-icon-gap); padding: 0 var(--kairos-channel-label-padding); color: var(--kairos-status-pgm); font-weight: var(--kairos-weight-bold); font-size: var(--kairos-text-sm); text-transform: uppercase; letter-spacing: var(--kairos-tracking-wider); }
+
+/* ─── Status Bar ─── */
+.kairos-status-bar { display: flex; align-items: center; padding: 0 var(--kairos-status-bar-padding-x); background: var(--kairos-bg-deep-alt); border-top: var(--kairos-border-base) solid var(--kairos-border-muted); gap: var(--kairos-status-bar-gap); height: var(--kairos-size-status-bar); font-size: var(--kairos-text-sm); color: var(--kairos-text-muted); flex-shrink: 0; }
+.kairos-spacer { flex: 1; }
+
+/* ─── Menu Item ─── */
+.kairos-menu-item {
+  padding: var(--kairos-menu-item-padding-y) var(--kairos-menu-item-padding-x);
+  font-size: var(--kairos-text-sm);
+  text-transform: uppercase;
+  letter-spacing: var(--kairos-tracking-wider);
+  color: var(--kairos-text-muted);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color var(--kairos-motion-fast) var(--kairos-easing-ease-out), color var(--kairos-motion-fast) var(--kairos-easing-ease-out);
+}
+.kairos-menu-item.active { background: var(--kairos-bg-selected); color: var(--kairos-text); }
+.kairos-menu-item:hover { background: var(--kairos-bg-selected); color: var(--kairos-text); }
+.kairos-menu-item:focus-visible { outline: var(--kairos-focus-base) solid var(--kairos-focus-ring-color); outline-offset: var(--kairos-focus-ring-offset); }
+
+
+
+.kairos-dropdown-item {
+  padding: var(--kairos-dropdown-item-padding-y) var(--kairos-dropdown-item-padding-x);
+  font-size: var(--kairos-text-sm);
+  color: var(--kairos-text-muted);
+  cursor: pointer;
+  transition: background-color var(--kairos-motion-fast) var(--kairos-easing-ease-out), color var(--kairos-motion-fast) var(--kairos-easing-ease-out);
+}
+.kairos-dropdown-item:hover { background: var(--kairos-bg-selected); color: var(--kairos-text); }
+.kairos-dropdown-item:focus-visible { outline: var(--kairos-focus-base) solid var(--kairos-focus-ring-color); outline-offset: var(--kairos-focus-ring-offset); }
+.kairos-dropdown-item[class*="kairos-intent-"] { color: var(--kairos-comp-border); }
+.kairos-dropdown-item[class*="kairos-intent-"]:hover { background: var(--kairos-comp-bg-subtle); color: var(--kairos-comp-border); }
+.kairos-dropdown-divider { height: var(--kairos-border-base); background: var(--kairos-border); margin: var(--kairos-dropdown-divider-margin-y) 0; }
+
+/* ─── Status Items ─── */
+.kairos-status-item { display: flex; align-items: center; gap: var(--kairos-status-item-gap); white-space: nowrap; font-size: var(--kairos-text-sm); color: var(--kairos-text-muted); font-family: var(--kairos-font-mono); }
+.kairos-status-sep { width: var(--kairos-border-base); height: var(--kairos-status-sep-height); background: var(--kairos-border); }
+
+/* ─── Status Dot ─── */
+.kairos-status-dot { width: var(--kairos-size-dot); height: var(--kairos-size-dot); flex-shrink: 0; }
+.kairos-status-dot[class*="kairos-intent-"] { background: var(--kairos-comp-bg); }
+.kairos-status-dot.kairos-intent-neutral { background: var(--kairos-text-placeholder); }
+.kairos-status-dot[data-state="recording"] { animation: kairos-pulse 300ms ease-in-out infinite; }
+
+/* ─── Nav Item (Settings Sidebar) ─── */
+.kairos-nav-item {
+  display: flex;
+  align-items: center;
+  gap: var(--kairos-nav-item-gap);
+  padding: var(--kairos-nav-item-padding-y) var(--kairos-nav-item-padding-x);
+  font-size: var(--kairos-text-sm);
+  font-family: var(--kairos-font-mono);
+  color: var(--kairos-text-muted);
+  cursor: pointer;
+  border-left: var(--kairos-border-thick) solid transparent;
+  transition: background var(--kairos-motion-fast) var(--kairos-easing-ease), color var(--kairos-motion-fast) var(--kairos-easing-ease), border-left-color var(--kairos-motion-fast) var(--kairos-easing-ease);
+  user-select: none;
+}
+.kairos-nav-item:hover { color: var(--kairos-text); background: var(--kairos-border-muted); }
+.kairos-nav-item.kairos-active { color: var(--kairos-text); border-left-color: var(--kairos-text); background: var(--kairos-bg-surface); }
+.kairos-nav-item:focus-visible { outline: var(--kairos-focus-base) solid var(--kairos-focus-ring-color); outline-offset: var(--kairos-focus-ring-offset); }
+

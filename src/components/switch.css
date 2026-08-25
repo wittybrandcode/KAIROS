@@ -1,0 +1,33 @@
+/* ═══════════════════════════════════════════════════
+   Kairos v01 — Switch (Input Primitive)
+   ═══════════════════════════════════════════════════ */
+
+.kairos-switch {
+  width: var(--kairos-switch-width);
+  height: var(--kairos-switch-height);
+  background: var(--kairos-border-muted);
+  border: var(--kairos-border-base) solid var(--kairos-border);
+  transition: background var(--kairos-motion-normal) var(--kairos-easing-ease), border-color var(--kairos-motion-normal) var(--kairos-easing-ease);
+}
+.kairos-switch:checked,
+.kairos-switch[data-state="pressed"] {
+  background: var(--kairos-comp-current-bg, var(--kairos-status-pvw));
+  border-color: var(--kairos-comp-current-border, var(--kairos-status-pvw));
+}
+.kairos-switch::after {
+  content: '';
+  position: absolute;
+  top: var(--kairos-border-base);
+  left: var(--kairos-border-base);
+  width: var(--kairos-switch-thumb-size);
+  height: var(--kairos-switch-thumb-size);
+  background: var(--kairos-text-placeholder);
+  transition: left var(--kairos-motion-normal) var(--kairos-easing-ease), background var(--kairos-motion-normal) var(--kairos-easing-ease);
+}
+.kairos-switch:checked::after,
+.kairos-switch[data-state="pressed"]::after {
+  left: calc(var(--kairos-switch-width) - var(--kairos-switch-thumb-size) - var(--kairos-border-base) * 2);
+  background: var(--kairos-bg-deep);
+}
+.kairos-switch:focus-visible { outline: var(--kairos-focus-base) solid var(--kairos-focus-ring-color); outline-offset: var(--kairos-focus-ring-offset); }
+

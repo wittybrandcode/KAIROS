@@ -1,0 +1,52 @@
+/* ═══════════════════════════════════════════════════
+   Kairos v01 — Loading / Skeleton
+   حالات التحميل والانتظار
+   ═══════════════════════════════════════════════════ */
+
+:root {
+  --kairos-skeleton-color:      var(--kairos-bg-surface);
+  --kairos-skeleton-shimmer:    var(--kairos-bg-surface-alt);
+  --kairos-skeleton-radius:     0;
+}
+
+.kairos-skeleton {
+  background: linear-gradient(90deg,
+    var(--kairos-skeleton-color) 25%,
+    var(--kairos-skeleton-shimmer) 50%,
+    var(--kairos-skeleton-color) 75%
+  );
+  background-size: 200% 100%;
+  animation: kairos-shimmer 300ms ease-in-out infinite;
+  border-radius: 0;
+  min-height: var(--kairos-size-dot);
+}
+
+.kairos-skeleton-text  { height: var(--kairos-size-dot); margin-bottom: var(--kairos-skeleton-text-margin-bottom); }
+.kairos-skeleton-title { height: var(--kairos-size-dot-lg); width: 60%; margin-bottom: var(--kairos-skeleton-title-margin-bottom); }
+.kairos-skeleton-avatar { width: var(--kairos-control-md); height: var(--kairos-control-md); }
+.kairos-skeleton-btn   {   width: var(--kairos-set-input-num-width); height: var(--kairos-control-sm); }
+
+
+
+.kairos-spinner {
+  width: var(--kairos-size-dot-lg);
+  height: var(--kairos-size-dot-lg);
+  border: var(--kairos-border-thick) solid var(--kairos-border);
+  border-top-color: var(--kairos-status-pvw);
+  border-radius: 0;
+  animation: kairos-spin 300ms linear infinite;
+  display: inline-block;
+}
+.kairos-spinner-lg {
+  width: var(--kairos-icon-sm);
+  height: var(--kairos-icon-sm);
+  border-width: var(--kairos-border-thick);
+}
+.kairos-spinner-sm {
+  width: var(--kairos-size-dot-md);
+  height: var(--kairos-size-dot-md);
+  border-width: var(--kairos-border-base);
+}
+
+@media (prefers-reduced-motion: reduce) { .kairos-skeleton, .kairos-spinner { animation: none; } }
+

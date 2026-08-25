@@ -1,0 +1,20 @@
+.kairos-accordion { display: flex; flex-direction: column; border: var(--kairos-border-base) solid var(--kairos-border-muted); background: var(--kairos-bg-surface); }
+.kairos-accordion-item { border-bottom: var(--kairos-border-base) solid var(--kairos-border-muted); }
+.kairos-accordion-item:last-child { border-bottom: none; }
+
+.kairos-accordion-trigger { display: flex; align-items: center; gap: var(--kairos-accordion-trigger-gap); width: 100%; padding: var(--kairos-accordion-trigger-padding); background: var(--kairos-bg-surface); border: none; color: var(--kairos-text); font-size: var(--kairos-text-sm); font-family: var(--kairos-font-sans); letter-spacing: var(--kairos-tracking-wider); text-transform: uppercase; cursor: pointer; text-align: left; transition: background var(--kairos-motion-fast) var(--kairos-easing-ease); user-select: none; }
+.kairos-accordion-trigger:hover { background: var(--kairos-bg-hover); }
+.kairos-accordion-trigger:focus-visible { outline: var(--kairos-focus-base) solid var(--kairos-focus-ring-color); outline-offset: var(--kairos-focus-ring-offset); }
+.kairos-accordion-trigger-icon { margin-left: auto; color: var(--kairos-text-placeholder); font-size: var(--kairos-text-sm); transition: transform var(--kairos-motion-fast) var(--kairos-easing-ease); }
+.kairos-accordion-item.open .kairos-accordion-trigger-icon,
+.kairos-accordion-item[data-state="open"] .kairos-accordion-trigger-icon { transform: rotate(90deg); }
+
+.kairos-accordion-panel { display: none; padding: var(--kairos-accordion-panel-padding); padding-top: 0; font-size: var(--kairos-text-sm); color: var(--kairos-text-muted); }
+.kairos-accordion-item.open .kairos-accordion-panel,
+.kairos-accordion-item[data-state="open"] .kairos-accordion-panel { display: block; }
+
+.kairos-accordion.compact .kairos-accordion-trigger,
+.kairos-accordion.kairos-size-sm .kairos-accordion-trigger { padding: var(--kairos-accordion-trigger-compact-padding-y) var(--kairos-accordion-trigger-compact-padding-x); }
+.kairos-accordion.compact .kairos-accordion-panel,
+.kairos-accordion.kairos-size-sm .kairos-accordion-panel { padding: var(--kairos-accordion-panel-compact-padding-y) var(--kairos-accordion-panel-compact-padding-x); }
+

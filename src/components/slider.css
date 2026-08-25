@@ -1,0 +1,14 @@
+/* ═══════════════════════════════════════════════════
+   Kairos v01 — Slider Component
+   منزلقات القيم
+   ═══════════════════════════════════════════════════ */
+
+.kairos-slider-track { height: var(--kairos-size-indicator); background: var(--kairos-bg-input); border: var(--kairos-border-base) solid var(--kairos-border-muted); position: relative; cursor: pointer; }
+.kairos-slider-fill { height: 100%; background: var(--kairos-status-pvw); }
+.kairos-slider-thumb { position: absolute; top: calc(-1 * var(--kairos-slider-thumb-outset-y)); width: var(--kairos-slider-thumb-width); height: calc(100% + var(--kairos-slider-thumb-height-extra)); background: var(--kairos-text-muted); border: var(--kairos-border-base) solid var(--kairos-border-active); cursor: grab; transform: translateX(-50%); }
+.kairos-slider-thumb:hover { background: var(--kairos-text); }
+.kairos-slider-h { width: 100%; }
+.kairos-slider-v { width: var(--kairos-control-sm); height: var(--kairos-slider-v-height); }
+.kairos-slider-v .kairos-slider-fill { width: 100%; height: auto; }
+.kairos-slider-v .kairos-slider-thumb { top: auto; left: calc(-1 * var(--kairos-slider-v-thumb-outset-x)); width: calc(100% + var(--kairos-slider-v-thumb-width-extra)); height: var(--kairos-slider-v-thumb-height); transform: translateY(-50%); }
+

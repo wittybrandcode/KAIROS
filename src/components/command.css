@@ -1,0 +1,101 @@
+/* ═══════════════════════════════════════════════════
+   Kairos v01 — Command Palette
+   لوحة الأوامر السريعة
+   ═══════════════════════════════════════════════════ */
+
+.kairos-command {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: var(--kairos-command-max-width);
+  background: var(--kairos-bg-surface);
+  border: var(--kairos-border-base) solid var(--kairos-border);
+  box-shadow: var(--kairos-shadow-lg);
+  overflow: hidden;
+}
+
+.kairos-command-input-wrapper {
+  display: flex;
+  align-items: center;
+  padding: 0 var(--kairos-command-padding);
+  border-bottom: var(--kairos-border-base) solid var(--kairos-border-muted);
+}
+
+.kairos-command-icon {
+  color: var(--kairos-text-muted);
+  margin-right: var(--kairos-command-gap);
+  font-size: var(--kairos-text-xl);
+}
+
+.kairos-command-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  padding: var(--kairos-command-padding-lg) 0;
+  font-size: var(--kairos-text-md);
+  color: var(--kairos-text);
+  outline: none;
+}
+
+.kairos-command-input::placeholder {
+  color: var(--kairos-text-placeholder);
+}
+
+.kairos-command-list {
+  max-height: var(--kairos-command-max-height);
+  overflow-y: auto;
+  padding: var(--kairos-command-gap);
+}
+
+.kairos-command-group {
+  margin-bottom: var(--kairos-command-gap);
+}
+
+.kairos-command-group-heading {
+  padding: var(--kairos-command-gap) var(--kairos-command-padding);
+  font-size: var(--kairos-text-xs);
+  color: var(--kairos-text-muted);
+  text-transform: uppercase;
+  letter-spacing: var(--kairos-tracking-widest);
+}
+
+.kairos-command-item {
+  display: flex;
+  align-items: center;
+  gap: var(--kairos-command-gap);
+  padding: var(--kairos-command-gap) var(--kairos-command-padding);
+  font-size: var(--kairos-text-sm);
+  color: var(--kairos-text);
+  cursor: pointer;
+  transition: background var(--kairos-motion-fast) var(--kairos-easing-ease);
+}
+
+.kairos-command-item:hover,
+.kairos-command-item[data-state="active"] {
+  background: var(--kairos-bg-hover);
+}
+
+.kairos-command-item[data-state="selected"] {
+  background: var(--kairos-comp-current-bg, var(--kairos-status-pvw));
+  color: var(--kairos-comp-current-text, var(--kairos-bg-deep));
+}
+
+.kairos-command-shortcut {
+  margin-left: auto;
+  display: flex;
+  gap: var(--kairos-command-gap-sm);
+}
+
+.kairos-command-key {
+  padding: 0 var(--kairos-command-gap);
+  background: var(--kairos-bg-input);
+  border: var(--kairos-border-base) solid var(--kairos-border-muted);
+  font-family: var(--kairos-font-mono);
+  font-size: var(--kairos-command-key-font-size);
+  color: var(--kairos-text-muted);
+}
+.kairos-command-item[data-state="selected"] .kairos-command-key {
+  background: var(--kairos-bg-deep);
+  border-color: var(--kairos-bg-deep);
+}
+

@@ -1,0 +1,22 @@
+/* ═══════════════════════════════════════════════════
+   Kairos v01 — Shadows / Elevation
+   ظلال حسب العمق — كلما ارتفع العنصر زاد الظل
+   ═══════════════════════════════════════════════════ */
+
+:root {
+  --kairos-shadow-flat:       none;
+  --kairos-shadow-raised:     0 1px 2px #0000004D;
+  --kairos-shadow-sticky:     0 2px 4px #00000059;
+  --kairos-shadow-dropdown:   0 4px 12px #00000066;
+  --kairos-shadow-modal:      0 8px 24px #00000073;
+  --kairos-shadow-toast:      0 4px 16px #00000080;
+  --kairos-shadow-tooltip:    0 2px 8px #00000080;
+}
+
+.kairos-shadow-flat     { box-shadow: var(--kairos-shadow-flat); }
+.kairos-shadow-raised   { box-shadow: var(--kairos-shadow-raised); }
+.kairos-shadow-sticky   { box-shadow: var(--kairos-shadow-sticky); }
+.kairos-shadow-dropdown { box-shadow: var(--kairos-shadow-dropdown); }
+.kairos-shadow-modal    { box-shadow: var(--kairos-shadow-modal); }
+.kairos-shadow-toast    { box-shadow: var(--kairos-shadow-toast); }
+.kairos-shadow-tooltip  { box-shadow: var(--kairos-shadow-tooltip); }

@@ -1,0 +1,41 @@
+/* ═══════════════════════════════════════════════════
+   Kairos v01 — Checkbox (Input Primitive)
+   ═══════════════════════════════════════════════════ */
+
+.kairos-chk {
+  width: var(--kairos-chk-size);
+  height: var(--kairos-chk-size);
+  border: var(--kairos-border-base) solid var(--kairos-border);
+  background: var(--kairos-bg-input);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--kairos-motion-fast) var(--kairos-easing-ease), border-color var(--kairos-motion-fast) var(--kairos-easing-ease);
+}
+
+.kairos-chk::after {
+  content: '';
+  width: var(--kairos-chk-mark-width);
+  height: var(--kairos-chk-mark-height);
+  border: solid var(--kairos-comp-current-text, var(--kairos-bg-deep));
+  border-width: 0 var(--kairos-border-thick) var(--kairos-border-thick) 0;
+  transform: rotate(45deg) translateY(calc(-1 * var(--kairos-border-base)));
+  opacity: 0;
+  transition: opacity var(--kairos-motion-fast) var(--kairos-easing-ease);
+}
+
+.kairos-chk:checked,
+.kairos-chk.checked,
+.kairos-chk[data-state="pressed"] {
+  background: var(--kairos-comp-current-bg, var(--kairos-status-pvw));
+  border-color: var(--kairos-comp-current-border, var(--kairos-status-pvw));
+}
+
+.kairos-chk:checked::after,
+.kairos-chk.checked::after,
+.kairos-chk[data-state="pressed"]::after {
+  opacity: 1;
+}
+
+.kairos-chk:focus-visible { outline: var(--kairos-focus-base) solid var(--kairos-focus-ring-color); outline-offset: var(--kairos-focus-ring-offset); }
+

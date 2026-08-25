@@ -1,0 +1,12 @@
+/* ═══════════════════════════════════════════════════
+   Kairos v01 — Tally LED (Broadcast Domain)
+   ═══════════════════════════════════════════════════ */
+
+.kairos-tally-led {
+  width: var(--kairos-size-dot); height: var(--kairos-size-dot); flex-shrink: 0;
+  border: var(--kairos-border-base) solid var(--kairos-text-placeholder);
+}
+.kairos-tally-led.pgm { background: var(--kairos-status-pgm); border-color: var(--kairos-status-pgm); }
+.kairos-tally-led.pvw { background: var(--kairos-status-pvw); border-color: var(--kairos-status-pvw); }
+.kairos-tally-led.aux { background: var(--kairos-status-info); border-color: var(--kairos-status-info); }
+

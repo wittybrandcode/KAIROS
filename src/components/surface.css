@@ -1,0 +1,16 @@
+/* ═══════════════════════════════════════════════════
+   Kairos v01 — Surface (Overlay Primitive)
+   ═══════════════════════════════════════════════════ */
+
+.kairos-surface {
+  background: var(--kairos-bg-surface);
+  border: var(--kairos-border-base) solid var(--kairos-border);
+  box-shadow: var(--kairos-shadow-raised);
+  border-radius: 0;
+  overflow: hidden;
+}
+
+
+
+
+

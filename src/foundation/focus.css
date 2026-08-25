@@ -1,0 +1,71 @@
+/* ═══════════════════════════════════════════════════
+   Kairos v01 — Focus / Accessibility
+   حلقات التركيز — وصولية لوحة المفاتيح
+   ═══════════════════════════════════════════════════ */
+
+:root {
+  --kairos-focus-ring-color:  var(--kairos-border-focus);
+  --kairos-focus-ring-width:  2px;
+  --kairos-focus-ring-offset: 1px;
+}
+
+.kairos-focus-visible:focus-visible {
+  outline: var(--kairos-focus-base) solid var(--kairos-focus-ring-color);
+  outline-offset: var(--kairos-focus-ring-offset);
+}
+
+.kairos-focus-within:focus-within {
+  outline: var(--kairos-focus-base) solid var(--kairos-focus-ring-color);
+  outline-offset: var(--kairos-focus-ring-offset);
+}
+
+/* تطبيق افتراضي على كل العناصر القابلة للتفاعل */
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+a:focus-visible,
+[tabindex]:focus-visible {
+  outline: var(--kairos-focus-base) solid var(--kairos-focus-ring-color);
+  outline-offset: var(--kairos-focus-ring-offset);
+}
+
+/* ─── إزالة focus ring للماوس ─── */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* ─── Screen Reader Only — محتوى مرئي لقارئات الشاشة فقط ─── */
+.kairos-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ─── Skip Link — رابط تخطي المحتوى ─── */
+.kairos-skip-link {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  padding: var(--kairos-space-xs) var(--kairos-space-md);
+  background: var(--kairos-bg-surface);
+  color: var(--kairos-text);
+  font-size: var(--kairos-text-sm);
+  font-family: var(--kairos-font-mono);
+  text-transform: uppercase;
+  letter-spacing: var(--kairos-tracking-ultra);
+  text-decoration: none;
+  z-index: var(--kairos-z-max);
+  border: var(--kairos-border-thick) solid var(--kairos-border-focus);
+}
+
+.kairos-skip-link:focus {
+  top: 0;
+}
+

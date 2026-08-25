@@ -1,0 +1,18 @@
+/* ═══════════════════════════════════════════════════
+   Kairos v01 — Kbd (Content Primitive)
+   ═══════════════════════════════════════════════════ */
+
+.kairos-kbd {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--kairos-kbd-padding-y) var(--kairos-kbd-padding-x);
+  font-family: var(--kairos-font-mono);
+  font-size: var(--kairos-text-sm);
+  color: var(--kairos-text);
+  background: var(--kairos-bg-surface-alt);
+  border: var(--kairos-border-base) solid var(--kairos-border);
+  border-bottom-width: var(--kairos-border-thick);
+  border-radius: 0;
+}
+

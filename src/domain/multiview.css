@@ -1,0 +1,90 @@
+/* ═══════════════════════════════════════════════════════════════
+   Kairos v01 — Multiviewer Cell
+   خلية معاينة الكاميرا مع التسمية والتالي
+   ═══════════════════════════════════════════════════════════════ */
+
+.kairos-mv {
+  aspect-ratio: 16 / 9;
+  background: var(--kairos-bg-deep);
+  border: var(--kairos-border-thick) solid var(--kairos-border-muted);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  min-height: var(--kairos-mv-min-height);
+}
+.kairos-mv.pgm {
+  border-color: var(--kairos-status-pgm);
+}
+.kairos-mv.pvw {
+  border-color: var(--kairos-status-pvw);
+}
+.kairos-mv.pvw.sel {
+  border-color: var(--kairos-status-pvw);
+  outline: var(--kairos-border-base) solid var(--kairos-status-pvw);
+  outline-offset: -3px;
+}
+
+/* ─── Video area (placeholder) ─── */
+.kairos-mv-video {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--kairos-bg-surface-alt);
+}
+.kairos-mv-video i {
+  font-size: var(--kairos-text-2xl);
+  color: var(--kairos-text-placeholder);
+}
+
+/* ─── Bottom label bar ─── */
+.kairos-mv-label {
+  display: flex;
+  align-items: center;
+  gap: var(--kairos-mv-label-gap);
+  padding: var(--kairos-mv-label-padding-y) var(--kairos-mv-label-padding-x);
+  font-family: var(--kairos-font-mono);
+  font-size: var(--kairos-text-sm);
+  background: var(--kairos-bg-surface);
+  color: var(--kairos-text);
+  border-top: var(--kairos-border-base) solid var(--kairos-border-muted);
+}
+.kairos-mv.pgm .kairos-mv-label {
+  background: var(--kairos-status-pgm);
+  border-top-color: var(--kairos-status-pgm);
+  color: var(--kairos-text);
+}
+.kairos-mv.pvw .kairos-mv-label {
+  background: var(--kairos-status-pvw);
+  border-top-color: var(--kairos-status-pvw);
+  color: var(--kairos-bg-deep);
+}
+
+/* ─── Tally indicator in corner ─── */
+.kairos-mv-tally {
+  position: absolute;
+  top: var(--kairos-mv-tally-pos);
+  right: var(--kairos-mv-tally-pos);
+  width: var(--kairos-mv-tally-size);
+  height: var(--kairos-mv-tally-size);
+}
+.kairos-mv.pgm .kairos-mv-tally {
+  background: var(--kairos-status-pgm);
+}
+.kairos-mv.pvw .kairos-mv-tally {
+  background: var(--kairos-status-pvw);
+}
+
+/* ─── Small variant ─── */
+.kairos-mv.sm {
+  min-height: var(--kairos-mv-sm-min-height);
+}
+.kairos-mv.sm .kairos-mv-label {
+  font-size: var(--kairos-text-2xs);
+  padding: 1px var(--kairos-mv-sm-label-padding-x);
+}
+.kairos-mv.sm .kairos-mv-video i {
+  font-size: var(--kairos-text-md);
+}
+

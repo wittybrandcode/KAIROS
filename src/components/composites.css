@@ -1,0 +1,11 @@
+/* ═══════════════════════════════════════════════════
+   Kairos v01 — Composite Components
+   مكونات مركبة مبنية من Atoms موجودة
+   ═══════════════════════════════════════════════════ */
+
+
+/* ─── Slider with Input ─── */
+.kairos-slider-input { display: flex; align-items: center; gap: var(--kairos-slider-input-gap); }
+.kairos-slider-input .kairos-slider { flex: 1; }
+.kairos-slider-input .kairos-stepper { flex-shrink: 0; }
+.kairos-slider-input.sm { gap: var(--kairos-slider-input-sm-gap); }

@@ -1,0 +1,56 @@
+/* ═══════════════════════════════════════════════════
+   Kairos v01 — Tabs
+   الألسن
+   ═══════════════════════════════════════════════════ */
+
+.kairos-tabs {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.kairos-tabs-list {
+  display: flex;
+  border-bottom: var(--kairos-border-base) solid var(--kairos-border-muted);
+  gap: var(--kairos-comp-padding-x, var(--kairos-tab-padding));
+}
+
+.kairos-tab {
+  padding: var(--kairos-comp-padding-y, var(--kairos-tab-padding)) var(--kairos-comp-padding-x, var(--kairos-tab-padding));
+  font-size: var(--kairos-comp-font-size, var(--kairos-text-sm));
+  color: var(--kairos-text-muted);
+  background: transparent;
+  border: none;
+  border-bottom: var(--kairos-border-thick) solid transparent;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: var(--kairos-tracking-wider);
+  font-weight: var(--kairos-weight-bold);
+  transition: color var(--kairos-motion-fast) var(--kairos-easing-ease), border-color var(--kairos-motion-fast) var(--kairos-easing-ease);
+}
+
+.kairos-tab:hover {
+  color: var(--kairos-text);
+}
+
+.kairos-tab[data-state="active"] {
+  color: var(--kairos-comp-current-text, var(--kairos-text));
+  border-bottom-color: var(--kairos-comp-current-border, var(--kairos-status-pvw));
+}
+
+.kairos-tab[data-state="disabled"],
+.kairos-tab:disabled {
+  opacity: var(--kairos-opacity-disabled);
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.kairos-tabs-panel {
+  display: none;
+  padding: var(--kairos-comp-padding-y, var(--kairos-tab-padding)) 0;
+}
+
+.kairos-tabs-panel[data-state="active"] {
+  display: block;
+}
+

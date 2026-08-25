@@ -1,0 +1,68 @@
+/* ═══════════════════════════════════════════════════════════════
+   Kairos v01 — Source Tag / Format Badge
+   شارة المصدر مع الاسم والدقة
+   ═══════════════════════════════════════════════════════════════ */
+
+.kairos-source-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--kairos-src-tag-gap);
+  padding: var(--kairos-badge-padding-y) var(--kairos-badge-padding-x);
+  font-family: var(--kairos-font-mono);
+  font-size: var(--kairos-text-sm);
+  border: var(--kairos-border-base) solid var(--kairos-border-muted);
+  background: var(--kairos-bg-surface);
+  color: var(--kairos-text);
+}
+.kairos-source-tag .kairos-tally-led {
+  width: var(--kairos-size-tally);
+  height: var(--kairos-size-tally);
+}
+.kairos-source-tag .kairos-source-tag-fmt {
+  color: var(--kairos-text-placeholder);
+}
+.kairos-source-tag .kairos-source-tag-fmt::before {
+  content: "\00B7\00a0";
+}
+.kairos-source-tag.pgm {
+  background: var(--kairos-status-pgm);
+  border-color: var(--kairos-status-pgm);
+  color: var(--kairos-text);
+}
+.kairos-source-tag.pgm .kairos-source-tag-fmt {
+  color: var(--kairos-text);
+  opacity: var(--kairos-opacity-subtle);
+}
+.kairos-source-tag.pvw {
+  background: var(--kairos-status-pvw);
+  border-color: var(--kairos-status-pvw);
+  color: var(--kairos-bg-deep);
+}
+.kairos-source-tag.pvw .kairos-source-tag-fmt {
+  color: var(--kairos-bg-deep);
+  opacity: var(--kairos-opacity-subtle);
+}
+.kairos-source-tag.info {
+  background: var(--kairos-status-info);
+  border-color: var(--kairos-status-info);
+  color: var(--kairos-text);
+}
+.kairos-source-tag.info .kairos-source-tag-fmt {
+  color: var(--kairos-text);
+  opacity: var(--kairos-opacity-subtle);
+}
+
+/* ─── Format Badge (standalone, no source name) ─── */
+.kairos-fmt-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--kairos-badge-padding-y) var(--kairos-badge-padding-x);
+  font-family: var(--kairos-font-mono);
+  font-size: var(--kairos-text-2xs);
+  border: var(--kairos-border-base) solid var(--kairos-border-muted);
+  background: var(--kairos-bg-input);
+  color: var(--kairos-text-placeholder);
+  text-transform: uppercase;
+  letter-spacing: var(--kairos-tracking-wider);
+}
+

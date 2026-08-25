@@ -1,0 +1,56 @@
+/* ═══════════════════════════════════════════════════
+   Kairos v01 — Modal Dialog (Overlay Primitive)
+   ═══════════════════════════════════════════════════ */
+
+.kairos-modal { 
+  background: var(--kairos-bg-surface);
+  border: var(--kairos-border-thick) solid var(--kairos-border-active);
+  box-shadow: var(--kairos-shadow-modal);
+  border-radius: 0;
+  overflow: hidden;
+}
+
+.kairos-modal-sm { max-width: var(--kairos-modal-max-width-sm); }
+.kairos-modal-md { max-width: var(--kairos-modal-max-width-md); }
+.kairos-modal-lg { max-width: var(--kairos-modal-max-width-lg); }
+
+.kairos-modal-head {
+  display: flex;
+  align-items: center;
+  gap: var(--kairos-card-header-gap);
+  padding: var(--kairos-card-header-padding-y) var(--kairos-card-header-padding-x);
+  border-bottom: var(--kairos-border-base) solid var(--kairos-border-muted);
+  background: var(--kairos-bg-surface-alt);
+  min-height: var(--kairos-modal-head-min-height);
+}
+
+.kairos-modal-body {
+  padding: var(--kairos-modal-padding);
+  display: flex;
+  flex-direction: column;
+  gap: var(--kairos-modal-section-gap);
+}
+
+.kairos-modal-foot {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: var(--kairos-modal-action-gap);
+  padding: var(--kairos-card-header-padding-y) var(--kairos-card-header-padding-x);
+  border-top: var(--kairos-border-base) solid var(--kairos-border-muted);
+  background: var(--kairos-bg-surface-alt);
+  min-height: var(--kairos-modal-foot-min-height);
+}
+
+.kairos-modal-title { font-size: var(--kairos-text-md); color: var(--kairos-text); font-weight: var(--kairos-weight-bold); text-transform: uppercase; letter-spacing: var(--kairos-tracking-wider); }
+.kairos-modal-action { flex: none; }
+.kairos-form-row { display: flex; flex-direction: column; gap: var(--kairos-label-input-gap); }
+.kairos-form-label { font-size: var(--kairos-text-sm); text-transform: uppercase; letter-spacing: var(--kairos-tracking-wider); color: var(--kairos-text-muted); }
+.kairos-form-input { display: flex; align-items: center; padding: var(--kairos-input-padding-y) var(--kairos-input-padding-x); background: var(--kairos-bg-input); border: var(--kairos-border-base) solid var(--kairos-border); }
+.kairos-form-input input { background: transparent; border: none; outline: none; color: var(--kairos-text); font-size: var(--kairos-text-sm); width: 100%; font-family: var(--kairos-font-sans); }
+.kairos-choice-group { display: flex; flex-direction: column; gap: var(--kairos-control-group-gap); }
+.kairos-choice { display: flex; align-items: center; gap: var(--kairos-control-label-gap); cursor: pointer; }
+.kairos-choice-box { width: var(--kairos-size-control-xs); height: var(--kairos-size-control-xs); border: var(--kairos-border-base) solid var(--kairos-border); background: var(--kairos-bg-input); flex-shrink: 0; }
+.kairos-choice-box.checked { background: var(--kairos-status-pvw); border-color: var(--kairos-status-pvw); }
+.kairos-choice-label { font-size: var(--kairos-text-sm); color: var(--kairos-text); }
+

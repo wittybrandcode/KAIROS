@@ -1,0 +1,21 @@
+{
+  "plugins": [
+    "./scripts/stylelint-plugin-kairos.js"
+  ],
+  "rules": {
+    "kairos/no-border-radius": true,
+    "kairos/class-prefix": [true, { "severity": "warning" }],
+    "kairos/custom-property-prefix": [true, { "severity": "warning" }],
+    "kairos/contract-enforcement": [true, { "severity": "error" }],
+    "declaration-no-important": [true, { "severity": "warning" }],
+    "color-no-invalid-hex": true
+  },
+  "overrides": [
+    {
+      "files": ["src/foundation/breakpoints.css", "src/foundation/motion.css"],
+      "rules": {
+        "declaration-no-important": null
+      }
+    }
+  ]
+}

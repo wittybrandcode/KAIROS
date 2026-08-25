@@ -1,0 +1,56 @@
+/* ═══════════════════════════════════════════════════
+   Kairos v01 — Core Component Classes
+   10 كلاسات أساسية — source of truth لكل الصفحات
+   ═══════════════════════════════════════════════════ */
+
+/* Panel Header */
+.kairos-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--kairos-panel-header-padding-y) var(--kairos-panel-header-padding-x);
+  background: var(--kairos-bg-surface-alt);
+  border-bottom: var(--kairos-border-base) solid var(--kairos-border);
+  user-select: none;
+}
+
+
+/* Section Label */
+.kairos-section-label {
+  font-family: var(--kairos-font-sans);
+  font-size: var(--kairos-text-sm);
+  letter-spacing: var(--kairos-tracking-max);
+  text-transform: uppercase;
+  color: var(--kairos-text-muted);
+}
+
+/* Tooltip base */
+.kairos-tooltip {
+  display: none;
+  position: absolute; z-index: var(--kairos-z-tooltip);
+  background: var(--kairos-bg-deep);
+  color: var(--kairos-text);
+  border: var(--kairos-border-base) solid var(--kairos-border-active);
+  padding: var(--kairos-tooltip-padding-y) var(--kairos-tooltip-padding-x);
+  font-size: var(--kairos-text-sm);
+  white-space: nowrap;
+  pointer-events: none;
+}
+.kairos-group-tooltip:hover .kairos-tooltip { display: block; }
+
+/* ── Input base — structural reset shared by all input primitives ── */
+.kairos-input {
+  appearance: none;
+  -webkit-appearance: none;
+  margin: 0;
+  background: transparent;
+  cursor: pointer;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  border-radius: 0;
+}
+

@@ -1,0 +1,112 @@
+/* ═══════════════════════════════════════════════════
+   Kairos v01 — Data Display Components
+   عرض البيانات — قوائم المصادر، التصنيفات، التدفق، السجلات
+   ═══════════════════════════════════════════════════ */
+
+/* ─── Source Item ─── */
+.kairos-source-item {
+  display: flex;
+  align-items: center;
+  gap: var(--kairos-source-item-gap);
+  padding: var(--kairos-source-item-padding-y) var(--kairos-src-btn-padding-x);
+  cursor: pointer;
+  border: var(--kairos-border-base) solid transparent;
+  transition: background var(--kairos-motion-fast) var(--kairos-easing-ease), border-color var(--kairos-motion-fast) var(--kairos-easing-ease);
+  user-select: none;
+}
+.kairos-source-item:hover { background: var(--kairos-border-muted); }
+.kairos-source-item.active { background: var(--kairos-bg-selected); border-color: var(--kairos-border-active); }
+.kairos-source-item:focus-visible { outline: var(--kairos-focus-base) solid var(--kairos-focus-ring-color); outline-offset: var(--kairos-focus-ring-offset); }
+.kairos-source-list { background: var(--kairos-bg-surface-alt); border: var(--kairos-border-base) solid var(--kairos-border); }
+
+/* ─── Highlight Item ─── */
+.kairos-hl-item {
+  display: flex;
+  align-items: center;
+  gap: var(--kairos-hl-item-gap);
+  padding: var(--kairos-hl-item-padding-y) var(--kairos-hl-item-padding-x);
+  cursor: pointer;
+  border: var(--kairos-border-base) solid transparent;
+  font-size: var(--kairos-text-sm);
+  font-family: var(--kairos-font-mono);
+  user-select: none;
+  transition: background var(--kairos-motion-fast) var(--kairos-easing-ease);
+}
+.kairos-hl-item:hover { background: var(--kairos-border-muted); }
+.kairos-hl-item.active { background: var(--kairos-bg-selected); border-color: var(--kairos-border-active); }
+.kairos-hl-border { width: var(--kairos-border-thick); height: var(--kairos-hl-border-height); flex-shrink: 0; }
+.kairos-hl-time { margin-left: auto; color: var(--kairos-text-placeholder); font-family: var(--kairos-font-mono); font-size: var(--kairos-text-sm); }
+.kairos-hl-list { background: var(--kairos-bg-surface-alt); border: var(--kairos-border-base) solid var(--kairos-border); }
+
+/* ─── I/O Label ─── */
+.kairos-io-label {
+  padding: var(--kairos-io-label-padding-y) var(--kairos-io-label-padding-x);
+  font-size: var(--kairos-text-sm);
+  font-family: var(--kairos-font-mono);
+  color: var(--kairos-text-muted);
+  cursor: pointer;
+  border: var(--kairos-border-base) solid transparent;
+  display: flex;
+  align-items: center;
+  gap: var(--kairos-io-label-gap);
+  user-select: none;
+  transition: background var(--kairos-motion-fast) var(--kairos-easing-ease), color var(--kairos-motion-fast) var(--kairos-easing-ease), border-color var(--kairos-motion-fast) var(--kairos-easing-ease);
+}
+.kairos-io-label:hover { background: var(--kairos-border-muted); border-color: var(--kairos-border-active); }
+.kairos-io-label.active { background: var(--kairos-bg-selected); color: var(--kairos-text); border-color: var(--kairos-border-active); }
+.kairos-io-label:focus-visible { outline: var(--kairos-focus-base) solid var(--kairos-focus-ring-color); outline-offset: var(--kairos-focus-ring-offset); }
+.kairos-io-list { background: var(--kairos-bg-surface-alt); border: var(--kairos-border-base) solid var(--kairos-border); }
+
+/* ─── Destination Label ─── */
+.kairos-dest-label {
+  padding: var(--kairos-dest-label-padding-y) var(--kairos-dest-label-padding-x);
+  font-size: var(--kairos-text-sm);
+  font-family: var(--kairos-font-mono);
+  color: var(--kairos-text-muted);
+  cursor: pointer;
+  border: var(--kairos-border-base) solid transparent;
+  display: flex;
+  align-items: center;
+  gap: var(--kairos-dest-label-gap);
+  user-select: none;
+  transition: background var(--kairos-motion-fast) var(--kairos-easing-ease), color var(--kairos-motion-fast) var(--kairos-easing-ease), border-color var(--kairos-motion-fast) var(--kairos-easing-ease);
+}
+.kairos-dest-label:hover { background: var(--kairos-border-muted); border-color: var(--kairos-border-active); }
+.kairos-dest-label.active { background: var(--kairos-bg-selected); color: var(--kairos-text); border-color: var(--kairos-border-active); }
+.kairos-dest-label:focus-visible { outline: var(--kairos-focus-base) solid var(--kairos-focus-ring-color); outline-offset: var(--kairos-focus-ring-offset); }
+.kairos-dest-row { display: flex; flex-wrap: wrap; gap: var(--kairos-dest-row-gap); background: var(--kairos-bg-surface-alt); border: var(--kairos-border-base) solid var(--kairos-border); padding: var(--kairos-dest-row-padding); }
+
+/* ─── Flow Node ─── */
+.kairos-flow-node {
+  padding: var(--kairos-flow-node-padding-y) var(--kairos-flow-node-padding-x);
+  font-size: var(--kairos-text-sm);
+  font-family: var(--kairos-font-mono);
+  border: var(--kairos-border-base) solid var(--kairos-border);
+  background: var(--kairos-bg-input);
+  color: var(--kairos-text-muted);
+  white-space: nowrap;
+}
+.kairos-flow-node.active { border-color: var(--kairos-status-pvw); color: var(--kairos-status-pvw); background: var(--kairos-pvw-alpha-10); }
+.kairos-flow-arrow { color: var(--kairos-text-placeholder); display: flex; align-items: center; }
+.kairos-flow-row { display: flex; align-items: center; gap: var(--kairos-flow-row-gap); }
+
+/* ─── Log Entry ─── */
+.kairos-log-entry {
+  display: flex;
+  align-items: center;
+  gap: var(--kairos-log-entry-gap);
+  padding: var(--kairos-log-entry-padding-y) var(--kairos-log-entry-padding-x);
+  font-size: var(--kairos-text-sm);
+  font-family: var(--kairos-font-mono);
+  border-left: var(--kairos-border-thick) solid var(--kairos-border);
+  margin-bottom: var(--kairos-log-entry-margin-bottom);
+  background: var(--kairos-bg-surface-alt);
+  color: var(--kairos-text-placeholder);
+}
+.kairos-log-entry.err { color: var(--kairos-status-pgm); border-left-color: var(--kairos-status-pgm); }
+.kairos-log-entry.warn { color: var(--kairos-status-warning); border-left-color: var(--kairos-status-warning); }
+.kairos-log-entry.info { color: var(--kairos-text-muted); border-left-color: var(--kairos-border); }
+.kairos-log-entry[class*="kairos-intent-"] { color: var(--kairos-comp-border); border-left-color: var(--kairos-comp-border); }
+.kairos-log-time { color: var(--kairos-text-placeholder); flex-shrink: 0; }
+.kairos-log-list { display: flex; flex-direction: column; }
+

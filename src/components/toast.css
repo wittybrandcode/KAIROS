@@ -1,0 +1,16 @@
+/* ═══════════════════════════════════════════════════
+   Kairos v01 — Toast (Feedback Primitive)
+   ═══════════════════════════════════════════════════ */
+
+.kairos-toast-stack { position: fixed; top: var(--kairos-toast-viewport-margin); right: var(--kairos-toast-viewport-margin); display: flex; flex-direction: column; gap: var(--kairos-toast-gap); z-index: var(--kairos-z-toast); pointer-events: none; }
+.kairos-toast-stack.kairos-tl { right: auto; left: var(--kairos-toast-viewport-margin); }
+.kairos-toast-stack.kairos-br { top: auto; bottom: var(--kairos-toast-viewport-margin); flex-direction: column-reverse; }
+.kairos-toast-stack.kairos-bl { top: auto; bottom: var(--kairos-toast-viewport-margin); right: auto; left: var(--kairos-toast-viewport-margin); flex-direction: column-reverse; }
+.kairos-toast { display: flex; align-items: stretch; gap: var(--kairos-toast-padding-y); padding: var(--kairos-comp-padding-y, var(--kairos-toast-padding-y)) var(--kairos-comp-padding-x, var(--kairos-toast-padding-y)); border: var(--kairos-border-base) solid var(--kairos-comp-current-border, var(--kairos-border-active)); background: var(--kairos-comp-current-bg, var(--kairos-bg-surface)); color: var(--kairos-comp-current-text, var(--kairos-text)); opacity: 0; transform: translateY(var(--kairos-toast-translate-y)); pointer-events: none; transition: opacity var(--kairos-motion-normal) var(--kairos-easing-ease-out), transform var(--kairos-motion-normal) var(--kairos-easing-ease-out); }
+.kairos-toast.show,
+.kairos-toast[data-state="open"] { opacity: 1; transform: translateY(0); pointer-events: auto; }
+.kairos-toast > i:first-child { display: flex; align-items: center; justify-content: center; align-self: stretch; flex-shrink: 0; font-size: var(--kairos-toast-icon-size); }
+.kairos-toast-body { flex: 1; }
+.kairos-toast-title { font-size: var(--kairos-text-sm); color: var(--kairos-text); font-weight: var(--kairos-weight-bold); text-transform: uppercase; letter-spacing: var(--kairos-tracking-wider); }
+.kairos-toast-msg { font-size: var(--kairos-text-sm); color: var(--kairos-text-muted); }
+

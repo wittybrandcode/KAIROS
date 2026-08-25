@@ -1,0 +1,18 @@
+/* ═══════════════════════════════════════════════════
+   Kairos v01 — Heading (Content Primitive)
+   ═══════════════════════════════════════════════════ */
+
+.kairos-heading {
+  font-family: var(--kairos-font-sans);
+  color: var(--kairos-text);
+  font-weight: var(--kairos-weight-bold);
+  margin: 0;
+  line-height: var(--kairos-leading-base);
+}
+.kairos-heading.kairos-h1 { font-size: var(--kairos-text-4xl); }
+.kairos-heading.kairos-h2 { font-size: var(--kairos-text-3xl); }
+.kairos-heading.kairos-h3 { font-size: var(--kairos-text-2xl); }
+.kairos-heading.kairos-h4 { font-size: var(--kairos-text-xl); }
+.kairos-heading.kairos-h5 { font-size: var(--kairos-text-lg); }
+.kairos-heading.kairos-h6 { font-size: var(--kairos-text-md); }
+

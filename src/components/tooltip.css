@@ -1,0 +1,16 @@
+/* ═══════════════════════════════════════════════════
+   Kairos v01 — Tooltip (Overlay Primitive)
+   ═══════════════════════════════════════════════════ */
+
+.kairos-tooltip { 
+  background: var(--kairos-bg-surface);
+  border: var(--kairos-border-base) solid var(--kairos-border);
+  box-shadow: var(--kairos-shadow-tooltip);
+  border-radius: 0;
+  overflow: hidden;
+}
+
+.kairos-tip-host { position: relative; }
+.kairos-tip { position: absolute; bottom: calc(100% + var(--kairos-tooltip-trigger-gap)); left: 50%; transform: translateX(-50%); background: var(--kairos-bg-deep); color: var(--kairos-text); border: var(--kairos-border-base) solid var(--kairos-border-active); padding: var(--kairos-tooltip-padding-y) var(--kairos-tooltip-padding-x); font-size: var(--kairos-text-sm); font-family: var(--kairos-font-mono); white-space: nowrap; z-index: var(--kairos-z-tooltip); pointer-events: none; opacity: 0; transition: opacity var(--kairos-motion-fast) var(--kairos-easing-ease-out); }
+.kairos-tip-host:hover .kairos-tip { opacity: 1; }
+

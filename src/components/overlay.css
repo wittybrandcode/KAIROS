@@ -1,0 +1,29 @@
+/* ═══════════════════════════════════════════════════
+   Kairos v01 — Overlay Primitive
+   Generic Backdrop and Overlay for compositing.
+   ═══════════════════════════════════════════════════ */
+
+.kairos-overlay-host {
+  position: relative;
+}
+
+.kairos-overlay {
+  position: absolute;
+  z-index: var(--kairos-z-dropdown);
+}
+
+.kairos-backdrop {
+  position: fixed;
+  inset: 0;
+  background: var(--kairos-overlay);
+  z-index: var(--kairos-z-modal);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--kairos-motion-normal) var(--kairos-easing-ease);
+}
+
+.kairos-backdrop[data-state="open"] {
+  opacity: 1;
+  pointer-events: auto;
+}
+

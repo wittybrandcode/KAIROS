@@ -1,0 +1,236 @@
+/* ═══════════════════════════════════════════════════
+   Kairos v01 — Domain Buttons
+   أزرار مخصصة للبث
+   ═══════════════════════════════════════════════════ */
+
+/* ─── Key Button ─── */
+.kairos-key-btn {
+  padding: var(--kairos-key-btn-padding-y) var(--kairos-key-btn-padding-x);
+  font-size: var(--kairos-text-sm);
+  font-family: var(--kairos-font-mono);
+  text-transform: uppercase;
+  letter-spacing: var(--kairos-tracking-ultra);
+  border: var(--kairos-border-base) solid var(--kairos-text-placeholder);
+  background: transparent;
+  color: var(--kairos-text-secondary);
+  cursor: pointer;
+  transition: background var(--kairos-motion-fast) var(--kairos-easing-ease), color var(--kairos-motion-fast) var(--kairos-easing-ease), border-color var(--kairos-motion-fast) var(--kairos-easing-ease);
+  user-select: none;
+}
+.kairos-key-btn:hover {
+  background: var(--kairos-bg-selected);
+  color: var(--kairos-text);
+  border-color: var(--kairos-text-muted);
+}
+.kairos-key-btn.on {
+  background: var(--kairos-pvw-alpha-20);
+}
+.kairos-key-btn.tiny {
+  font-size: var(--kairos-text-sm);
+  padding: var(--kairos-key-btn-tiny-padding-y) var(--kairos-key-btn-tiny-padding-x);
+}
+.kairos-key-btn:focus-visible {
+  outline: var(--kairos-border-thick) solid var(--kairos-border-focus);
+  outline-offset: var(--kairos-focus-ring-offset);
+}
+
+/* ─── Source Button ─── */
+.kairos-src-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--kairos-src-btn-gap);
+  padding: var(--kairos-src-btn-padding-y) var(--kairos-src-btn-padding-x);
+  font-size: var(--kairos-text-sm);
+  font-family: var(--kairos-font-mono);
+  border: var(--kairos-border-base) solid transparent;
+  background: transparent;
+  cursor: pointer;
+  transition: background var(--kairos-motion-fast) var(--kairos-easing-ease), color var(--kairos-motion-fast) var(--kairos-easing-ease), border-color var(--kairos-motion-fast) var(--kairos-easing-ease);
+  user-select: none;
+}
+.kairos-src-btn:hover {
+  background: var(--kairos-border-muted);
+  border-color: var(--kairos-border-active);
+}
+.kairos-src-btn.pgm {
+  background: var(--kairos-bg-selected);
+  border-color: var(--kairos-status-pgm);
+}
+.kairos-src-btn.pvw {
+  background: var(--kairos-bg-selected);
+  border-color: var(--kairos-status-pvw);
+}
+.kairos-src-btn:focus-visible {
+  outline: var(--kairos-border-thick) solid var(--kairos-border-focus);
+  outline-offset: var(--kairos-focus-ring-offset);
+}
+
+/* ─── Transition Button ─── */
+.kairos-trans-btn {
+  flex: 1;
+  padding: var(--kairos-trans-btn-padding-y) var(--kairos-trans-btn-padding-x);
+  font-size: var(--kairos-text-sm);
+  font-family: var(--kairos-font-mono);
+  text-transform: uppercase;
+  letter-spacing: var(--kairos-tracking-ultra);
+  cursor: pointer;
+  border: var(--kairos-border-base) solid var(--kairos-text-placeholder);
+  background: transparent;
+  color: var(--kairos-text-secondary);
+  transition: background var(--kairos-motion-fast) var(--kairos-easing-ease), color var(--kairos-motion-fast) var(--kairos-easing-ease), border-color var(--kairos-motion-fast) var(--kairos-easing-ease);
+  user-select: none;
+}
+.kairos-trans-btn:hover {
+  background: var(--kairos-bg-selected);
+  color: var(--kairos-text);
+  border-color: var(--kairos-text-muted);
+}
+.kairos-trans-btn.cut {
+  border-color: var(--kairos-status-pgm);
+  color: var(--kairos-status-pgm);
+}
+.kairos-trans-btn.cut:hover {
+  background: var(--kairos-status-pgm);
+  color: var(--kairos-text-inverse);
+}
+.kairos-trans-btn.auto {
+  border-color: var(--kairos-status-pvw);
+  color: var(--kairos-status-pvw);
+}
+.kairos-trans-btn.auto:hover {
+  background: var(--kairos-status-pvw);
+  color: var(--kairos-text-inverse);
+}
+.kairos-trans-btn:focus-visible {
+  outline: var(--kairos-border-thick) solid var(--kairos-border-focus);
+  outline-offset: var(--kairos-focus-ring-offset);
+}
+
+/* ─── Transport Button ─── */
+.kairos-tp-btn {
+  display: flex;
+  align-items: center;
+  gap: var(--kairos-tp-btn-gap);
+  padding: var(--kairos-tp-btn-padding-y) var(--kairos-tp-btn-padding-x);
+  font-size: var(--kairos-text-sm);
+  font-family: var(--kairos-font-mono);
+  text-transform: uppercase;
+  border: var(--kairos-border-base) solid var(--kairos-text-placeholder);
+  background: transparent;
+  color: var(--kairos-text-secondary);
+  cursor: pointer;
+  transition: background var(--kairos-motion-fast) var(--kairos-easing-ease), color var(--kairos-motion-fast) var(--kairos-easing-ease), border-color var(--kairos-motion-fast) var(--kairos-easing-ease);
+  user-select: none;
+}
+.kairos-tp-btn:hover {
+  background: var(--kairos-bg-selected);
+  color: var(--kairos-text);
+  border-color: var(--kairos-text-muted);
+}
+.kairos-tp-btn.active {
+  background: var(--kairos-pgm-alpha-30);
+  border-color: var(--kairos-status-pgm);
+  color: var(--kairos-status-pgm);
+}
+.kairos-tp-btn.play {
+  border-color: var(--kairos-status-pvw);
+  color: var(--kairos-status-pvw);
+}
+.kairos-tp-btn.play:hover {
+  background: var(--kairos-status-pvw);
+  color: var(--kairos-text-inverse);
+}
+.kairos-tp-btn:focus-visible {
+  outline: var(--kairos-border-thick) solid var(--kairos-border-focus);
+  outline-offset: var(--kairos-focus-ring-offset);
+}
+
+/* ─── Buffer Button ─── */
+.kairos-buf-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: var(--kairos-size-top-bar);
+  padding: var(--kairos-buf-btn-padding-y) var(--kairos-buf-btn-padding-x);
+  font-size: var(--kairos-text-sm);
+  font-family: var(--kairos-font-mono);
+  border: var(--kairos-border-base) solid var(--kairos-text-placeholder);
+  background: transparent;
+  color: var(--kairos-text-secondary);
+  cursor: pointer;
+  transition: background var(--kairos-motion-fast) var(--kairos-easing-ease), color var(--kairos-motion-fast) var(--kairos-easing-ease), border-color var(--kairos-motion-fast) var(--kairos-easing-ease);
+  user-select: none;
+}
+.kairos-buf-btn:hover {
+  border-color: var(--kairos-text-muted);
+  color: var(--kairos-text);
+}
+.kairos-buf-btn.active {
+  border-color: var(--kairos-text);
+  color: var(--kairos-text);
+  background: var(--kairos-bg-selected);
+}
+.kairos-buf-btn:focus-visible {
+  outline: var(--kairos-border-thick) solid var(--kairos-border-focus);
+  outline-offset: var(--kairos-focus-ring-offset);
+}
+
+/* ─── Salvo Button ─── */
+.kairos-salvo-btn {
+  padding: var(--kairos-salvo-btn-padding-y) var(--kairos-salvo-btn-padding-x);
+  font-size: var(--kairos-text-sm);
+  font-family: var(--kairos-font-mono);
+  text-transform: uppercase;
+  border: var(--kairos-border-base) solid var(--kairos-text-placeholder);
+  background: transparent;
+  color: var(--kairos-text-secondary);
+  cursor: pointer;
+  transition: background var(--kairos-motion-fast) var(--kairos-easing-ease), color var(--kairos-motion-fast) var(--kairos-easing-ease), border-color var(--kairos-motion-fast) var(--kairos-easing-ease);
+  user-select: none;
+  white-space: nowrap;
+}
+.kairos-salvo-btn:hover {
+  border-color: var(--kairos-text-placeholder);
+  color: var(--kairos-text);
+  background: var(--kairos-border-muted);
+}
+.kairos-salvo-btn.active {
+  border-color: var(--kairos-status-pvw);
+  color: var(--kairos-status-pvw);
+  background: var(--kairos-pvw-alpha-10);
+}
+.kairos-salvo-btn:focus-visible {
+  outline: var(--kairos-border-thick) solid var(--kairos-border-focus);
+  outline-offset: var(--kairos-focus-ring-offset);
+}
+
+/* ─── Angle Button ─── */
+.kairos-angle-btn {
+  display: flex;
+  align-items: center;
+  gap: var(--kairos-angle-btn-gap);
+  padding: var(--kairos-angle-btn-padding-y) var(--kairos-angle-btn-padding-x);
+  font-size: var(--kairos-text-sm);
+  font-family: var(--kairos-font-mono);
+  border: var(--kairos-border-base) solid var(--kairos-text-placeholder);
+  background: transparent;
+  color: var(--kairos-text-secondary);
+  cursor: pointer;
+  transition: background var(--kairos-motion-normal) var(--kairos-easing-ease), color var(--kairos-motion-normal) var(--kairos-easing-ease), border-color var(--kairos-motion-normal) var(--kairos-easing-ease);
+  user-select: none;
+}
+.kairos-angle-btn:hover {
+  border-color: var(--kairos-text-placeholder);
+  color: var(--kairos-text);
+  background: var(--kairos-border-muted);
+}
+.kairos-angle-btn.active {
+  border-color: var(--kairos-status-pvw);
+  color: var(--kairos-status-pvw);
+  background: var(--kairos-pvw-alpha-10);
+}
+.kairos-angle-btn:focus-visible {
+  outline: var(--kairos-border-thick) solid var(--kairos-border-focus);
+  outline-offset: var(--kairos-focus-ring-offset);
+}
+

@@ -1,0 +1,32 @@
+/* ---------------------------------------------------
+   Kairos v01 — Spacing System
+   ??? ???????? ??????? (Semantic Spacing Scale)
+   --------------------------------------------------- */
+
+:root {
+  /* --- Base Spacing Scale --- */
+  --kairos-space-3xs: 2px;
+  --kairos-space-2xs: 4px;
+  --kairos-space-xs:  6px;
+  --kairos-space-sm:  8px;
+  --kairos-space-md:  12px;
+  --kairos-space-lg:  16px;
+  --kairos-space-xl:  24px;
+  --kairos-space-2xl: 32px;
+  --kairos-space-3xl: 48px;
+
+  /* --- Legacy Aliases (to prevent breakage) --- */
+  --kairos-space-extra-tight: var(--kairos-space-3xs);
+  --kairos-space-compact:     var(--kairos-space-xs);
+  --kairos-space-standard:    var(--kairos-space-md);
+  --kairos-space-loose:       var(--kairos-space-xl);
+  --kairos-space-extra-loose: var(--kairos-space-3xl);
+
+  /* --- BORDER RADIUS — ??? ?????? (?? ???????) --- */
+  --kairos-radius-1: var(--kairos-radius-none, 0);
+  --kairos-radius-2: var(--kairos-radius-none, 0);
+  --kairos-radius-3: var(--kairos-radius-none, 0);
+  --kairos-radius-4: var(--kairos-radius-none, 0);
+  --kairos-radius-6: var(--kairos-radius-none, 0);
+}
+

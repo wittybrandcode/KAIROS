@@ -1,0 +1,87 @@
+<div class="kairos-flex kairos-col kairos-gap-loose">
+  <div class="kairos-flex kairos-col kairos-gap-extra-tight">
+    <h1 class="kairos-text-3xl kairos-font-bold">Buttons (أزرار التحكم)</h1>
+    <p class="kairos-text-color-secondary">عرض شامل لكافة حالات وأنواع الأزرار المتاحة في كايروس التزاماً بالدستور.</p>
+  </div>
+  
+  <!-- 1. Intents (Solid) -->
+  <div class="kairos-bg-surface kairos-border kairos-border-color-muted kairos-p-loose kairos-flex kairos-col kairos-gap-standard">
+    <h3 class="kairos-text-sm kairos-text-color-muted kairos-tracking-widest kairos-uppercase">Intents (Solid)</h3>
+    <div class="kairos-flex kairos-gap-standard kairos-wrap">
+      <button class="kairos-btn kairos-intent-neutral kairos-variant-solid">NEUTRAL</button>
+      <button class="kairos-btn kairos-intent-pgm kairos-variant-solid">PGM CUT</button>
+      <button class="kairos-btn kairos-intent-pvw kairos-variant-solid">PVW SET</button>
+      <button class="kairos-btn kairos-intent-warning kairos-variant-solid">WARNING</button>
+      <button class="kairos-btn kairos-intent-info kairos-variant-solid">INFO</button>
+    </div>
+  </div>
+
+  <!-- 2. Variants (Outline & Ghost) -->
+  <div class="kairos-bg-surface kairos-border kairos-border-color-muted kairos-p-loose kairos-flex kairos-col kairos-gap-standard">
+    <h3 class="kairos-text-sm kairos-text-color-muted kairos-tracking-widest kairos-uppercase">Variants (Outline & Ghost)</h3>
+    <div class="kairos-flex kairos-gap-standard kairos-wrap">
+      <button class="kairos-btn kairos-intent-neutral kairos-variant-outline">OUTLINE</button>
+      <button class="kairos-btn kairos-intent-pgm kairos-variant-outline">PGM OUTLINE</button>
+      <button class="kairos-btn kairos-intent-pvw kairos-variant-ghost">PVW GHOST</button>
+      <button class="kairos-btn kairos-intent-warning kairos-variant-ghost">WARN GHOST</button>
+    </div>
+  </div>
+
+  <!-- 3. Sizes -->
+  <div class="kairos-bg-surface kairos-border kairos-border-color-muted kairos-p-loose kairos-flex kairos-col kairos-gap-standard">
+    <h3 class="kairos-text-sm kairos-text-color-muted kairos-tracking-widest kairos-uppercase">Sizes (Small, Default, Large, Block)</h3>
+    <div class="kairos-flex kairos-items-center kairos-gap-standard kairos-wrap">
+      <button class="kairos-btn kairos-size-sm kairos-intent-neutral kairos-variant-solid">SMALL</button>
+      <button class="kairos-btn kairos-intent-neutral kairos-variant-solid">DEFAULT</button>
+      <button class="kairos-btn kairos-size-lg kairos-intent-neutral kairos-variant-solid">LARGE</button>
+    </div>
+    <div class="kairos-mt-compact">
+      <button class="kairos-btn kairos-btn-block kairos-intent-info kairos-variant-solid">BLOCK BUTTON</button>
+    </div>
+  </div>
+
+  <!-- 4. Content (Icons vs Text) -->
+  <div class="kairos-bg-surface kairos-border kairos-border-color-muted kairos-p-loose kairos-flex kairos-col kairos-gap-standard">
+    <h3 class="kairos-text-sm kairos-text-color-muted kairos-tracking-widest kairos-uppercase">Content Forms</h3>
+    <div class="kairos-flex kairos-items-center kairos-gap-standard kairos-wrap">
+      <!-- Text Only -->
+      <button class="kairos-btn kairos-intent-neutral kairos-variant-solid">TEXT ONLY</button>
+      
+      <!-- Icon + Text -->
+      <button class="kairos-btn kairos-intent-pgm kairos-variant-solid">
+        <i class="kairos-icon-video-camera kairos-icon-sm"></i>
+        <span>TAKE CAM</span>
+      </button>
+
+      <!-- Text + Icon -->
+      <button class="kairos-btn kairos-intent-pvw kairos-variant-outline">
+        <span>SETTINGS</span>
+        <i class="kairos-icon-gear kairos-icon-sm"></i>
+      </button>
+      
+      <!-- Icon Only (Using dedicated class) -->
+      <button class="kairos-icon-btn">
+        <i class="kairos-icon-trash kairos-icon-sm"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- 5. Groups & States -->
+  <div class="kairos-bg-surface kairos-border kairos-border-color-muted kairos-p-loose kairos-flex kairos-col kairos-gap-standard">
+    <h3 class="kairos-text-sm kairos-text-color-muted kairos-tracking-widest kairos-uppercase">Groups & States</h3>
+    <div class="kairos-flex kairos-items-center kairos-gap-loose kairos-wrap">
+      <!-- Button Group -->
+      <div class="kairos-btn-group">
+        <button class="kairos-btn kairos-intent-neutral kairos-variant-solid">LEFT</button>
+        <button class="kairos-btn kairos-intent-neutral kairos-variant-solid">CENTER</button>
+        <button class="kairos-btn kairos-intent-neutral kairos-variant-solid">RIGHT</button>
+      </div>
+
+      <!-- Disabled State -->
+      <button class="kairos-btn kairos-intent-pgm kairos-variant-solid" disabled>
+        <i class="kairos-icon-lock kairos-icon-sm"></i>
+        <span>DISABLED</span>
+      </button>
+    </div>
+  </div>
+</div>

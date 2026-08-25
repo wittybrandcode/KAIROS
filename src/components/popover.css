@@ -1,0 +1,64 @@
+/* ═══════════════════════════════════════════════════
+   Kairos v01 — Popover Primitive
+   Generic positioning for Tooltips, Menus, Comboboxes.
+   ═══════════════════════════════════════════════════ */
+
+.kairos-popover-host {
+  position: relative;
+  display: inline-block;
+}
+
+.kairos-popover {
+  position: absolute;
+  background: var(--kairos-bg-surface);
+  border: var(--kairos-border-base) solid var(--kairos-border-active);
+  z-index: var(--kairos-z-dropdown);
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(var(--kairos-popover-translate-y));
+  transition: opacity var(--kairos-motion-fast) var(--kairos-easing-ease-out), transform var(--kairos-motion-fast) var(--kairos-easing-ease-out);
+}
+
+.kairos-popover[data-state="open"] {
+  pointer-events: auto;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Positioning Variants */
+.kairos-popover-top {
+  bottom: calc(100% + var(--kairos-popover-offset));
+  left: 50%;
+  transform: translateX(-50%) translateY(var(--kairos-popover-translate-y));
+}
+.kairos-popover-top[data-state="open"] {
+  transform: translateX(-50%) translateY(0);
+}
+
+.kairos-popover-bottom {
+  top: calc(100% + var(--kairos-popover-offset));
+  left: 50%;
+  transform: translateX(-50%) translateY(calc(-1 * var(--kairos-popover-translate-y)));
+}
+.kairos-popover-bottom[data-state="open"] {
+  transform: translateX(-50%) translateY(0);
+}
+
+.kairos-popover-left {
+  right: calc(100% + var(--kairos-popover-offset));
+  top: 50%;
+  transform: translateY(-50%) translateX(var(--kairos-popover-translate-y));
+}
+.kairos-popover-left[data-state="open"] {
+  transform: translateY(-50%) translateX(0);
+}
+
+.kairos-popover-right {
+  left: calc(100% + var(--kairos-popover-offset));
+  top: 50%;
+  transform: translateY(-50%) translateX(calc(-1 * var(--kairos-popover-translate-y)));
+}
+.kairos-popover-right[data-state="open"] {
+  transform: translateY(-50%) translateX(0);
+}
+

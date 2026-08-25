@@ -1,0 +1,177 @@
+/* ═══════════════════════════════════════════════════
+   Kairos v01 — Unified Component API Contract
+   يوفر متغيرات وفئات موحدة (Modifiers) لجميع المكونات
+   (Intents, Variants, Sizes, States)
+   ═══════════════════════════════════════════════════ */
+
+/* ─── INTENTS (Semantic Colors) ─── */
+
+.kairos-intent-neutral {
+  --kairos-comp-bg: var(--kairos-bg-surface);
+  --kairos-comp-bg-subtle: var(--kairos-bg-input);
+  --kairos-comp-border: var(--kairos-border);
+  --kairos-comp-text: var(--kairos-text);
+  --kairos-comp-bg-hover: var(--kairos-bg-hover);
+  --kairos-comp-border-hover: var(--kairos-border-active);
+}
+
+.kairos-intent-pvw {
+  --kairos-comp-bg: var(--kairos-status-pvw);
+  --kairos-comp-bg-subtle: var(--kairos-pvw-bg);
+  --kairos-comp-border: var(--kairos-status-pvw);
+  --kairos-comp-text: var(--kairos-bg-deep);
+  --kairos-comp-bg-hover: var(--kairos-status-pvw);
+  --kairos-comp-border-hover: var(--kairos-status-pvw);
+}
+
+.kairos-intent-pgm {
+  --kairos-comp-bg: var(--kairos-status-pgm);
+  --kairos-comp-bg-subtle: var(--kairos-pgm-bg);
+  --kairos-comp-border: var(--kairos-status-pgm);
+  --kairos-comp-text: var(--kairos-text);
+  --kairos-comp-bg-hover: var(--kairos-status-pgm);
+  --kairos-comp-border-hover: var(--kairos-status-pgm);
+}
+
+.kairos-intent-warning {
+  --kairos-comp-bg: var(--kairos-status-warning);
+  --kairos-comp-bg-subtle: var(--kairos-warning-bg);
+  --kairos-comp-border: var(--kairos-status-warning);
+  --kairos-comp-text: var(--kairos-bg-deep);
+  --kairos-comp-bg-hover: var(--kairos-status-warning);
+  --kairos-comp-border-hover: var(--kairos-status-warning);
+}
+
+.kairos-intent-info {
+  --kairos-comp-bg: var(--kairos-status-info);
+  --kairos-comp-bg-subtle: var(--kairos-bg-input); /* Fallback */
+  --kairos-comp-border: var(--kairos-status-info);
+  --kairos-comp-text: var(--kairos-text);
+  --kairos-comp-bg-hover: var(--kairos-status-info);
+  --kairos-comp-border-hover: var(--kairos-status-info);
+}
+
+/* ─── VARIANTS (Visual Style) ─── */
+
+.kairos-variant-solid {
+  --kairos-comp-current-bg: var(--kairos-comp-bg);
+  --kairos-comp-current-border: var(--kairos-comp-border);
+  --kairos-comp-current-text: var(--kairos-comp-text);
+  --kairos-comp-current-bg-hover: var(--kairos-comp-bg-hover);
+}
+
+.kairos-variant-subtle {
+  --kairos-comp-current-bg: var(--kairos-comp-bg-subtle);
+  --kairos-comp-current-border: var(--kairos-comp-border);
+  --kairos-comp-current-text: var(--kairos-comp-border); /* Colored text */
+  --kairos-comp-current-bg-hover: var(--kairos-comp-bg-hover);
+}
+
+.kairos-variant-outline {
+  --kairos-comp-current-bg: transparent;
+  --kairos-comp-current-border: var(--kairos-comp-border);
+  --kairos-comp-current-text: var(--kairos-comp-border);
+  --kairos-comp-current-bg-hover: var(--kairos-comp-bg-subtle);
+}
+
+.kairos-variant-ghost {
+  --kairos-comp-current-bg: transparent;
+  --kairos-comp-current-border: transparent;
+  --kairos-comp-current-text: var(--kairos-comp-border);
+  --kairos-comp-current-bg-hover: var(--kairos-comp-bg-subtle);
+}
+
+/* Special case: Neutral Outline/Ghost uses neutral text, not border color */
+.kairos-intent-neutral.kairos-variant-outline,
+.kairos-intent-neutral.kairos-variant-ghost {
+  --kairos-comp-current-text: var(--kairos-text);
+}
+
+/* ─── SIZES ─── */
+
+.kairos-size-sm {
+  --kairos-comp-padding-y: var(--kairos-comp-padding-sm-y, 2px);
+  --kairos-comp-padding-x: var(--kairos-comp-padding-sm-x, 6px);
+  --kairos-comp-font-size: var(--kairos-text-sm);
+}
+
+.kairos-size-md {
+  --kairos-comp-padding-y: var(--kairos-comp-padding-md-y, 6px);
+  --kairos-comp-padding-x: var(--kairos-comp-padding-md-x, 12px);
+  --kairos-comp-font-size: var(--kairos-text-sm); /* Most UI is sm */
+}
+
+.kairos-size-lg {
+  --kairos-comp-padding-y: var(--kairos-comp-padding-lg-y, 12px);
+  --kairos-comp-padding-x: var(--kairos-comp-padding-lg-x, 24px);
+  --kairos-comp-font-size: var(--kairos-text-md);
+}
+
+/* ─── STATES (data-state driven) ─── */
+
+[data-state="disabled"],
+[disabled] {
+  --kairos-comp-state-opacity: var(--kairos-opacity-disabled);
+  pointer-events: none;
+  cursor: not-allowed;
+  opacity: var(--kairos-comp-state-opacity);
+}
+
+[data-state="loading"] {
+  pointer-events: none;
+  cursor: wait;
+  opacity: var(--kairos-opacity-subtle);
+}
+
+[data-state="active"],
+[data-state="selected"],
+[aria-selected="true"] {
+  --kairos-comp-current-bg: var(--kairos-comp-bg, var(--kairos-bg-selected));
+  --kairos-comp-current-border: var(--kairos-comp-border, var(--kairos-border-active));
+}
+
+[data-state="open"] {
+  --kairos-comp-state-open: 1;
+}
+
+[data-state="pressed"],
+[aria-pressed="true"] {
+  --kairos-comp-current-bg: var(--kairos-comp-bg, var(--kairos-bg-selected));
+  --kairos-comp-current-border: var(--kairos-comp-border, var(--kairos-border-active));
+}
+
+/* ─── RECIPES (Composed Shortcuts) ─── */
+
+.kairos-recipe-action-pvw {
+  --kairos-comp-bg: var(--kairos-status-pvw);
+  --kairos-comp-bg-subtle: var(--kairos-pvw-bg);
+  --kairos-comp-border: var(--kairos-status-pvw);
+  --kairos-comp-text: var(--kairos-bg-deep);
+  --kairos-comp-bg-hover: var(--kairos-status-pvw);
+  --kairos-comp-border-hover: var(--kairos-status-pvw);
+  --kairos-comp-current-bg: var(--kairos-status-pvw);
+  --kairos-comp-current-border: var(--kairos-status-pvw);
+  --kairos-comp-current-text: var(--kairos-bg-deep);
+  --kairos-comp-current-bg-hover: var(--kairos-status-pvw);
+}
+
+.kairos-recipe-action-pgm {
+  --kairos-comp-bg: var(--kairos-status-pgm);
+  --kairos-comp-bg-subtle: var(--kairos-pgm-bg);
+  --kairos-comp-border: var(--kairos-status-pgm);
+  --kairos-comp-text: var(--kairos-text);
+  --kairos-comp-bg-hover: var(--kairos-status-pgm);
+  --kairos-comp-border-hover: var(--kairos-status-pgm);
+  --kairos-comp-current-bg: var(--kairos-status-pgm);
+  --kairos-comp-current-border: var(--kairos-status-pgm);
+  --kairos-comp-current-text: var(--kairos-text);
+  --kairos-comp-current-bg-hover: var(--kairos-status-pgm);
+}
+
+.kairos-recipe-action-neutral {
+  --kairos-comp-current-bg: transparent;
+  --kairos-comp-current-border: var(--kairos-border);
+  --kairos-comp-current-text: var(--kairos-text);
+  --kairos-comp-current-bg-hover: var(--kairos-bg-hover);
+}
+

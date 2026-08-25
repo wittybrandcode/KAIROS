@@ -1,0 +1,40 @@
+/* ---------------------------------------------------
+   Kairos v01 � Motion / Animation
+   ??? ?????? ??????? (Semantic Motion Scale)
+   --------------------------------------------------- */
+
+:root {
+  --kairos-motion-instant: 0ms;
+  --kairos-motion-fast:    100ms;
+  --kairos-motion-normal:  150ms;
+  --kairos-motion-medium:  200ms;
+  --kairos-motion-slow:    300ms;
+
+  /* Legacy aliases */
+  --kairos-duration-instant: var(--kairos-motion-instant);
+  --kairos-duration-fast:    var(--kairos-motion-fast);
+  --kairos-duration-normal:  var(--kairos-motion-normal);
+  --kairos-duration-slow:    var(--kairos-motion-slow);
+
+  --kairos-easing-linear:    linear;
+  --kairos-easing-ease:      ease;
+  --kairos-easing-ease-out:  ease-out;
+  --kairos-easing-bounce:    cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Utilities */
+.kairos-motion-instant { transition-duration: var(--kairos-motion-instant); transition-timing-function: var(--kairos-easing-linear); }
+.kairos-motion-fast    { transition-duration: var(--kairos-motion-fast); transition-timing-function: var(--kairos-easing-ease-out); }
+.kairos-motion-normal  { transition-duration: var(--kairos-motion-normal); transition-timing-function: var(--kairos-easing-ease); }
+.kairos-motion-slow    { transition-duration: var(--kairos-motion-slow); transition-timing-function: var(--kairos-easing-ease-out); }
+
+/* --- Reduced Motion � ?????? ????? ???????? --- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+

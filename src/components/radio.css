@@ -1,0 +1,52 @@
+/* ═══════════════════════════════════════════════════
+   Kairos v01 — Radio (Input Primitive)
+   sizes: sm 10 / md 16 / lg 24px
+   border: 1 / 2 / 2px   padding: 2 / 2 / 4px
+   indicator fills content area via 100%
+   ═══════════════════════════════════════════════════ */
+
+.kairos-radio {
+  width: var(--kairos-radio-size);
+  height: var(--kairos-radio-size);
+  border: var(--kairos-radio-border) solid var(--kairos-comp-current-border, var(--kairos-border));
+  padding: var(--kairos-radio-padding);
+  transition: border-color var(--kairos-motion-fast) var(--kairos-easing-ease);
+}
+
+.kairos-radio:hover {
+  border-color: var(--kairos-comp-current-border, var(--kairos-border-active));
+}
+
+.kairos-radio::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: var(--kairos-comp-current-border, var(--kairos-status-pvw));
+  transform: scale(0);
+  transition: transform var(--kairos-motion-fast) var(--kairos-easing-ease-out);
+}
+
+.kairos-radio:checked::after,
+.kairos-radio[data-state="pressed"]::after {
+  transform: scale(1);
+}
+
+.kairos-radio:focus-visible {
+  outline: var(--kairos-focus-base) solid var(--kairos-focus-ring-color);
+  outline-offset: var(--kairos-focus-ring-offset);
+}
+
+/* ── Size variants ─────────────────────────────────────────── */
+
+.kairos-size-sm {
+  --kairos-radio-size: var(--kairos-radio-size-sm);
+  --kairos-radio-border: var(--kairos-radio-border-sm);
+  --kairos-radio-padding: var(--kairos-radio-padding-sm);
+}
+
+.kairos-size-lg {
+  --kairos-radio-size: var(--kairos-radio-size-lg);
+  --kairos-radio-border: var(--kairos-radio-border-lg);
+  --kairos-radio-padding: var(--kairos-radio-padding-lg);
+}
+

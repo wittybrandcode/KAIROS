@@ -1,0 +1,74 @@
+/* ═══════════════════════════════════════════════════════════════
+   Kairos v01 — Segmented Control
+   اختيار متعدد الخيارات (Off / On / Auto — إلخ)
+   ═══════════════════════════════════════════════════════════════ */
+
+.kairos-segment {
+  display: inline-flex;
+  gap: 0;
+  border: var(--kairos-border-base) solid var(--kairos-border-muted);
+  background: var(--kairos-bg-input);
+}
+
+.kairos-segment-btn {
+  padding: var(--kairos-segment-btn-padding-y) var(--kairos-segment-btn-padding-x);
+  font-family: var(--kairos-font-mono);
+  font-size: var(--kairos-text-sm);
+  text-transform: uppercase;
+  letter-spacing: var(--kairos-tracking-wider);
+  border: none;
+  border-right: var(--kairos-border-base) solid var(--kairos-border-muted);
+  background: transparent;
+  color: var(--kairos-text-muted);
+  cursor: pointer;
+  transition: background var(--kairos-motion-fast) var(--kairos-easing-ease),
+              color var(--kairos-motion-fast) var(--kairos-easing-ease);
+}
+.kairos-segment-btn:last-child {
+  border-right: none;
+}
+.kairos-segment-btn:hover {
+  background: var(--kairos-bg-hover);
+  color: var(--kairos-text);
+}
+.kairos-segment-btn.active {
+  background: var(--kairos-bg-selected);
+  color: var(--kairos-text);
+}
+.kairos-segment-btn:focus-visible {
+  outline: var(--kairos-focus-base) solid var(--kairos-focus-ring-color);
+  outline-offset: calc(-1 * var(--kairos-focus-ring-offset));
+}
+
+/* ─── Status-colored active variants ─── */
+.kairos-segment-btn.active.pgm {
+  background: var(--kairos-status-pgm);
+  color: var(--kairos-text);
+}
+.kairos-segment-btn.active.pvw {
+  background: var(--kairos-status-pvw);
+  color: var(--kairos-bg-deep);
+}
+.kairos-segment-btn.active.warning {
+  background: var(--kairos-status-warning);
+  color: var(--kairos-bg-deep);
+}
+.kairos-segment-btn.active.info {
+  background: var(--kairos-status-info);
+  color: var(--kairos-text);
+}
+
+/* ─── Small variant ─── */
+.kairos-segment.sm .kairos-segment-btn {
+  padding: var(--kairos-segment-sm-padding-y) var(--kairos-segment-sm-padding-x);
+  font-size: var(--kairos-text-2xs);
+}
+
+/* ─── Dense variant (no borders between buttons) ─── */
+.kairos-segment.dense {
+  gap: 0;
+}
+.kairos-segment.dense .kairos-segment-btn {
+  border-right: none;
+}
+

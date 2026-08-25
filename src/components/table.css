@@ -1,0 +1,12 @@
+/* ═══════════════════════════════════════════════════
+   Kairos v01 — Table Component
+   جداول البيانات العامة
+   ═══════════════════════════════════════════════════ */
+
+.kairos-table { width: 100%; border-collapse: collapse; font-size: var(--kairos-text-sm); }
+.kairos-th { padding: var(--kairos-table-th-padding-y) var(--kairos-table-th-padding-x); text-align: left; font-size: var(--kairos-text-sm); text-transform: uppercase; letter-spacing: var(--kairos-tracking-widest); color: var(--kairos-text-placeholder); border-bottom: var(--kairos-border-base) solid var(--kairos-border-muted); font-weight: var(--kairos-weight-bold); background: var(--kairos-bg-surface-alt); }
+.kairos-td { padding: var(--kairos-table-td-padding-y) var(--kairos-table-td-padding-x); border-bottom: var(--kairos-border-base) solid var(--kairos-border-muted); color: var(--kairos-text); }
+.kairos-tr:hover .kairos-td { background: var(--kairos-bg-surface); }
+.kairos-tr.selected .kairos-td { background: var(--kairos-bg-selected); }
+.kairos-tr.active .kairos-td { background: var(--kairos-bg-selected); border-left: var(--kairos-border-thick) solid var(--kairos-status-pvw); }
+

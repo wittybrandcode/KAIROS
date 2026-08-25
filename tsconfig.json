@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    // Environment Settings — Vite-compatible
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "target": "esnext",
+    "lib": ["esnext", "dom", "dom.iterable"],
+    "types": [],
+
+    // Output — Vite handles emit, we only typecheck
+    "noEmit": true,
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+
+    // Stricter Typechecking
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+
+    // Module behavior
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    "skipLibCheck": true,
+
+    // JSX (not used yet, but ready)
+    "jsx": "react-jsx"
+  },
+  "include": ["src/**/*.ts", "src/**/*.d.ts"]
+}

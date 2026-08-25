@@ -1,0 +1,131 @@
+/* ═══════════════════════════════════════════════════
+   Kairos v01 — Shell Layout
+   App shell, top bar, side panel, center switcher, right panel, status bar
+   ═══════════════════════════════════════════════════ */
+
+/* ─── App Shell Stage ─── */
+.kairos-stage { display: grid; grid-template-rows: var(--kairos-size-top-bar) 1fr var(--kairos-size-status-bar); height: 100vh; background: var(--kairos-bg-deep); }
+.kairos-shell { display: grid; grid-template-columns: var(--kairos-layout-panel-side) 1fr var(--kairos-layout-panel-main); min-height: 0; }
+.kairos-center { display: flex; flex-direction: column; min-width: 0; border-left: var(--kairos-border-base) solid var(--kairos-border-muted); border-right: var(--kairos-border-base) solid var(--kairos-border-muted); }
+
+/* ─── Side Panel ─── */
+.kairos-side-panel { display: flex; flex-direction: column; background: var(--kairos-bg-deep); min-height: 0; container-type: inline-size; container-name: side-panel; }
+.kairos-side-tabs { display: flex; background: var(--kairos-bg-surface-alt); border-bottom: var(--kairos-border-base) solid var(--kairos-border); }
+.kairos-side-tab { background: transparent; border: none; padding: var(--kairos-tab-padding-y) var(--kairos-tab-padding-x); font-size: var(--kairos-text-sm); font-family: inherit; text-transform: uppercase; letter-spacing: var(--kairos-tracking-wider); color: var(--kairos-text-placeholder); cursor: pointer; border-bottom: var(--kairos-border-base) solid transparent; text-align: left; }
+.kairos-side-tab.active { color: var(--kairos-text); background: var(--kairos-bg-deep); border-bottom-color: var(--kairos-status-pvw); }
+.kairos-side-tab:hover { background: var(--kairos-bg-surface); }
+.kairos-side-tab:focus-visible { outline: var(--kairos-focus-base) solid var(--kairos-focus-ring-color); outline-offset: var(--kairos-focus-ring-offset); }
+.kairos-search-row { padding: var(--kairos-form-field-gap); border-bottom: var(--kairos-border-base) solid var(--kairos-border-muted); }
+.kairos-search-input { display: flex; align-items: center; gap: var(--kairos-label-input-gap); background: var(--kairos-bg-input); border: var(--kairos-border-base) solid var(--kairos-border); padding: var(--kairos-input-padding-y) var(--kairos-input-padding-x); }
+.kairos-search-input input { background: transparent; border: none; outline: none; color: var(--kairos-text); font-size: var(--kairos-text-sm); width: 100%; font-family: var(--kairos-font-sans); }
+.kairos-search-input input::placeholder { color: var(--kairos-text-placeholder); }
+.kairos-side-section { padding: var(--kairos-card-section-gap) 0; }
+.kairos-side-section-label { padding: 0 var(--kairos-card-padding) var(--kairos-section-label-margin-bottom); font-size: var(--kairos-text-sm); text-transform: uppercase; letter-spacing: var(--kairos-tracking-widest); color: var(--kairos-text-placeholder); display: flex; align-items: center; gap: var(--kairos-section-label-gap); }
+.kairos-side-section-label-flat { padding: 0; }
+.kairos-side-list { display: flex; flex-direction: column; gap: var(--kairos-list-item-gap); }
+.kairos-src-row { display: flex; align-items: center; gap: var(--kairos-src-btn-icon-gap); padding: var(--kairos-src-btn-padding-y) var(--kairos-src-btn-padding-x); cursor: pointer; border-left: var(--kairos-border-thick) solid transparent; transition: background-color var(--kairos-motion-fast) var(--kairos-easing-ease-out), border-color var(--kairos-motion-fast) var(--kairos-easing-ease-out); }
+.kairos-src-row:hover { background: var(--kairos-bg-surface); }
+.kairos-src-row.active { background: var(--kairos-bg-selected); border-left-color: var(--kairos-status-pvw); }
+.kairos-src-row-bordered { padding: var(--kairos-form-field-gap) 0; border-bottom: var(--kairos-border-base) solid var(--kairos-border-muted); }
+.kairos-src-name { flex: 1; font-size: var(--kairos-text-sm); color: var(--kairos-text); }
+.kairos-src-key { font-family: var(--kairos-font-mono); font-size: var(--kairos-text-sm); color: var(--kairos-text-placeholder); }
+
+@container side-panel (max-width: 200px) {
+  .kairos-src-key { display: none; }
+  .kairos-src-row { flex-wrap: wrap; gap: var(--kairos-src-row-gap); }
+}
+
+@container side-panel (max-width: 160px) {
+  .kairos-side-section-label { font-size: var(--kairos-text-sm); letter-spacing: var(--kairos-tracking-normal); }
+  .kairos-src-name { font-size: var(--kairos-text-sm); }
+}
+/* ─── Center Switcher ─── */
+.kairos-switcher { display: flex; flex-direction: column; flex: 1; min-height: 0; container-type: inline-size; container-name: center; }
+.kairos-pgm-pvw-row { display: flex; align-items: stretch; gap: var(--kairos-pgm-pvw-gap); padding: var(--kairos-form-field-gap); background: var(--kairos-bg-surface-alt); border-bottom: var(--kairos-border-base) solid var(--kairos-border-muted); }
+.kairos-pgm-btn, .kairos-pvw-btn { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: var(--kairos-btn-icon-gap); padding: var(--kairos-pgm-pvw-padding-y) var(--kairos-pgm-pvw-padding-x); cursor: pointer; border: var(--kairos-border-thick) solid transparent;   min-height: var(--kairos-pgm-btn-min-height); transition: background-color var(--kairos-motion-normal) var(--kairos-easing-ease), border-color var(--kairos-motion-normal) var(--kairos-easing-ease); }
+.kairos-pgm-btn { background: var(--kairos-pgm-bg); border-color: var(--kairos-status-pgm); }
+.kairos-pgm-btn.active { background: var(--kairos-status-pgm); }
+.kairos-pvw-btn { background: var(--kairos-pvw-bg); border-color: var(--kairos-status-pvw); }
+.kairos-pvw-btn.active { background: var(--kairos-pvw-alpha-20); }
+.kairos-pgm-label, .kairos-pvw-label { font-size: var(--kairos-text-sm); font-weight: var(--kairos-weight-bold); letter-spacing: var(--kairos-tracking-widest); text-transform: uppercase; }
+.kairos-pgm-label { color: var(--kairos-status-pgm); }
+.kairos-pvw-label { color: var(--kairos-status-pvw); }
+.kairos-pgm-btn.active .kairos-pgm-label, .kairos-pvw-btn.active .kairos-pvw-label { color: var(--kairos-bg-deep); }
+.kairos-pgm-name, .kairos-pvw-name { font-family: var(--kairos-font-mono); font-size: var(--kairos-text-sm); font-weight: var(--kairos-weight-bold); color: var(--kairos-text); }
+.kairos-pgm-btn:focus-visible, .kairos-pvw-btn:focus-visible { outline: var(--kairos-focus-base) solid var(--kairos-focus-ring-color); outline-offset: var(--kairos-focus-ring-offset); }
+
+.kairos-transition-row { display: flex; align-items: center; gap: var(--kairos-btn-group-gap); padding: var(--kairos-form-field-gap); background: var(--kairos-bg-deep); border-bottom: var(--kairos-border-base) solid var(--kairos-border-muted); }
+.kairos-take-btn { padding: var(--kairos-btn-padding-y) var(--kairos-btn-padding-x); background: var(--kairos-status-pgm); color: var(--kairos-bg-deep); font-weight: var(--kairos-weight-bold); font-size: var(--kairos-text-sm); text-transform: uppercase; letter-spacing: var(--kairos-tracking-widest); border: none; cursor: pointer; flex: 1; }
+.kairos-take-btn:hover { background: var(--kairos-pgm-bright); }
+.kairos-take-btn:focus-visible { outline: var(--kairos-focus-base) solid var(--kairos-focus-ring-color); outline-offset: var(--kairos-focus-ring-offset); }
+
+
+.kairos-source-grid-section { padding: var(--kairos-form-field-gap); display: flex; flex-direction: column; gap: var(--kairos-card-section-gap); }
+.kairos-source-grid { display: grid; grid-template-columns: repeat(8, 1fr); gap: var(--kairos-src-grid-gap); }
+
+@container center (max-width: 600px) {
+  .kairos-source-grid { grid-template-columns: repeat(4, 1fr); }
+  .kairos-macros-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@container center (max-width: 400px) {
+  .kairos-source-grid { grid-template-columns: repeat(2, 1fr); }
+  .kairos-macros-grid { grid-template-columns: repeat(2, 1fr); }
+  .kairos-pgm-pvw-row { flex-direction: column; }
+}
+.kairos-source-grid-btn { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: var(--kairos-name-role-gap); padding: var(--kairos-pgm-pvw-padding-y) var(--kairos-pgm-pvw-padding-x); background: var(--kairos-bg-surface); border: var(--kairos-border-base) solid var(--kairos-border-muted); cursor: pointer;   min-height: var(--kairos-src-grid-btn-min-height); transition: background-color var(--kairos-motion-fast) var(--kairos-easing-ease-out), border-color var(--kairos-motion-fast) var(--kairos-easing-ease-out); }
+.kairos-source-grid-btn:hover { background: var(--kairos-bg-hover); border-color: var(--kairos-border-active); }
+.kairos-source-grid-btn.pgm { background: var(--kairos-pgm-bg); border-color: var(--kairos-status-pgm); }
+.kairos-source-grid-btn.pvw { background: var(--kairos-pvw-bg); border-color: var(--kairos-status-pvw); }
+.kairos-source-grid-btn:focus-visible { outline: var(--kairos-focus-base) solid var(--kairos-focus-ring-color); outline-offset: var(--kairos-focus-ring-offset); }
+.kairos-src-num { font-family: var(--kairos-font-mono); font-size: var(--kairos-text-sm); color: var(--kairos-text-placeholder); }
+.kairos-src-lbl { font-size: var(--kairos-text-sm); color: var(--kairos-text); font-weight: var(--kairos-weight-bold); text-align: center;   line-height: var(--kairos-leading-tight); }
+.kairos-macros-row { padding: 0 var(--kairos-form-field-gap) var(--kairos-form-field-gap); display: flex; flex-direction: column; gap: var(--kairos-card-section-gap); }
+.kairos-macros-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: var(--kairos-macro-grid-gap); }
+.kairos-macro-btn { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: var(--kairos-macro-icon-gap); padding: var(--kairos-macro-padding-y) var(--kairos-macro-padding-x); background: var(--kairos-bg-surface); border: var(--kairos-border-base) solid var(--kairos-border-muted); cursor: pointer; transition: background-color var(--kairos-motion-fast) var(--kairos-easing-ease-out), border-color var(--kairos-motion-fast) var(--kairos-easing-ease-out); }
+.kairos-macro-btn:hover { background: var(--kairos-bg-hover); border-color: var(--kairos-status-warning); }
+.kairos-macro-btn i { color: var(--kairos-status-warning); font-size: var(--kairos-size-dot-lg); }
+.kairos-macro-btn:focus-visible { outline: var(--kairos-focus-base) solid var(--kairos-focus-ring-color); outline-offset: var(--kairos-focus-ring-offset); }
+.kairos-macro-lbl { font-size: var(--kairos-text-sm); color: var(--kairos-text); text-transform: uppercase; letter-spacing: var(--kairos-tracking-wider); }
+
+/* ─── Right Panel ─── */
+.kairos-right-panel { display: flex; flex-direction: column; background: var(--kairos-bg-deep); min-height: 0; container-type: inline-size; container-name: right-panel; }
+.kairos-right-scroll { overflow-y: auto; flex: 1; }
+.kairos-right-section { padding: 0 var(--kairos-form-field-gap) var(--kairos-form-field-gap); }
+.kairos-right-section-stack { display: flex; flex-direction: column; gap: var(--kairos-router-card-section-gap); }
+.kairos-metrics-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--kairos-card-section-gap); padding: var(--kairos-form-field-gap); }
+.kairos-metric-card { background: var(--kairos-bg-surface); border: var(--kairos-border-base) solid var(--kairos-border-muted); padding: var(--kairos-card-padding); display: flex; flex-direction: column; gap: var(--kairos-name-role-gap); }
+.kairos-metric-label { font-size: var(--kairos-text-sm); color: var(--kairos-text-placeholder); text-transform: uppercase; letter-spacing: var(--kairos-tracking-widest); }
+.kairos-metric-value { font-family: var(--kairos-font-mono); font-size: var(--kairos-text-2xl); color: var(--kairos-text); font-weight: var(--kairos-weight-bold); }
+.kairos-metric-value-pvw { color: var(--kairos-status-pvw); }
+.kairos-metric-bar { height: var(--kairos-size-indicator); background: var(--kairos-bg-deep); }
+.kairos-metric-fill { height: 100%; }
+.kairos-metric-bar > div { height: 100%; background: var(--kairos-status-pvw); }
+.kairos-metric-bar-warn > div { background: var(--kairos-status-warning); }
+.kairos-metric-bar-pvw > div { background: var(--kairos-status-pvw); }
+
+.kairos-events-table { width: 100%; border-collapse: collapse; font-size: var(--kairos-text-sm); }
+
+@container right-panel (max-width: 240px) {
+  .kairos-events-table th, .kairos-events-table td { padding: var(--kairos-events-cell-padding-y) var(--kairos-events-cell-padding-x); font-size: var(--kairos-text-sm); }
+  .kairos-metrics-grid { grid-template-columns: 1fr; }
+}
+.kairos-events-table th { padding: var(--kairos-table-cell-padding-y) var(--kairos-table-cell-padding-x); text-align: left; font-size: var(--kairos-text-sm); text-transform: uppercase; letter-spacing: var(--kairos-tracking-widest); color: var(--kairos-text-placeholder); border-bottom: var(--kairos-border-base) solid var(--kairos-border-muted); font-weight: var(--kairos-weight-bold); background: var(--kairos-bg-surface-alt); }
+.kairos-events-table td { padding: var(--kairos-table-cell-padding-y) var(--kairos-table-cell-padding-x); border-bottom: var(--kairos-border-base) solid var(--kairos-border-muted); color: var(--kairos-text); }
+.kairos-events-table tr:hover td { background: var(--kairos-bg-surface); }
+.kairos-event-badge { display: inline-block; padding: var(--kairos-badge-padding-y) var(--kairos-badge-padding-x); font-family: var(--kairos-font-mono); font-size: var(--kairos-text-sm); font-weight: var(--kairos-weight-bold); text-transform: uppercase; }
+.kairos-event-badge.ok { background: var(--kairos-pvw-bg); color: var(--kairos-status-pvw); border: var(--kairos-border-base) solid var(--kairos-status-pvw); }
+.kairos-event-badge.warn { background: var(--kairos-warning-bg); color: var(--kairos-status-warning); border: var(--kairos-border-base) solid var(--kairos-status-warning); }
+.kairos-event-badge.err { background: var(--kairos-pgm-bg); color: var(--kairos-status-pgm); border: var(--kairos-border-base) solid var(--kairos-status-pgm); }
+.kairos-event-badge.info { background: var(--kairos-bg-input); color: var(--kairos-status-info); border: var(--kairos-border-base) solid var(--kairos-status-info); }
+
+/* ─── Audio Section ─── */
+.kairos-audio-section { background: var(--kairos-bg-surface-alt); border-top: var(--kairos-border-base) solid var(--kairos-border); padding: var(--kairos-form-field-gap); display: flex; flex-direction: column; gap: var(--kairos-card-section-gap); }
+.kairos-audio-meters { display: grid; grid-template-columns: repeat(8, 1fr); gap: var(--kairos-meter-group-gap); }
+.kairos-meter { background: var(--kairos-bg-deep); border: var(--kairos-border-base) solid var(--kairos-border-muted); padding: var(--kairos-meter-padding-y); display: flex; flex-direction: column; gap: var(--kairos-meter-label-gap);   min-height: var(--kairos-meter-min-height); }
+.kairos-meter-label { display: flex; align-items: center; gap: var(--kairos-meter-label-gap); font-size: var(--kairos-text-sm); color: var(--kairos-text-placeholder); text-transform: uppercase; letter-spacing: var(--kairos-tracking-wider); }
+.kairos-meter-track { flex: 1; background: var(--kairos-bg-input); position: relative; overflow: hidden; }
+.kairos-meter-fill { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, var(--kairos-status-pvw) 0%, var(--kairos-status-pvw) 70%, var(--kairos-status-warning) 70%, var(--kairos-status-warning) 90%, var(--kairos-status-pgm) 90%); }
+
+
+

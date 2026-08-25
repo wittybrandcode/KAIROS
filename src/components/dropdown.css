@@ -1,0 +1,12 @@
+/* ═══════════════════════════════════════════════════
+   Kairos v01 — Dropdown (Overlay Primitive)
+   ═══════════════════════════════════════════════════ */
+
+.kairos-dropdown { 
+  background: var(--kairos-bg-surface);
+  border: var(--kairos-border-base) solid var(--kairos-border);
+  box-shadow: var(--kairos-shadow-dropdown);
+  border-radius: 0;
+  overflow: hidden;
+}
+

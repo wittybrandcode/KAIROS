@@ -1,0 +1,67 @@
+/* ---------------------------------------------------
+   Kairos v01 — Typography Scale
+   ??? ?????? ??????? (Semantic Typography Scale)
+   --------------------------------------------------- */
+
+:root {
+  /* --- Font Families --- */
+  --kairos-font-sans: 'IBM Plex Sans Arabic', system-ui, sans-serif;
+  --kairos-font-mono: 'IBM Plex Mono', 'SF Mono', 'JetBrains Mono', 'Fira Code', monospace;
+
+  /* --- Font Sizes (canonical: --kairos-text-*) --- */
+  --kairos-text-2xs: 10px;
+  --kairos-text-xs: 11px;
+  --kairos-text-sm: 12px;
+  --kairos-text-md: 14px;
+  --kairos-text-lg: 16px;
+  --kairos-text-xl: 20px;
+  --kairos-text-2xl: 24px;
+  --kairos-text-3xl: 30px;
+  --kairos-text-4xl: 38px;
+
+  /* --- Font Size Aliases (legacy compat, prefer --kairos-text-*) --- */
+  --kairos-font-size-2xs: var(--kairos-text-2xs);
+  --kairos-font-size-xs: var(--kairos-text-xs);
+  --kairos-font-size-sm: var(--kairos-text-sm);
+  --kairos-font-size-md: var(--kairos-text-md);
+  --kairos-font-size-lg: var(--kairos-text-lg);
+  --kairos-font-size-xl: var(--kairos-text-xl);
+  --kairos-font-size-2xl: var(--kairos-text-2xl);
+  --kairos-font-size-3xl: var(--kairos-text-3xl);
+  --kairos-font-size-4xl: var(--kairos-text-4xl);
+
+  /* --- Font Weights (canonical: --kairos-weight-*) --- */
+  --kairos-weight-light: 300;
+  --kairos-weight-normal: 400;
+  --kairos-weight-medium: 500;
+  --kairos-weight-bold: 600;
+  --kairos-weight-heavy: 700;
+
+  /* --- Font Weight Alias (legacy compat) --- */
+  --kairos-font-weight-bold: var(--kairos-weight-bold);
+
+  /* --- Line Heights (canonical: --kairos-leading-*) --- */
+  --kairos-leading-tight: 1.2;
+  --kairos-leading-base: 1.4;
+  --kairos-leading-loose: 1.6;
+
+  /* --- Line Height Aliases (legacy compat) --- */
+  --kairos-line-height-sm: 1.1;
+  --kairos-line-height-base: var(--kairos-leading-base);
+  --kairos-line-height-lg: var(--kairos-leading-loose);
+  --kairos-line-height-4xl: 1;
+
+  /* --- Letter Spacing (Tracking) for Uppercase Broadcast Labels --- */
+  --kairos-tracking-tight: -0.01em;
+  --kairos-tracking-normal: 0;
+  --kairos-tracking-wide: 0.02em;
+  --kairos-tracking-wider: 0.04em;
+  --kairos-tracking-widest: 0.06em;
+  --kairos-tracking-extra-wide: 0.08em;
+  --kairos-tracking-ultra: 0.12em;
+  --kairos-tracking-max: 0.16em;
+  --kairos-tracking-super-wide: 0.2em;
+}
+
+
+

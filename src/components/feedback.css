@@ -1,0 +1,61 @@
+/* ═══════════════════════════════════════════════════
+   Kairos v01 — Feedback Components
+   الإشعارات، التلميحات، الفلاش، فلترة السجلات
+   ═══════════════════════════════════════════════════ */
+
+/* ─── Toast (fixed variant for programmatic use) ─── */
+.kairos-toast-fixed {
+  position: fixed;
+  bottom: var(--kairos-toast-fixed-bottom);
+  right: var(--kairos-toast-fixed-right);
+  display: flex;
+  align-items: flex-start;
+  gap: var(--kairos-toast-icon-gap, var(--kairos-toast-fixed-icon-gap));
+  padding: var(--kairos-comp-padding-y, var(--kairos-toast-padding-y, var(--kairos-toast-fixed-padding-y))) var(--kairos-comp-padding-x, var(--kairos-toast-padding-x, var(--kairos-toast-fixed-padding-x)));
+  background: var(--kairos-comp-current-bg, var(--kairos-bg-surface));
+  border: var(--kairos-border-base) solid var(--kairos-comp-current-border, var(--kairos-border-active));
+  z-index: var(--kairos-z-max);
+  opacity: 0;
+  transition: opacity var(--kairos-motion-normal) var(--kairos-easing-ease);
+  pointer-events: none;
+  font-size: var(--kairos-text-sm);
+  font-family: var(--kairos-font-mono);
+  color: var(--kairos-comp-current-text, var(--kairos-text));
+}
+.kairos-toast-fixed.show,
+.kairos-toast-fixed[data-state="open"] { opacity: 1; }
+
+/* ─── Flash Overlay ─── */
+.kairos-flash {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: var(--kairos-z-max);
+  transition: opacity var(--kairos-motion-normal) var(--kairos-easing-ease);
+  pointer-events: none;
+}
+.kairos-flash-content {
+  background: var(--kairos-bg-surface);
+  border: var(--kairos-border-thick) solid var(--kairos-border-active);
+  padding: var(--kairos-flash-content-padding-y) var(--kairos-flash-content-padding-x);
+  font-size: var(--kairos-text-sm);
+  font-family: var(--kairos-font-mono);
+  color: var(--kairos-text);
+  text-align: center;
+}
+.kairos-flash.kairos-intent-pgm .kairos-flash-content,
+.kairos-flash[class*="kairos-intent-"] .kairos-flash-content { border-color: var(--kairos-comp-border); }
+
+/* ─── Log Filter Bar ─── */
+.kairos-log-filter-bar {
+  display: flex;
+  gap: var(--kairos-log-filter-bar-gap);
+  margin-bottom: var(--kairos-log-filter-bar-margin-bottom);
+}
+.kairos-filter-btn {
+  transition: background var(--kairos-motion-fast) var(--kairos-easing-ease), color var(--kairos-motion-fast) var(--kairos-easing-ease), border-color var(--kairos-motion-fast) var(--kairos-easing-ease);
+}
+.kairos-filter-btn.active { background: var(--kairos-bg-selected); }
+

@@ -1,0 +1,36 @@
+/* ═══════════════════════════════════════════════════
+   Kairos v01 — Layout Primitives
+   Box, Stack, Cluster, Spacer
+   ═══════════════════════════════════════════════════ */
+
+/* ─── Box (Container) ─── */
+.kairos-box {
+  display: block;
+  box-sizing: border-box;
+}
+
+/* ─── Stack (Vertical) ─── */
+.kairos-stack {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.kairos-stack-gap-sm { gap: var(--kairos-layout-gap-sm); }
+.kairos-stack-gap-md { gap: var(--kairos-layout-gap-md); }
+.kairos-stack-gap-lg { gap: var(--kairos-layout-gap-lg); }
+
+/* ─── Cluster (Horizontal wrapping) ─── */
+.kairos-cluster {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.kairos-cluster-gap-sm { gap: var(--kairos-layout-gap-sm); }
+.kairos-cluster-gap-md { gap: var(--kairos-layout-gap-md); }
+.kairos-cluster-gap-lg { gap: var(--kairos-layout-gap-lg); }
+
+/* ─── Spacer (Expanding gap) ─── */
+.kairos-spacer {
+  flex-grow: 1;
+}

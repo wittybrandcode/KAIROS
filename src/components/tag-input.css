@@ -1,0 +1,16 @@
+.kairos-tag-input { display: flex; flex-wrap: wrap; align-items: center; gap: var(--kairos-tag-input-gap); padding: var(--kairos-tag-input-padding-y) var(--kairos-tag-input-padding-x); background: var(--kairos-bg-input); border: var(--kairos-border-base) solid var(--kairos-border); cursor: text; transition: border-color var(--kairos-motion-fast) var(--kairos-easing-ease); min-height: var(--kairos-size-control); }
+.kairos-tag-input:focus-within { border-color: var(--kairos-border-active); }
+
+.kairos-tag-input-tag { display: inline-flex; align-items: center; gap: var(--kairos-tag-gap); padding: var(--kairos-tag-padding-y) var(--kairos-tag-padding-x); background: var(--kairos-bg-surface-alt); border: var(--kairos-border-base) solid var(--kairos-border-muted); font-size: var(--kairos-text-sm); color: var(--kairos-text); white-space: nowrap; }
+.kairos-tag-input-tag.pgm { background: var(--kairos-pgm-bg); border-color: var(--kairos-status-pgm); color: var(--kairos-status-pgm); }
+.kairos-tag-input-tag.pvw { background: var(--kairos-pvw-bg); border-color: var(--kairos-status-pvw); color: var(--kairos-status-pvw); }
+
+.kairos-tag-input-remove { display: inline-flex; align-items: center; justify-content: center; width: var(--kairos-size-dot-lg); height: var(--kairos-size-dot-lg); background: transparent; border: none; color: var(--kairos-text-placeholder); cursor: pointer; font-size: var(--kairos-text-sm); padding: 0; transition: color var(--kairos-motion-fast) var(--kairos-easing-ease); }
+.kairos-tag-input-remove:hover { color: var(--kairos-status-pgm); }
+.kairos-tag-input-remove:focus-visible { outline: var(--kairos-focus-base) solid var(--kairos-focus-ring-color); outline-offset: var(--kairos-focus-ring-offset); }
+
+.kairos-tag-input input { flex: 1; min-width: var(--kairos-tag-input-min-width); border: none; outline: none; background: transparent; color: var(--kairos-text); font-size: var(--kairos-text-sm); font-family: var(--kairos-font-sans); padding: 0; }
+.kairos-tag-input input::placeholder { color: var(--kairos-text-placeholder); }
+
+.kairos-tag-input.sm { padding: var(--kairos-tag-input-sm-padding-y) var(--kairos-tag-input-sm-padding-x); min-height: auto; }
+

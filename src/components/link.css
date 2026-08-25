@@ -1,0 +1,19 @@
+/* ═══════════════════════════════════════════════════
+   Kairos v01 — Link (Content Primitive)
+   ═══════════════════════════════════════════════════ */
+
+.kairos-link {
+  color: var(--kairos-status-info);
+  text-decoration: none;
+  cursor: pointer;
+  transition: color var(--kairos-motion-fast) var(--kairos-easing-ease);
+}
+.kairos-link:hover {
+  text-decoration: underline;
+  color: var(--kairos-text);
+}
+.kairos-link:focus-visible {
+  outline: var(--kairos-focus-base) solid var(--kairos-focus-ring-color);
+  outline-offset: var(--kairos-focus-ring-offset);
+}
+

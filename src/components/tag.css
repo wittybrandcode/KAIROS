@@ -1,0 +1,22 @@
+/* ═══════════════════════════════════════════════════
+   Kairos v01 — Tag (Feedback Primitive)
+   ═══════════════════════════════════════════════════ */
+
+.kairos-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--kairos-tag-padding-y) var(--kairos-tag-padding-x);
+  font-family: var(--kairos-font-mono);
+  font-size: var(--kairos-text-sm);
+  text-transform: uppercase;
+  letter-spacing: var(--kairos-tracking-wide);
+  background: var(--kairos-bg-input);
+  color: var(--kairos-text-secondary);
+  border: var(--kairos-border-base) solid var(--kairos-border-muted);
+  white-space: nowrap;
+}
+.kairos-tag.pgm { background: var(--kairos-pgm-alpha-20); color: var(--kairos-status-pgm); border-color: var(--kairos-status-pgm); }
+.kairos-tag.pvw { background: var(--kairos-pvw-alpha-20); color: var(--kairos-status-pvw); border-color: var(--kairos-status-pvw); }
+.kairos-tag.warn { background: transparent; color: var(--kairos-status-warning); border-color: var(--kairos-status-warning); }
+.kairos-tag.info { background: transparent; color: var(--kairos-status-info); border-color: var(--kairos-status-info); }
+

@@ -1,0 +1,25 @@
+/* ═══════════════════════════════════════════════════
+   Kairos v01 — Elevation / Z-Index
+   طبقات العمق — كل طبقة تعبر عن ارتفاع محدد
+   ═══════════════════════════════════════════════════ */
+
+:root {
+  --kairos-z-base:        1;      /* مستوى الأرض — محتوى عادي */
+  --kairos-z-sticky:     10;      /* أشرطة لاصقة — top-bar, panel headers */
+  --kairos-z-dropdown:   50;      /* قوائم منسدلة — menus, popovers */
+  --kairos-z-sticky-nav: 80;      /* تنقل لاصق — side panels, tabs */
+  --kairos-z-toast:    9000;      /* الإشعارات - toasts, alerts فوق كل شيء */
+  --kairos-z-modal:     100;      /* نوافذ مشروطة — modals, dialogs */
+  --kairos-z-tooltip:   200;      /* تلميحات — tooltips, popups */
+  --kairos-z-loader:    500;      /* شاشة تحميل — loading overlay */
+  --kairos-z-max:      9999;      /* أقصى ارتفاع — حالات الطوارئ */
+}
+
+.kairos-z-base        { z-index: var(--kairos-z-base); }
+.kairos-z-sticky      { z-index: var(--kairos-z-sticky); }
+.kairos-z-dropdown    { z-index: var(--kairos-z-dropdown); }
+.kairos-z-sticky-nav  { z-index: var(--kairos-z-sticky-nav); }
+.kairos-z-toast       { z-index: var(--kairos-z-toast); }
+.kairos-z-modal       { z-index: var(--kairos-z-modal); }
+.kairos-z-tooltip     { z-index: var(--kairos-z-tooltip); }
+.kairos-z-loader      { z-index: var(--kairos-z-loader); }

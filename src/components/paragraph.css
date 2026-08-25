@@ -1,0 +1,15 @@
+/* ═══════════════════════════════════════════════════
+   Kairos v01 — Paragraph (Content Primitive)
+   ═══════════════════════════════════════════════════ */
+
+.kairos-paragraph {
+  font-family: var(--kairos-font-sans);
+  font-size: var(--kairos-text-md);
+  color: var(--kairos-text-secondary);
+  line-height: var(--kairos-leading-base);
+  margin: 0 0 var(--kairos-paragraph-margin) 0;
+}
+.kairos-paragraph:last-child {
+  margin-bottom: 0;
+}
+

@@ -1,0 +1,12 @@
+/* ═══════════════════════════════════════════════════
+   Kairos v01 — Alert (Feedback Primitive)
+   ═══════════════════════════════════════════════════ */
+
+.kairos-alert { display: flex; align-items: stretch; gap: var(--kairos-alert-padding); padding: var(--kairos-comp-padding-y, var(--kairos-alert-padding)) var(--kairos-comp-padding-x, var(--kairos-alert-padding)); border: var(--kairos-border-base) solid var(--kairos-comp-current-border, var(--kairos-border)); background: var(--kairos-comp-current-bg, transparent); color: var(--kairos-comp-current-text, var(--kairos-text)); }
+.kairos-alert i { display: flex; align-items: center; justify-content: center; align-self: stretch; flex-shrink: 0; font-size: var(--kairos-text-xl); }
+.kairos-alert-body { flex: 1; }
+.kairos-alert-title { font-size: var(--kairos-text-sm); font-weight: var(--kairos-weight-bold); text-transform: uppercase; letter-spacing: var(--kairos-tracking-wider); color: inherit; }
+.kairos-alert-msg { font-size: var(--kairos-text-sm); margin-top: var(--kairos-alert-msg-gap); color: var(--kairos-text-muted); }
+.kairos-alert-actions { display: flex; gap: var(--kairos-alert-action-gap); margin-top: var(--kairos-card-section-gap); }
+.kairos-alert-action { font-size: var(--kairos-text-sm); color: inherit; font-weight: var(--kairos-weight-bold); text-transform: uppercase; letter-spacing: var(--kairos-tracking-wider); cursor: pointer; }
+

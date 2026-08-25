@@ -1,0 +1,76 @@
+/* ═══════════════════════════════════════════════════
+   Kairos v01 — Sidebar
+   الشريط الجانبي
+   ═══════════════════════════════════════════════════ */
+
+.kairos-sidebar {
+  display: flex;
+  flex-direction: column;
+  width: var(--kairos-sidebar-width);
+  height: 100%;
+  background: var(--kairos-bg-surface-alt);
+  border-right: var(--kairos-border-base) solid var(--kairos-border);
+  flex-shrink: 0;
+}
+
+.kairos-sidebar-header {
+  padding: var(--kairos-sidebar-padding);
+  border-bottom: var(--kairos-border-base) solid var(--kairos-border-muted);
+}
+
+.kairos-sidebar-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--kairos-sidebar-padding) 0;
+}
+
+.kairos-sidebar-footer {
+  padding: var(--kairos-sidebar-padding);
+  border-top: var(--kairos-border-base) solid var(--kairos-border-muted);
+}
+
+.kairos-sidebar-group {
+  margin-bottom: var(--kairos-sidebar-gap-lg);
+}
+
+.kairos-sidebar-heading {
+  padding: 0 var(--kairos-sidebar-padding);
+  margin-bottom: var(--kairos-sidebar-gap-sm);
+  font-size: var(--kairos-text-xs);
+  color: var(--kairos-text-placeholder);
+  text-transform: uppercase;
+  letter-spacing: var(--kairos-tracking-widest);
+  font-weight: var(--kairos-weight-bold);
+}
+
+.kairos-sidebar-item {
+  display: flex;
+  align-items: center;
+  gap: var(--kairos-sidebar-gap-sm);
+  padding: var(--kairos-sidebar-gap-sm) var(--kairos-sidebar-padding);
+  font-size: var(--kairos-text-sm);
+  color: var(--kairos-text-muted);
+  text-decoration: none;
+  cursor: pointer;
+  border-left: var(--kairos-border-thick) solid transparent;
+  transition: background var(--kairos-motion-fast) var(--kairos-easing-ease), color var(--kairos-motion-fast) var(--kairos-easing-ease), border-left-color var(--kairos-motion-fast) var(--kairos-easing-ease);
+}
+
+.kairos-sidebar-item:hover {
+  background: var(--kairos-bg-hover);
+  color: var(--kairos-text);
+}
+
+.kairos-sidebar-item[data-state="active"] {
+  background: var(--kairos-bg-surface);
+  color: var(--kairos-comp-current-text, var(--kairos-text));
+  border-left-color: var(--kairos-comp-current-border, var(--kairos-status-pvw));
+}
+
+.kairos-sidebar-icon {
+  font-size: var(--kairos-text-xl);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+

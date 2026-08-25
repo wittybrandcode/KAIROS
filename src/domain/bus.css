@@ -1,0 +1,191 @@
+/* ═══════════════════════════════════════════════════════════════
+   Kairos v01 — Bus Bar / Source Bus
+   أزرار المصادر في صفوف PGM/PVW
+
+   The bus bar is the horizontal strip of source buttons found at
+   the bottom of every production switcher. Two rows stacked:
+   Program (PGM — red highlight) and Preview (PVW — green highlight).
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ─── Bus Container ─── */
+.kairos-bus {
+  display: flex;
+  flex-direction: column;
+  gap: var(--kairos-bus-row-gap);
+}
+
+/* ─── Bus Row ─── */
+.kairos-bus-row {
+  display: flex;
+  gap: var(--kairos-bus-btn-gap);
+  align-items: stretch;
+}
+
+/* ─── Row Label (PGM / PVW) ─── */
+.kairos-bus-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--kairos-bus-label-w);
+  padding: var(--kairos-bus-label-padding);
+  font-family: var(--kairos-font-mono);
+  font-size: var(--kairos-text-sm);
+  text-transform: uppercase;
+  letter-spacing: var(--kairos-tracking-wider);
+  color: var(--kairos-text-placeholder);
+  flex-shrink: 0;
+  user-select: none;
+}
+.kairos-bus-label.pgm { color: var(--kairos-status-pgm); }
+.kairos-bus-label.pvw { color: var(--kairos-status-pvw); }
+
+/* ─── Source Button ─── */
+.kairos-bus-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--kairos-bus-btn-content-gap);
+  padding: var(--kairos-bus-btn-padding-y) var(--kairos-bus-btn-padding-x);
+  font-family: var(--kairos-font-mono);
+  font-size: var(--kairos-text-sm);
+  text-transform: uppercase;
+  letter-spacing: var(--kairos-tracking-wider);
+  border: var(--kairos-border-base) solid var(--kairos-border-muted);
+  background: var(--kairos-bg-surface);
+  color: var(--kairos-text-muted);
+  cursor: pointer;
+  user-select: none;
+  transition: background var(--kairos-motion-fast) var(--kairos-easing-ease-out),
+              border-color var(--kairos-motion-fast) var(--kairos-easing-ease-out),
+              color var(--kairos-motion-fast) var(--kairos-easing-ease-out),
+              filter var(--kairos-motion-fast) var(--kairos-easing-ease-out);
+}
+.kairos-bus-btn:hover {
+  background: var(--kairos-bg-hover);
+  border-color: var(--kairos-border-active);
+  color: var(--kairos-text);
+}
+
+/* ─── PGM State (On Air) ─── */
+.kairos-bus-btn.pgm {
+  background: var(--kairos-status-pgm);
+  border-color: var(--kairos-status-pgm);
+  color: var(--kairos-text);
+}
+.kairos-bus-btn.pgm:hover {
+  filter: brightness(1.12);
+}
+
+/* ─── PVW State (Preview) ─── */
+.kairos-bus-btn.pvw {
+  background: var(--kairos-status-pvw);
+  border-color: var(--kairos-status-pvw);
+  color: var(--kairos-bg-deep);
+}
+.kairos-bus-btn.pvw:hover {
+  filter: brightness(1.12);
+}
+
+/* ─── Focus ─── */
+.kairos-bus-btn:focus-visible {
+  outline: var(--kairos-focus-base) solid var(--kairos-focus-ring-color);
+  outline-offset: var(--kairos-focus-ring-offset);
+}
+
+/* ─── Tally Dot (inside button) ─── */
+.kairos-bus-tally {
+  width: var(--kairos-size-tally);
+  height: var(--kairos-size-tally);
+  flex-shrink: 0;
+}
+.kairos-bus-btn.pgm .kairos-bus-tally {
+  background: var(--kairos-text);
+}
+.kairos-bus-btn.pvw .kairos-bus-tally {
+  background: var(--kairos-bg-deep);
+}
+
+/* ─── Transition Controls (between rows) ─── */
+.kairos-bus-transition {
+  display: flex;
+  align-items: center;
+  gap: var(--kairos-btn-group-gap);
+  padding: var(--kairos-bus-row-gap) 0;
+}
+.kairos-bus-transition .kairos-bus-label {
+  color: var(--kairos-text-placeholder);
+}
+
+.kairos-bus-trans-btn {
+  padding: var(--kairos-btn-padding-y) var(--kairos-bus-trans-btn-padding-x);
+  font-family: var(--kairos-font-mono);
+  font-size: var(--kairos-text-sm);
+  text-transform: uppercase;
+  letter-spacing: var(--kairos-tracking-widest);
+  cursor: pointer;
+  border: var(--kairos-border-base) solid var(--kairos-border);
+  background: var(--kairos-bg-surface);
+  color: var(--kairos-text-muted);
+  transition: background var(--kairos-motion-fast) var(--kairos-easing-ease),
+              color var(--kairos-motion-fast) var(--kairos-easing-ease),
+              border-color var(--kairos-motion-fast) var(--kairos-easing-ease),
+              filter var(--kairos-motion-fast) var(--kairos-easing-ease);
+}
+.kairos-bus-trans-btn:hover {
+  background: var(--kairos-bg-hover);
+  color: var(--kairos-text);
+  border-color: var(--kairos-border-active);
+}
+.kairos-bus-trans-btn.cut {
+  background: var(--kairos-status-pgm);
+  border-color: var(--kairos-status-pgm);
+  color: var(--kairos-text);
+}
+.kairos-bus-trans-btn.cut:hover {
+  filter: brightness(1.12);
+}
+.kairos-bus-trans-btn.auto {
+  background: var(--kairos-status-pvw);
+  border-color: var(--kairos-status-pvw);
+  color: var(--kairos-bg-deep);
+}
+.kairos-bus-trans-btn.auto:hover {
+  filter: brightness(1.12);
+}
+.kairos-bus-trans-btn:focus-visible {
+  outline: var(--kairos-focus-base) solid var(--kairos-focus-ring-color);
+  outline-offset: var(--kairos-focus-ring-offset);
+}
+
+/* ─── Transition Style Selector ─── */
+.kairos-bus-trans-style {
+  display: flex;
+  gap: var(--kairos-bus-btn-gap);
+  margin-left: auto;
+}
+.kairos-bus-trans-style-btn {
+  padding: var(--kairos-bus-btn-padding-y) var(--kairos-bus-btn-padding-x);
+  font-family: var(--kairos-font-mono);
+  font-size: var(--kairos-text-2xs);
+  text-transform: uppercase;
+  letter-spacing: var(--kairos-tracking-wider);
+  cursor: pointer;
+  border: var(--kairos-border-base) solid var(--kairos-border-muted);
+  background: var(--kairos-bg-surface);
+  color: var(--kairos-text-placeholder);
+  transition: background var(--kairos-motion-fast) var(--kairos-easing-ease),
+              color var(--kairos-motion-fast) var(--kairos-easing-ease),
+              border-color var(--kairos-motion-fast) var(--kairos-easing-ease);
+}
+.kairos-bus-trans-style-btn:hover {
+  background: var(--kairos-bg-hover);
+  border-color: var(--kairos-border-active);
+  color: var(--kairos-text);
+}
+.kairos-bus-trans-style-btn.active {
+  background: var(--kairos-bg-selected);
+  border-color: var(--kairos-border-active);
+  color: var(--kairos-text);
+}
+
