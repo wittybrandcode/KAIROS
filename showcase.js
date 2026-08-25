@@ -35,6 +35,12 @@ document.addEventListener('DOMContentLoaded', () => {
         { id: "radio", name: "Radio", key: "P4" },
         { id: "buttons", name: "Buttons", key: "P4" }
       ]
+    },
+    {
+      category: "P8: Composites",
+      items: [
+        { id: "accordion", name: "Accordion", key: "P8" }
+      ]
     }
   ];
 

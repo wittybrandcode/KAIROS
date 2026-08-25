@@ -1,0 +1,102 @@
+<div class="kairos-flex kairos-col kairos-gap-loose">
+  <div class="kairos-flex kairos-col kairos-gap-extra-tight">
+    <h1 class="kairos-text-3xl kairos-font-bold">Accordion (الأكورديون)</h1>
+    <p class="kairos-text-color-secondary">قوائم قابلة للطي — data-kairos-toggle="accordion" · وضع single-open افتراضياً · Enter/Space أصلي عبر button.</p>
+  </div>
+
+  <div class="kairos-bg-surface kairos-border kairos-border-color-muted kairos-p-loose kairos-flex kairos-col kairos-gap-standard">
+    <h3 class="kairos-text-sm kairos-text-color-muted kairos-tracking-widest kairos-uppercase">Single Open (افتراضي)</h3>
+    <div class="kairos-accordion" id="acc-basic">
+      <div class="kairos-accordion-item">
+        <button class="kairos-accordion-trigger" data-kairos-toggle="accordion" aria-controls="acc-p1">
+          Program Feed
+          <span class="kairos-accordion-trigger-icon">›</span>
+        </button>
+        <div class="kairos-accordion-panel" id="acc-p1" role="region">
+          Main program output — SDI-1 · 1080p59.94 · Embedded audio ch 1–8.
+        </div>
+      </div>
+      <div class="kairos-accordion-item">
+        <button class="kairos-accordion-trigger" data-kairos-toggle="accordion" aria-controls="acc-p2">
+          Preview Feed
+          <span class="kairos-accordion-trigger-icon">›</span>
+        </button>
+        <div class="kairos-accordion-panel" id="acc-p2" role="region">
+          Preview output — SDI-2 · 1080p59.94 · Clean feed enabled.
+        </div>
+      </div>
+      <div class="kairos-accordion-item">
+        <button class="kairos-accordion-trigger" data-kairos-toggle="accordion" aria-controls="acc-p3">
+          Aux Buses
+          <span class="kairos-accordion-trigger-icon">›</span>
+        </button>
+        <div class="kairos-accordion-panel" id="acc-p3" role="region">
+          AUX-1: Stream encoder · AUX-2: Confidence monitor · AUX-3: Unassigned.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="kairos-bg-surface kairos-border kairos-border-color-muted kairos-p-loose kairos-flex kairos-col kairos-gap-standard">
+    <h3 class="kairos-text-sm kairos-text-color-muted kairos-tracking-widest kairos-uppercase">Allow Multiple</h3>
+    <div class="kairos-accordion" data-kairos-allow-multiple="true">
+      <div class="kairos-accordion-item">
+        <button class="kairos-accordion-trigger" data-kairos-toggle="accordion">
+          Audio Settings
+          <span class="kairos-accordion-trigger-icon">›</span>
+        </button>
+        <div class="kairos-accordion-panel">Follow video · 48kHz · Loudness target −23 LUFS.</div>
+      </div>
+      <div class="kairos-accordion-item">
+        <button class="kairos-accordion-trigger" data-kairos-toggle="accordion">
+          Recording
+          <span class="kairos-accordion-trigger-icon">›</span>
+        </button>
+        <div class="kairos-accordion-panel">ISO record on all cameras · ProRes 422 HQ · Dual slot redundancy.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="kairos-bg-surface kairos-border kairos-border-color-muted kairos-p-loose kairos-flex kairos-col kairos-gap-standard">
+    <h3 class="kairos-text-sm kairos-text-color-muted kairos-tracking-widest kairos-uppercase">Compact Variant</h3>
+    <div class="kairos-accordion compact">
+      <div class="kairos-accordion-item">
+        <button class="kairos-accordion-trigger" data-kairos-toggle="accordion">
+          Router Crosspoints
+          <span class="kairos-accordion-trigger-icon">›</span>
+        </button>
+        <div class="kairos-accordion-panel">32×16 matrix · Salvos loaded · Last salvo: "NEWS-OPEN".</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="kairos-bg-surface kairos-border kairos-border-color-muted kairos-p-loose kairos-flex kairos-col kairos-gap-standard">
+    <h3 class="kairos-text-sm kairos-text-color-muted kairos-tracking-widest kairos-uppercase">Nested (عزل داخلي)</h3>
+    <div class="kairos-accordion" id="acc-nested-outer">
+      <div class="kairos-accordion-item">
+        <button class="kairos-accordion-trigger" data-kairos-toggle="accordion">
+          Device: Camera 01
+          <span class="kairos-accordion-trigger-icon">›</span>
+        </button>
+        <div class="kairos-accordion-panel">
+          <div class="kairos-accordion compact">
+            <div class="kairos-accordion-item">
+              <button class="kairos-accordion-trigger" data-kairos-toggle="accordion">
+                Shading
+                <span class="kairos-accordion-trigger-icon">›</span>
+              </button>
+              <div class="kairos-accordion-panel">Auto-iris ON · White balance 3200K · Gain 0dB.</div>
+            </div>
+            <div class="kairos-accordion-item">
+              <button class="kairos-accordion-trigger" data-kairos-toggle="accordion">
+                Network
+                <span class="kairos-accordion-trigger-icon">›</span>
+              </button>
+              <div class="kairos-accordion-panel">SMPTE ST 2110 · Multicast 239.1.10 · Latency 2 frames.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

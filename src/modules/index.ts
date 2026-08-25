@@ -4,10 +4,10 @@
  */
 export { Modal } from './modal';
 export { Dropdown } from './dropdown';
+export { Accordion } from './accordion';
 export { Tabs } from './tabs';
 export { Toast } from './toast';
 
 // TODO: uncomment when modules are implemented
-// export { Accordion } from './accordion';
 // export { Sidebar } from './sidebar';
 // export { Command } from './command';

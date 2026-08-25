@@ -82,7 +82,7 @@ export function init(): void {
 
     if (nextIndex >= 0) {
       e.preventDefault();
-      activateTab(tabs[nextIndex]);
+      activateTab(tabs[nextIndex]!);
     }
   }) as EventListener);
 }

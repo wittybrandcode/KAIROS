@@ -20,7 +20,7 @@ export function trap(container: HTMLElement): () => void {
   // Focus the first focusable element
   const focusable = getFocusable(container);
   if (focusable.length > 0) {
-    focusable[0].focus();
+    focusable[0]!.focus();
   } else {
     // If no focusable children, make the container itself focusable
     container.setAttribute('tabindex', '-1');
@@ -37,8 +37,8 @@ export function trap(container: HTMLElement): () => void {
       return;
     }
 
-    const first = elements[0];
-    const last = elements[elements.length - 1];
+    const first = elements[0]!;
+    const last = elements[elements.length - 1]!;
 
     if (e.shiftKey) {
       if (document.activeElement === first) {
@@ -71,7 +71,7 @@ export function next(container: HTMLElement): void {
 
   const currentIndex = elements.indexOf(document.activeElement as HTMLElement);
   const nextIndex = currentIndex < elements.length - 1 ? currentIndex + 1 : 0;
-  elements[nextIndex].focus();
+  elements[nextIndex]!.focus();
 }
 
 /** Move focus to the previous focusable element inside a container */
@@ -81,5 +81,5 @@ export function previous(container: HTMLElement): void {
 
   const currentIndex = elements.indexOf(document.activeElement as HTMLElement);
   const prevIndex = currentIndex > 0 ? currentIndex - 1 : elements.length - 1;
-  elements[prevIndex].focus();
+  elements[prevIndex]!.focus();
 }

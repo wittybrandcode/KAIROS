@@ -30,6 +30,7 @@ import * as utils from './core/utils';
 // ─── Modules ───
 import { Modal, init as initModal } from './modules/modal';
 import { Dropdown, init as initDropdown } from './modules/dropdown';
+import { Accordion, init as initAccordion } from './modules/accordion';
 import { Tabs, init as initTabs } from './modules/tabs';
 import { Toast, init as initToast } from './modules/toast';
 import { init as initIcons } from './icons';
@@ -39,6 +40,7 @@ function init(): void {
   initIcons();
   initModal();
   initDropdown();
+  initAccordion();
   initTabs();
   initToast();
 }
@@ -64,6 +66,7 @@ const Kairos = {
   // Modules
   Modal,
   Dropdown,
+  Accordion,
   Tabs,
   Toast,
 

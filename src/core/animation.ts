@@ -103,6 +103,7 @@ export function transitionPromise(
 function parseDuration(value: string): number {
   const match = value.trim().match(/^([\d.]+)(m?s)$/);
   if (!match) return 0;
-  const num = parseFloat(match[1]);
-  return match[2] === 'ms' ? num : num * 1000;
+  const num = parseFloat(match[1] ?? '0');
+  const unit = match[2];
+  return unit === 'ms' ? num : num * 1000;
 }

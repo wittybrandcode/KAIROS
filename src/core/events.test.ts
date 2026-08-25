@@ -11,7 +11,7 @@ describe('Core Events Module', () => {
     const result = events.emit(element, 'kairos:test', { value: 42 });
     
     expect(handler).toHaveBeenCalledTimes(1);
-    const event = handler.mock.calls[0][0] as CustomEvent;
+    const event = handler.mock.calls[0]![0] as CustomEvent;
     expect(event.detail).toEqual({ value: 42 });
     expect(result).toBe(true); // Default cancelable is false, so it wasn't cancelled
   });
