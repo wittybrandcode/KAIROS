@@ -56,3 +56,4 @@ showcase-data/     HTML fragments loaded by showcase.js
 See [PROJECT-HANDOVER.md](PROJECT-HANDOVER.md) for the full audit and v1.0 roadmap.
 Component behavior specs live in [`docs/component-specs/`](docs/component-specs/).
 Development conventions every contributor/agent must follow: [AGENTS.md](AGENTS.md).
+Engineering wisdom behind the rules: [EXPERT-ADVICE.md](EXPERT-ADVICE.md).
