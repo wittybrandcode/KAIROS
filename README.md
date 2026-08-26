@@ -52,6 +52,7 @@ showcase-data/     HTML fragments loaded by showcase.js
 
 ## Status
 
-See [PROJECT-HANDOVER.md](PROJECT-HANDOVER.md) for the full audit, gap list, and v1.0 roadmap.
+**AI coding agents: start with [AI-CONTEXT.md](AI-CONTEXT.md)** — complete onboarding brief to continue development immediately.
+See [PROJECT-HANDOVER.md](PROJECT-HANDOVER.md) for the full audit and v1.0 roadmap.
 Component behavior specs live in [`docs/component-specs/`](docs/component-specs/).
 Development conventions every contributor/agent must follow: [AGENTS.md](AGENTS.md).
