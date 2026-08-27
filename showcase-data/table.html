@@ -1,0 +1,121 @@
+<div class="kairos-flex kairos-col kairos-gap-loose">
+  <div class="kairos-flex kairos-col kairos-gap-extra-tight">
+    <h1 class="kairos-text-3xl kairos-font-bold">Table (الجدول)</h1>
+    <p class="kairos-text-color-secondary">جداول بيانات عامة — لعرض التوجيه، حالة المصادر، وسجلات الأحداث في غرفة التحكم.</p>
+  </div>
+
+  <div class="kairos-bg-surface kairos-border kairos-border-color-muted kairos-p-loose kairos-flex kairos-col kairos-gap-standard">
+    <h3 class="kairos-text-sm kairos-text-color-muted kairos-tracking-widest kairos-uppercase">Base Table</h3>
+    <div class="kairos-bg-input kairos-border kairos-border-color-muted kairos-overflow-hidden">
+      <table class="kairos-table">
+        <thead>
+          <tr>
+            <th class="kairos-th">Source</th>
+            <th class="kairos-th">Input</th>
+            <th class="kairos-th">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="kairos-tr">
+            <td class="kairos-td">CAM 01</td>
+            <td class="kairos-td kairos-font-mono kairos-text-color-muted">SDI-01</td>
+            <td class="kairos-td"><span class="kairos-badge kairos-intent-pgm kairos-variant-solid">PGM</span></td>
+          </tr>
+          <tr class="kairos-tr">
+            <td class="kairos-td">CAM 02</td>
+            <td class="kairos-td kairos-font-mono kairos-text-color-muted">SDI-02</td>
+            <td class="kairos-td"><span class="kairos-badge kairos-intent-pvw kairos-variant-solid">PVW</span></td>
+          </tr>
+          <tr class="kairos-tr">
+            <td class="kairos-td">VTR</td>
+            <td class="kairos-td kairos-font-mono kairos-text-color-muted">SDI-03</td>
+            <td class="kairos-td"><span class="kairos-badge kairos-intent-neutral kairos-variant-outline">STBY</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="kairos-bg-surface kairos-border kairos-border-color-muted kairos-p-loose kairos-flex kairos-col kairos-gap-standard">
+    <h3 class="kairos-text-sm kairos-text-color-muted kairos-tracking-widest kairos-uppercase">States (الحالات)</h3>
+    <div class="kairos-bg-input kairos-border kairos-border-color-muted kairos-overflow-hidden">
+      <table class="kairos-table">
+        <thead>
+          <tr>
+            <th class="kairos-th">Row</th>
+            <th class="kairos-th">State</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="kairos-tr">
+            <td class="kairos-td">Default</td>
+            <td class="kairos-td kairos-text-color-muted">Hover to see bg-surface</td>
+          </tr>
+          <tr class="kairos-tr selected">
+            <td class="kairos-td">Selected</td>
+            <td class="kairos-td kairos-text-color-pvw">bg-selected</td>
+          </tr>
+          <tr class="kairos-tr active">
+            <td class="kairos-td">Active (PVW)</td>
+            <td class="kairos-td kairos-text-color-pvw">border-left: pvw + bg-selected</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="kairos-flex kairos-items-center kairos-gap-compact kairos-text-xs kairos-font-mono kairos-text-color-muted">
+      <span>th: bg-surface-alt · td: border-muted · tr:hover: bg-surface · selected/active: bg-selected</span>
+    </div>
+  </div>
+
+  <div class="kairos-bg-surface kairos-border kairos-border-color-muted kairos-p-loose kairos-flex kairos-col kairos-gap-standard">
+    <h3 class="kairos-text-sm kairos-text-color-muted kairos-tracking-widest kairos-uppercase">Broadcast: Router Status Table</h3>
+    <div class="kairos-flex kairos-col kairos-gap-standard kairos-bg-deep kairos-p-standard kairos-border kairos-border-color-muted">
+      <div class="kairos-flex kairos-items-center">
+        <h4 class="kairos-heading kairos-h4">Routing Matrix — 32x32</h4>
+        <span class="kairos-badge kairos-intent-info kairos-variant-subtle kairos-ml-auto">SDI</span>
+      </div>
+      <div class="kairos-bg-surface kairos-border kairos-border-color-muted kairos-overflow-hidden">
+        <table class="kairos-table">
+          <thead>
+            <tr>
+              <th class="kairos-th">Dest</th>
+              <th class="kairos-th">Source</th>
+              <th class="kairos-th">Video</th>
+              <th class="kairos-th">Audio</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="kairos-tr active">
+              <td class="kairos-td kairos-font-mono kairos-font-bold">PGM</td>
+              <td class="kairos-td">CAM 01</td>
+              <td class="kairos-td"><span class="kairos-indicator pvw">SYNC</span></td>
+              <td class="kairos-td kairos-text-color-pvw">Embed</td>
+            </tr>
+            <tr class="kairos-tr selected">
+              <td class="kairos-td kairos-font-mono">PVW</td>
+              <td class="kairos-td">CAM 02</td>
+              <td class="kairos-td"><span class="kairos-indicator pvw">SYNC</span></td>
+              <td class="kairos-td">Embed</td>
+            </tr>
+            <tr class="kairos-tr">
+              <td class="kairos-td kairos-font-mono">AUX 01</td>
+              <td class="kairos-td">VTR</td>
+              <td class="kairos-td"><span class="kairos-indicator warn">NO SYNC</span></td>
+              <td class="kairos-td kairos-text-color-warning">Check</td>
+            </tr>
+            <tr class="kairos-tr">
+              <td class="kairos-td kairos-font-mono kairos-text-color-placeholder">AUX 02</td>
+              <td class="kairos-td kairos-text-color-placeholder">BLACK</td>
+              <td class="kairos-td"><span class="kairos-indicator">IDLE</span></td>
+              <td class="kairos-td">—</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="kairos-flex kairos-items-center kairos-gap-compact kairos-text-xs kairos-font-mono kairos-text-color-muted">
+        <span class="kairos-indicator pvw">PVW</span>
+        <span>Active row indicates next Take destination</span>
+      </div>
+    </div>
+  </div>
+</div>

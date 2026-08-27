@@ -52,13 +52,22 @@ document.addEventListener('DOMContentLoaded', () => {
       category: "P6: Overlay Primitives",
       items: [
         { id: "surface", name: "Surface", key: "P6" },
-        { id: "overlay", name: "Overlay", key: "P6" }
+        { id: "overlay", name: "Overlay", key: "P6" },
+        { id: "tooltip", name: "Tooltip", key: "P6" }
+      ]
+    },
+    {
+      category: "P7: Navigation",
+      items: [
+        { id: "navigation", name: "Navigation", key: "P7" }
       ]
     },
     {
       category: "P8: Composites",
       items: [
-        { id: "accordion", name: "Accordion", key: "P8" }
+        { id: "accordion", name: "Accordion", key: "P8" },
+        { id: "table", name: "Table", key: "P8" },
+        { id: "split-grid", name: "Split Grid", key: "P8" }
       ]
     }
   ];

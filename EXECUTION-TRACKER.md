@@ -1,10 +1,10 @@
 # KAIROS — EXECUTION TRACKER
 > **مسار التنفيذ الحي** — هذا الملف هو مصدر الحقيقة للتقدم. كل خطوة تُنفذ يجب تسجيلها هنا فوراً قبل الـ commit.
 
-**آخر تحديث:** 2026-08-28 00:10 UTC
-**التقدم الإجمالي:** `81%` → الهدف `v1.0` (100%)
-**الفرع:** `main` — `2ec444f` feat(showcase): B3 indicator/tag/loading/progress/surface/overlay
-**آخر تحقق:** `lint: ✅ 0 errors` · `tsc: ✅ 0 errors` · `test: ✅ 19/19` · `build: ✅ 198.91kB CSS`
+**آخر تحديث:** 2026-08-28 00:15 UTC
+**التقدم الإجمالي:** `84%` → الهدف `v1.0` (100%)
+**الفرع:** `main` — `2ec444f` → `feat(showcase): B4 navigation/table/split-grid/tooltip` (pending)
+**آخر تحقق:** `lint: ✅ 0 errors` · `tsc: ✅ 0 errors` · `test: ✅ 19/19` · `build: ✅ 199.03kB CSS`
 
 ---
 
@@ -131,10 +131,10 @@ A (30د) → B (جلستان) → C (جلستان) → D (جلسة) → E (جل�
 
 | ID | الصفحة | CSS موجود | الحالة | التاريخ | Commit |
 |---|---|---|---|---|---|
-| **B4.1** | `navigation.html` | `src/components/navigation.css:1` | ⬜ | — | — |
-| **B4.2** | `table.html` | `src/components/table.css:1` | ⬜ | — | — |
-| **B4.3** | `split-grid.html` | `src/components/split-grid.css:1` | ⬜ | — | — |
-| **B4.4** | `tooltip.html` (CSS hover فقط — بدون JS) | `src/components/tooltip.css:1` | ⬜ | — | — |
+| **B4.1** | `navigation.html` | `src/components/navigation.css:1` | ✅ | 2026-08-28 | `feat: B4` | 4 cards top-bar/menu/nav-item/broadcast shell |
+| **B4.2** | `table.html` | `src/components/table.css:1` | ✅ | 2026-08-28 | `feat: B4` | 3 cards base/states/broadcast router |
+| **B4.3** | `split-grid.html` | `src/components/split-grid.css:1` | ✅ | 2026-08-28 | `feat: B4` | 3 cards layouts/PIP/broadcast quad |
+| **B4.4** | `tooltip.html` (CSS hover فقط — بدون JS) | `src/components/tooltip.css:1` | ✅ | 2026-08-28 | `feat: B4` | 3 cards hover/content/broadcast toolbar |
 
 **معايير إنجاز Phase B:**
 - [ ] 16 ملف جديد في `showcase-data/*.html` + `showcase.js:6` يضم `P5/P6/P7` categories كاملة
@@ -230,6 +230,7 @@ A (30د) → B (جلستان) → C (جلستان) → D (جلسة) → E (جل�
 
 | التاريخ | Phase | ID | ما تم | Commit | تحقق | الملاحظات |
 |---|---|---|---|---|---|---|
+| 2026-08-28 00:15 | B4 | **B4.1-B4.4** | B4 مكتمل: navigation/table/split-grid/tooltip (4 showcase + showcase.js P6/P7/P8) | `feat: B4` | lint✅ tsc✅ test19✅ build199.03kB✅ | showcase-data/*4 + showcase.js |
 | 2026-08-28 00:05 | B3 | **B3.1-B3.5** | B3 مكتمل: indicator/tag/loading/progress/surface/overlay (6 showcase + showcase.js P3+P6) | `2ec444f` | lint✅ tsc✅ test19✅ build198.91kB✅ | showcase-data/*6 + showcase.js |
 | 2026-08-27 23:55 | B2 | **B2.1-B2.4** | B2 مكتمل: switch/forms/slider/tag-input (4 showcase + showcase.js P4) | `9dadbc1` | lint✅ tsc✅ test19✅ build198.91kB✅ | showcase-data/*4 + showcase.js |
 | 2026-08-27 23:45 | B1 | **B1.1-B1.4** | B1 مكتمل: heading/paragraph/divider/layout (4 showcase + showcase.js P2) | `90d8aaf` | lint✅ tsc✅ test19✅ build198.91kB✅ | showcase-data/*4 + showcase.js |
@@ -242,8 +243,8 @@ A (30د) → B (جلستان) → C (جلستان) → D (جلسة) → E (جل�
 ## مؤشرات سريعة
 
 **إجمالي المهام:** `Phase A:4 + B:16 + C:6 + D:10 + E:5 = 41 مهمة`
-**المنجز:** `18/41` (44%) ✅ Phase A + B1 + B2 + B3 مكتمل
-**بعد B:** `20/41` (49%) · **بعد C:** `26/41` (63%) · **بعد D:** `36/41` (88%) · **بعد E:** `41/41` (100% v1.0)
+**المنجز:** `22/41` (54%) ✅ Phase A + B1 + B2 + B3 + B4 مكتمل — Phase B مغلقة
+**بعد B:** `22/41` (54%) · **بعد C:** `28/41` (68%) · **بعد D:** `38/41` (93%) · **بعد E:** `41/41` (100% v1.0)
 
 **الوقت التقديري المتبقي:** `3–5 جلسات` (حسب `PROJECT-HANDOVER.md:24`)
 

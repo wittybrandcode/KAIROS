@@ -1,0 +1,79 @@
+<div class="kairos-flex kairos-col kairos-gap-loose">
+  <div class="kairos-flex kairos-col kairos-gap-extra-tight">
+    <h1 class="kairos-text-3xl kairos-font-bold">Tooltip (التلميح)</h1>
+    <p class="kairos-text-color-secondary">تلميح سياقي يظهر عند المرور — للاختصارات، الأسماء الكاملة، وحالة الإشارة (hover فقط، JS للـ focus قادم).</p>
+  </div>
+
+  <div class="kairos-bg-surface kairos-border kairos-border-color-muted kairos-p-loose kairos-flex kairos-col kairos-gap-standard">
+    <h3 class="kairos-text-sm kairos-text-color-muted kairos-tracking-widest kairos-uppercase">Hover (المرور)</h3>
+    <div class="kairos-flex kairos-items-center kairos-gap-standard kairos-flex-wrap">
+      <div class="kairos-tip-host">
+        <button class="kairos-btn kairos-size-sm">Hover me</button>
+        <span class="kairos-tip">Save project — Ctrl+S</span>
+      </div>
+      <div class="kairos-tip-host">
+        <button class="kairos-btn kairos-size-sm kairos-intent-pvw kairos-variant-outline">PVW Source</button>
+        <span class="kairos-tip">Preview bus — next Take</span>
+      </div>
+      <div class="kairos-tip-host">
+        <button class="kairos-btn kairos-size-sm kairos-intent-pgm kairos-variant-solid">PGM</button>
+        <span class="kairos-tip">On air — cannot edit</span>
+      </div>
+    </div>
+    <div class="kairos-flex kairos-items-center kairos-gap-compact kairos-text-xs kairos-font-mono kairos-text-color-muted">
+      <span>host: kairos-tip-host (relative) · tip: absolute bottom 100% + --kairos-tooltip-trigger-gap (6px) · opacity 0→1 on :hover</span>
+    </div>
+  </div>
+
+  <div class="kairos-bg-surface kairos-border kairos-border-color-muted kairos-p-loose kairos-flex kairos-col kairos-gap-standard">
+    <h3 class="kairos-text-sm kairos-text-color-muted kairos-tracking-widest kairos-uppercase">Content (المحتوى)</h3>
+    <div class="kairos-flex kairos-items-center kairos-gap-standard kairos-flex-wrap">
+      <div class="kairos-tip-host">
+        <i class="kairos-icon-info kairos-icon-md kairos-text-color-info"></i>
+        <span class="kairos-tip kairos-font-mono">SDI-01 · 1080i59.94 · Embed</span>
+      </div>
+      <div class="kairos-tip-host">
+        <span class="kairos-badge kairos-intent-warning kairos-variant-outline">WARN</span>
+        <span class="kairos-tip">Signal weak — check cable</span>
+      </div>
+      <div class="kairos-tip-host">
+        <span class="kairos-tag pvw">PVW</span>
+        <span class="kairos-tip">Preview — will go to PGM on Take</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="kairos-bg-surface kairos-border kairos-border-color-muted kairos-p-loose kairos-flex kairos-col kairos-gap-standard">
+    <h3 class="kairos-text-sm kairos-text-color-muted kairos-tracking-widest kairos-uppercase">Broadcast: Toolbar with Hotkeys</h3>
+    <div class="kairos-flex kairos-col kairos-gap-standard kairos-bg-deep kairos-p-standard kairos-border kairos-border-color-muted">
+      <div class="kairos-flex kairos-items-center kairos-gap-standard">
+        <div class="kairos-tip-host">
+          <button class="kairos-btn kairos-size-sm">CUT</button>
+          <span class="kairos-tip">Cut — Enter</span>
+        </div>
+        <div class="kairos-tip-host">
+          <button class="kairos-btn kairos-size-sm">AUTO</button>
+          <span class="kairos-tip">Auto transition — Space</span>
+        </div>
+        <div class="kairos-divider v"></div>
+        <div class="kairos-tip-host">
+          <button class="kairos-btn kairos-size-sm kairos-intent-pvw kairos-variant-outline">FTB</button>
+          <span class="kairos-tip">Fade to black — F</span>
+        </div>
+        <div class="kairos-tip-host">
+          <i class="kairos-icon-gear kairos-icon-sm kairos-text-color-muted"></i>
+          <span class="kairos-tip">Settings — Ctrl+,</span>
+        </div>
+      </div>
+      <div class="kairos-flex kairos-items-center kairos-gap-compact kairos-text-xs kairos-font-mono kairos-text-color-muted">
+        <span>Hover على أي زر لرؤية الاختصار — النسخة التفاعلية بلا hover (focus + aria-describedby) في Phase C2</span>
+      </div>
+      <div class="kairos-flex kairos-gap-compact kairos-flex-wrap kairos-mt-standard">
+        <span class="kairos-kbd">Ctrl</span>
+        <span class="kairos-text-sm">+</span>
+        <span class="kairos-kbd">K</span>
+        <span class="kairos-text-sm kairos-text-color-muted">→ Command Palette</span>
+      </div>
+    </div>
+  </div>
+</div>
