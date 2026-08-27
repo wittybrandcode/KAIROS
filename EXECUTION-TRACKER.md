@@ -1,9 +1,9 @@
 # KAIROS — EXECUTION TRACKER
 > **مسار التنفيذ الحي** — هذا الملف هو مصدر الحقيقة للتقدم. كل خطوة تُنفذ يجب تسجيلها هنا فوراً قبل الـ commit.
 
-**آخر تحديث:** 2026-08-27 23:50 UTC
+**آخر تحديث:** 2026-08-27 23:52 UTC
 **التقدم الإجمالي:** `75%` → الهدف `v1.0` (100%)
-**الفرع:** `main` — `0b71f88` feat(showcase): B1 heading/paragraph/divider/layout
+**الفرع:** `main` — `90d8aaf` feat(showcase): B1 heading/paragraph/divider/layout
 **آخر تحقق:** `lint: ✅ 0 errors` · `tsc: ✅ 0 errors` · `test: ✅ 19/19` · `build: ✅ 198.91kB CSS`
 
 ---
@@ -103,10 +103,10 @@ A (30د) → B (جلستان) → C (جلستان) → D (جلسة) → E (جل�
 
 | ID | الصفحة | CSS موجود | الحالة | التاريخ | Commit |
 |---|---|---|---|---|---|
-| **B1.1** | `heading.html` | `src/components/heading.css:1` | ✅ | 2026-08-27 | `0b71f88` | 3 cards hierarchy/weights/broadcast |
-| **B1.2** | `paragraph.html` | `src/components/paragraph.css:1` | ✅ | 2026-08-27 | `0b71f88` | 3 cards base/spacing/broadcast |
-| **B1.3** | `divider.html` | `src/components/divider.css:1` | ✅ | 2026-08-27 | `0b71f88` | 4 cards solid/label/variants/broadcast |
-| **B1.4** | `layout.html` | `src/components/layout.css:1` + `src/utilities/layout.css:1` | ✅ | 2026-08-27 | `0b71f88` | 4 cards stack/cluster/box+broadcast |
+| **B1.1** | `heading.html` | `src/components/heading.css:1` | ✅ | 2026-08-27 | `90d8aaf` | 3 cards hierarchy/weights/broadcast |
+| **B1.2** | `paragraph.html` | `src/components/paragraph.css:1` | ✅ | 2026-08-27 | `90d8aaf` | 3 cards base/spacing/broadcast |
+| **B1.3** | `divider.html` | `src/components/divider.css:1` | ✅ | 2026-08-27 | `90d8aaf` | 4 cards solid/label/variants/broadcast |
+| **B1.4** | `layout.html` | `src/components/layout.css:1` + `src/utilities/layout.css:1` | ✅ | 2026-08-27 | `90d8aaf` | 4 cards stack/cluster/box+broadcast |
 
 #### B2 — Input Primitives (4 صفحات)
 
@@ -230,7 +230,7 @@ A (30د) → B (جلستان) → C (جلستان) → D (جلسة) → E (جل�
 
 | التاريخ | Phase | ID | ما تم | Commit | تحقق | الملاحظات |
 |---|---|---|---|---|---|---|
-| 2026-08-27 23:45 | B1 | **B1.1-B1.4** | B1 مكتمل: heading/paragraph/divider/layout (4 showcase + showcase.js P2) | `0b71f88` | lint✅ tsc✅ test19✅ build198.91kB✅ | showcase-data/*4 + showcase.js |
+| 2026-08-27 23:45 | B1 | **B1.1-B1.4** | B1 مكتمل: heading/paragraph/divider/layout (4 showcase + showcase.js P2) | `90d8aaf` | lint✅ tsc✅ test19✅ build198.91kB✅ | showcase-data/*4 + showcase.js |
 | 2026-08-27 23:35 | A | **A1-A4** | Phase A مكتمل: idempotent(4) + 9 phantom + 7 raw tokens + ARCHITECTURE.md | `b67646b` | lint✅ tsc✅ test19✅ build198.91kB✅ | 4 files JS + components.css + layout + domain(3) + docs |
 | 2026-08-27 23:20 | — | — | إنشاء `EXECUTION-TRACKER.md` + تحليل شامل للمشروع (4 وكلاء متوازيين) | — | lint✅ tsc✅ test19✅ build197.85kB✅ | baseline: 5 commits `b06c61d`، 13 showcase، 5 modules |
 | — | — | — | — | — | — | — |
