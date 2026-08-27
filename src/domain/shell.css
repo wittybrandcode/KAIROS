@@ -4,8 +4,8 @@
    ═══════════════════════════════════════════════════ */
 
 /* ─── App Shell Stage ─── */
-.kairos-stage { display: grid; grid-template-rows: var(--kairos-size-top-bar) 1fr var(--kairos-size-status-bar); height: 100vh; background: var(--kairos-bg-deep); }
-.kairos-shell { display: grid; grid-template-columns: var(--kairos-layout-panel-side) 1fr var(--kairos-layout-panel-main); min-height: 0; }
+.kairos-stage { display: grid; grid-template-rows: var(--kairos-size-top-bar) 1fr var(--kairos-size-status-bar); height: 100vh; min-height: 0; overflow: hidden; background: var(--kairos-bg-deep); }
+.kairos-shell { display: grid; grid-template-columns: var(--kairos-layout-panel-side) 1fr var(--kairos-layout-panel-main); min-height: 0; height: 100%; overflow: hidden; }
 .kairos-center { display: flex; flex-direction: column; min-width: 0; border-left: var(--kairos-border-base) solid var(--kairos-border-muted); border-right: var(--kairos-border-base) solid var(--kairos-border-muted); }
 
 /* ─── Side Panel ─── */

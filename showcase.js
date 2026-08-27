@@ -37,13 +37,6 @@ document.addEventListener('DOMContentLoaded', () => {
       ]
     },
     {
-      category: "P6: Overlay Primitives",
-      items: [
-        { id: "surface", name: "Surface", key: "P6" },
-        { id: "overlay", name: "Overlay", key: "P6" }
-      ]
-    },
-    {
       category: "P4: Input Primitives",
       items: [
         { id: "checkbox", name: "Checkbox", key: "P4" },
@@ -53,6 +46,13 @@ document.addEventListener('DOMContentLoaded', () => {
         { id: "forms", name: "Forms", key: "P4" },
         { id: "slider", name: "Slider", key: "P4" },
         { id: "tag-input", name: "Tag Input", key: "P4" }
+      ]
+    },
+    {
+      category: "P6: Overlay Primitives",
+      items: [
+        { id: "surface", name: "Surface", key: "P6" },
+        { id: "overlay", name: "Overlay", key: "P6" }
       ]
     },
     {

@@ -8,6 +8,8 @@
   flex-direction: column;
   width: var(--kairos-sidebar-width);
   height: 100%;
+  min-height: 0;
+  overflow: hidden;
   background: var(--kairos-bg-surface-alt);
   border-right: var(--kairos-border-base) solid var(--kairos-border);
   flex-shrink: 0;
@@ -20,7 +22,9 @@
 
 .kairos-sidebar-content {
   flex: 1;
+  min-height: 0;
   overflow-y: auto;
+  overflow-x: hidden;
   padding: var(--kairos-sidebar-padding) 0;
 }
 
