@@ -105,7 +105,7 @@
 .kairos-rundown.compact .kairos-rundown-tc,
 .kairos-rundown.compact .kairos-rundown-dur {
   font-size: var(--kairos-text-2xs);
-  min-width: 40px;
+  min-width: var(--kairos-rundown-compact-tc-w);
 }
 .kairos-rundown.compact .kairos-rundown-title {
   font-size: var(--kairos-text-2xs);

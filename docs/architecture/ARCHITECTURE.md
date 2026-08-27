@@ -218,10 +218,11 @@ See `docs/browser-support.md` for the full matrix.
 - `@media` queries ✅
 - `:focus-visible` ✅
 - `appearance: none` ✅
+- Container Queries ✅ (`@container` — used in `src/domain/shell.css:12` + `src/foundation/breakpoints.css:35`; raw px in `@container (max-width: ...)` cannot use `var()` — document with `/* --kairos-bp-* */` comments)
+- Ticker/Marquee functional motion ✅ — durations `10s–40s` via `--kairos-ticker-*-speed` / `--kairos-marquee-*-speed` (`src/components/components.css:827`) are **documented exceptions** to the 300ms rule (`AGENTS.md:4`)
 
 **CSS Features NOT Used (intentionally):**
 - CSS Nesting ❌ (browser support too narrow)
 - `:has()` ❌ (not yet universal)
-- Container Queries ❌ (not yet universal)
 - Popover API ❌ (we use our own)
 - `@layer` ❌ (not needed, import order is sufficient)

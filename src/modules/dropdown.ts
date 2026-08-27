@@ -96,8 +96,13 @@ async function closeDropdown(dropdown: HTMLElement): Promise<void> {
   emit(dropdown, 'kairos:dropdown:closed');
 }
 
+let initialized = false;
+
 /** Initialize dropdown delegation */
 export function init(): void {
+  if (initialized) return;
+  initialized = true;
+
   on(document, 'click', ((e: MouseEvent) => {
     // Toggle trigger
     const trigger = closest<HTMLElement>(e.target as Element, '[data-kairos-toggle="dropdown"]');

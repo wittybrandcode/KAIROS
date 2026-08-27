@@ -89,8 +89,13 @@ function clearTimer(toast: HTMLElement): void {
   }
 }
 
+let initialized = false;
+
 /** Initialize toast delegation */
 export function init(): void {
+  if (initialized) return;
+  initialized = true;
+
   on(document, 'click', ((e: MouseEvent) => {
     // Trigger: show toast
     const trigger = closest<HTMLElement>(e.target as Element, '[data-kairos-toggle="toast"]');

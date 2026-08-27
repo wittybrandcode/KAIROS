@@ -81,8 +81,13 @@ async function closeModal(modal: HTMLElement): Promise<void> {
   emit(modal, 'kairos:modal:closed');
 }
 
+let initialized = false;
+
 /** Initialize modal delegation */
 export function init(): void {
+  if (initialized) return;
+  initialized = true;
+
   // Click delegation: open triggers
   on(document, 'click', ((e: MouseEvent) => {
     const trigger = closest<HTMLElement>(e.target as Element, '[data-kairos-toggle="modal"]');

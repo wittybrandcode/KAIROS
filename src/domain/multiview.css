@@ -22,7 +22,7 @@
 .kairos-mv.pvw.sel {
   border-color: var(--kairos-status-pvw);
   outline: var(--kairos-border-base) solid var(--kairos-status-pvw);
-  outline-offset: -3px;
+  outline-offset: var(--kairos-mv-outline-offset);
 }
 
 /* ─── Video area (placeholder) ─── */
@@ -82,7 +82,7 @@
 }
 .kairos-mv.sm .kairos-mv-label {
   font-size: var(--kairos-text-2xs);
-  padding: 1px var(--kairos-mv-sm-label-padding-x);
+  padding: var(--kairos-mv-sm-label-padding-y) var(--kairos-mv-sm-label-padding-x);
 }
 .kairos-mv.sm .kairos-mv-video i {
   font-size: var(--kairos-text-md);

@@ -46,8 +46,13 @@ function activateTab(tab: HTMLElement): void {
   emit(tabsContainer, 'kairos:tab:changed', { tab });
 }
 
+let initialized = false;
+
 /** Initialize tabs delegation */
 export function init(): void {
+  if (initialized) return;
+  initialized = true;
+
   // Click delegation
   on(document, 'click', ((e: MouseEvent) => {
     const tab = closest<HTMLElement>(e.target as Element, '[data-kairos-toggle="tab"]');

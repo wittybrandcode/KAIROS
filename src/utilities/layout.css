@@ -47,7 +47,7 @@
 /* ─── App Shell Grid ─── */
 .kairos-app-shell {
   display: grid;
-  grid-template-rows: var(--kairos-control-xl) 1fr 210px var(--kairos-control-sm);
+  grid-template-rows: var(--kairos-control-xl) 1fr var(--kairos-layout-center-height) var(--kairos-control-sm);
   height: 100vh;
   overflow: hidden;
 }
@@ -77,8 +77,8 @@
 .kairos-resize-handle::after {
   content: '';
   position: absolute;
-  left: -3px;
-  right: -3px;
+  left: calc(-1 * var(--kairos-layout-handle-outset));
+  right: calc(-1 * var(--kairos-layout-handle-outset));
   top: 0;
   bottom: 0;
 }

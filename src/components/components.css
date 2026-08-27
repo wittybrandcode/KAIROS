@@ -830,6 +830,31 @@
   --kairos-marquee-normal-speed: 15s;
   --kairos-marquee-fast-speed: 8s;
   --kairos-marquee-slow-speed: 30s;
+
+  /* ═══════════════════════════════════════════════════
+     PHANTOM FIX — A2 (2026-08-27)
+     Tokens consumed but previously undefined
+     ═══════════════════════════════════════════════════ */
+  --kairos-avatar-name-gap:        var(--kairos-space-xs);   /* 6px  avatar → name */
+  --kairos-name-role-gap:          var(--kairos-space-3xs);  /* 2px  name → role stacked */
+  --kairos-shadow-lg:              var(--kairos-shadow-modal); /* alias for command palette */
+  --kairos-size-control:           var(--kairos-control-md); /* 36px  legacy bare alias */
+  --kairos-timeline-track-height:  var(--kairos-control-sm); /* 32px  fallback was 100% */
+  --kairos-fader-track-width:      var(--kairos-size-indicator); /* 4px */
+  --kairos-fader-track-height:     var(--kairos-control-md); /* 36px */
+  --kairos-breadcrumb-item-gap:    var(--kairos-space-xs);   /* 6px */
+  --kairos-breadcrumb-padding:     var(--kairos-space-xs);   /* 6px */
+  --kairos-pagination-item-gap:    var(--kairos-space-xs);   /* 6px */
+  --kairos-pagination-padding:     var(--kairos-space-xs);   /* 6px */
+
+  /* ── A3 RAW TOKENIZATION (2026-08-27) ── */
+  --kairos-layout-center-height:   210px; /* app-shell middle row */
+  --kairos-layout-handle-outset:   3px;   /* resize handle hit-area */
+  --kairos-rundown-compact-tc-w:   40px;  /* compact timecode */
+  --kairos-mv-outline-offset:      -3px;  /* pvw.sel outline */
+  --kairos-mv-sm-label-padding-y:  1px;   /* sm label vertical */
+  --kairos-xp-glow:                4px;   /* crosspoint active glow */
+  --kairos-viewport-glow:          20px;  /* viewport inset glow */
 }
 
 
