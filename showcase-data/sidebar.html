@@ -1,0 +1,84 @@
+<div class="kairos-flex kairos-col kairos-gap-loose">
+  <div class="kairos-flex kairos-col kairos-gap-extra-tight">
+    <h1 class="kairos-text-3xl kairos-font-bold">Sidebar (الشريط الجانبي)</h1>
+    <p class="kairos-text-color-secondary">شريط جانبي قابل للطي — للتنقل بين الأقسام، مع حالة نشطة وتجاوب للمحمول.</p>
+  </div>
+
+  <div class="kairos-bg-surface kairos-border kairos-border-color-muted kairos-p-loose kairos-flex kairos-col kairos-gap-standard">
+    <h3 class="kairos-text-sm kairos-text-color-muted kairos-tracking-widest kairos-uppercase">Toggle (فتح/إغلاق)</h3>
+    <div class="kairos-flex kairos-items-center kairos-gap-standard kairos-flex-wrap">
+      <button class="kairos-btn kairos-size-sm" data-kairos-toggle="sidebar" data-kairos-target="#demo-sidebar">Toggle Sidebar</button>
+      <span class="kairos-text-xs kairos-font-mono kairos-text-color-muted">data-kairos-toggle="sidebar" · data-kairos-target="#id"</span>
+    </div>
+    <div id="demo-sidebar" class="kairos-sidebar" data-state="open" style="height: 200px;">
+      <div class="kairos-sidebar-header">
+        <span class="kairos-text-sm kairos-font-bold kairos-tracking-widest kairos-uppercase">Demo Sidebar</span>
+        <button class="kairos-btn kairos-size-sm kairos-variant-ghost kairos-ml-auto" data-kairos-dismiss aria-label="Close">×</button>
+      </div>
+      <nav class="kairos-sidebar-content">
+        <div class="kairos-sidebar-group">
+          <div class="kairos-sidebar-heading">Section A</div>
+          <a class="kairos-sidebar-item" data-state="active">Dashboard</a>
+          <a class="kairos-sidebar-item">Sources</a>
+          <a class="kairos-sidebar-item">Routing</a>
+        </div>
+        <div class="kairos-sidebar-group">
+          <div class="kairos-sidebar-heading">Section B</div>
+          <a class="kairos-sidebar-item">Settings</a>
+        </div>
+      </nav>
+    </div>
+    <div class="kairos-flex kairos-items-center kairos-gap-compact kairos-text-xs kairos-font-mono kairos-text-color-muted">
+      <span>State: data-state="open/closed" · Events: before-open/opened/before-close/closed · Escape closes</span>
+    </div>
+  </div>
+
+  <div class="kairos-bg-surface kairos-border kairos-border-color-muted kairos-p-loose kairos-flex kairos-col kairos-gap-standard">
+    <h3 class="kairos-text-sm kairos-text-color-muted kairos-tracking-widest kairos-uppercase">Active State (عنصر نشط)</h3>
+    <div class="kairos-flex kairos-col kairos-gap-standard">
+      <div class="kairos-sidebar" data-state="open" style="height: 160px;">
+        <nav class="kairos-sidebar-content">
+          <a class="kairos-sidebar-item">Item 01</a>
+          <a class="kairos-sidebar-item" data-state="active">Item 02 — Active</a>
+          <a class="kairos-sidebar-item">Item 03</a>
+        </nav>
+      </div>
+      <div class="kairos-flex kairos-items-center kairos-gap-compact kairos-text-xs kairos-font-mono kairos-text-color-muted">
+        <span>Click any .kairos-sidebar-item to activate (border-left: pvw + bg-surface)</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="kairos-bg-surface kairos-border kairos-border-color-muted kairos-p-loose kairos-flex kairos-col kairos-gap-standard">
+    <h3 class="kairos-text-sm kairos-text-color-muted kairos-tracking-widest kairos-uppercase">Broadcast: Studio Navigation</h3>
+    <div class="kairos-flex kairos-gap-standard kairos-bg-deep kairos-p-standard kairos-border kairos-border-color-muted">
+      <div class="kairos-sidebar" data-state="open" style="height: 220px; width: 200px;">
+        <div class="kairos-sidebar-header">
+          <span class="kairos-text-xs kairos-font-bold kairos-tracking-widest kairos-uppercase">Studio A</span>
+        </div>
+        <nav class="kairos-sidebar-content">
+          <div class="kairos-sidebar-group">
+            <div class="kairos-sidebar-heading">Production</div>
+            <a class="kairos-sidebar-item" data-state="active"><i class="kairos-icon-squares-four kairos-icon-sm"></i> Multiview</a>
+            <a class="kairos-sidebar-item"><i class="kairos-icon-broadcast kairos-icon-sm"></i> Program</a>
+            <a class="kairos-sidebar-item"><i class="kairos-icon-video kairos-icon-sm"></i> Sources</a>
+          </div>
+          <div class="kairos-sidebar-group">
+            <div class="kairos-sidebar-heading">System</div>
+            <a class="kairos-sidebar-item"><i class="kairos-icon-gear kairos-icon-sm"></i> Settings</a>
+          </div>
+        </nav>
+      </div>
+      <div class="kairos-flex kairos-col kairos-flex-1 kairos-gap-standard">
+        <h4 class="kairos-heading kairos-h4">Multiview — 4-up</h4>
+        <div class="kairos-split-grid four kairos-flex-1">
+          <div class="kairos-split-grid-cell">CAM 01</div>
+          <div class="kairos-split-grid-cell">CAM 02</div>
+          <div class="kairos-split-grid-cell">VTR</div>
+          <div class="kairos-split-grid-cell">BLACK</div>
+        </div>
+        <button class="kairos-btn kairos-size-sm kairos-variant-outline" data-kairos-toggle="sidebar" data-kairos-target="#demo-sidebar">Toggle Demo Sidebar ↑</button>
+      </div>
+    </div>
+  </div>
+</div>

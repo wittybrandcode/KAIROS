@@ -69,7 +69,8 @@ document.addEventListener('DOMContentLoaded', () => {
         { id: "accordion", name: "Accordion", key: "P8" },
         { id: "table", name: "Table", key: "P8" },
         { id: "split-grid", name: "Split Grid", key: "P8" },
-        { id: "command", name: "Command", key: "P8" }
+        { id: "command", name: "Command", key: "P8" },
+        { id: "sidebar", name: "Sidebar", key: "P8" }
       ]
     }
   ];
