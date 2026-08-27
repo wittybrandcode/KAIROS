@@ -1,0 +1,81 @@
+<div class="kairos-flex kairos-col kairos-gap-loose">
+  <div class="kairos-flex kairos-col kairos-gap-extra-tight">
+    <h1 class="kairos-text-3xl kairos-font-bold">Surface (السطح)</h1>
+    <p class="kairos-text-color-secondary">حاوية مرتفعة بظل — لعرض الألواح، البطاقات، ومجموعات التحكم في البث.</p>
+  </div>
+
+  <div class="kairos-bg-surface kairos-border kairos-border-color-muted kairos-p-loose kairos-flex kairos-col kairos-gap-standard">
+    <h3 class="kairos-text-sm kairos-text-color-muted kairos-tracking-widest kairos-uppercase">Base Surface</h3>
+    <div class="kairos-flex kairos-gap-standard kairos-flex-wrap">
+      <div class="kairos-surface kairos-p-standard" style="min-width: 200px;">
+        <div class="kairos-text-xs kairos-text-color-muted kairos-tracking-widest kairos-uppercase kairos-mb-compact">Default</div>
+        <div class="kairos-text-sm kairos-font-bold">Program Bus</div>
+        <div class="kairos-text-xs kairos-text-color-muted kairos-font-mono">8 sources · SDI 01-08</div>
+      </div>
+      <div class="kairos-surface kairos-p-standard" style="min-width: 200px; background: var(--kairos-bg-surface-alt);">
+        <div class="kairos-text-xs kairos-text-color-muted kairos-tracking-widest kairos-uppercase kairos-mb-compact">Alt (surface-alt)</div>
+        <div class="kairos-text-sm kairos-font-bold">Preview Bus</div>
+        <div class="kairos-text-xs kairos-text-color-muted kairos-font-mono">Next source · PGM follow</div>
+      </div>
+      <div class="kairos-surface kairos-p-standard" style="min-width: 200px; border-color: var(--kairos-status-pvw);">
+        <div class="kairos-text-xs kairos-text-color-pvw kairos-tracking-widest kairos-uppercase kairos-mb-compact">PVW Selected</div>
+        <div class="kairos-text-sm kairos-font-bold kairos-text-color-pvw">CAM 02 — PVW</div>
+        <div class="kairos-text-xs kairos-text-color-muted kairos-font-mono">Ready for Take</div>
+      </div>
+    </div>
+    <div class="kairos-flex kairos-items-center kairos-gap-compact kairos-text-xs kairos-font-mono kairos-text-color-muted">
+      <span>bg: --kairos-bg-surface · border: 1px muted · shadow: --kairos-shadow-raised · radius:0</span>
+    </div>
+  </div>
+
+  <div class="kairos-bg-surface kairos-border kairos-border-color-muted kairos-p-loose kairos-flex kairos-col kairos-gap-standard">
+    <h3 class="kairos-text-sm kairos-text-color-muted kairos-tracking-widest kairos-uppercase">Elevation (الارتفاع)</h3>
+    <div class="kairos-flex kairos-col kairos-gap-standard">
+      <div class="kairos-flex kairos-gap-standard kairos-flex-wrap">
+        <div class="kairos-flex kairos-col kairos-gap-compact kairos-p-standard kairos-bg-deep kairos-border kairos-border-color-muted" style="min-width: 140px;">
+          <span class="kairos-text-xs kairos-text-color-muted kairos-font-mono">Deep (bg-deep)</span>
+          <div class="kairos-surface kairos-p-compact kairos-text-sm kairos-text-center">Surface</div>
+        </div>
+        <div class="kairos-flex kairos-col kairos-gap-compact kairos-p-standard kairos-bg-surface kairos-border kairos-border-color-muted" style="min-width: 140px;">
+          <span class="kairos-text-xs kairos-text-color-muted kairos-font-mono">Surface</span>
+          <div class="kairos-surface kairos-p-compact kairos-text-sm kairos-text-center" style="box-shadow: var(--kairos-shadow-modal);">Modal</div>
+        </div>
+      </div>
+      <div class="kairos-flex kairos-items-center kairos-gap-compact kairos-text-xs kairos-font-mono kairos-text-color-muted">
+        <span>z-index: base(1) < dropdown(50) < modal(100) < toast(9000)</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="kairos-bg-surface kairos-border kairos-border-color-muted kairos-p-loose kairos-flex kairos-col kairos-gap-standard">
+    <h3 class="kairos-text-sm kairos-text-color-muted kairos-tracking-widest kairos-uppercase">Broadcast: Control Panel</h3>
+    <div class="kairos-flex kairos-col kairos-gap-standard kairos-bg-deep kairos-p-standard kairos-border kairos-border-color-muted">
+      <div class="kairos-flex kairos-items-center">
+        <h4 class="kairos-heading kairos-h4">Switcher — Main</h4>
+        <span class="kairos-badge kairos-intent-pgm kairos-variant-solid kairos-ml-auto">LIVE</span>
+      </div>
+      <div class="kairos-flex kairos-gap-standard">
+        <div class="kairos-surface kairos-p-standard kairos-flex-1 kairos-flex kairos-col kairos-gap-compact">
+          <span class="kairos-text-xs kairos-text-color-muted kairos-tracking-widest kairos-uppercase">PGM</span>
+          <span class="kairos-text-lg kairos-font-bold kairos-text-color-pgm">CAM 01</span>
+          <span class="kairos-text-xs kairos-font-mono kairos-text-color-muted">SDI-01 · 1080i59.94</span>
+          <div class="kairos-progress-track kairos-mt-compact">
+            <div class="kairos-progress-fill" style="width: 100%; background: var(--kairos-status-pgm);"></div>
+          </div>
+        </div>
+        <div class="kairos-surface kairos-p-standard kairos-flex-1 kairos-flex kairos-col kairos-gap-compact" style="border-color: var(--kairos-status-pvw);">
+          <span class="kairos-text-xs kairos-text-color-pvw kairos-tracking-widest kairos-uppercase">PVW</span>
+          <span class="kairos-text-lg kairos-font-bold kairos-text-color-pvw">CAM 02</span>
+          <span class="kairos-text-xs kairos-font-mono kairos-text-color-muted">SDI-02 · Ready</span>
+          <div class="kairos-progress-track kairos-mt-compact">
+            <div class="kairos-progress-fill" style="width: 100%;"></div>
+          </div>
+        </div>
+      </div>
+      <div class="kairos-flex kairos-gap-compact">
+        <button class="kairos-btn kairos-variant-solid kairos-intent-pgm kairos-flex-1">CUT</button>
+        <button class="kairos-btn kairos-variant-outline kairos-flex-1">AUTO</button>
+      </div>
+    </div>
+  </div>
+</div>

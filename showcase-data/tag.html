@@ -1,0 +1,75 @@
+<div class="kairos-flex kairos-col kairos-gap-loose">
+  <div class="kairos-flex kairos-col kairos-gap-extra-tight">
+    <h1 class="kairos-text-3xl kairos-font-bold">Tag (الوسم)</h1>
+    <p class="kairos-text-color-secondary">وسم ثابت غير تفاعلي — لعرض الفئات، الصيغ، أو حالات القراءة فقط (مقابل Tag-Input التفاعلي).</p>
+  </div>
+
+  <div class="kairos-bg-surface kairos-border kairos-border-color-muted kairos-p-loose kairos-flex kairos-col kairos-gap-standard">
+    <h3 class="kairos-text-sm kairos-text-color-muted kairos-tracking-widest kairos-uppercase">Variants (الأنماط)</h3>
+    <div class="kairos-flex kairos-items-center kairos-gap-compact kairos-wrap">
+      <span class="kairos-tag">Default</span>
+      <span class="kairos-tag pgm">PGM</span>
+      <span class="kairos-tag pvw">PVW</span>
+      <span class="kairos-tag warn">Warning</span>
+      <span class="kairos-tag info">Info</span>
+    </div>
+    <div class="kairos-flex kairos-items-center kairos-gap-compact kairos-text-xs kairos-font-mono kairos-text-color-muted">
+      <span>padding: --kairos-tag-padding <br/> border: 1px muted · mono uppercase wide</span>
+    </div>
+  </div>
+
+  <div class="kairos-bg-surface kairos-border kairos-border-color-muted kairos-p-loose kairos-flex kairos-col kairos-gap-standard">
+    <h3 class="kairos-text-sm kairos-text-color-muted kairos-tracking-widest kairos-uppercase">Usage (الاستخدام)</h3>
+    <div class="kairos-flex kairos-col kairos-gap-standard">
+      <div class="kairos-flex kairos-items-center kairos-gap-standard">
+        <span class="kairos-text-xs kairos-text-color-muted kairos-font-mono kairos-w-side-panel">Format</span>
+        <span class="kairos-tag">HD</span>
+        <span class="kairos-tag">UHD</span>
+        <span class="kairos-tag">SD</span>
+      </div>
+      <div class="kairos-flex kairos-items-center kairos-gap-standard">
+        <span class="kairos-text-xs kairos-text-color-muted kairos-font-mono kairos-w-side-panel">Signal</span>
+        <span class="kairos-tag pvw">SYNCED</span>
+        <span class="kairos-tag warn">NO SYNC</span>
+        <span class="kairos-tag pgm">LIVE</span>
+      </div>
+      <div class="kairos-flex kairos-items-center kairos-gap-standard">
+        <span class="kairos-text-xs kairos-text-color-muted kairos-font-mono kairos-w-side-panel">Inline</span>
+        <span class="kairos-text-sm">Source</span>
+        <span class="kairos-tag pgm">CAM 01</span>
+        <span class="kairos-text-sm kairos-text-color-muted">→</span>
+        <span class="kairos-tag">SDI-01</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="kairos-bg-surface kairos-border kairos-border-color-muted kairos-p-loose kairos-flex kairos-col kairos-gap-standard">
+    <h3 class="kairos-text-sm kairos-text-color-muted kairos-tracking-widest kairos-uppercase">Broadcast: Metadata Row</h3>
+    <div class="kairos-flex kairos-col kairos-gap-standard kairos-bg-deep kairos-p-standard kairos-border kairos-border-color-muted">
+      <div class="kairos-flex kairos-items-center kairos-gap-compact">
+        <i class="kairos-icon-broadcast kairos-icon-sm kairos-text-color-pgm"></i>
+        <span class="kairos-text-sm kairos-font-bold">CAM 01 — Studio A</span>
+        <span class="kairos-tag pvw kairos-ml-auto">PVW</span>
+        <span class="kairos-tag">1080i</span>
+        <span class="kairos-tag">59.94</span>
+      </div>
+      <div class="kairos-flex kairos-items-center kairos-gap-compact">
+        <i class="kairos-icon-video kairos-icon-sm kairos-text-color-muted"></i>
+        <span class="kairos-text-sm kairos-font-bold">VTR 01 — Playback</span>
+        <span class="kairos-tag pgm kairos-ml-auto">PGM</span>
+        <span class="kairos-tag warn">REC</span>
+        <span class="kairos-tag">720p</span>
+      </div>
+      <div class="kairos-flex kairos-items-center kairos-gap-compact">
+        <i class="kairos-icon-warning kairos-icon-sm kairos-text-color-warning"></i>
+        <span class="kairos-text-sm kairos-font-bold kairos-text-color-placeholder">CAM 04 — No Signal</span>
+        <span class="kairos-tag warn kairos-ml-auto">NO SYNC</span>
+        <span class="kairos-tag">SDI-04</span>
+      </div>
+      <div class="kairos-divider h"></div>
+      <div class="kairos-flex kairos-items-center kairos-gap-compact kairos-text-xs kairos-font-mono kairos-text-color-muted">
+        <span>Tag vs Tag-Input: Tag ثابت للعرض فقط — Tag-Input تفاعلي (Enter/Backspace) سيُفعّل في Phase C3</span>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,98 @@
+<div class="kairos-flex kairos-col kairos-gap-loose">
+  <div class="kairos-flex kairos-col kairos-gap-extra-tight">
+    <h1 class="kairos-text-3xl kairos-font-bold">Progress (التقدم)</h1>
+    <p class="kairos-text-color-secondary">شريط تقدم خطي لنقل الملفات، تصدير الفيديو، ومزامنة المصفوفات — ألوان PGM/PVW/خطأ.</p>
+  </div>
+
+  <div class="kairos-bg-surface kairos-border kairos-border-color-muted kairos-p-loose kairos-flex kairos-col kairos-gap-standard">
+    <h3 class="kairos-text-sm kairos-text-color-muted kairos-tracking-widest kairos-uppercase">Track vs Progress (مسار vs شريط)</h3>
+    <div class="kairos-flex kairos-col kairos-gap-standard">
+      <div class="kairos-flex kairos-col kairos-gap-extra-tight">
+        <span class="kairos-text-xs kairos-text-color-muted kairos-font-mono">Track only (4px)</span>
+        <div class="kairos-progress-track">
+          <div class="kairos-progress-fill" style="width: 60%;"></div>
+        </div>
+      </div>
+      <div class="kairos-flex kairos-col kairos-gap-extra-tight">
+        <span class="kairos-text-xs kairos-text-color-muted kairos-font-mono">Progress (border + height token)</span>
+        <div class="kairos-progress">
+          <div class="kairos-progress-bar" style="width: 60%;"></div>
+        </div>
+      </div>
+      <div class="kairos-flex kairos-items-center kairos-gap-compact kairos-text-xs kairos-font-mono kairos-text-color-muted">
+        <span>height: --kairos-progress-height (6px) · fill: --kairos-status-pvw · transition 150ms</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="kairos-bg-surface kairos-border kairos-border-color-muted kairos-p-loose kairos-flex kairos-col kairos-gap-standard">
+    <h3 class="kairos-text-sm kairos-text-color-muted kairos-tracking-widest kairos-uppercase">Intents (حسب اللون)</h3>
+    <div class="kairos-flex kairos-col kairos-gap-standard">
+      <div class="kairos-flex kairos-col kairos-gap-extra-tight">
+        <span class="kairos-text-xs kairos-text-color-pvw kairos-font-mono kairos-uppercase kairos-tracking-widest">OK — PVW (success)</span>
+        <div class="kairos-progress-track">
+          <div class="kairos-progress-fill ok" style="width: 85%;"></div>
+        </div>
+      </div>
+      <div class="kairos-flex kairos-col kairos-gap-extra-tight">
+        <span class="kairos-text-xs kairos-text-color-warning kairos-font-mono kairos-uppercase kairos-tracking-widest">WARN — warning</span>
+        <div class="kairos-progress-track">
+          <div class="kairos-progress-fill warn" style="width: 55%;"></div>
+        </div>
+      </div>
+      <div class="kairos-flex kairos-col kairos-gap-extra-tight">
+        <span class="kairos-text-xs kairos-text-color-pgm kairos-font-mono kairos-uppercase kairos-tracking-widest">ERR — PGM (error)</span>
+        <div class="kairos-progress-track">
+          <div class="kairos-progress-fill err" style="width: 25%;"></div>
+        </div>
+      </div>
+      <div class="kairos-flex kairos-col kairos-gap-extra-tight">
+        <span class="kairos-text-xs kairos-text-color-muted kairos-font-mono">Loading pulse (50% + 300ms pulse)</span>
+        <div class="kairos-progress" data-state="loading">
+          <div class="kairos-progress-bar"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="kairos-bg-surface kairos-border kairos-border-color-muted kairos-p-loose kairos-flex kairos-col kairos-gap-standard">
+    <h3 class="kairos-text-sm kairos-text-color-muted kairos-tracking-widest kairos-uppercase">Broadcast: Export &amp; Sync</h3>
+    <div class="kairos-flex kairos-col kairos-gap-standard kairos-bg-deep kairos-p-standard kairos-border kairos-border-color-muted">
+      <div class="kairos-flex kairos-items-center kairos-gap-standard">
+        <i class="kairos-icon-download kairos-icon-sm kairos-text-color-info"></i>
+        <span class="kairos-text-sm kairos-font-bold">Exporting — Evening News Master</span>
+        <span class="kairos-text-xs kairos-font-mono kairos-text-color-muted kairos-ml-auto">01:24 / 04:10</span>
+      </div>
+      <div class="kairos-progress">
+        <div class="kairos-progress-bar" style="width: 34%;"></div>
+      </div>
+      <div class="kairos-flex kairos-col kairos-gap-compact kairos-bg-surface kairos-p-compact kairos-border kairos-border-color-muted">
+        <div class="kairos-flex kairos-items-center kairos-gap-compact">
+          <span class="kairos-text-xs kairos-font-mono">SDI-01</span>
+          <div class="kairos-progress-track kairos-flex-1">
+            <div class="kairos-progress-fill ok" style="width: 100%;"></div>
+          </div>
+          <span class="kairos-badge kairos-intent-pvw kairos-variant-subtle">DONE</span>
+        </div>
+        <div class="kairos-flex kairos-items-center kairos-gap-compact">
+          <span class="kairos-text-xs kairos-font-mono">SDI-04</span>
+          <div class="kairos-progress-track kairos-flex-1">
+            <div class="kairos-progress-fill warn" style="width: 60%;"></div>
+          </div>
+          <span class="kairos-badge kairos-intent-warning kairos-variant-outline">SYNCING</span>
+        </div>
+        <div class="kairos-flex kairos-items-center kairos-gap-compact">
+          <span class="kairos-text-xs kairos-font-mono">SDI-07</span>
+          <div class="kairos-progress-track kairos-flex-1">
+            <div class="kairos-progress-fill err" style="width: 10%;"></div>
+          </div>
+          <span class="kairos-badge kairos-intent-pgm kairos-variant-solid">FAIL</span>
+        </div>
+      </div>
+      <div class="kairos-flex kairos-items-center kairos-gap-compact kairos-text-xs kairos-font-mono kairos-text-color-muted">
+        <span class="kairos-spinner kairos-spinner-sm"></span>
+        <span>34% exported · 2 destinations synced · 1 failed</span>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,61 @@
+<div class="kairos-flex kairos-col kairos-gap-loose">
+  <div class="kairos-flex kairos-col kairos-gap-extra-tight">
+    <h1 class="kairos-text-3xl kairos-font-bold">Indicator (المؤشر)</h1>
+    <p class="kairos-text-color-secondary">مؤشر حالة نصي مع مربع لوني — لتلخيص حالة الإشارة، التزامن، أو الجاهزية في لوحات المراقبة.</p>
+  </div>
+
+  <div class="kairos-bg-surface kairos-border kairos-border-color-muted kairos-p-loose kairos-flex kairos-col kairos-gap-standard">
+    <h3 class="kairos-text-sm kairos-text-color-muted kairos-tracking-widest kairos-uppercase">States (الحالات)</h3>
+    <div class="kairos-flex kairos-items-center kairos-gap-loose kairos-wrap">
+      <span class="kairos-indicator">Default</span>
+      <span class="kairos-indicator pgm">PGM</span>
+      <span class="kairos-indicator pvw">PVW</span>
+      <span class="kairos-indicator warn">Warning</span>
+      <span class="kairos-indicator info">Info</span>
+    </div>
+    <div class="kairos-flex kairos-items-center kairos-gap-compact kairos-text-xs kairos-font-mono kairos-text-color-muted">
+      <span>--kairos-indicator-gap: 6px · dot: --kairos-size-dot-md (8px)</span>
+    </div>
+  </div>
+
+  <div class="kairos-bg-surface kairos-border kairos-border-color-muted kairos-p-loose kairos-flex kairos-col kairos-gap-standard">
+    <h3 class="kairos-text-sm kairos-text-color-muted kairos-tracking-widest kairos-uppercase">Sizes &amp; Mono</h3>
+    <div class="kairos-flex kairos-items-center kairos-gap-standard kairos-wrap">
+      <span class="kairos-indicator kairos-text-xs">Signal</span>
+      <span class="kairos-indicator">Signal</span>
+      <span class="kairos-indicator kairos-text-lg kairos-font-bold">SIGNAL</span>
+      <span class="kairos-indicator pgm kairos-font-mono kairos-uppercase kairos-tracking-widest">PGM</span>
+    </div>
+  </div>
+
+  <div class="kairos-bg-surface kairos-border kairos-border-color-muted kairos-p-loose kairos-flex kairos-col kairos-gap-standard">
+    <h3 class="kairos-text-sm kairos-text-color-muted kairos-tracking-widest kairos-uppercase">Broadcast: Input Status Row</h3>
+    <div class="kairos-flex kairos-col kairos-gap-standard kairos-bg-deep kairos-p-standard kairos-border kairos-border-color-muted">
+      <div class="kairos-flex kairos-items-center kairos-gap-compact">
+        <span class="kairos-indicator pgm">ON AIR</span>
+        <span class="kairos-text-xs kairos-font-mono kairos-text-color-muted">SDI-01 · CAM 01 · 1080i59.94</span>
+        <span class="kairos-badge kairos-intent-pgm kairos-variant-solid kairos-ml-auto">PGM</span>
+      </div>
+      <div class="kairos-flex kairos-items-center kairos-gap-compact">
+        <span class="kairos-indicator pvw">PREVIEW</span>
+        <span class="kairos-text-xs kairos-font-mono kairos-text-color-muted">SDI-02 · VTR · Ready</span>
+        <span class="kairos-badge kairos-intent-pvw kairos-variant-subtle kairos-ml-auto">PVW</span>
+      </div>
+      <div class="kairos-flex kairos-items-center kairos-gap-compact">
+        <span class="kairos-indicator warn">NO SYNC</span>
+        <span class="kairos-text-xs kairos-font-mono kairos-text-color-warning">SDI-04 · CAM 04 · Check cable</span>
+        <span class="kairos-badge kairos-intent-warning kairos-variant-outline kairos-ml-auto">WARN</span>
+      </div>
+      <div class="kairos-flex kairos-items-center kairos-gap-compact">
+        <span class="kairos-indicator">STANDBY</span>
+        <span class="kairos-text-xs kairos-font-mono kairos-text-color-muted">SDI-07 · BLACK · Idle</span>
+        <span class="kairos-indigo kairos-badge kairos-intent-neutral kairos-variant-ghost kairos-ml-auto">IDLE</span>
+      </div>
+      <div class="kairos-divider h"></div>
+      <div class="kairos-flex kairos-items-center kairos-gap-compact kairos-text-xs kairos-font-mono kairos-text-color-muted">
+        <span class="kairos-indicator info">INFO</span>
+        <span>5 inputs monitored · 1 warning</span>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,9 +1,9 @@
 # KAIROS — EXECUTION TRACKER
 > **مسار التنفيذ الحي** — هذا الملف هو مصدر الحقيقة للتقدم. كل خطوة تُنفذ يجب تسجيلها هنا فوراً قبل الـ commit.
 
-**آخر تحديث:** 2026-08-28 00:02 UTC
-**التقدم الإجمالي:** `78%` → الهدف `v1.0` (100%)
-**الفرع:** `main` — `9dadbc1` feat(showcase): B2 switch/forms/slider/tag-input
+**آخر تحديث:** 2026-08-28 00:10 UTC
+**التقدم الإجمالي:** `81%` → الهدف `v1.0` (100%)
+**الفرع:** `main` — `2ec444f` feat(showcase): B3 indicator/tag/loading/progress/surface/overlay
 **آخر تحقق:** `lint: ✅ 0 errors` · `tsc: ✅ 0 errors` · `test: ✅ 19/19` · `build: ✅ 198.91kB CSS`
 
 ---
@@ -121,11 +121,11 @@ A (30د) → B (جلستان) → C (جلستان) → D (جلسة) → E (جل�
 
 | ID | الصفحة | CSS موجود | الحالة | التاريخ | Commit |
 |---|---|---|---|---|---|
-| **B3.1** | `indicator.html` | `src/components/indicator.css:1` | ⬜ | — | — |
-| **B3.2** | `tag.html` | `src/components/tag.css:1` | ⬜ | — | — |
-| **B3.3** | `loading.html` | `src/components/loading.css:1` | ⬜ | — | — |
-| **B3.4** | `progress.html` | `src/components/progress.css:1` | ⬜ | — | — |
-| **B3.5** | `surface.html` + `overlay.html` | `src/components/surface.css:1` `overlay.css:1` | ⬜ | — | — |
+| **B3.1** | `indicator.html` | `src/components/indicator.css:1` | ✅ | 2026-08-28 | `2ec444f` | 3 cards states/mono/broadcast status row |
+| **B3.2** | `tag.html` | `src/components/tag.css:1` | ✅ | 2026-08-28 | `2ec444f` | 3 cards variants/usage/broadcast metadata |
+| **B3.3** | `loading.html` | `src/components/loading.css:1` | ✅ | 2026-08-28 | `2ec444f` | 3 cards spinner/skeleton/broadcast router sync |
+| **B3.4** | `progress.html` | `src/components/progress.css:1` | ✅ | 2026-08-28 | `2ec444f` | 3 cards track+progress/intents/broadcast export |
+| **B3.5** | `surface.html` + `overlay.html` | `src/components/surface.css:1` `overlay.css:1` | ✅ | 2026-08-28 | `2ec444f` | 6 cards surface base/elevation/broadcast + overlay primitives/stacking/backdrop |
 
 #### B4 — Navigation + Composite (4 صفحات)
 
@@ -230,6 +230,7 @@ A (30د) → B (جلستان) → C (جلستان) → D (جلسة) → E (جل�
 
 | التاريخ | Phase | ID | ما تم | Commit | تحقق | الملاحظات |
 |---|---|---|---|---|---|---|
+| 2026-08-28 00:05 | B3 | **B3.1-B3.5** | B3 مكتمل: indicator/tag/loading/progress/surface/overlay (6 showcase + showcase.js P3+P6) | `2ec444f` | lint✅ tsc✅ test19✅ build198.91kB✅ | showcase-data/*6 + showcase.js |
 | 2026-08-27 23:55 | B2 | **B2.1-B2.4** | B2 مكتمل: switch/forms/slider/tag-input (4 showcase + showcase.js P4) | `9dadbc1` | lint✅ tsc✅ test19✅ build198.91kB✅ | showcase-data/*4 + showcase.js |
 | 2026-08-27 23:45 | B1 | **B1.1-B1.4** | B1 مكتمل: heading/paragraph/divider/layout (4 showcase + showcase.js P2) | `90d8aaf` | lint✅ tsc✅ test19✅ build198.91kB✅ | showcase-data/*4 + showcase.js |
 | 2026-08-27 23:35 | A | **A1-A4** | Phase A مكتمل: idempotent(4) + 9 phantom + 7 raw tokens + ARCHITECTURE.md | `b67646b` | lint✅ tsc✅ test19✅ build198.91kB✅ | 4 files JS + components.css + layout + domain(3) + docs |
@@ -241,7 +242,7 @@ A (30د) → B (جلستان) → C (جلستان) → D (جلسة) → E (جل�
 ## مؤشرات سريعة
 
 **إجمالي المهام:** `Phase A:4 + B:16 + C:6 + D:10 + E:5 = 41 مهمة`
-**المنجز:** `12/41` (29%) ✅ Phase A + B1 + B2 مكتمل
+**المنجز:** `18/41` (44%) ✅ Phase A + B1 + B2 + B3 مكتمل
 **بعد B:** `20/41` (49%) · **بعد C:** `26/41` (63%) · **بعد D:** `36/41` (88%) · **بعد E:** `41/41` (100% v1.0)
 
 **الوقت التقديري المتبقي:** `3–5 جلسات` (حسب `PROJECT-HANDOVER.md:24`)

@@ -1,0 +1,82 @@
+<div class="kairos-flex kairos-col kairos-gap-loose">
+  <div class="kairos-flex kairos-col kairos-gap-extra-tight">
+    <h1 class="kairos-text-3xl kairos-font-bold">Loading (التحميل)</h1>
+    <p class="kairos-text-color-secondary">حالات انتظار وتحضير — Spinner للبث المباشر، وSkeleton لمحتوى الواجهات.</p>
+  </div>
+
+  <div class="kairos-bg-surface kairos-border kairos-border-color-muted kairos-p-loose kairos-flex kairos-col kairos-gap-standard">
+    <h3 class="kairos-text-sm kairos-text-color-muted kairos-tracking-widest kairos-uppercase">Spinner (دوار)</h3>
+    <div class="kairos-flex kairos-items-center kairos-gap-loose kairos-wrap">
+      <div class="kairos-flex kairos-col kairos-items-center kairos-gap-compact">
+        <span class="kairos-spinner"></span>
+        <span class="kairos-text-xs kairos-font-mono kairos-text-color-muted">Default (12px)</span>
+      </div>
+      <div class="kairos-flex kairos-col kairos-items-center kairos-gap-compact">
+        <span class="kairos-spinner kairos-spinner-lg"></span>
+        <span class="kairos-text-xs kairos-font-mono kairos-text-color-muted">Large (24px)</span>
+      </div>
+      <div class="kairos-flex kairos-col kairos-items-center kairos-gap-compact">
+        <span class="kairos-spinner kairos-spinner-sm"></span>
+        <span class="kairos-text-xs kairos-font-mono kairos-text-color-muted">Small (8px)</span>
+      </div>
+      <div class="kairos-flex kairos-items-center kairos-gap-compact kairos-bg-input kairos-p-compact kairos-border kairos-border-color-muted">
+        <span class="kairos-spinner"></span>
+        <span class="kairos-text-sm kairos-text-color-muted">Syncing router…</span>
+      </div>
+    </div>
+    <div class="kairos-flex kairos-items-center kairos-gap-compact kairos-text-xs kairos-font-mono kairos-text-color-muted">
+      <span>border: var(--kairos-border-thick) · top-color: var(--kairos-status-pvw) · animation: kairos-spin 300ms linear</span>
+    </div>
+  </div>
+
+  <div class="kairos-bg-surface kairos-border kairos-border-color-muted kairos-p-loose kairos-flex kairos-col kairos-gap-standard">
+    <h3 class="kairos-text-sm kairos-text-color-muted kairos-tracking-widest kairos-uppercase">Skeleton (هيكل)</h3>
+    <div class="kairos-flex kairos-col kairos-gap-standard">
+      <div class="kairos-flex kairos-col kairos-gap-compact kairos-bg-input kairos-p-standard kairos-border kairos-border-color-muted" style="min-width: 280px;">
+        <div class="kairos-skeleton kairos-skeleton-title"></div>
+        <div class="kairos-skeleton kairos-skeleton-text"></div>
+        <div class="kairos-skeleton kairos-skeleton-text" style="width: 80%;"></div>
+        <div class="kairos-flex kairos-items-center kairos-gap-compact kairos-mt-standard">
+          <div class="kairos-skeleton kairos-skeleton-avatar"></div>
+          <div class="kairos-flex kairos-col kairos-gap-compact kairos-flex-1">
+            <div class="kairos-skeleton kairos-skeleton-text" style="width: 60%;"></div>
+            <div class="kairos-skeleton kairos-skeleton-text" style="width: 40%;"></div>
+          </div>
+          <div class="kairos-skeleton kairos-skeleton-btn"></div>
+        </div>
+      </div>
+      <div class="kairos-flex kairos-items-center kairos-gap-compact kairos-text-xs kairos-font-mono kairos-text-color-muted">
+        <span>gradient shimmer 300ms · respects prefers-reduced-motion</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="kairos-bg-surface kairos-border kairos-border-color-muted kairos-p-loose kairos-flex kairos-col kairos-gap-standard">
+    <h3 class="kairos-text-sm kairos-text-color-muted kairos-tracking-widest kairos-uppercase">Broadcast: Router Sync</h3>
+    <div class="kairos-flex kairos-col kairos-gap-standard kairos-bg-deep kairos-p-standard kairos-border kairos-border-color-muted">
+      <div class="kairos-flex kairos-items-center kairos-gap-standard">
+        <span class="kairos-spinner"></span>
+        <div class="kairos-flex kairos-col">
+          <span class="kairos-text-sm kairos-font-bold">Syncing Routing Matrix</span>
+          <span class="kairos-text-xs kairos-font-mono kairos-text-color-muted">14 destinations · 32 sources</span>
+        </div>
+        <span class="kairos-text-xs kairos-font-mono kairos-text-color-pvw kairos-ml-auto">42%</span>
+      </div>
+      <div class="kairos-progress">
+        <div class="kairos-progress-bar" style="width: 42%;"></div>
+      </div>
+      <div class="kairos-flex kairos-col kairos-gap-extra-tight kairos-bg-surface kairos-p-compact kairos-border kairos-border-color-muted">
+        <div class="kairos-flex kairos-items-center kairos-gap-compact">
+          <span class="kairos-spinner kairos-spinner-sm"></span>
+          <span class="kairos-text-xs kairos-font-mono">SDI-01 — verifying</span>
+          <span class="kairos-badge kairos-intent-pvw kairos-variant-subtle kairos-ml-auto">OK</span>
+        </div>
+        <div class="kairos-skeleton kairos-skeleton-text" style="width: 100%;"></div>
+        <div class="kairos-skeleton kairos-skeleton-text" style="width: 70%;"></div>
+      </div>
+      <div class="kairos-flex kairos-items-center kairos-gap-compact kairos-text-xs kairos-font-mono kairos-text-color-muted">
+        <span>Spinner + Skeleton + Progress يعملان معًا أثناء انتظار البث</span>
+      </div>
+    </div>
+  </div>
+</div>

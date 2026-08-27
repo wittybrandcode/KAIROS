@@ -29,7 +29,18 @@ document.addEventListener('DOMContentLoaded', () => {
       category: "P3: Feedback Primitives",
       items: [
         { id: "alert", name: "Alert", key: "P3" },
-        { id: "status-dot", name: "Status Dot", key: "P3" }
+        { id: "status-dot", name: "Status Dot", key: "P3" },
+        { id: "indicator", name: "Indicator", key: "P3" },
+        { id: "tag", name: "Tag", key: "P3" },
+        { id: "loading", name: "Loading", key: "P3" },
+        { id: "progress", name: "Progress", key: "P3" }
+      ]
+    },
+    {
+      category: "P6: Overlay Primitives",
+      items: [
+        { id: "surface", name: "Surface", key: "P6" },
+        { id: "overlay", name: "Overlay", key: "P6" }
       ]
     },
     {
