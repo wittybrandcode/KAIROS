@@ -27,6 +27,6 @@ body {
 
 ::-webkit-scrollbar { width: var(--kairos-scrollbar-size); height: var(--kairos-scrollbar-size); }
 ::-webkit-scrollbar-track { background: var(--kairos-bg-deep); }
-::-webkit-scrollbar-thumb { background: var(--kairos-border); }
-::-webkit-scrollbar-thumb:hover { background: var(--kairos-border-active); }
+::-webkit-scrollbar-thumb { background: var(--kairos-border-active); }
+::-webkit-scrollbar-thumb:hover { background: var(--kairos-text-placeholder); }
 
