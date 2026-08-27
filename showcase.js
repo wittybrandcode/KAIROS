@@ -18,7 +18,11 @@ document.addEventListener('DOMContentLoaded', () => {
         { id: "kbd", name: "Kbd", key: "P2" },
         { id: "code", name: "Code", key: "P2" },
         { id: "link", name: "Link", key: "P2" },
-        { id: "data-display", name: "Data Display", key: "P2" }
+        { id: "data-display", name: "Data Display", key: "P2" },
+        { id: "heading", name: "Heading", key: "P2" },
+        { id: "paragraph", name: "Paragraph", key: "P2" },
+        { id: "divider", name: "Divider", key: "P2" },
+        { id: "layout", name: "Layout", key: "P2" }
       ]
     },
     {

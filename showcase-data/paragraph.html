@@ -1,0 +1,46 @@
+<div class="kairos-flex kairos-col kairos-gap-loose">
+  <div class="kairos-flex kairos-col kairos-gap-extra-tight">
+    <h1 class="kairos-text-3xl kairos-font-bold">Paragraph (الفقرات)</h1>
+    <p class="kairos-text-color-secondary">نصوص وصفية وتفسيرية — للتعليمات، الأوصاف، والرسائل الثانوية داخل لوحات التحكم.</p>
+  </div>
+
+  <div class="kairos-bg-surface kairos-border kairos-border-color-muted kairos-p-loose kairos-flex kairos-col kairos-gap-standard">
+    <h3 class="kairos-text-sm kairos-text-color-muted kairos-tracking-widest kairos-uppercase">Base Paragraph</h3>
+    <div class="kairos-flex kairos-col kairos-gap-standard kairos-bg-input kairos-p-standard kairos-border kairos-border-color-muted">
+      <p class="kairos-paragraph">The multiviewer displays 8 independent SDI inputs with embedded audio metering. Each cell shows tally status, source name, and signal presence. Operators can confirm routing without switching the program bus.</p>
+      <p class="kairos-paragraph">يعرض جهاز تعدد المشاهد 8 مداخل SDI مستقلة مع قياس الصوت المدمج. تعرض كل خلية حالة التالي واسم المصدر ووجود الإشارة.</p>
+      <p class="kairos-paragraph">This is a secondary note rendered with muted paragraph spacing. Use for helper text under form fields.</p>
+    </div>
+  </div>
+
+  <div class="kairos-bg-surface kairos-border kairos-border-color-muted kairos-p-loose kairos-flex kairos-col kairos-gap-standard">
+    <h3 class="kairos-text-sm kairos-text-color-muted kairos-tracking-widest kairos-uppercase">Spacing (تباعد الفقرات)</h3>
+    <div class="kairos-bg-input kairos-p-standard kairos-border kairos-border-color-muted">
+      <p class="kairos-paragraph">Paragraph 01 — margin-bottom is `var(--kairos-paragraph-margin)` (12px).</p>
+      <p class="kairos-paragraph">Paragraph 02 — the last-child automatically removes margin (0).</p>
+      <p class="kairos-paragraph">Paragraph 03 — no extra gap needed; the token handles rhythm.</p>
+    </div>
+    <div class="kairos-flex kairos-items-center kairos-gap-compact">
+      <span class="kairos-text-xs kairos-text-color-muted kairos-font-mono">Token: --kairos-paragraph-margin = 12px (md)</span>
+    </div>
+  </div>
+
+  <div class="kairos-bg-surface kairos-border kairos-border-color-muted kairos-p-loose kairos-flex kairos-col kairos-gap-standard">
+    <h3 class="kairos-text-sm kairos-text-color-muted kairos-tracking-widest kairos-uppercase">Broadcast: Help &amp; Status Messages</h3>
+    <div class="kairos-flex kairos-col kairos-gap-standard kairos-bg-deep kairos-p-standard kairos-border kairos-border-color-muted">
+      <div class="kairos-flex kairos-col kairos-gap-extra-tight">
+        <h4 class="kairos-heading kairos-h4">Routing Matrix — Destination Locked</h4>
+        <p class="kairos-paragraph">Destination SDI-14 is locked by operator Studio B. You cannot route a new source until the lock is released. Contact the technical director or wait for the current segment to end.</p>
+        <p class="kairos-paragraph">الوجهة SDI-14 مقفلة من قبل مشغل الاستوديو B. لا يمكنك توجيه مصدر جديد حتى يتم فك القفل.</p>
+      </div>
+      <div class="kairos-flex kairos-items-center kairos-gap-compact kairos-bg-surface kairos-p-compact kairos-border kairos-border-color-muted">
+        <i class="kairos-icon-info kairos-icon-sm kairos-text-color-info"></i>
+        <p class="kairos-paragraph" style="margin: 0;">Tip: Hold SHIFT while clicking a crosspoint to preview without taking to air.</p>
+      </div>
+      <div class="kairos-flex kairos-items-center kairos-gap-compact kairos-bg-pvw kairos-p-compact">
+        <i class="kairos-icon-check kairos-icon-sm" style="color: var(--kairos-bg-deep);"></i>
+        <p class="kairos-paragraph kairos-text-color-pvw kairos-font-bold" style="margin: 0; color: var(--kairos-bg-deep);">Sync complete — all 14 destinations verified.</p>
+      </div>
+    </div>
+  </div>
+</div>
