@@ -12,6 +12,7 @@ export { Tooltip } from './tooltip';
 export { TagInput } from './tag-input';
 export { Command } from './command';
 export { Sidebar } from './sidebar';
+export { Slider } from './slider';
 
 // TODO: uncomment when modules are implemented
 // export { Sidebar } from './sidebar';
