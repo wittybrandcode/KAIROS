@@ -1,0 +1,69 @@
+<div class="kairos-flex kairos-col kairos-gap-loose">
+  <div class="kairos-flex kairos-col kairos-gap-extra-tight">
+    <h1 class="kairos-text-3xl kairos-font-bold">Toast (الإشعار)</h1>
+    <p class="kairos-text-color-secondary">إشعار عائم مؤقت — يُفتح عبر data-kairos-toggle="toast" مع data-kairos-target و duration، يُغلق تلقائيًا أو بـ data-kairos-dismiss.</p>
+  </div>
+
+  <div class="kairos-bg-surface kairos-border kairos-border-color-muted kairos-p-loose kairos-flex kairos-col kairos-gap-standard">
+    <h3 class="kairos-text-sm kairos-text-color-muted kairos-tracking-widest kairos-uppercase">Triggers (فتح)</h3>
+    <div class="kairos-flex kairos-gap-standard kairos-flex-wrap">
+      <button class="kairos-btn kairos-size-sm" data-kairos-toggle="toast" data-kairos-target="#toast-1" data-kairos-duration="5000">Show Toast (5s)</button>
+      <button class="kairos-btn kairos-size-sm kairos-variant-outline" data-kairos-toggle="toast" data-kairos-target="#toast-2" data-kairos-duration="3000">Short (3s)</button>
+      <button class="kairos-btn kairos-size-sm kairos-variant-ghost" data-kairos-toggle="toast" data-kairos-target="#toast-3" data-kairos-duration="0">Persistent (no auto)</button>
+    </div>
+    <div class="kairos-flex kairos-col kairos-gap-compact kairos-text-xs kairos-font-mono kairos-text-color-muted">
+      <span>data-kairos-toggle="toast" · data-kairos-target="#id" · data-kairos-duration="5000" · hover pauses timer</span>
+    </div>
+    <!-- Toast elements (initially hidden, JS will show) -->
+    <div id="toast-1" class="kairos-toast kairos-intent-info" data-state="closed" role="status" aria-live="polite">
+      <i class="kairos-icon-info kairos-icon-sm"></i>
+      <div class="kairos-flex kairos-col"><span class="kairos-text-sm kairos-font-bold">Info</span><span class="kairos-text-sm">Routing updated — SDI-02 → PVW</span></div>
+      <button class="kairos-btn kairos-size-sm kairos-variant-ghost kairos-ml-auto" data-kairos-dismiss>×</button>
+    </div>
+    <div id="toast-2" class="kairos-toast kairos-intent-pvw" data-state="closed" role="status" aria-live="polite">
+      <i class="kairos-icon-check kairos-icon-sm"></i>
+      <div class="kairos-flex kairos-col"><span class="kairos-text-sm kairos-font-bold">Success</span><span class="kairos-text-sm">Take executed — CAM 02 on air</span></div>
+      <button class="kairos-btn kairos-size-sm kairos-variant-ghost kairos-ml-auto" data-kairos-dismiss>×</button>
+    </div>
+    <div id="toast-3" class="kairos-toast kairos-intent-warning" data-state="closed" role="status" aria-live="polite">
+      <i class="kairos-icon-warning kairos-icon-sm"></i>
+      <div class="kairos-flex kairos-col"><span class="kairos-text-sm kairos-font-bold">Warning</span><span class="kairos-text-sm">Signal weak — SDI-04 check cable</span></div>
+      <button class="kairos-btn kairos-size-sm kairos-variant-ghost kairos-ml-auto" data-kairos-dismiss>×</button>
+    </div>
+  </div>
+
+  <div class="kairos-bg-surface kairos-border kairos-border-color-muted kairos-p-loose kairos-flex kairos-col kairos-gap-standard">
+    <h3 class="kairos-text-sm kairos-text-color-muted kairos-tracking-widest kairos-uppercase">Intents (الألوان)</h3>
+    <div class="kairos-flex kairos-col kairos-gap-standard">
+      <div class="kairos-toast kairos-intent-pgm" data-state="open" role="status"><i class="kairos-icon-warning kairos-icon-sm"></i><span class="kairos-text-sm kairos-font-bold">PGM — On Air</span></div>
+      <div class="kairos-toast kairos-intent-pvw" data-state="open" role="status"><i class="kairos-icon-check kairos-icon-sm"></i><span class="kairos-text-sm kairos-font-bold">PVW — Ready</span></div>
+      <div class="kairos-toast kairos-intent-warning" data-state="open" role="status"><i class="kairos-icon-warning kairos-icon-sm"></i><span class="kairos-text-sm kairos-font-bold">Warning — No Sync</span></div>
+      <div class="kairos-toast kairos-intent-info" data-state="open" role="status"><i class="kairos-icon-info kairos-icon-sm"></i><span class="kairos-text-sm kairos-font-bold">Info — System Idle</span></div>
+    </div>
+  </div>
+
+  <div class="kairos-bg-surface kairos-border kairos-border-color-muted kairos-p-loose kairos-flex kairos-col kairos-gap-standard">
+    <h3 class="kairos-text-sm kairos-text-color-muted kairos-tracking-widest kairos-uppercase">Broadcast: Live Feedback</h3>
+    <div class="kairos-flex kairos-col kairos-gap-standard kairos-bg-deep kairos-p-standard kairos-border kairos-border-color-muted">
+      <div class="kairos-flex kairos-items-center">
+        <span class="kairos-text-sm kairos-font-bold">Program Feedback</span>
+        <span class="kairos-badge kairos-intent-pgm kairos-variant-solid kairos-ml-auto">LIVE</span>
+      </div>
+      <div class="kairos-flex kairos-col kairos-gap-compact">
+        <div class="kairos-toast kairos-intent-pgm" data-state="open" role="status">
+          <i class="kairos-icon-broadcast kairos-icon-sm"></i>
+          <span class="kairos-text-sm">Take — CAM 01 → CAM 02</span>
+          <span class="kairos-text-xs kairos-font-mono kairos-text-color-muted kairos-ml-auto">00:12:34</span>
+        </div>
+        <div class="kairos-toast kairos-intent-info" data-state="open" role="status">
+          <i class="kairos-icon-info kairos-icon-sm"></i>
+          <span class="kairos-text-sm">Router — SDI-03 synced</span>
+          <span class="kairos-text-xs kairos-font-mono kairos-ml-auto">OK</span>
+        </div>
+      </div>
+      <div class="kairos-flex kairos-items-center kairos-gap-compact kairos-text-xs kairos-font-mono kairos-text-color-muted">
+        <span>Toast uses role=status + aria-live=polite · auto-dismiss 5s · hover pauses · data-kairos-dismiss closes</span>
+      </div>
+    </div>
+  </div>
+</div>

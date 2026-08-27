@@ -1,0 +1,72 @@
+<div class="kairos-flex kairos-col kairos-gap-loose">
+  <div class="kairos-flex kairos-col kairos-gap-extra-tight">
+    <h1 class="kairos-text-3xl kairos-font-bold">Dropdown (قائمة منسدلة)</h1>
+    <p class="kairos-text-color-secondary">قائمة خيارات عائمة — تُفتح عبر data-kairos-toggle="dropdown"، تُغلق بالنقر الخارجي أو Escape أو اختيار عنصر.</p>
+  </div>
+
+  <div class="kairos-bg-surface kairos-border kairos-border-color-muted kairos-p-loose kairos-flex kairos-col kairos-gap-standard">
+    <h3 class="kairos-text-sm kairos-text-color-muted kairos-tracking-widest kairos-uppercase">Basic (أساسي)</h3>
+    <div class="kairos-flex kairos-gap-standard kairos-flex-wrap">
+      <div class="kairos-dropdown-wrapper kairos-relative">
+        <button class="kairos-btn kairos-size-sm" data-kairos-toggle="dropdown" aria-expanded="false">Select Source</button>
+        <div class="kairos-dropdown" data-state="closed">
+          <div class="kairos-dropdown-item">CAM 01 — Studio A</div>
+          <div class="kairos-dropdown-item">CAM 02 — Studio B</div>
+          <div class="kairos-dropdown-item">VTR — Playback</div>
+          <div class="kairos-dropdown-divider"></div>
+          <div class="kairos-dropdown-item">BLACK</div>
+        </div>
+      </div>
+      <div class="kairos-dropdown-wrapper">
+        <button class="kairos-btn kairos-size-sm kairos-variant-outline" data-kairos-toggle="dropdown">With Target</button>
+        <div id="dropdown-target" class="kairos-dropdown" data-state="closed">
+          <div class="kairos-dropdown-item kairos-intent-pgm">PGM — Live</div>
+          <div class="kairos-dropdown-item kairos-intent-pvw">PVW — Preview</div>
+        </div>
+      </div>
+    </div>
+    <div class="kairos-flex kairos-items-center kairos-gap-compact kairos-text-xs kairos-font-mono kairos-text-color-muted">
+      <span>data-kairos-toggle="dropdown" · .kairos-dropdown-wrapper · .kairos-dropdown[data-state] · ArrowUp/Down navigates</span>
+    </div>
+  </div>
+
+  <div class="kairos-bg-surface kairos-border kairos-border-color-muted kairos-p-loose kairos-flex kairos-col kairos-gap-standard">
+    <h3 class="kairos-text-sm kairos-text-color-muted kairos-tracking-widest kairos-uppercase">Intents &amp; States</h3>
+    <div class="kairos-flex kairos-gap-standard kairos-flex-wrap">
+      <div class="kairos-dropdown" data-state="open" style="position: relative;">
+        <div class="kairos-dropdown-item">Default</div>
+        <div class="kairos-dropdown-item kairos-intent-pgm">PGM — Live</div>
+        <div class="kairos-dropdown-item kairos-intent-pvw">PVW — Preview</div>
+        <div class="kairos-dropdown-item kairos-intent-warning">Warning</div>
+      </div>
+      <div class="kairos-flex kairos-col kairos-gap-compact kairos-text-xs kairos-font-mono kairos-text-color-muted">
+        <span>Open state shows items with hover bg-selected</span>
+        <span>Intents use --kairos-comp-border/bg-subtle</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="kairos-bg-surface kairos-border kairos-border-color-muted kairos-p-loose kairos-flex kairos-col kairos-gap-standard">
+    <h3 class="kairos-text-sm kairos-text-color-muted kairos-tracking-widest kairos-uppercase">Broadcast: Source Selector</h3>
+    <div class="kairos-flex kairos-col kairos-gap-standard kairos-bg-deep kairos-p-standard kairos-border kairos-border-color-muted">
+      <div class="kairos-flex kairos-items-center">
+        <span class="kairos-text-sm kairos-font-bold">PGM Source</span>
+        <span class="kairos-badge kairos-intent-pgm kairos-variant-solid kairos-ml-auto">CAM 01</span>
+      </div>
+      <div class="kairos-dropdown-wrapper">
+        <button class="kairos-btn kairos-size-sm kairos-variant-outline kairos-flex-1" data-kairos-toggle="dropdown" aria-expanded="false">Change Source — PVW: CAM 02</button>
+        <div class="kairos-dropdown" data-state="closed">
+          <div class="kairos-dropdown-item"><span class="kairos-status-dot pvw"></span> CAM 02 — Studio B</div>
+          <div class="kairos-dropdown-item"><span class="kairos-status-dot"></span> CAM 03 — Remote</div>
+          <div class="kairos-dropdown-item kairos-intent-pgm"><span class="kairos-status-dot pgm"></span> CAM 01 — PGM (on air)</div>
+          <div class="kairos-dropdown-divider"></div>
+          <div class="kairos-dropdown-item">VTR</div>
+          <div class="kairos-dropdown-item">BLACK</div>
+        </div>
+      </div>
+      <div class="kairos-flex kairos-items-center kairos-gap-compact kairos-text-xs kairos-font-mono kairos-text-color-muted">
+        <span>Arrow keys navigate · Enter selects (kairos:dropdown:select) · click outside closes</span>
+      </div>
+    </div>
+  </div>
+</div>

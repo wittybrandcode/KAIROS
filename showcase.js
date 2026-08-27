@@ -54,13 +54,17 @@ document.addEventListener('DOMContentLoaded', () => {
         { id: "surface", name: "Surface", key: "P6" },
         { id: "overlay", name: "Overlay", key: "P6" },
         { id: "tooltip", name: "Tooltip", key: "P6" },
-        { id: "popover", name: "Popover", key: "P6" }
+        { id: "popover", name: "Popover", key: "P6" },
+        { id: "modal", name: "Modal", key: "P6" },
+        { id: "dropdown", name: "Dropdown", key: "P6" },
+        { id: "toast", name: "Toast", key: "P6" }
       ]
     },
     {
       category: "P7: Navigation",
       items: [
-        { id: "navigation", name: "Navigation", key: "P7" }
+        { id: "navigation", name: "Navigation", key: "P7" },
+        { id: "tabs", name: "Tabs", key: "P7" }
       ]
     },
     {
@@ -72,7 +76,18 @@ document.addEventListener('DOMContentLoaded', () => {
         { id: "command", name: "Command", key: "P8" },
         { id: "sidebar", name: "Sidebar", key: "P8" }
       ]
-    }
+    },
+    {
+      category: "P9: Domain (Broadcast)",
+      items: [
+        { id: "bus", name: "Bus", key: "P9" },
+        { id: "shell", name: "Shell", key: "P9" },
+        { id: "multiview", name: "Multiview", key: "P9" },
+        { id: "rundown", name: "Rundown", key: "P9" },
+        { id: "production", name: "Production", key: "P9" },
+        { id: "ticker", name: "Ticker", key: "P9" }
+      ]
+    },
   ];
 
   /* -------------------------------------------------------------------------

@@ -1,9 +1,9 @@
 # KAIROS — EXECUTION TRACKER
 > **مسار التنفيذ الحي** — هذا الملف هو مصدر الحقيقة للتقدم. كل خطوة تُنفذ يجب تسجيلها هنا فوراً قبل الـ commit.
 
-**آخر تحديث:** 2026-08-28 02:05 UTC
-**التقدم الإجمالي:** `91%` → الهدف `v1.0` (100%)
-**الفرع:** `main` — `11a36fe` feat(slider): C6 pointer drag + keyboard + aria — Tier 2 closed
+**آخر تحديث:** 2026-08-28 02:50 UTC
+**التقدم الإجمالي:** `95%` → الهدف `v1.0` (100%)
+**الفرع:** `main` — `11a36fe` → `feat(domain): D1+D2 10 showcases (modal/dropdown/tabs/toast + 6 domain)` (pending)
 **آخر تحقق:** `lint: ✅ 0 errors` · `tsc: ✅ 0 errors` · `test: ✅ 55/55` · `build: ✅ 199.03kB CSS / 721.61kB MJS`
 
 ---
@@ -59,8 +59,8 @@ powershell -ExecutionPolicy Bypass -Command "npm run build"
 | Components CSS L2-L8 `src/components/*.css` | 42/42 | ✅ 100% | `src/kairos.css:xx` L2-L8 |
 | Domain CSS L9 `src/domain/*.css` | 13/13 | ✅ 98% (glows + outline تم ترميزها) | `src/kairos.css:xx` L9 |
 | JS Core `src/core/*.ts` | 8/8 impl + 2 tested | ✅ 100% impl / 25% tested | `src/core/index.ts:1` |
-| JS Modules `src/modules/*.ts` | 11/11 | ✅ 100% (Popover+Tooltip+TagInput+Command+Sidebar+Slider ✅) | `src/kairos.ts:1` + `src/modules/index.ts:1` |
-| Showcase `showcase-data/*.html` | 34/40 | ✅ 85% | `showcase.js:6` `KairosInventory` (P1:1, P2:10, P3:6, P4:7, P6:4, P7:1, P8:5) |
+| JS Modules `src/modules/*.ts` | 11/11 | ✅ 100% (all Tier 2 ✅) | `src/kairos.ts:1` + `src/modules/index.ts:1` |
+| Showcase `showcase-data/*.html` | 43/40 | ✅ 100%+ | `showcase.js:6` `KairosInventory` (P1:1, P2:10, P3:6, P4:7, P6:7, P7:2, P8:5, P9:6) |
 | Tests `vitest` | 55/55 passing (9 suites) | ✅ تغطية 9 ملفات | `vitest.config.ts:1` |
 | Build `dist/` | 199.03kB CSS / 707.78kB MJS | ✅ | `vite.config.js:1` |
 | Git | `main` 9 commits ahead | ✅ | `git log --oneline -5` |
@@ -183,25 +183,25 @@ A (30د) → B (جلستان) → C (جلستان) → D (جلسة) → E (جل�
 
 | ID | الصفحة | JS موجود | الحالة | التاريخ | Commit |
 |---|---|---|---|---|---|
-| **D1.1** | `modal.html` — `data-kairos-toggle="modal"` + `data-kairos-target` + `data-kairos-dismiss` + `data-backdrop="static"` | `src/modules/modal.ts:1` | ⬜ | — | — |
-| **D1.2** | `dropdown.html` — `data-kairos-toggle="dropdown"` | `src/modules/dropdown.ts:1` | ⬜ | — | — |
-| **D1.3** | `tabs.html` — `data-kairos-toggle="tab"` + `data-kairos-target` | `src/modules/tabs.ts:1` | ⬜ | — | — |
-| **D1.4** | `toast.html` — `data-kairos-toggle="toast"` + duration | `src/modules/toast.ts:1` | ⬜ | — | — |
+| **D1.1** | `modal.html` — `data-kairos-toggle="modal"` + `data-kairos-target` + `data-kairos-dismiss` + `data-backdrop="static"` | `src/modules/modal.ts:1` | ✅ | 2026-08-28 | `feat: D1` | 3 cards basic/sizes/broadcast |
+| **D1.2** | `dropdown.html` — `data-kairos-toggle="dropdown"` | `src/modules/dropdown.ts:1` | ✅ | 2026-08-28 | `feat: D1` | 3 cards basic/intents/broadcast |
+| **D1.3** | `tabs.html` — `data-kairos-toggle="tab"` + `data-kairos-target` | `src/modules/tabs.ts:1` | ✅ | 2026-08-28 | `feat: D1` | 3 cards basic/states/broadcast |
+| **D1.4** | `toast.html` — `data-kairos-toggle="toast"` + duration | `src/modules/toast.ts:1` | ✅ | 2026-08-28 | `feat: D1` | 3 cards triggers/intents/broadcast |
 
 #### D2 — صفحات Domain L9 (Tier 4) — CSS خالص
 
 | ID | الصفحة | CSS موجود | الحالة | التاريخ | Commit |
 |---|---|---|---|---|---|
-| **D2.1** | `bus.html` | `src/domain/bus.css:1` | ⬜ | — | — |
-| **D2.2** | `shell.html` | `src/domain/shell.css:1` | ⬜ | — | — |
-| **D2.3** | `multiview.html` | `src/domain/multiview.css:1` | ⬜ | — | — |
-| **D2.4** | `rundown.html` | `src/domain/rundown.css:1` | ⬜ | — | — |
-| **D2.5** | `production.html` | `src/domain/production.css:1` | ⬜ | — | — |
-| **D2.6** | `ticker.html` | `src/domain/ticker.css:1` | ⬜ | — | — |
+| **D2.1** | `bus.html` | `src/domain/bus.css:1` | ✅ | 2026-08-28 | `feat: D2` | PGM/PVW bus + broadcast switcher |
+| **D2.2** | `shell.html` | `src/domain/shell.css:1` | ✅ | 2026-08-28 | `feat: D2` | stage/shell grid + broadcast full shell |
+| **D2.3** | `multiview.html` | `src/domain/multiview.css:1` | ✅ | 2026-08-28 | `feat: D2` | cells pgm/pvw/sm + broadcast 4-up |
+| **D2.4** | `rundown.html` | `src/domain/rundown.css:1` | ✅ | 2026-08-28 | `feat: D2` | items live/next/done/compact + broadcast |
+| **D2.5** | `production.html` | `src/domain/production.css:1` | ✅ | 2026-08-28 | `feat: D2` | crosspoint/viewport/timeline/vu + broadcast |
+| **D2.6** | `ticker.html` | `src/domain/ticker.css:1` | ✅ | 2026-08-28 | `feat: D2` | ticker/marquee + broadcast lower third |
 
 **معايير إنجاز Phase D:**
-- [ ] 10 صفحات جديدة — كل `data-kairos-*` يعمل حياً على `localhost:5178`
-- [ ] `tests/e2e/*.spec.ts` محدثة من `tests/e2e/modal.spec.ts:1` (4 e2e جديدة)
+- [x] 10 صفحات جديدة — كل `data-kairos-*` يعمل حياً على `localhost:5178` (D1 4 demos + D2 6 domain = 10)
+- [ ] `tests/e2e/*.spec.ts` محدثة من `tests/e2e/modal.spec.ts:1` (4 e2e جديدة) — مؤجل لـ E2
 
 ---
 
@@ -234,6 +234,7 @@ A (30د) → B (جلستان) → C (جلستان) → D (جلسة) → E (جل�
 
 | التاريخ | Phase | ID | ما تم | Commit | تحقق | الملاحظات |
 |---|---|---|---|---|---|---|
+| 2026-08-28 02:55 | D | **D1+D2** | D مكتمل: 4 demos (modal/dropdown/tabs/toast) + 6 domain (bus/shell/multiview/rundown/production/ticker) | `feat: D` | lint✅ tsc✅ test55✅ build199.03kB✅ | 10 showcases + showcase.js P6/P7/P9 |
 | 2026-08-28 02:05 | C6 | **Slider** | C6 مكتمل: pointer drag + keyboard + aria (7 tests) — Tier 2 closed | `11a36fe` | lint✅ tsc✅ test55✅ build199.03kB✅ | slider.ts + slider.test.ts + kairos.ts — 11/11 modules |
 | 2026-08-28 01:50 | C5 | **Sidebar** | C5 مكتمل: toggle + active + Escape + dismiss (6 tests) | `0021e97` | lint✅ tsc✅ test48✅ build199.03kB✅ | sidebar.ts + sidebar.test.ts + kairos.ts + showcase.js |
 | 2026-08-28 01:35 | C4 | **Command** | C4 مكتمل: Ctrl+K + filter + arrows + Enter (6 tests) | `67ea51c` | lint✅ tsc✅ test42✅ build199.03kB✅ | command.ts + command.test.ts + kairos.ts + showcase.js |
@@ -253,7 +254,7 @@ A (30د) → B (جلستان) → C (جلستان) → D (جلسة) → E (جل�
 ## مؤشرات سريعة
 
 **إجمالي المهام:** `Phase A:4 + B:16 + C:6 + D:10 + E:5 = 41 مهمة`
-**المنجز:** `28/41` (68%) ✅ Phase A + B (20) + C (6) مكتمل — Tier 1+2 closed
+**المنجز:** `38/41` (93%) ✅ Phase A + B + C + D مكتمل — بقي E فقط
 **بعد B:** `22/41` (54%) · **بعد C:** `28/41` (68%) · **بعد D:** `38/41` (93%) · **بعد E:** `41/41` (100% v1.0)
 
 **الوقت التقديري المتبقي:** `3–5 جلسات` (حسب `PROJECT-HANDOVER.md:24`)

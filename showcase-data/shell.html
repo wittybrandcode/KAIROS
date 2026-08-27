@@ -1,0 +1,32 @@
+<div class="kairos-flex kairos-col kairos-gap-loose">
+  <div class="kairos-flex kairos-col kairos-gap-extra-tight">
+    <h1 class="kairos-text-3xl kairos-font-bold">Shell (الهيكل)</h1>
+    <p class="kairos-text-color-secondary">هيكل التطبيق الكامل — شريط علوي، لوحة جانبية، منطقة وسطى، ولوحة يمنى مع حاويات متجاوبة.</p>
+  </div>
+  <div class="kairos-bg-surface kairos-border kairos-border-color-muted kairos-p-loose kairos-flex kairos-col kairos-gap-standard">
+    <h3 class="kairos-text-sm kairos-text-color-muted kairos-tracking-widest kairos-uppercase">App Shell Grid</h3>
+    <div class="kairos-stage" style="height: 300px;">
+      <header class="kairos-top-bar"><div class="kairos-brand"><div class="kairos-brand-mark">K</div><span>KAIROS</span></div></header>
+      <div class="kairos-shell">
+        <aside class="kairos-side-panel"><div class="kairos-side-section-label">Sources</div><div class="kairos-src-row active"><span class="kairos-src-name">CAM 01</span><span class="kairos-src-key">SDI-01</span></div></aside>
+        <main class="kairos-center"><div class="kairos-switcher"><div class="kairos-pgm-pvw-row"><div class="kairos-pgm-btn active"><span class="kairos-pgm-label">PGM</span></div><div class="kairos-pvw-btn"><span class="kairos-pvw-label">PVW</span></div></div></div></main>
+        <aside class="kairos-right-panel"><div class="kairos-right-section"><span class="kairos-text-sm">Right Panel</span></div></aside>
+      </div>
+      <div class="kairos-status-bar"><span class="kairos-status-item">REC</span><span class="kairos-spacer"></span><span class="kairos-status-item">00:00:00</span></div>
+    </div>
+    <div class="kairos-flex kairos-items-center kairos-gap-compact kairos-text-xs kairos-font-mono kairos-text-color-muted">
+      <span>stage: grid 56px 1fr 24px · shell: 260px 1fr 280px · side-panel/center/right-panel with @container queries</span>
+    </div>
+  </div>
+  <div class="kairos-bg-surface kairos-border kairos-border-color-muted kairos-p-loose kairos-flex kairos-col kairos-gap-standard">
+    <h3 class="kairos-text-sm kairos-text-color-muted kairos-tracking-widest kairos-uppercase">Broadcast: Full Shell</h3>
+    <div class="kairos-flex kairos-col kairos-gap-standard kairos-bg-deep kairos-p-standard kairos-border kairos-border-color-muted">
+      <div class="kairos-top-bar"><div class="kairos-brand"><div class="kairos-brand-mark">K</div><span>STUDIO A</span></div><div class="kairos-top-status"><span class="kairos-rec-indicator"><span class="kairos-status-dot pgm"></span> REC</span></div></div>
+      <div class="kairos-shell">
+        <div class="kairos-side-panel"><div class="kairos-side-tabs"><button class="kairos-side-tab active">Sources</button><button class="kairos-side-tab">Scenes</button></div><div class="kairos-search-row"><div class="kairos-search-input"><input type="text" placeholder="Search" /></div></div></div>
+        <div class="kairos-center"><div class="kairos-source-grid"><div class="kairos-source-grid-btn">CAM 01</div><div class="kairos-source-grid-btn pvw">CAM 02</div></div></div>
+        <div class="kairos-right-panel"><div class="kairos-metrics-grid"><div class="kairos-metric-card"><span class="kairos-metric-label">Bitrate</span><span class="kairos-metric-value">5.2<span class="kairos-text-sm">Mb</span></span></div></div></div>
+      </div>
+    </div>
+  </div>
+</div>

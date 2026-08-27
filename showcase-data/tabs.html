@@ -1,0 +1,75 @@
+<div class="kairos-flex kairos-col kairos-gap-loose">
+  <div class="kairos-flex kairos-col kairos-gap-extra-tight">
+    <h1 class="kairos-text-3xl kairos-font-bold">Tabs (الألسن)</h1>
+    <p class="kairos-text-color-secondary">ألسن للتنقل بين الأقسام — data-kairos-toggle="tab" مع data-kairos-target للوحة، وأسهم وتنقل لوحة المفاتيح.</p>
+  </div>
+
+  <div class="kairos-bg-surface kairos-border kairos-border-color-muted kairos-p-loose kairos-flex kairos-col kairos-gap-standard">
+    <h3 class="kairos-text-sm kairos-text-color-muted kairos-tracking-widest kairos-uppercase">Basic (أساسي)</h3>
+    <div class="kairos-tabs">
+      <div class="kairos-tabs-list" role="tablist">
+        <button class="kairos-tab" role="tab" aria-selected="true" tabindex="0" data-kairos-toggle="tab" data-kairos-target="#panel-1" data-state="active">Sources</button>
+        <button class="kairos-tab" role="tab" aria-selected="false" tabindex="-1" data-kairos-toggle="tab" data-kairos-target="#panel-2">Routing</button>
+        <button class="kairos-tab" role="tab" aria-selected="false" tabindex="-1" data-kairos-toggle="tab" data-kairos-target="#panel-3">Audio</button>
+      </div>
+      <div id="panel-1" class="kairos-tabs-panel" data-state="active" role="tabpanel">
+        <div class="kairos-p-standard kairos-bg-input kairos-border kairos-border-color-muted kairos-mt-standard">
+          <p class="kairos-paragraph">Sources panel — 32 inputs, tally, and signal status.</p>
+        </div>
+      </div>
+      <div id="panel-2" class="kairos-tabs-panel" data-state="inactive" role="tabpanel">
+        <div class="kairos-p-standard kairos-bg-input kairos-border kairos-border-color-muted kairos-mt-standard">
+          <p class="kairos-paragraph">Routing matrix — 32x32 crosspoints.</p>
+        </div>
+      </div>
+      <div id="panel-3" class="kairos-tabs-panel" data-state="inactive" role="tabpanel">
+        <div class="kairos-p-standard kairos-bg-input kairos-border kairos-border-color-muted kairos-mt-standard">
+          <p class="kairos-paragraph">Audio mixer — 8 channels, AFV, and metering.</p>
+        </div>
+      </div>
+    </div>
+    <div class="kairos-flex kairos-items-center kairos-gap-compact kairos-text-xs kairos-font-mono kairos-text-color-muted">
+      <span>data-kairos-toggle="tab" · data-kairos-target="#panel" · ArrowLeft/Right/Home/End navigates · data-state active/inactive</span>
+    </div>
+  </div>
+
+  <div class="kairos-bg-surface kairos-border kairos-border-color-muted kairos-p-loose kairos-flex kairos-col kairos-gap-standard">
+    <h3 class="kairos-text-sm kairos-text-color-muted kairos-tracking-widest kairos-uppercase">States &amp; Disabled</h3>
+    <div class="kairos-tabs">
+      <div class="kairos-tabs-list" role="tablist">
+        <button class="kairos-tab" data-state="active" data-kairos-toggle="tab" data-kairos-target="#p-a">Active</button>
+        <button class="kairos-tab" data-kairos-toggle="tab" data-kairos-target="#p-b">Default</button>
+        <button class="kairos-tab" disabled>Disabled</button>
+      </div>
+      <div id="p-a" class="kairos-tabs-panel" data-state="active"><div class="kairos-p-standard kairos-bg-input kairos-border kairos-border-color-muted kairos-mt-standard"><span class="kairos-text-sm">Active panel</span></div></div>
+      <div id="p-b" class="kairos-tabs-panel" data-state="inactive"><div class="kairos-p-standard kairos-bg-input kairos-border kairos-border-color-muted kairos-mt-standard"><span class="kairos-text-sm">Second panel</span></div></div>
+    </div>
+  </div>
+
+  <div class="kairos-bg-surface kairos-border kairos-border-color-muted kairos-p-loose kairos-flex kairos-col kairos-gap-standard">
+    <h3 class="kairos-text-sm kairos-text-color-muted kairos-tracking-widest kairos-uppercase">Broadcast: Production Switcher Tabs</h3>
+    <div class="kairos-flex kairos-col kairos-gap-standard kairos-bg-deep kairos-p-standard kairos-border kairos-border-color-muted">
+      <div class="kairos-tabs">
+        <div class="kairos-tabs-list" role="tablist">
+          <button class="kairos-tab" data-state="active" data-kairos-toggle="tab" data-kairos-target="#prod-pgm">PGM</button>
+          <button class="kairos-tab" data-kairos-toggle="tab" data-kairos-target="#prod-pvw">PVW</button>
+          <button class="kairos-tab" data-kairos-toggle="tab" data-kairos-target="#prod-keys">Keys</button>
+          <button class="kairos-tab" data-kairos-toggle="tab" data-kairos-target="#prod-media">Media</button>
+        </div>
+        <div id="prod-pgm" class="kairos-tabs-panel" data-state="active">
+          <div class="kairos-flex kairos-col kairos-gap-compact kairos-bg-surface kairos-p-standard kairos-border kairos-border-color-muted kairos-mt-standard">
+            <div class="kairos-flex kairos-items-center kairos-gap-compact"><span class="kairos-status-dot pgm"></span><span class="kairos-text-sm kairos-font-bold">On Air — CAM 01</span><span class="kairos-badge kairos-intent-pgm kairos-variant-solid kairos-ml-auto">PGM</span></div>
+            <div class="kairos-progress-track"><div class="kairos-progress-fill" style="width: 100%; background: var(--kairos-status-pgm);"></div></div>
+          </div>
+        </div>
+        <div id="prod-pvw" class="kairos-tabs-panel" data-state="inactive">
+          <div class="kairos-flex kairos-col kairos-gap-compact kairos-bg-surface kairos-p-standard kairos-border kairos-border-color-muted kairos-mt-standard">
+            <div class="kairos-flex kairos-items-center kairos-gap-compact"><span class="kairos-status-dot pvw"></span><span class="kairos-text-sm kairos-font-bold">Preview — CAM 02</span><span class="kairos-badge kairos-intent-pvw kairos-variant-subtle kairos-ml-auto">PVW</span></div>
+          </div>
+        </div>
+        <div id="prod-keys" class="kairos-tabs-panel" data-state="inactive"><div class="kairos-p-standard kairos-bg-input kairos-border kairos-border-color-muted kairos-mt-standard"><span class="kairos-text-sm">Keyer — chroma, luma, DSK</span></div></div>
+        <div id="prod-media" class="kairos-tabs-panel" data-state="inactive"><div class="kairos-p-standard kairos-bg-input kairos-border kairos-border-color-muted kairos-mt-standard"><span class="kairos-text-sm">Media Pool — 8 stills, 2 clips</span></div></div>
+      </div>
+    </div>
+  </div>
+</div>

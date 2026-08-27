@@ -1,0 +1,58 @@
+<div class="kairos-flex kairos-col kairos-gap-loose">
+  <div class="kairos-flex kairos-col kairos-gap-extra-tight">
+    <h1 class="kairos-text-3xl kairos-font-bold">Production (الإنتاج)</h1>
+    <p class="kairos-text-color-secondary">مكونات البث المباشر — خلايا التحويل، شاشات المعاينة، ومقاييس الصوت.</p>
+  </div>
+  <div class="kairos-bg-surface kairos-border kairos-border-color-muted kairos-p-loose kairos-flex kairos-col kairos-gap-standard">
+    <h3 class="kairos-text-sm kairos-text-color-muted kairos-tracking-widest kairos-uppercase">Crosspoint &amp; Viewport</h3>
+    <div class="kairos-flex kairos-gap-standard kairos-flex-wrap">
+      <div class="kairos-flex kairos-col kairos-gap-compact">
+        <span class="kairos-text-xs kairos-text-color-muted kairos-font-mono">Crosspoint Cell</span>
+        <div class="kairos-flex kairos-gap-compact">
+          <span class="kairos-xp-cell"></span>
+          <span class="kairos-xp-cell active"></span>
+          <span class="kairos-xp-cell preview"></span>
+          <span class="kairos-xp-cell taken"></span>
+          <span class="kairos-xp-cell locked"></span>
+        </div>
+      </div>
+      <div class="kairos-flex kairos-gap-standard">
+        <div class="kairos-viewport"><span class="kairos-text-xs kairos-font-mono">Idle</span></div>
+        <div class="kairos-viewport pgm"><span class="kairos-source-label">CAM 01 — PGM</span><span class="kairos-indicator pgm"></span></div>
+        <div class="kairos-viewport pvw"><span class="kairos-source-label">CAM 02 — PVW</span><span class="kairos-indicator pvw"></span></div>
+      </div>
+    </div>
+  </div>
+  <div class="kairos-bg-surface kairos-border kairos-border-color-muted kairos-p-loose kairos-flex kairos-col kairos-gap-standard">
+    <h3 class="kairos-text-sm kairos-text-color-muted kairos-tracking-widest kairos-uppercase">Timeline &amp; VU Meter</h3>
+    <div class="kairos-flex kairos-col kairos-gap-standard">
+      <div class="kairos-timeline-track">
+        <div class="kairos-timeline-in" style="left: 10%; width: 30%;"></div>
+        <div class="kairos-timeline-out" style="left: 70%; width: 20%;"></div>
+        <div class="kairos-timeline-playhead" style="left: 25%;"></div>
+        <div class="kairos-timeline-thumb" style="left: 25%;"></div>
+      </div>
+      <div class="kairos-flex kairos-gap-standard kairos-items-end">
+        <div class="kairos-vu-channel"><span class="kairos-vu-channel-label">CH 01</span><div class="kairos-vu-meter"><span class="kairos-vu-segment green" style="height: 80%;"></span><span class="kairos-vu-segment yellow" style="height: 15%;"></span><span class="kairos-vu-segment red" style="height: 5%;"></span></div><span class="kairos-vu-peak" style="height: 4px;"></span></div>
+        <div class="kairos-vu-channel"><span class="kairos-vu-channel-label">CH 02</span><div class="kairos-vu-meter"><span class="kairos-vu-segment green" style="height: 60%;"></span><span class="kairos-vu-segment off" style="height: 40%;"></span></div></div>
+        <div class="kairos-fader-track"><div class="kairos-fader-thumb"></div></div>
+      </div>
+    </div>
+  </div>
+  <div class="kairos-bg-surface kairos-border kairos-border-color-muted kairos-p-loose kairos-flex kairos-col kairos-gap-standard">
+    <h3 class="kairos-text-sm kairos-text-color-muted kairos-tracking-widest kairos-uppercase">Broadcast: Production Switcher</h3>
+    <div class="kairos-flex kairos-col kairos-gap-standard kairos-bg-deep kairos-p-standard kairos-border kairos-border-color-muted">
+      <div class="kairos-flex kairos-gap-standard">
+        <div class="kairos-viewport pgm kairos-flex-1"><span class="kairos-source-label">PGM — CAM 01</span></div>
+        <div class="kairos-viewport pvw kairos-flex-1"><span class="kairos-source-label">PVW — CAM 02</span></div>
+      </div>
+      <div class="kairos-flex kairos-gap-compact">
+        <span class="kairos-xp-cell active"></span><span class="kairos-xp-cell"></span><span class="kairos-xp-cell preview"></span><span class="kairos-xp-cell"></span>
+      </div>
+      <div class="kairos-flex kairos-gap-standard kairos-items-end">
+        <div class="kairos-vu-channel"><span class="kairos-vu-channel-label">PGM</span><div class="kairos-vu-meter"><span class="kairos-vu-segment green" style="height: 75%;"></span><span class="kairos-vu-segment yellow" style="height: 20%;"></span><span class="kairos-vu-segment red" style="height: 5%;"></span></div></div>
+        <div class="kairos-knob active">PTZ</div>
+      </div>
+    </div>
+  </div>
+</div>

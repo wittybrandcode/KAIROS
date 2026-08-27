@@ -1,0 +1,71 @@
+<div class="kairos-flex kairos-col kairos-gap-loose">
+  <div class="kairos-flex kairos-col kairos-gap-extra-tight">
+    <h1 class="kairos-text-3xl kairos-font-bold">Modal (النافذة)</h1>
+    <p class="kairos-text-color-secondary">نافذة عائمة مع خلفية — تُفتح عبر data-kairos-toggle="modal"، تُغلق بـ Escape أو الخلفية أو data-kairos-dismiss.</p>
+  </div>
+
+  <div class="kairos-bg-surface kairos-border kairos-border-color-muted kairos-p-loose kairos-flex kairos-col kairos-gap-standard">
+    <h3 class="kairos-text-sm kairos-text-color-muted kairos-tracking-widest kairos-uppercase">Basic (أساسي)</h3>
+    <div class="kairos-flex kairos-gap-standard kairos-flex-wrap">
+      <button class="kairos-btn kairos-size-sm" data-kairos-toggle="modal" data-kairos-target="#demo-modal">Open Modal</button>
+      <button class="kairos-btn kairos-size-sm kairos-variant-outline" data-kairos-toggle="modal" data-kairos-target="#demo-modal-static">Static Backdrop</button>
+    </div>
+    <div id="demo-modal" class="kairos-modal kairos-modal-md" data-state="closed" role="dialog" aria-modal="true" aria-hidden="true">
+      <div class="kairos-modal-head">
+        <span class="kairos-modal-title">Confirm Take</span>
+        <button class="kairos-btn kairos-size-sm kairos-variant-ghost kairos-ml-auto" data-kairos-dismiss aria-label="Close">×</button>
+      </div>
+      <div class="kairos-modal-body">
+        <p class="kairos-paragraph">Cut from CAM 01 (PGM) to CAM 02 (PVW)? Audio will follow video.</p>
+        <div class="kairos-flex kairos-col kairos-gap-compact">
+          <label class="kairos-form-label">Notes</label>
+          <div class="kairos-form-input"><input type="text" placeholder="Optional" /></div>
+        </div>
+      </div>
+      <div class="kairos-modal-foot">
+        <button class="kairos-btn kairos-size-sm kairos-variant-ghost" data-kairos-dismiss>Cancel</button>
+        <button class="kairos-btn kairos-size-sm kairos-intent-pgm kairos-variant-solid" data-kairos-dismiss>TAKE</button>
+      </div>
+    </div>
+    <div id="demo-modal-static" class="kairos-modal kairos-modal-sm" data-state="closed" data-backdrop="static" role="dialog" aria-modal="true" aria-hidden="true">
+      <div class="kairos-modal-head"><span class="kairos-modal-title">Static Backdrop</span><button class="kairos-btn kairos-size-sm kairos-variant-ghost kairos-ml-auto" data-kairos-dismiss>×</button></div>
+      <div class="kairos-modal-body"><p class="kairos-paragraph">Click outside does not close — only × or Cancel.</p></div>
+      <div class="kairos-modal-foot"><button class="kairos-btn kairos-size-sm kairos-variant-outline" data-kairos-dismiss>Close</button></div>
+    </div>
+    <div class="kairos-flex kairos-items-center kairos-gap-compact kairos-text-xs kairos-font-mono kairos-text-color-muted">
+      <span>data-kairos-toggle="modal" · data-kairos-target="#id" · data-kairos-dismiss · data-backdrop="static" · Escape/Backdrop closes</span>
+    </div>
+  </div>
+
+  <div class="kairos-bg-surface kairos-border kairos-border-color-muted kairos-p-loose kairos-flex kairos-col kairos-gap-standard">
+    <h3 class="kairos-text-sm kairos-text-color-muted kairos-tracking-widest kairos-uppercase">Sizes (الأحجام)</h3>
+    <div class="kairos-flex kairos-gap-standard kairos-flex-wrap">
+      <button class="kairos-btn kairos-size-sm kairos-variant-outline" data-kairos-toggle="modal" data-kairos-target="#modal-sm">Small</button>
+      <button class="kairos-btn kairos-size-sm kairos-variant-outline" data-kairos-toggle="modal" data-kairos-target="#modal-md">Medium</button>
+      <button class="kairos-btn kairos-size-sm kairos-variant-outline" data-kairos-toggle="modal" data-kairos-target="#modal-lg">Large</button>
+    </div>
+    <div id="modal-sm" class="kairos-modal kairos-modal-sm" data-state="closed" role="dialog" aria-hidden="true"><div class="kairos-modal-head"><span class="kairos-modal-title">Small</span><button class="kairos-btn kairos-size-sm kairos-variant-ghost kairos-ml-auto" data-kairos-dismiss>×</button></div><div class="kairos-modal-body"><p class="kairos-paragraph">Small modal — 400px max.</p></div></div>
+    <div id="modal-md" class="kairos-modal kairos-modal-md" data-state="closed" role="dialog" aria-hidden="true"><div class="kairos-modal-head"><span class="kairos-modal-title">Medium</span><button class="kairos-btn kairos-size-sm kairos-variant-ghost kairos-ml-auto" data-kairos-dismiss>×</button></div><div class="kairos-modal-body"><p class="kairos-paragraph">Medium modal — 600px max.</p></div></div>
+    <div id="modal-lg" class="kairos-modal kairos-modal-lg" data-state="closed" role="dialog" aria-hidden="true"><div class="kairos-modal-head"><span class="kairos-modal-title">Large</span><button class="kairos-btn kairos-size-sm kairos-variant-ghost kairos-ml-auto" data-kairos-dismiss>×</button></div><div class="kairos-modal-body"><p class="kairos-paragraph">Large modal — 800px max.</p></div></div>
+  </div>
+
+  <div class="kairos-bg-surface kairos-border kairos-border-color-muted kairos-p-loose kairos-flex kairos-col kairos-gap-standard">
+    <h3 class="kairos-text-sm kairos-text-color-muted kairos-tracking-widest kairos-uppercase">Broadcast: Program Confirm</h3>
+    <div class="kairos-flex kairos-col kairos-gap-standard kairos-bg-deep kairos-p-standard kairos-border kairos-border-color-muted">
+      <div class="kairos-flex kairos-items-center">
+        <span class="kairos-badge kairos-intent-pgm kairos-variant-solid">PGM</span>
+        <span class="kairos-text-sm kairos-font-bold kairos-ml-auto">CAM 01 → CAM 02</span>
+        <button class="kairos-btn kairos-size-sm kairos-intent-pgm kairos-variant-solid kairos-ml-auto" data-kairos-toggle="modal" data-kairos-target="#broadcast-modal">Confirm Take</button>
+      </div>
+      <div id="broadcast-modal" class="kairos-modal kairos-modal-md" data-state="closed" role="dialog" aria-hidden="true">
+        <div class="kairos-modal-head"><span class="kairos-modal-title">Confirm Transition</span><button class="kairos-btn kairos-size-sm kairos-variant-ghost kairos-ml-auto" data-kairos-dismiss>×</button></div>
+        <div class="kairos-modal-body">
+          <div class="kairos-flex kairos-items-center kairos-gap-compact"><span class="kairos-status-dot pgm"></span><span class="kairos-text-sm kairos-font-bold">On Air: CAM 01</span><span class="kairos-text-xs kairos-font-mono kairos-text-color-muted">SDI-01</span></div>
+          <div class="kairos-flex kairos-items-center kairos-gap-compact"><span class="kairos-status-dot pvw"></span><span class="kairos-text-sm kairos-font-bold">Preview: CAM 02</span><span class="kairos-text-xs kairos-font-mono kairos-text-color-muted">SDI-02</span></div>
+          <p class="kairos-paragraph">This will cut the program feed. Audio follows video. Press Escape to cancel.</p>
+        </div>
+        <div class="kairos-modal-foot"><button class="kairos-btn kairos-size-sm kairos-variant-ghost" data-kairos-dismiss>Cancel</button><button class="kairos-btn kairos-size-sm kairos-intent-pgm kairos-variant-solid" data-kairos-dismiss>TAKE</button></div>
+      </div>
+    </div>
+  </div>
+</div>
