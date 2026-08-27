@@ -1,0 +1,94 @@
+<div class="kairos-flex kairos-col kairos-gap-loose">
+  <div class="kairos-flex kairos-col kairos-gap-extra-tight">
+    <h1 class="kairos-text-3xl kairos-font-bold">Command (لوحة الأوامر)</h1>
+    <p class="kairos-text-color-secondary">لوحة أوامر سريعة — Ctrl+K للفتح، كتابة للفلترة، أسهم للتنقل، Enter للتنفيذ.</p>
+  </div>
+
+  <div class="kairos-bg-surface kairos-border kairos-border-color-muted kairos-p-loose kairos-flex kairos-col kairos-gap-standard">
+    <h3 class="kairos-text-sm kairos-text-color-muted kairos-tracking-widest kairos-uppercase">Trigger (الفتح)</h3>
+    <div class="kairos-flex kairos-items-center kairos-gap-standard kairos-flex-wrap">
+      <span class="kairos-kbd">Ctrl</span>
+      <span class="kairos-text-sm">+</span>
+      <span class="kairos-kbd">K</span>
+      <span class="kairos-text-sm kairos-text-color-muted">أو</span>
+      <span class="kairos-kbd">⌘</span>
+      <span class="kairos-text-sm">+</span>
+      <span class="kairos-kbd">K</span>
+      <span class="kairos-text-xs kairos-font-mono kairos-text-color-muted kairos-ml-auto">hotkey: core/keyboard.ts hotkey()</span>
+    </div>
+    <button class="kairos-btn kairos-size-sm kairos-variant-outline" onclick="document.querySelector('.kairos-command')?.parentElement?.setAttribute('data-state','open'); document.querySelector('.kairos-command-input')?.focus();">Open Command Palette</button>
+  </div>
+
+  <div class="kairos-bg-surface kairos-border kairos-border-color-muted kairos-p-loose kairos-flex kairos-col kairos-gap-standard">
+    <h3 class="kairos-text-sm kairos-text-color-muted kairos-tracking-widest kairos-uppercase">Palette (اللوحة — مع Modal)</h3>
+    <div id="cmd-palette" class="kairos-modal" data-state="closed" role="dialog" aria-modal="true">
+      <div class="kairos-modal-backdrop" data-kairos-dismiss></div>
+      <div class="kairos-command" data-state="closed">
+        <div class="kairos-command-input-wrapper">
+          <i class="kairos-icon-magnifying-glass kairos-command-icon"></i>
+          <input type="text" class="kairos-command-input" placeholder="Search commands..." aria-controls="cmd-list" />
+        </div>
+        <div id="cmd-list" class="kairos-command-list" role="listbox">
+          <div class="kairos-command-group">
+            <div class="kairos-command-group-heading">Switcher</div>
+            <div class="kairos-command-item" data-state="selected" role="option"><span>CUT — Take to PGM</span><span class="kairos-command-shortcut"><span class="kairos-command-key">↵</span></span></div>
+            <div class="kairos-command-item" role="option"><span>AUTO — Transition</span><span class="kairos-command-shortcut"><span class="kairos-command-key">Space</span></span></div>
+            <div class="kairos-command-item" role="option"><span>FTB — Fade to Black</span><span class="kairos-command-shortcut"><span class="kairos-command-key">F</span></span></div>
+          </div>
+          <div class="kairos-command-group">
+            <div class="kairos-command-group-heading">Sources</div>
+            <div class="kairos-command-item" role="option"><span>CAM 01 — Studio A</span><span class="kairos-command-shortcut"><span class="kairos-command-key">1</span></span></div>
+            <div class="kairos-command-item" role="option"><span>CAM 02 — Studio B</span><span class="kairos-command-shortcut"><span class="kairos-command-key">2</span></span></div>
+            <div class="kairos-command-item" role="option"><span>VTR — Playback</span><span class="kairos-command-shortcut"><span class="kairos-command-key">V</span></span></div>
+            <div class="kairos-command-item" role="option"><span>BLACK — No Source</span></div>
+          </div>
+          <div class="kairos-command-group">
+            <div class="kairos-command-group-heading">System</div>
+            <div class="kairos-command-item" role="option"><span>Toggle Multiview</span><span class="kairos-command-shortcut"><span class="kairos-command-key">M</span></span></div>
+            <div class="kairos-command-item" role="option"><span>Lock PGM</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="kairos-flex kairos-items-center kairos-gap-compact kairos-text-xs kairos-font-mono kairos-text-color-muted">
+      <span>Input filters list · ArrowUp/Down moves selected · Enter executes (kairos:command:execute) · Escape closes</span>
+    </div>
+  </div>
+
+  <div class="kairos-bg-surface kairos-border kairos-border-color-muted kairos-p-loose kairos-flex kairos-col kairos-gap-standard">
+    <h3 class="kairos-text-sm kairos-text-color-muted kairos-tracking-widest kairos-uppercase">Broadcast: Quick Source Switch</h3>
+    <div class="kairos-flex kairos-col kairos-gap-standard kairos-bg-deep kairos-p-standard kairos-border kairos-border-color-muted">
+      <div class="kairos-flex kairos-items-center">
+        <h4 class="kairos-heading kairos-h4">Evening News — Live</h4>
+        <span class="kairos-badge kairos-intent-pgm kairos-variant-solid kairos-ml-auto">PGM: CAM 01</span>
+      </div>
+      <div class="kairos-flex kairos-gap-compact kairos-flex-wrap">
+        <span class="kairos-badge kairos-intent-neutral kairos-variant-outline">CAM 01</span>
+        <span class="kairos-badge kairos-intent-pvw kairos-variant-solid">CAM 02</span>
+        <span class="kairos-badge kairos-intent-neutral kairos-variant-outline">VTR</span>
+      </div>
+      <div class="kairos-flex kairos-items-center kairos-gap-compact kairos-text-xs kairos-font-mono kairos-text-color-muted">
+        <span class="kairos-kbd">Ctrl</span><span>+</span><span class="kairos-kbd">K</span>
+        <span>→ type "cam 02" → Enter → Take</span>
+      </div>
+      <div class="kairos-flex kairos-col kairos-gap-extra-tight kairos-bg-surface kairos-p-compact kairos-border kairos-border-color-muted">
+        <span class="kairos-text-xs kairos-text-color-muted kairos-font-mono">Last execute:</span>
+        <span id="cmd-last" class="kairos-text-sm kairos-font-mono">—</span>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  // Demo: show last executed command
+  document.addEventListener('kairos:command:execute', (e) => {
+    const el = document.getElementById('cmd-last');
+    if (el && e.detail) el.textContent = e.detail.value || e.detail.item?.textContent || 'executed';
+  });
+  // Also handle modal dismiss for demo
+  document.addEventListener('click', (e) => {
+    if (e.target.closest && e.target.closest('[data-kairos-dismiss]')) {
+      const modal = e.target.closest('.kairos-modal');
+      if (modal) modal.dataset.state = 'closed';
+    }
+  });
+</script>

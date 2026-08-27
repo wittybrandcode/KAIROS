@@ -36,6 +36,7 @@ import { Toast, init as initToast } from './modules/toast';
 import { Popover, init as initPopover } from './modules/popover';
 import { Tooltip, init as initTooltip } from './modules/tooltip';
 import { TagInput, init as initTagInput } from './modules/tag-input';
+import { Command, init as initCommand } from './modules/command';
 import { init as initIcons } from './icons';
 
 // ─── Initialize ───
@@ -49,6 +50,7 @@ function init(): void {
   initPopover();
   initTooltip();
   initTagInput();
+  initCommand();
 }
 
 if (document.readyState === 'loading') {
@@ -78,6 +80,7 @@ const Kairos = {
   Popover,
   Tooltip,
   TagInput,
+  Command,
 
   // Utilities
   init,

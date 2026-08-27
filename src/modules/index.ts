@@ -10,6 +10,7 @@ export { Toast } from './toast';
 export { Popover } from './popover';
 export { Tooltip } from './tooltip';
 export { TagInput } from './tag-input';
+export { Command } from './command';
 
 // TODO: uncomment when modules are implemented
 // export { Sidebar } from './sidebar';

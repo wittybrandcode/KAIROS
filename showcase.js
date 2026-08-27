@@ -68,7 +68,8 @@ document.addEventListener('DOMContentLoaded', () => {
       items: [
         { id: "accordion", name: "Accordion", key: "P8" },
         { id: "table", name: "Table", key: "P8" },
-        { id: "split-grid", name: "Split Grid", key: "P8" }
+        { id: "split-grid", name: "Split Grid", key: "P8" },
+        { id: "command", name: "Command", key: "P8" }
       ]
     }
   ];
