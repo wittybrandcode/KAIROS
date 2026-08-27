@@ -1,9 +1,9 @@
 # KAIROS — EXECUTION TRACKER
 > **مسار التنفيذ الحي** — هذا الملف هو مصدر الحقيقة للتقدم. كل خطوة تُنفذ يجب تسجيلها هنا فوراً قبل الـ commit.
 
-**آخر تحديث:** 2026-08-28 02:00 UTC
+**آخر تحديث:** 2026-08-28 02:05 UTC
 **التقدم الإجمالي:** `91%` → الهدف `v1.0` (100%)
-**الفرع:** `main` — `0021e97` → `feat(slider): C6 pointer drag + keyboard + aria` (pending)
+**الفرع:** `main` — `11a36fe` feat(slider): C6 pointer drag + keyboard + aria — Tier 2 closed
 **آخر تحقق:** `lint: ✅ 0 errors` · `tsc: ✅ 0 errors` · `test: ✅ 55/55` · `build: ✅ 199.03kB CSS / 721.61kB MJS`
 
 ---
@@ -154,7 +154,7 @@ A (30د) → B (جلستان) → C (جلستان) → D (جلسة) → E (جل�
 | **C3** | **TagInput** | ⭐⭐ متوسط | — استنتاج من `src/components/tag-input.css:1` (Enter/comma add, Backspace delete, hidden sync) | `tag-input.css` | ✅ | 2026-08-28 | `e394368` | 6 |
 | **C4** | **Command** | ⭐⭐ متوسط | `docs/component-specs/command.md:1` | `src/components/command.css:1` | ✅ | 2026-08-28 | `67ea51c` | 6 |
 | **C5** | **Sidebar** | ⭐ سهل | `docs/component-specs/sidebar.md:1` | `src/components/sidebar.css:1` | ✅ | 2026-08-28 | `0021e97` | 6 |
-| **C6** | **Slider** | ⭐⭐⭐ صعب | — استنتاج من `src/components/slider.css:1` (pointer drag + `aria-valuenow` + arrows) | `slider.css` | ✅ | 2026-08-28 | `feat: C6` | 7 |
+| **C6** | **Slider** | ⭐⭐⭐ صعب | — استنتاج من `src/components/slider.css:1` (pointer drag + `aria-valuenow` + arrows) | `slider.css` | ✅ | 2026-08-28 | `11a36fe` | 7 |
 | **C3** | **TagInput** | ⭐⭐ متوسط | — استنتاج من `src/components/tag-input.css:1` (Enter/comma add, Backspace delete, hidden sync) | `tag-input.css` | ⬜ | — | — | ≥5 |
 | **C4** | **Command** | ⭐⭐ متوسط | `docs/component-specs/command.md:1` | `src/components/command.css:1` | ⬜ | — | — | ≥5 |
 | **C5** | **Sidebar** | ⭐ سهل | `docs/component-specs/sidebar.md:1` | `src/components/sidebar.css:1` | ⬜ | — | — | ≥5 |
@@ -234,6 +234,7 @@ A (30د) → B (جلستان) → C (جلستان) → D (جلسة) → E (جل�
 
 | التاريخ | Phase | ID | ما تم | Commit | تحقق | الملاحظات |
 |---|---|---|---|---|---|---|
+| 2026-08-28 02:05 | C6 | **Slider** | C6 مكتمل: pointer drag + keyboard + aria (7 tests) — Tier 2 closed | `11a36fe` | lint✅ tsc✅ test55✅ build199.03kB✅ | slider.ts + slider.test.ts + kairos.ts — 11/11 modules |
 | 2026-08-28 01:50 | C5 | **Sidebar** | C5 مكتمل: toggle + active + Escape + dismiss (6 tests) | `0021e97` | lint✅ tsc✅ test48✅ build199.03kB✅ | sidebar.ts + sidebar.test.ts + kairos.ts + showcase.js |
 | 2026-08-28 01:35 | C4 | **Command** | C4 مكتمل: Ctrl+K + filter + arrows + Enter (6 tests) | `67ea51c` | lint✅ tsc✅ test42✅ build199.03kB✅ | command.ts + command.test.ts + kairos.ts + showcase.js |
 | 2026-08-28 01:05 | C3 | **TagInput** | C3 مكتمل: Enter/comma + Backspace + remove + hidden sync (6 tests) | `e394368` | lint✅ tsc✅ test36✅ build199.03kB✅ | tag-input.ts + tag-input.test.ts + kairos.ts |
@@ -252,7 +253,7 @@ A (30د) → B (جلستان) → C (جلستان) → D (جلسة) → E (جل�
 ## مؤشرات سريعة
 
 **إجمالي المهام:** `Phase A:4 + B:16 + C:6 + D:10 + E:5 = 41 مهمة`
-**المنجز:** `27/41` (66%) ✅ Phase A + B (20) + C1 + C2 + C3 + C4 + C5 مكتمل
+**المنجز:** `28/41` (68%) ✅ Phase A + B (20) + C (6) مكتمل — Tier 1+2 closed
 **بعد B:** `22/41` (54%) · **بعد C:** `28/41` (68%) · **بعد D:** `38/41` (93%) · **بعد E:** `41/41` (100% v1.0)
 
 **الوقت التقديري المتبقي:** `3–5 جلسات` (حسب `PROJECT-HANDOVER.md:24`)
