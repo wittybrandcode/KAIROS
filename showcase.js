@@ -53,7 +53,8 @@ document.addEventListener('DOMContentLoaded', () => {
       items: [
         { id: "surface", name: "Surface", key: "P6" },
         { id: "overlay", name: "Overlay", key: "P6" },
-        { id: "tooltip", name: "Tooltip", key: "P6" }
+        { id: "tooltip", name: "Tooltip", key: "P6" },
+        { id: "popover", name: "Popover", key: "P6" }
       ]
     },
     {

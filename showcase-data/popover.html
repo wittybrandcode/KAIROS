@@ -1,0 +1,97 @@
+<div class="kairos-flex kairos-col kairos-gap-loose">
+  <div class="kairos-flex kairos-col kairos-gap-extra-tight">
+    <h1 class="kairos-text-3xl kairos-font-bold">Popover (الطبقة السياقية)</h1>
+    <p class="kairos-text-color-secondary">طبقة غنية سياقية — تظهر عند النقر، تحبس التركيز، وتُغلق بالنقر الخارجي أو Escape. أساس إعدادات المصدر السريع.</p>
+  </div>
+
+  <div class="kairos-bg-surface kairos-border kairos-border-color-muted kairos-p-loose kairos-flex kairos-col kairos-gap-standard">
+    <h3 class="kairos-text-sm kairos-text-color-muted kairos-tracking-widest kairos-uppercase">Basic (أساسي — click + focus trap)</h3>
+    <div class="kairos-flex kairos-items-center kairos-gap-standard kairos-flex-wrap">
+      <div class="kairos-popover-host kairos-popover-wrapper">
+        <button class="kairos-btn kairos-size-sm" data-kairos-toggle="popover" data-kairos-target="#popover-basic" aria-expanded="false" aria-haspopup="dialog">Settings</button>
+        <div id="popover-basic" class="kairos-popover kairos-popover-bottom" data-state="closed" role="dialog">
+          <div class="kairos-flex kairos-col kairos-gap-standard kairos-p-standard">
+            <h4 class="kairos-heading kairos-h4">Source Settings</h4>
+            <input type="text" class="kairos-field kairos-input" placeholder="Label" value="CAM 01" />
+            <div class="kairos-flex kairos-gap-compact">
+              <button class="kairos-btn kairos-size-sm kairos-intent-pvw kairos-variant-solid" data-kairos-dismiss>Save</button>
+              <button class="kairos-btn kairos-size-sm kairos-variant-outline" data-kairos-dismiss>Cancel</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <span class="kairos-text-xs kairos-font-mono kairos-text-color-muted">data-kairos-toggle="popover" · data-kairos-target="#id" · data-kairos-dismiss</span>
+    </div>
+  </div>
+
+  <div class="kairos-bg-surface kairos-border kairos-border-color-muted kairos-p-loose kairos-flex kairos-col kairos-gap-standard">
+    <h3 class="kairos-text-sm kairos-text-color-muted kairos-tracking-widest kairos-uppercase">Placements (التموضع — 4 variants)</h3>
+    <div class="kairos-flex kairos-gap-standard kairos-flex-wrap">
+      <div class="kairos-popover-host kairos-popover-wrapper">
+        <button class="kairos-btn kairos-size-sm kairos-variant-outline" data-kairos-toggle="popover" data-kairos-target="#popover-top">Top</button>
+        <div id="popover-top" class="kairos-popover kairos-popover-top" data-state="closed" role="dialog">
+          <div class="kairos-p-standard kairos-text-sm">Top placement</div>
+        </div>
+      </div>
+      <div class="kairos-popover-host kairos-popover-wrapper">
+        <button class="kairos-btn kairos-size-sm kairos-variant-outline" data-kairos-toggle="popover" data-kairos-target="#popover-bottom">Bottom</button>
+        <div id="popover-bottom" class="kairos-popover kairos-popover-bottom" data-state="closed" role="dialog">
+          <div class="kairos-p-standard kairos-text-sm">Bottom placement</div>
+        </div>
+      </div>
+      <div class="kairos-popover-host kairos-popover-wrapper">
+        <button class="kairos-btn kairos-size-sm kairos-variant-outline" data-kairos-toggle="popover" data-kairos-target="#popover-left">Left</button>
+        <div id="popover-left" class="kairos-popover kairos-popover-left" data-state="closed" role="dialog">
+          <div class="kairos-p-standard kairos-text-sm">Left</div>
+        </div>
+      </div>
+      <div class="kairos-popover-host kairos-popover-wrapper">
+        <button class="kairos-btn kairos-size-sm kairos-variant-outline" data-kairos-toggle="popover" data-kairos-target="#popover-right">Right</button>
+        <div id="popover-right" class="kairos-popover kairos-popover-right" data-state="closed" role="dialog">
+          <div class="kairos-p-standard kairos-text-sm">Right</div>
+        </div>
+      </div>
+    </div>
+    <div class="kairos-flex kairos-items-center kairos-gap-compact kairos-text-xs kairos-font-mono kairos-text-color-muted">
+      <span>CSS: .kairos-popover-top/bottom/left/right · offset: --kairos-popover-offset (6px)</span>
+    </div>
+  </div>
+
+  <div class="kairos-bg-surface kairos-border kairos-border-color-muted kairos-p-loose kairos-flex kairos-col kairos-gap-standard">
+    <h3 class="kairos-text-sm kairos-text-color-muted kairos-tracking-widest kairos-uppercase">Broadcast: Source Quick Edit</h3>
+    <div class="kairos-flex kairos-col kairos-gap-standard kairos-bg-deep kairos-p-standard kairos-border kairos-border-color-muted">
+      <div class="kairos-flex kairos-items-center kairos-gap-standard">
+        <span class="kairos-badge kairos-intent-pgm kairos-variant-solid">PGM</span>
+        <span class="kairos-text-sm kairos-font-bold">CAM 01 — Studio A</span>
+        <span class="kairos-text-xs kairos-font-mono kairos-text-color-muted">SDI-01 · 1080i</span>
+        <div class="kairos-popover-host kairos-popover-wrapper kairos-ml-auto">
+          <button class="kairos-btn kairos-size-sm kairos-variant-outline" data-kairos-toggle="popover" data-kairos-target="#popover-broadcast"><i class="kairos-icon-gear kairos-icon-sm"></i> Edit</button>
+          <div id="popover-broadcast" class="kairos-popover kairos-popover-bottom" data-state="closed" role="dialog">
+            <div class="kairos-flex kairos-col kairos-gap-standard kairos-p-standard">
+              <div class="kairos-flex kairos-items-center kairos-gap-compact">
+                <span class="kairos-indicator pvw">PVW</span>
+                <span class="kairos-text-sm kairos-font-bold">Quick Edit — CAM 01</span>
+              </div>
+              <div class="kairos-flex kairos-col kairos-gap-extra-tight">
+                <label class="kairos-label">Label</label>
+                <input type="text" class="kairos-field kairos-input" value="CAM 01" />
+              </div>
+              <div class="kairos-flex kairos-col kairos-gap-extra-tight">
+                <label class="kairos-label">Source</label>
+                <select class="kairos-select kairos-input"><option>SDI-01</option><option>SDI-02</option></select>
+              </div>
+              <div class="kairos-flex kairos-gap-compact">
+                <button class="kairos-btn kairos-size-sm kairos-intent-pvw kairos-variant-solid" data-kairos-dismiss>Apply</button>
+                <button class="kairos-btn kairos-size-sm kairos-variant-ghost" data-kairos-dismiss>Close</button>
+              </div>
+              <span class="kairos-text-xs kairos-font-mono kairos-text-color-muted">Tab traps focus · Escape closes · click outside closes</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="kairos-flex kairos-items-center kairos-gap-compact kairos-text-xs kairos-font-mono kairos-text-color-muted">
+        <span>Popover يحبس التركيز مثل Modal — جرّب Tab و Escape</span>
+      </div>
+    </div>
+  </div>
+</div>
