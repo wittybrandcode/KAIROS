@@ -1,9 +1,9 @@
 # KAIROS — EXECUTION TRACKER
 > **مسار التنفيذ الحي** — هذا الملف هو مصدر الحقيقة للتقدم. كل خطوة تُنفذ يجب تسجيلها هنا فوراً قبل الـ commit.
 
-**آخر تحديث:** 2026-08-28 00:30 UTC
-**التقدم الإجمالي:** `85%` → الهدف `v1.0` (100%)
-**الفرع:** `main` — `56422a7` → `feat(popover): C1 interactive module + tests + showcase` (pending)
+**آخر تحديث:** 2026-08-28 00:35 UTC
+**التقدم الإجمالي:** `86%` → الهدف `v1.0` (100%)
+**الفرع:** `main` — `efecf3a` feat(popover): C1 interactive module + tests + showcase
 **آخر تحقق:** `lint: ✅ 0 errors` · `tsc: ✅ 0 errors` · `test: ✅ 25/25` · `build: ✅ 199.03kB CSS / 707.78kB MJS`
 
 ---
@@ -59,11 +59,11 @@ powershell -ExecutionPolicy Bypass -Command "npm run build"
 | Components CSS L2-L8 `src/components/*.css` | 42/42 | ✅ 100% | `src/kairos.css:xx` L2-L8 |
 | Domain CSS L9 `src/domain/*.css` | 13/13 | ✅ 98% (glows + outline تم ترميزها) | `src/kairos.css:xx` L9 |
 | JS Core `src/core/*.ts` | 8/8 impl + 2 tested | ✅ 100% impl / 25% tested | `src/core/index.ts:1` |
-| JS Modules `src/modules/*.ts` | 5/11 | ⚠️ 45% | `src/kairos.ts:1` + `src/modules/index.ts:1` |
-| Showcase `showcase-data/*.html` | 13/~40 | ❌ 32% | `showcase.js:6` `KairosInventory` |
-| Tests `vitest` | 19/19 passing (3 suites) | ⚠️ تغطية 3 ملفات فقط | `vitest.config.ts:1` |
-| Build `dist/` | 197.85kB CSS / 706kB MJS | ✅ | `vite.config.js:1` |
-| Git | `main` synced `origin/main` 5 commits | ✅ | `git log --oneline` |
+| JS Modules `src/modules/*.ts` | 6/11 | ⚠️ 55% (Popover ✅) | `src/kairos.ts:1` + `src/modules/index.ts:1` |
+| Showcase `showcase-data/*.html` | 32/40 | ✅ 80% | `showcase.js:6` `KairosInventory` (P1:1, P2:10, P3:6, P4:7, P6:4, P7:1, P8:3) |
+| Tests `vitest` | 25/25 passing (4 suites) | ⚠️ تغطية 4 ملفات | `vitest.config.ts:1` |
+| Build `dist/` | 199.03kB CSS / 707.78kB MJS | ✅ | `vite.config.js:1` |
+| Git | `main` 9 commits ahead | ✅ | `git log --oneline -5` |
 
 ---
 
@@ -149,7 +149,7 @@ A (30د) → B (جلستان) → C (جلستان) → D (جلسة) → E (جل�
 
 | ID | الوحدة | الصعوبة | Spec | CSS | الحالة | التاريخ | Commit | Tests |
 |---|---|---|---|---|---|---|---|---|
-| **C1** | **Popover** | ⭐ سهل | `docs/component-specs/popover.md:1` | `src/components/popover.css:1` | ✅ | 2026-08-28 | `feat: C1` | 6 |
+| **C1** | **Popover** | ⭐ سهل | `docs/component-specs/popover.md:1` | `src/components/popover.css:1` | ✅ | 2026-08-28 | `efecf3a` | 6 |
 | **C2** | **Tooltip** | ⭐ سهل | `docs/component-specs/tooltip.md:1` | `src/components/tooltip.css:1` | ⬜ | — | — | ≥5 |
 | **C3** | **TagInput** | ⭐⭐ متوسط | — استنتاج من `src/components/tag-input.css:1` (Enter/comma add, Backspace delete, hidden sync) | `tag-input.css` | ⬜ | — | — | ≥5 |
 | **C4** | **Command** | ⭐⭐ متوسط | `docs/component-specs/command.md:1` | `src/components/command.css:1` | ⬜ | — | — | ≥5 |
@@ -230,8 +230,8 @@ A (30د) → B (جلستان) → C (جلستان) → D (جلسة) → E (جل�
 
 | التاريخ | Phase | ID | ما تم | Commit | تحقق | الملاحظات |
 |---|---|---|---|---|---|---|
+| 2026-08-28 00:30 | C1 | **Popover** | C1 مكتمل: JS module + 6 tests + showcase تفاعلي (popover.html) | `efecf3a` | lint✅ tsc✅ test25✅ build199.03kB✅ | popover.ts + popover.test.ts + kairos.ts + showcase.js |
 | 2026-08-28 00:20 | B4 | **B4.1-B4.4** | B4 مكتمل: navigation/table/split-grid/tooltip (4 showcase + showcase.js P6/P7/P8) | `56422a7` | lint✅ tsc✅ test19✅ build199.03kB✅ | showcase-data/*4 + showcase.js — Phase B مغلقة (31 showcase) |
-| 2026-08-28 00:15 | C1 | **Popover** | وحدة Popover — خارج-نقر + Escape + focus trap (CSS جاهز) | `pending` | tsc✅ lint✅ | — |
 | 2026-08-28 00:05 | B3 | **B3.1-B3.5** | B3 مكتمل: indicator/tag/loading/progress/surface/overlay (6 showcase + showcase.js P3+P6) | `2ec444f` | lint✅ tsc✅ test19✅ build198.91kB✅ | showcase-data/*6 + showcase.js |
 | 2026-08-27 23:55 | B2 | **B2.1-B2.4** | B2 مكتمل: switch/forms/slider/tag-input (4 showcase + showcase.js P4) | `9dadbc1` | lint✅ tsc✅ test19✅ build198.91kB✅ | showcase-data/*4 + showcase.js |
 | 2026-08-27 23:45 | B1 | **B1.1-B1.4** | B1 مكتمل: heading/paragraph/divider/layout (4 showcase + showcase.js P2) | `90d8aaf` | lint✅ tsc✅ test19✅ build198.91kB✅ | showcase-data/*4 + showcase.js |
@@ -244,7 +244,7 @@ A (30د) → B (جلستان) → C (جلستان) → D (جلسة) → E (جل�
 ## مؤشرات سريعة
 
 **إجمالي المهام:** `Phase A:4 + B:16 + C:6 + D:10 + E:5 = 41 مهمة`
-**المنجز:** `22/41` (54%) ✅ Phase A + B1 + B2 + B3 + B4 مكتمل — Phase B مغلقة
+**المنجز:** `23/41` (56%) ✅ Phase A + B (20) + C1 مكتمل
 **بعد B:** `22/41` (54%) · **بعد C:** `28/41` (68%) · **بعد D:** `38/41` (93%) · **بعد E:** `41/41` (100% v1.0)
 
 **الوقت التقديري المتبقي:** `3–5 جلسات` (حسب `PROJECT-HANDOVER.md:24`)
