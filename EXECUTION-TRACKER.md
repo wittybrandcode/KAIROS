@@ -1,9 +1,9 @@
 # KAIROS — EXECUTION TRACKER
 > **مسار التنفيذ الحي** — هذا الملف هو مصدر الحقيقة للتقدم. كل خطوة تُنفذ يجب تسجيلها هنا فوراً قبل الـ commit.
 
-**آخر تحديث:** 2026-08-27 23:35 UTC
+**آخر تحديث:** 2026-08-27 23:40 UTC
 **التقدم الإجمالي:** `71%` → الهدف `v1.0` (100%)
-**الفرع:** `main` — `0f727af` fix(core): harden init idempotence + define phantom tokens (A1-A4)
+**الفرع:** `main` — `b67646b` fix(core): harden init idempotence + define phantom tokens (A1-A4)
 **آخر تحقق:** `lint: ✅ 0 errors` · `tsc: ✅ 0 errors` · `test: ✅ 19/19` · `build: ✅ 198.91kB CSS / 706.25kB MJS`
 
 ---
@@ -83,10 +83,10 @@ A (30د) → B (جلستان) → C (جلستان) → D (جلسة) → E (جل�
 
 | ID | المهمة | الملفات | الحالة | التاريخ | Commit | تحقق |
 |---|---|---|---|---|---|---|
-| **A1** | جعل `init()` idempotent في 4 وحدات (إضافة `let initialized` guard) | `src/modules/modal.ts:85` `src/modules/dropdown.ts:100` `src/modules/tabs.ts:50` `src/modules/toast.ts:92` — نسخ نمط `src/modules/accordion.ts:63` | ✅ | 2026-08-27 | `0f727af` | `tsc✅ test19✅` |
-| **A2** | تعريف 9 phantom tokens الناقصة في العقود | `src/components/components.css:834` — أضف: `--kairos-avatar-name-gap` `--kairos-name-role-gap` `--kairos-shadow-lg` `--kairos-size-control` `--kairos-timeline-track-height` `--kairos-fader-*` `--kairos-breadcrumb-*` `--kairos-pagination-*` | ✅ | 2026-08-27 | `0f727af` | `lint✅` |
-| **A3** | ترميز القيم الخام المتبقية (210px, 40px, -3px, glows) | `src/utilities/layout.css:50` `src/domain/rundown.css:108` `src/domain/multiview.css:25/85` `src/domain/production.css:16/34` → 7 tokens جديدة | ✅ | 2026-08-27 | `0f727af` | `build 198.91kB✅` |
-| **A4** | توثيق استثناء ticker + تحديث `ARCHITECTURE.md` | `docs/architecture/ARCHITECTURE.md:215` (Container Queries ✅ + ticker exception) | ✅ | 2026-08-27 | `0f727af` | docs تطابق الواقع |
+| **A1** | جعل `init()` idempotent في 4 وحدات (إضافة `let initialized` guard) | `src/modules/modal.ts:85` `src/modules/dropdown.ts:100` `src/modules/tabs.ts:50` `src/modules/toast.ts:92` — نسخ نمط `src/modules/accordion.ts:63` | ✅ | 2026-08-27 | `b67646b` | `tsc✅ test19✅` |
+| **A2** | تعريف 9 phantom tokens الناقصة في العقود | `src/components/components.css:834` — أضف: `--kairos-avatar-name-gap` `--kairos-name-role-gap` `--kairos-shadow-lg` `--kairos-size-control` `--kairos-timeline-track-height` `--kairos-fader-*` `--kairos-breadcrumb-*` `--kairos-pagination-*` | ✅ | 2026-08-27 | `b67646b` | `lint✅` |
+| **A3** | ترميز القيم الخام المتبقية (210px, 40px, -3px, glows) | `src/utilities/layout.css:50` `src/domain/rundown.css:108` `src/domain/multiview.css:25/85` `src/domain/production.css:16/34` → 7 tokens جديدة | ✅ | 2026-08-27 | `b67646b` | `build 198.91kB✅` |
+| **A4** | توثيق استثناء ticker + تحديث `ARCHITECTURE.md` | `docs/architecture/ARCHITECTURE.md:215` (Container Queries ✅ + ticker exception) | ✅ | 2026-08-27 | `b67646b` | docs تطابق الواقع |
 
 **معايير إنجاز Phase A:**
 - [x] `A1 + A2 + A3 + A4` كلها `✅`
@@ -230,7 +230,7 @@ A (30د) → B (جلستان) → C (جلستان) → D (جلسة) → E (جل�
 
 | التاريخ | Phase | ID | ما تم | Commit | تحقق | الملاحظات |
 |---|---|---|---|---|---|---|
-| 2026-08-27 23:35 | A | **A1-A4** | Phase A مكتمل: idempotent(4) + 9 phantom + 7 raw tokens + ARCHITECTURE.md | `0f727af` | lint✅ tsc✅ test19✅ build198.91kB✅ | 4 files JS + components.css + layout + domain(3) + docs |
+| 2026-08-27 23:35 | A | **A1-A4** | Phase A مكتمل: idempotent(4) + 9 phantom + 7 raw tokens + ARCHITECTURE.md | `b67646b` | lint✅ tsc✅ test19✅ build198.91kB✅ | 4 files JS + components.css + layout + domain(3) + docs |
 | 2026-08-27 23:20 | — | — | إنشاء `EXECUTION-TRACKER.md` + تحليل شامل للمشروع (4 وكلاء متوازيين) | — | lint✅ tsc✅ test19✅ build197.85kB✅ | baseline: 5 commits `b06c61d`، 13 showcase، 5 modules |
 | — | — | — | — | — | — | — |
 
