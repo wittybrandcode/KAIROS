@@ -8,6 +8,7 @@ export { Accordion } from './accordion';
 export { Tabs } from './tabs';
 export { Toast } from './toast';
 export { Popover } from './popover';
+export { Tooltip } from './tooltip';
 
 // TODO: uncomment when modules are implemented
 // export { Sidebar } from './sidebar';

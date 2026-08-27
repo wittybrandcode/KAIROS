@@ -1,10 +1,10 @@
 # KAIROS — EXECUTION TRACKER
 > **مسار التنفيذ الحي** — هذا الملف هو مصدر الحقيقة للتقدم. كل خطوة تُنفذ يجب تسجيلها هنا فوراً قبل الـ commit.
 
-**آخر تحديث:** 2026-08-28 00:35 UTC
-**التقدم الإجمالي:** `86%` → الهدف `v1.0` (100%)
-**الفرع:** `main` — `efecf3a` feat(popover): C1 interactive module + tests + showcase
-**آخر تحقق:** `lint: ✅ 0 errors` · `tsc: ✅ 0 errors` · `test: ✅ 25/25` · `build: ✅ 199.03kB CSS / 707.78kB MJS`
+**آخر تحديث:** 2026-08-28 00:45 UTC
+**التقدم الإجمالي:** `87%` → الهدف `v1.0` (100%)
+**الفرع:** `main` — `efecf3a` → `feat(tooltip): C2 focus + aria-describedby` (pending)
+**آخر تحقق:** `lint: ✅ 0 errors` · `tsc: ✅ 0 errors` · `test: ✅ 30/30` · `build: ✅ 199.03kB CSS / 707.78kB MJS`
 
 ---
 
@@ -150,7 +150,7 @@ A (30د) → B (جلستان) → C (جلستان) → D (جلسة) → E (جل�
 | ID | الوحدة | الصعوبة | Spec | CSS | الحالة | التاريخ | Commit | Tests |
 |---|---|---|---|---|---|---|---|---|
 | **C1** | **Popover** | ⭐ سهل | `docs/component-specs/popover.md:1` | `src/components/popover.css:1` | ✅ | 2026-08-28 | `efecf3a` | 6 |
-| **C2** | **Tooltip** | ⭐ سهل | `docs/component-specs/tooltip.md:1` | `src/components/tooltip.css:1` | ⬜ | — | — | ≥5 |
+| **C2** | **Tooltip** | ⭐ سهل | `docs/component-specs/tooltip.md:1` | `src/components/tooltip.css:1` | ✅ | 2026-08-28 | `feat: C2` | 5 |
 | **C3** | **TagInput** | ⭐⭐ متوسط | — استنتاج من `src/components/tag-input.css:1` (Enter/comma add, Backspace delete, hidden sync) | `tag-input.css` | ⬜ | — | — | ≥5 |
 | **C4** | **Command** | ⭐⭐ متوسط | `docs/component-specs/command.md:1` | `src/components/command.css:1` | ⬜ | — | — | ≥5 |
 | **C5** | **Sidebar** | ⭐ سهل | `docs/component-specs/sidebar.md:1` | `src/components/sidebar.css:1` | ⬜ | — | — | ≥5 |

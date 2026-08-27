@@ -34,6 +34,7 @@ import { Accordion, init as initAccordion } from './modules/accordion';
 import { Tabs, init as initTabs } from './modules/tabs';
 import { Toast, init as initToast } from './modules/toast';
 import { Popover, init as initPopover } from './modules/popover';
+import { Tooltip, init as initTooltip } from './modules/tooltip';
 import { init as initIcons } from './icons';
 
 // ─── Initialize ───
@@ -45,6 +46,7 @@ function init(): void {
   initTabs();
   initToast();
   initPopover();
+  initTooltip();
 }
 
 if (document.readyState === 'loading') {
@@ -72,6 +74,7 @@ const Kairos = {
   Tabs,
   Toast,
   Popover,
+  Tooltip,
 
   // Utilities
   init,
