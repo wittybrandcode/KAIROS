@@ -1,10 +1,10 @@
 # KAIROS — EXECUTION TRACKER
 > **مسار التنفيذ الحي** — هذا الملف هو مصدر الحقيقة للتقدم. كل خطوة تُنفذ يجب تسجيلها هنا فوراً قبل الـ commit.
 
-**آخر تحديث:** 2026-08-28 00:50 UTC
-**التقدم الإجمالي:** `87%` → الهدف `v1.0` (100%)
-**الفرع:** `main` — `144da25` feat(tooltip): C2 focus + aria-describedby
-**آخر تحقق:** `lint: ✅ 0 errors` · `tsc: ✅ 0 errors` · `test: ✅ 30/30` · `build: ✅ 199.03kB CSS / 707.78kB MJS`
+**آخر تحديث:** 2026-08-28 01:00 UTC
+**التقدم الإجمالي:** `88%` → الهدف `v1.0` (100%)
+**الفرع:** `main` — `144da25` → `feat(tag-input): C3 Enter/comma + Backspace + remove` (pending)
+**آخر تحقق:** `lint: ✅ 0 errors` · `tsc: ✅ 0 errors` · `test: ✅ 36/36` · `build: ✅ 199.03kB CSS / 711.76kB MJS`
 
 ---
 
@@ -59,9 +59,9 @@ powershell -ExecutionPolicy Bypass -Command "npm run build"
 | Components CSS L2-L8 `src/components/*.css` | 42/42 | ✅ 100% | `src/kairos.css:xx` L2-L8 |
 | Domain CSS L9 `src/domain/*.css` | 13/13 | ✅ 98% (glows + outline تم ترميزها) | `src/kairos.css:xx` L9 |
 | JS Core `src/core/*.ts` | 8/8 impl + 2 tested | ✅ 100% impl / 25% tested | `src/core/index.ts:1` |
-| JS Modules `src/modules/*.ts` | 7/11 | ⚠️ 64% (Popover+Tooltip ✅) | `src/kairos.ts:1` + `src/modules/index.ts:1` |
+| JS Modules `src/modules/*.ts` | 8/11 | ⚠️ 73% (Popover+Tooltip+TagInput ✅) | `src/kairos.ts:1` + `src/modules/index.ts:1` |
 | Showcase `showcase-data/*.html` | 32/40 | ✅ 80% | `showcase.js:6` `KairosInventory` (P1:1, P2:10, P3:6, P4:7, P6:4, P7:1, P8:3) |
-| Tests `vitest` | 30/30 passing (5 suites) | ⚠️ تغطية 5 ملفات | `vitest.config.ts:1` |
+| Tests `vitest` | 36/36 passing (6 suites) | ⚠️ تغطية 6 ملفات | `vitest.config.ts:1` |
 | Build `dist/` | 199.03kB CSS / 707.78kB MJS | ✅ | `vite.config.js:1` |
 | Git | `main` 9 commits ahead | ✅ | `git log --oneline -5` |
 
@@ -151,6 +151,7 @@ A (30د) → B (جلستان) → C (جلستان) → D (جلسة) → E (جل�
 |---|---|---|---|---|---|---|---|---|
 | **C1** | **Popover** | ⭐ سهل | `docs/component-specs/popover.md:1` | `src/components/popover.css:1` | ✅ | 2026-08-28 | `efecf3a` | 6 |
 | **C2** | **Tooltip** | ⭐ سهل | `docs/component-specs/tooltip.md:1` | `src/components/tooltip.css:1` | ✅ | 2026-08-28 | `144da25` | 5 |
+| **C3** | **TagInput** | ⭐⭐ متوسط | — استنتاج من `src/components/tag-input.css:1` (Enter/comma add, Backspace delete, hidden sync) | `tag-input.css` | ✅ | 2026-08-28 | `feat: C3` | 6 |
 | **C3** | **TagInput** | ⭐⭐ متوسط | — استنتاج من `src/components/tag-input.css:1` (Enter/comma add, Backspace delete, hidden sync) | `tag-input.css` | ⬜ | — | — | ≥5 |
 | **C4** | **Command** | ⭐⭐ متوسط | `docs/component-specs/command.md:1` | `src/components/command.css:1` | ⬜ | — | — | ≥5 |
 | **C5** | **Sidebar** | ⭐ سهل | `docs/component-specs/sidebar.md:1` | `src/components/sidebar.css:1` | ⬜ | — | — | ≥5 |
