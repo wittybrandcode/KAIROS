@@ -1,9 +1,9 @@
 # KAIROS — EXECUTION TRACKER
 > **مسار التنفيذ الحي** — هذا الملف هو مصدر الحقيقة للتقدم. كل خطوة تُنفذ يجب تسجيلها هنا فوراً قبل الـ commit.
 
-**آخر تحديث:** 2026-08-28 01:00 UTC
+**آخر تحديث:** 2026-08-28 01:05 UTC
 **التقدم الإجمالي:** `88%` → الهدف `v1.0` (100%)
-**الفرع:** `main` — `144da25` → `feat(tag-input): C3 Enter/comma + Backspace + remove` (pending)
+**الفرع:** `main` — `e394368` feat(tag-input): C3 Enter/comma + Backspace + remove
 **آخر تحقق:** `lint: ✅ 0 errors` · `tsc: ✅ 0 errors` · `test: ✅ 36/36` · `build: ✅ 199.03kB CSS / 711.76kB MJS`
 
 ---
@@ -151,7 +151,7 @@ A (30د) → B (جلستان) → C (جلستان) → D (جلسة) → E (جل�
 |---|---|---|---|---|---|---|---|---|
 | **C1** | **Popover** | ⭐ سهل | `docs/component-specs/popover.md:1` | `src/components/popover.css:1` | ✅ | 2026-08-28 | `efecf3a` | 6 |
 | **C2** | **Tooltip** | ⭐ سهل | `docs/component-specs/tooltip.md:1` | `src/components/tooltip.css:1` | ✅ | 2026-08-28 | `144da25` | 5 |
-| **C3** | **TagInput** | ⭐⭐ متوسط | — استنتاج من `src/components/tag-input.css:1` (Enter/comma add, Backspace delete, hidden sync) | `tag-input.css` | ✅ | 2026-08-28 | `feat: C3` | 6 |
+| **C3** | **TagInput** | ⭐⭐ متوسط | — استنتاج من `src/components/tag-input.css:1` (Enter/comma add, Backspace delete, hidden sync) | `tag-input.css` | ✅ | 2026-08-28 | `e394368` | 6 |
 | **C3** | **TagInput** | ⭐⭐ متوسط | — استنتاج من `src/components/tag-input.css:1` (Enter/comma add, Backspace delete, hidden sync) | `tag-input.css` | ⬜ | — | — | ≥5 |
 | **C4** | **Command** | ⭐⭐ متوسط | `docs/component-specs/command.md:1` | `src/components/command.css:1` | ⬜ | — | — | ≥5 |
 | **C5** | **Sidebar** | ⭐ سهل | `docs/component-specs/sidebar.md:1` | `src/components/sidebar.css:1` | ⬜ | — | — | ≥5 |
@@ -231,6 +231,7 @@ A (30د) → B (جلستان) → C (جلستان) → D (جلسة) → E (جل�
 
 | التاريخ | Phase | ID | ما تم | Commit | تحقق | الملاحظات |
 |---|---|---|---|---|---|---|
+| 2026-08-28 01:05 | C3 | **TagInput** | C3 مكتمل: Enter/comma + Backspace + remove + hidden sync (6 tests) | `e394368` | lint✅ tsc✅ test36✅ build199.03kB✅ | tag-input.ts + tag-input.test.ts + kairos.ts |
 | 2026-08-28 00:50 | C2 | **Tooltip** | C2 مكتمل: focus + aria-describedby + Escape (5 tests) | `144da25` | lint✅ tsc✅ test30✅ build199.03kB✅ | tooltip.ts + tooltip.test.ts + kairos.ts |
 | 2026-08-28 00:30 | C1 | **Popover** | C1 مكتمل: JS module + 6 tests + showcase تفاعلي (popover.html) | `efecf3a` | lint✅ tsc✅ test25✅ build199.03kB✅ | popover.ts + popover.test.ts + kairos.ts + showcase.js |
 | 2026-08-28 00:20 | B4 | **B4.1-B4.4** | B4 مكتمل: navigation/table/split-grid/tooltip (4 showcase + showcase.js P6/P7/P8) | `56422a7` | lint✅ tsc✅ test19✅ build199.03kB✅ | showcase-data/*4 + showcase.js — Phase B مغلقة (31 showcase) |
@@ -246,7 +247,7 @@ A (30د) → B (جلستان) → C (جلستان) → D (جلسة) → E (جل�
 ## مؤشرات سريعة
 
 **إجمالي المهام:** `Phase A:4 + B:16 + C:6 + D:10 + E:5 = 41 مهمة`
-**المنجز:** `24/41` (59%) ✅ Phase A + B (20) + C1 + C2 مكتمل
+**المنجز:** `25/41` (61%) ✅ Phase A + B (20) + C1 + C2 + C3 مكتمل
 **بعد B:** `22/41` (54%) · **بعد C:** `28/41` (68%) · **بعد D:** `38/41` (93%) · **بعد E:** `41/41` (100% v1.0)
 
 **الوقت التقديري المتبقي:** `3–5 جلسات` (حسب `PROJECT-HANDOVER.md:24`)
