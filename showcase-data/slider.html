@@ -1,0 +1,144 @@
+<div class="kairos-flex kairos-col kairos-gap-loose">
+  <div class="kairos-flex kairos-col kairos-gap-extra-tight">
+    <h1 class="kairos-text-3xl kairos-font-bold">Slider (المنزلق)</h1>
+    <p class="kairos-text-color-secondary">تحكم تناظري للصوت، السطوع، ومستويات الإشارة — عرض ثابت (JS قادم في Phase C6).</p>
+  </div>
+
+  <div class="kairos-bg-surface kairos-border kairos-border-color-muted kairos-p-loose kairos-flex kairos-col kairos-gap-standard">
+    <h3 class="kairos-text-sm kairos-text-color-muted kairos-tracking-widest kairos-uppercase">Horizontal (أفقي)</h3>
+    <div class="kairos-flex kairos-col kairos-gap-standard">
+      <div class="kairos-flex kairos-col kairos-gap-extra-tight">
+        <div class="kairos-flex kairos-items-center kairos-gap-compact">
+          <span class="kairos-text-xs kairos-text-color-muted kairos-font-mono">0% (min)</span>
+          <div class="kairos-slider-h kairos-slider-track kairos-flex-1">
+            <div class="kairos-slider-fill" style="width: 0%;"></div>
+            <div class="kairos-slider-thumb" style="left: 0%;"></div>
+          </div>
+          <span class="kairos-text-xs kairos-font-mono kairos-text-color-muted" style="min-width: 3ch;">0</span>
+        </div>
+        <div class="kairos-flex kairos-items-center kairos-gap-compact">
+          <span class="kairos-text-xs kairos-text-color-muted kairos-font-mono">45%</span>
+          <div class="kairos-slider-h kairos-slider-track kairos-flex-1">
+            <div class="kairos-slider-fill" style="width: 45%;"></div>
+            <div class="kairos-slider-thumb" style="left: 45%;"></div>
+          </div>
+          <span class="kairos-text-xs kairos-font-mono kairos-text-color-pvw" style="min-width: 3ch;">45</span>
+        </div>
+        <div class="kairos-flex kairos-items-center kairos-gap-compact">
+          <span class="kairos-text-xs kairos-text-color-muted kairos-font-mono">100% (max)</span>
+          <div class="kairos-slider-h kairos-slider-track kairos-flex-1">
+            <div class="kairos-slider-fill" style="width: 100%;"></div>
+            <div class="kairos-slider-thumb" style="left: 100%;"></div>
+          </div>
+          <span class="kairos-text-xs kairos-font-mono kairos-text-color-pgm" style="min-width: 3ch;">100</span>
+        </div>
+      </div>
+      <div class="kairos-flex kairos-items-center kairos-gap-compact kairos-text-xs kairos-font-mono kairos-text-color-muted">
+        <span>Track: --kairos-size-indicator (4px) · Thumb: --kairos-slider-thumb-width (12px)</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="kairos-bg-surface kairos-border kairos-border-color-muted kairos-p-loose kairos-flex kairos-col kairos-gap-standard">
+    <h3 class="kairos-text-sm kairos-text-color-muted kairos-tracking-widest kairos-uppercase">Vertical (عمودي) + Fader</h3>
+    <div class="kairos-flex kairos-items-end kairos-gap-standard kairos-flex-wrap">
+      <div class="kairos-flex kairos-col kairos-items-center kairos-gap-extra-tight">
+        <span class="kairos-text-xs kairos-font-mono kairos-text-color-muted">CH 01</span>
+        <div class="kairos-slider-v kairos-slider-track">
+          <div class="kairos-slider-fill" style="height: 70%; bottom: 0; position: absolute; width: 100%;"></div>
+          <div class="kairos-slider-thumb" style="bottom: 70%;"></div>
+        </div>
+        <span class="kairos-text-xs kairos-font-mono">70</span>
+      </div>
+      <div class="kairos-flex kairos-col kairos-items-center kairos-gap-extra-tight">
+        <span class="kairos-text-xs kairos-font-mono kairos-text-color-muted">CH 02</span>
+        <div class="kairos-slider-v kairos-slider-track">
+          <div class="kairos-slider-fill" style="height: 30%; bottom: 0; position: absolute; width: 100%;"></div>
+          <div class="kairos-slider-thumb" style="bottom: 30%;"></div>
+        </div>
+        <span class="kairos-text-xs kairos-font-mono">30</span>
+      </div>
+      <div class="kairos-flex kairos-col kairos-items-center kairos-gap-extra-tight">
+        <span class="kairos-text-xs kairos-font-mono kairos-text-color-pgm">PGM</span>
+        <div class="kairos-slider-v kairos-slider-track">
+          <div class="kairos-slider-fill" style="height: 85%; bottom: 0; position: absolute; width: 100%; background: var(--kairos-status-pgm);"></div>
+          <div class="kairos-slider-thumb" style="bottom: 85%;"></div>
+        </div>
+        <span class="kairos-text-xs kairos-font-mono kairos-text-color-pgm">85</span>
+      </div>
+      <div class="kairos-flex kairos-col kairos-gap-standard kairos-bg-input kairos-p-compact kairos-border kairos-border-color-muted">
+        <span class="kairos-text-xs kairos-text-color-muted kairos-tracking-widest kairos-uppercase">Fader Track</span>
+        <div class="kairos-flex kairos-items-end kairos-gap-compact">
+          <div class="kairos-flex kairos-col kairos-items-center kairos-gap-extra-tight">
+            <div class="kairos-fader-track" style="height: 80px;">
+              <div class="kairos-fader-thumb" style="bottom: 40px;"></div>
+            </div>
+            <span class="kairos-text-xs kairos-font-mono">0dB</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="kairos-bg-surface kairos-border kairos-border-color-muted kairos-p-loose kairos-flex kairos-col kairos-gap-standard">
+    <h3 class="kairos-text-sm kairos-text-color-muted kairos-tracking-widest kairos-uppercase">States (الحالات)</h3>
+    <div class="kairos-flex kairos-col kairos-gap-standard">
+      <div class="kairos-flex kairos-items-center kairos-gap-compact">
+        <span class="kairos-text-xs kairos-text-color-muted kairos-font-mono kairos-w-side-panel">Disabled</span>
+        <div class="kairos-slider-h kairos-slider-track kairos-flex-1" style="opacity: var(--kairos-opacity-disabled);">
+          <div class="kairos-slider-fill" style="width: 50%;"></div>
+          <div class="kairos-slider-thumb" style="left: 50%;"></div>
+        </div>
+      </div>
+      <div class="kairos-flex kairos-items-center kairos-gap-compact">
+        <span class="kairos-text-xs kairos-text-color-muted kairos-font-mono kairos-w-side-panel">Keyboard focus</span>
+        <div class="kairos-slider-h kairos-slider-track kairos-flex-1" tabindex="0" style="outline: var(--kairos-focus-base) solid var(--kairos-focus-ring-color); outline-offset: var(--kairos-focus-ring-offset);">
+          <div class="kairos-slider-fill" style="width: 60%;"></div>
+          <div class="kairos-slider-thumb" style="left: 60%; background: var(--kairos-text);"></div>
+        </div>
+        <span class="kairos-text-xs kairos-font-mono kairos-text-color-muted">← → / ↑ ↓</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="kairos-bg-surface kairos-border kairos-border-color-muted kairos-p-loose kairos-flex kairos-col kairos-gap-standard">
+    <h3 class="kairos-text-sm kairos-text-color-muted kairos-tracking-widest kairos-uppercase">Broadcast: Audio Mixer Strip</h3>
+    <div class="kairos-flex kairos-col kairos-gap-standard kairos-bg-deep kairos-p-standard kairos-border kairos-border-color-muted">
+      <div class="kairos-flex kairos-items-center">
+        <h4 class="kairos-heading kairos-h4">Audio Mixer</h4>
+        <span class="kairos-text-xs kairos-font-mono kairos-text-color-muted kairos-ml-auto">4 channels · PGM bus</span>
+      </div>
+      <div class="kairos-divider h"></div>
+      <div class="kairos-flex kairos-gap-standard">
+        <div class="kairos-flex kairos-col kairos-items-center kairos-gap-compact kairos-bg-surface kairos-p-compact kairos-border kairos-border-color-muted kairos-flex-1">
+          <span class="kairos-text-xs kairos-font-mono kairos-text-color-pgm">PGM</span>
+          <div class="kairos-slider-v kairos-slider-track" style="height: 100px;">
+            <div class="kairos-slider-fill" style="height: 75%; bottom: 0; position: absolute; width: 100%;"></div>
+            <div class="kairos-slider-thumb" style="bottom: 75%;"></div>
+          </div>
+          <span class="kairos-text-xs kairos-font-bold">CH 01</span>
+          <span class="kairos-text-xs kairos-font-mono kairos-text-color-pgm">-6dB</span>
+        </div>
+        <div class="kairos-flex kairos-col kairos-items-center kairos-gap-compact kairos-bg-surface kairos-p-compact kairos-border kairos-border-color-muted kairos-flex-1">
+          <span class="kairos-text-xs kairos-font-mono kairos-text-color-muted">STBY</span>
+          <div class="kairos-slider-v kairos-slider-track" style="height: 100px;">
+            <div class="kairos-slider-fill" style="height: 20%; bottom: 0; position: absolute; width: 100%;"></div>
+            <div class="kairos-slider-thumb" style="bottom: 20%;"></div>
+          </div>
+          <span class="kairos-text-xs kairos-font-bold kairos-text-color-placeholder">CH 02</span>
+          <span class="kairos-text-xs kairos-font-mono">-∞</span>
+        </div>
+        <div class="kairos-flex kairos-col kairos-items-center kairos-gap-compact kairos-bg-surface kairos-p-compact kairos-border kairos-border-color-muted kairos-flex-1">
+          <span class="kairos-text-xs kairos-font-mono kairos-text-color-warning">CUE</span>
+          <div class="kairos-slider-v kairos-slider-track" style="height: 100px;">
+            <div class="kairos-slider-fill" style="height: 55%; bottom: 0; position: absolute; width: 100%; background: var(--kairos-status-warning);"></div>
+            <div class="kairos-slider-thumb" style="bottom: 55%;"></div>
+          </div>
+          <span class="kairos-text-xs kairos-font-bold">CH 03</span>
+          <span class="kairos-text-xs kairos-font-mono kairos-text-color-warning">-12dB</span>
+        </div>
+      </div>
+      <p class="kairos-paragraph" style="margin:0;">* Slider JS (pointer drag + keyboard) سيُفعّل في Phase C6 — العرض الحالي ثابت لإظهار الـ CSS فقط.</p>
+    </div>
+  </div>
+</div>

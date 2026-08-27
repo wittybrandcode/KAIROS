@@ -1,9 +1,9 @@
 # KAIROS — EXECUTION TRACKER
 > **مسار التنفيذ الحي** — هذا الملف هو مصدر الحقيقة للتقدم. كل خطوة تُنفذ يجب تسجيلها هنا فوراً قبل الـ commit.
 
-**آخر تحديث:** 2026-08-27 23:52 UTC
-**التقدم الإجمالي:** `75%` → الهدف `v1.0` (100%)
-**الفرع:** `main` — `90d8aaf` feat(showcase): B1 heading/paragraph/divider/layout
+**آخر تحديث:** 2026-08-28 00:00 UTC
+**التقدم الإجمالي:** `78%` → الهدف `v1.0` (100%)
+**الفرع:** `main` — `ad718f5` feat(showcase): B2 switch/forms/slider/tag-input
 **آخر تحقق:** `lint: ✅ 0 errors` · `tsc: ✅ 0 errors` · `test: ✅ 19/19` · `build: ✅ 198.91kB CSS`
 
 ---
@@ -112,10 +112,10 @@ A (30د) → B (جلستان) → C (جلستان) → D (جلسة) → E (جل�
 
 | ID | الصفحة | CSS موجود | الحالة | التاريخ | Commit |
 |---|---|---|---|---|---|
-| **B2.1** | `switch.html` | `src/components/switch.css:1` | ⬜ | — | — |
-| **B2.2** | `forms.html` | `src/components/forms.css:1` | ⬜ | — | — |
-| **B2.3** | `slider.html` | `src/components/slider.css:1` | ⬜ | — | — |
-| **B2.4** | `tag-input.html` | `src/components/tag-input.css:1` | ⬜ | — | — |
+| **B2.1** | `switch.html` | `src/components/switch.css:1` | ✅ | 2026-08-27 | `ad718f5` | 3 cards states/intents/broadcast AFV |
+| **B2.2** | `forms.html` | `src/components/forms.css:1` | ✅ | 2026-08-27 | `ad718f5` | 4 cards fields/validation/sizes/broadcast router |
+| **B2.3** | `slider.html` | `src/components/slider.css:1` | ✅ | 2026-08-27 | `ad718f5` | 4 cards horizontal/vertical/states/broadcast mixer |
+| **B2.4** | `tag-input.html` | `src/components/tag-input.css:1` | ✅ | 2026-08-27 | `ad718f5` | 3 cards states/intents/broadcast keywords |
 
 #### B3 — Feedback Primitives (5 صفحات)
 
@@ -230,6 +230,7 @@ A (30د) → B (جلستان) → C (جلستان) → D (جلسة) → E (جل�
 
 | التاريخ | Phase | ID | ما تم | Commit | تحقق | الملاحظات |
 |---|---|---|---|---|---|---|
+| 2026-08-27 23:55 | B2 | **B2.1-B2.4** | B2 مكتمل: switch/forms/slider/tag-input (4 showcase + showcase.js P4) | `ad718f5` | lint✅ tsc✅ test19✅ build198.91kB✅ | showcase-data/*4 + showcase.js |
 | 2026-08-27 23:45 | B1 | **B1.1-B1.4** | B1 مكتمل: heading/paragraph/divider/layout (4 showcase + showcase.js P2) | `90d8aaf` | lint✅ tsc✅ test19✅ build198.91kB✅ | showcase-data/*4 + showcase.js |
 | 2026-08-27 23:35 | A | **A1-A4** | Phase A مكتمل: idempotent(4) + 9 phantom + 7 raw tokens + ARCHITECTURE.md | `b67646b` | lint✅ tsc✅ test19✅ build198.91kB✅ | 4 files JS + components.css + layout + domain(3) + docs |
 | 2026-08-27 23:20 | — | — | إنشاء `EXECUTION-TRACKER.md` + تحليل شامل للمشروع (4 وكلاء متوازيين) | — | lint✅ tsc✅ test19✅ build197.85kB✅ | baseline: 5 commits `b06c61d`، 13 showcase، 5 modules |
@@ -240,7 +241,7 @@ A (30د) → B (جلستان) → C (جلستان) → D (جلسة) → E (جل�
 ## مؤشرات سريعة
 
 **إجمالي المهام:** `Phase A:4 + B:16 + C:6 + D:10 + E:5 = 41 مهمة`
-**المنجز:** `8/41` (20%) ✅ Phase A + B1 مكتمل
+**المنجز:** `12/41` (29%) ✅ Phase A + B1 + B2 مكتمل
 **بعد B:** `20/41` (49%) · **بعد C:** `26/41` (63%) · **بعد D:** `36/41` (88%) · **بعد E:** `41/41` (100% v1.0)
 
 **الوقت التقديري المتبقي:** `3–5 جلسات` (حسب `PROJECT-HANDOVER.md:24`)

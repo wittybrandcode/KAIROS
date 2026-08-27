@@ -37,7 +37,11 @@ document.addEventListener('DOMContentLoaded', () => {
       items: [
         { id: "checkbox", name: "Checkbox", key: "P4" },
         { id: "radio", name: "Radio", key: "P4" },
-        { id: "buttons", name: "Buttons", key: "P4" }
+        { id: "buttons", name: "Buttons", key: "P4" },
+        { id: "switch", name: "Switch", key: "P4" },
+        { id: "forms", name: "Forms", key: "P4" },
+        { id: "slider", name: "Slider", key: "P4" },
+        { id: "tag-input", name: "Tag Input", key: "P4" }
       ]
     },
     {
