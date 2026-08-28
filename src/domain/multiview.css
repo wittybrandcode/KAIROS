@@ -6,7 +6,7 @@
 .kairos-mv {
   aspect-ratio: 16 / 9;
   background: var(--kairos-bg-deep);
-  border: var(--kairos-border-thick) solid var(--kairos-border-muted);
+  border: var(--kairos-border-base) solid var(--kairos-border-muted);
   display: flex;
   flex-direction: column;
   position: relative;
@@ -15,9 +15,11 @@
 }
 .kairos-mv.pgm {
   border-color: var(--kairos-status-pgm);
+  border-width: var(--kairos-border-thick);
 }
 .kairos-mv.pvw {
   border-color: var(--kairos-status-pvw);
+  border-width: var(--kairos-border-thick);
 }
 .kairos-mv.pvw.sel {
   border-color: var(--kairos-status-pvw);
