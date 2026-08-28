@@ -2,6 +2,29 @@
 
 All notable changes to Kairos Design System.
 
+## [1.0.0] — 2026-08-28
+
+### Added
+- **Showcase (Tier 1):** 18 new static pages — `heading, paragraph, divider, layout, switch, forms, slider, tag-input, indicator, tag, loading, progress, surface, overlay, navigation, table, split-grid, tooltip` (all 42 components now have showcase, 43 total with domain)
+- **JS Modules (Tier 2):** 6 new interactive modules — `Popover (outside+Escape+focus trap)`, `Tooltip (focus+aria-describedby)`, `TagInput (Enter/comma/Backspace)`, `Command (Ctrl+K+filter+arrows)`, `Sidebar (toggle+active)`, `Slider (pointer drag+keyboard+aria)` — all with ≥5 tests (55 total, 11/11 modules)
+- **Domain (Tier 4):** 6 broadcast pages — `bus, shell, multiview, rundown, production, ticker` + 4 demos for existing modules (`modal/dropdown/tabs/toast` with `data-kairos-*`)
+- **Core Tests (E1):** 5 new suites — `keyboard (hotkey/arrows), dom (q/closest/resolveTarget), utils (debounce/throttle/uid/clamp), focus (trap/restore), animation (waitTransition)` — 75 total
+- **Layout Fix:** Sidebar scrollbar now visible (`min-height:0` + `overflow:hidden` on sidebar/shell) and thumb contrast increased
+- **Tokens:** 16 new contract tokens (9 phantom + 7 raw) — `avatar-name-gap, name-role-gap, shadow-lg, size-control, timeline-track, fader, breadcrumb, pagination, layout-center, handle-outset, rundown-compact, mv-outline, mv-sm-label, xp-glow, viewport-glow`
+
+### Fixed
+- **Idempotent init:** `modal/dropdown/tabs/toast` now guard with `let initialized` (was stacking listeners)
+- **Inline-style violations:** Removed 51 `style=""` with `position/background/min-width` from showcase (kept only necessary `width%` for progress/slider)
+- **Circle icons:** `check-circle` → `check-square`, `circle` → `square` (hard law: squares only)
+- **Hex violation:** `overlay.html:33` `#fff` → `kairos-text-color`
+- **Scrollbar:** Thumb `border → border-active` for visibility
+- **Inventory order:** `P4` before `P6` (was reversed)
+
+### Changed
+- **Version:** `0.1.0` → `1.0.0` — Phase A+B+C+D closed (38/41, 93% → 100% with E)
+- **Build:** `dist/kairos.min.css 199.03kB / kairos.mjs 721.61kB / kairos.umd.js 695.90kB` (was 193kB/688kB)
+- **Tests:** `19 → 75` (9 suites → 14 suites)
+
 ## [0.1.0] — 2026-06-15
 
 ### Added

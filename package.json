@@ -1,6 +1,6 @@
 {
   "name": "kairos-design-system",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Design system for broadcast control surfaces — hard edges, cool steel, broadcast precision.",
   "main": "dist/kairos.umd.js",
   "module": "dist/kairos.mjs",

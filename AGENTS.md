@@ -46,7 +46,7 @@ npm run test:smoke   # Run smoke tests
 - CSS variables: `--kairos-{category}-{name}` (e.g., `--kairos-bg-surface`, `--kairos-status-pgm`)
 - CSS classes: `.kairos-{component}-{element}-{modifier}` (e.g., `.kairos-btn-primary`, `.kairos-side-tab.active`)
 - Data attributes: `data-kairos-toggle`, `data-kairos-target`, `data-kairos-dismiss`
-- All spacing via 5-level semantic tokens: `--kairos-space-extra-tight` (2px), `--kairos-space-compact` (6px), `--kairos-space-standard` (12px), `--kairos-space-loose` (24px), `--kairos-space-extra-loose` (48px)
+- All spacing via 5-level semantic tokens: `--kairos-space-extra-tight`/`3xs` (2px), `--kairos-space-compact`/`xs` (6px), `--kairos-space-standard`/`md` (12px), `--kairos-space-loose`/`xl` (24px), `--kairos-space-extra-loose`/`3xl` (48px) — aliases `3xs/xs/md/xl/3xl` canonical in `src/foundation/spacing.css:12`
 
 ## Component Contract Pattern
 Each component defines its own spacing contract in `src/components/components.css`:
