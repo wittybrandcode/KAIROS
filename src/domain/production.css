@@ -13,7 +13,7 @@
   transition: background var(--kairos-motion-fast) var(--kairos-easing-ease), border-color var(--kairos-motion-fast) var(--kairos-easing-ease);
 }
 .kairos-xp-cell:hover { border-color: var(--kairos-text-placeholder); background: var(--kairos-border-muted); }
-.kairos-xp-cell.active { background: var(--kairos-status-pvw); border-color: var(--kairos-status-pvw); box-shadow: 0 0 var(--kairos-xp-glow) var(--kairos-pvw-alpha-40); }
+.kairos-xp-cell.active { background: var(--kairos-pvw-alpha-20); border-color: var(--kairos-status-pvw); }
 .kairos-xp-cell.active.dest-locked { background: var(--kairos-status-info); border-color: var(--kairos-status-info); }
 .kairos-xp-cell.preview { background: var(--kairos-status-warning); border-color: var(--kairos-status-warning); }
 .kairos-xp-cell.taken { background: var(--kairos-status-pgm); border-color: var(--kairos-status-pgm); }
@@ -31,13 +31,13 @@
   align-items: center;
   justify-content: center;
 }
-.kairos-viewport.pgm { border-color: var(--kairos-status-pgm); box-shadow: inset 0 0 var(--kairos-viewport-glow) var(--kairos-pgm-alpha-15); }
-.kairos-viewport.pvw { border-color: var(--kairos-status-pvw); box-shadow: inset 0 0 var(--kairos-viewport-glow) var(--kairos-pvw-alpha-15); }
+.kairos-viewport.pgm { border-color: var(--kairos-status-pgm); background: var(--kairos-pgm-alpha-15); }
+.kairos-viewport.pvw { border-color: var(--kairos-status-pvw); background: var(--kairos-pvw-alpha-15); }
 .kairos-viewport .kairos-source-label {
   position: absolute; bottom: 0; left: 0; right: 0;
   font-size: var(--kairos-text-sm); font-family: var(--kairos-font-mono);
   color: var(--kairos-text); background: var(--kairos-overlay);
-  padding: var(--kairos-prod-cell-padding-y) var(--kairos-prod-cell-padding-x); text-transform: uppercase;
+  padding: var(--kairos-prod-cell-padding-y) var(--kairos-prod-cell-padding-x); text-transform: uppercase; letter-spacing: var(--kairos-tracking-widest); font-weight: var(--kairos-weight-bold);
   line-height: var(--kairos-leading-tight); white-space: nowrap; overflow: hidden;
 }
 .kairos-viewport .kairos-indicator {
@@ -52,11 +52,14 @@
   width: var(--kairos-size-toggle);
   height: var(--kairos-size-toggle);
   border: var(--kairos-border-thick) solid var(--kairos-text-placeholder);
+  border-radius: 0;
+  background: var(--kairos-bg-surface);
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   color: var(--kairos-text-muted);
+  font-size: var(--kairos-text-sm); font-weight: var(--kairos-weight-bold); text-transform: uppercase; letter-spacing: var(--kairos-tracking-wider);
   transition: border-color var(--kairos-motion-normal) var(--kairos-easing-ease), color var(--kairos-motion-normal) var(--kairos-easing-ease);
 }
 .kairos-knob:hover { border-color: var(--kairos-text-muted); color: var(--kairos-text); }
