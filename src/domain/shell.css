@@ -30,12 +30,12 @@
 .kairos-src-name { flex: 1; font-size: var(--kairos-text-sm); color: var(--kairos-text); }
 .kairos-src-key { font-family: var(--kairos-font-mono); font-size: var(--kairos-text-sm); color: var(--kairos-text-placeholder); }
 
-@container side-panel (max-width: 200px) {
+@container side-panel (max-width: 200px) { /* --kairos-bp-sm ~200px, var() not allowed in @container */
   .kairos-src-key { display: none; }
   .kairos-src-row { flex-wrap: wrap; gap: var(--kairos-src-row-gap); }
 }
 
-@container side-panel (max-width: 160px) {
+@container side-panel (max-width: 160px) { /* --kairos-bp-xs ~160px */
   .kairos-side-section-label { font-size: var(--kairos-text-sm); letter-spacing: var(--kairos-tracking-normal); }
   .kairos-src-name { font-size: var(--kairos-text-sm); }
 }
@@ -63,12 +63,12 @@
 .kairos-source-grid-section { padding: var(--kairos-form-field-gap); display: flex; flex-direction: column; gap: var(--kairos-card-section-gap); }
 .kairos-source-grid { display: grid; grid-template-columns: repeat(8, 1fr); gap: var(--kairos-src-grid-gap); }
 
-@container center (max-width: 600px) {
+@container center (max-width: 600px) { /* --kairos-bp-md ~600px */
   .kairos-source-grid { grid-template-columns: repeat(4, 1fr); }
   .kairos-macros-grid { grid-template-columns: repeat(3, 1fr); }
 }
 
-@container center (max-width: 400px) {
+@container center (max-width: 400px) { /* --kairos-bp-sm ~400px */
   .kairos-source-grid { grid-template-columns: repeat(2, 1fr); }
   .kairos-macros-grid { grid-template-columns: repeat(2, 1fr); }
   .kairos-pgm-pvw-row { flex-direction: column; }
@@ -106,7 +106,7 @@
 
 .kairos-events-table { width: 100%; border-collapse: collapse; font-size: var(--kairos-text-sm); }
 
-@container right-panel (max-width: 240px) {
+@container right-panel (max-width: 240px) { /* --kairos-bp-sm ~240px */
   .kairos-events-table th, .kairos-events-table td { padding: var(--kairos-events-cell-padding-y) var(--kairos-events-cell-padding-x); font-size: var(--kairos-text-sm); }
   .kairos-metrics-grid { grid-template-columns: 1fr; }
 }
