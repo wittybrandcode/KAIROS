@@ -34,6 +34,9 @@
   padding: var(--kairos-command-padding-lg) 0;
   font-size: var(--kairos-text-md);
   color: var(--kairos-text);
+  font-weight: var(--kairos-weight-bold);
+  letter-spacing: var(--kairos-tracking-wider);
+  text-transform: uppercase;
   outline: none;
 }
 

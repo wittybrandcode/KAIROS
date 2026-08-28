@@ -56,25 +56,36 @@
   </div>
 
   <div class="kairos-bg-surface kairos-border kairos-border-color-muted kairos-p-loose kairos-flex kairos-col kairos-gap-standard">
-    <h3 class="kairos-text-sm kairos-text-color-muted kairos-tracking-widest kairos-uppercase">Broadcast: Quick Source Switch</h3>
-    <div class="kairos-flex kairos-col kairos-gap-standard kairos-bg-deep kairos-p-standard kairos-border kairos-border-color-muted">
-      <div class="kairos-flex kairos-items-center">
-        <h4 class="kairos-heading kairos-h4">Evening News — Live</h4>
-        <span class="kairos-badge kairos-intent-pgm kairos-variant-solid kairos-ml-auto">PGM: CAM 01</span>
+    <h3 class="kairos-text-sm kairos-text-color-muted kairos-tracking-widest kairos-uppercase">Broadcast: Quick Source Switch Inside Shell</h3>
+    <div class="kairos-stage" style="height: 320px;">
+      <div class="kairos-top-bar"><div class="kairos-brand"><div class="kairos-brand-mark">K</div><span>STUDIO A</span></div><div class="kairos-top-status"><span class="kairos-badge kairos-intent-pgm kairos-variant-solid">PGM: CAM 01</span></div></div>
+      <div class="kairos-shell">
+        <div class="kairos-side-panel"><div class="kairos-side-section-label">Sources</div><div class="kairos-src-row"><span class="kairos-src-name">CAM 01</span><span class="kairos-status-dot pgm"></span></div><div class="kairos-src-row active"><span class="kairos-src-name">CAM 02</span><span class="kairos-status-dot pvw"></span></div></div>
+        <div class="kairos-center kairos-bg-deep kairos-p-standard">
+          <div class="kairos-flex kairos-col kairos-gap-compact">
+            <div class="kairos-flex kairos-items-center"><h4 class="kairos-heading kairos-h4">Evening News — Live</h4><span class="kairos-badge kairos-intent-pgm kairos-variant-solid kairos-ml-auto">PGM: CAM 01</span></div>
+            <div class="kairos-flex kairos-gap-compact kairos-flex-wrap">
+              <span class="kairos-badge kairos-intent-neutral kairos-variant-outline">CAM 01</span>
+              <span class="kairos-badge kairos-intent-pvw kairos-variant-solid">CAM 02</span>
+              <span class="kairos-badge kairos-intent-neutral kairos-variant-outline">VTR</span>
+            </div>
+            <div class="kairos-flex kairos-items-center kairos-gap-compact kairos-text-xs kairos-font-mono kairos-text-color-muted">
+              <span class="kairos-kbd">Ctrl</span><span>+</span><span class="kairos-kbd">K</span>
+              <span>→ type "cam 02" → Enter → Take</span>
+            </div>
+            <div class="kairos-flex kairos-col kairos-gap-extra-tight kairos-bg-surface kairos-p-compact kairos-border kairos-border-color-muted">
+              <span class="kairos-text-xs kairos-text-color-muted kairos-font-mono">Last execute:</span>
+              <span id="cmd-last" class="kairos-text-sm kairos-font-mono">—</span>
+            </div>
+            <div class="kairos-command" data-state="closed" style="max-width: 320px;">
+              <div class="kairos-command-input-wrapper"><i class="kairos-icon-magnifying-glass kairos-icon-sm kairos-command-icon"></i><input type="text" class="kairos-command-input" placeholder="Search..." /></div>
+              <div class="kairos-command-list"><div class="kairos-command-item" data-state="selected">CAM 02 — Studio B</div><div class="kairos-command-item">VTR — Playback</div></div>
+            </div>
+          </div>
+        </div>
+        <div class="kairos-right-panel"><div class="kairos-metrics-grid"><div class="kairos-metric-card"><span class="kairos-metric-label">Tally</span><span class="kairos-indicator pgm">PGM</span></div></div></div>
       </div>
-      <div class="kairos-flex kairos-gap-compact kairos-flex-wrap">
-        <span class="kairos-badge kairos-intent-neutral kairos-variant-outline">CAM 01</span>
-        <span class="kairos-badge kairos-intent-pvw kairos-variant-solid">CAM 02</span>
-        <span class="kairos-badge kairos-intent-neutral kairos-variant-outline">VTR</span>
-      </div>
-      <div class="kairos-flex kairos-items-center kairos-gap-compact kairos-text-xs kairos-font-mono kairos-text-color-muted">
-        <span class="kairos-kbd">Ctrl</span><span>+</span><span class="kairos-kbd">K</span>
-        <span>→ type "cam 02" → Enter → Take</span>
-      </div>
-      <div class="kairos-flex kairos-col kairos-gap-extra-tight kairos-bg-surface kairos-p-compact kairos-border kairos-border-color-muted">
-        <span class="kairos-text-xs kairos-text-color-muted kairos-font-mono">Last execute:</span>
-        <span id="cmd-last" class="kairos-text-sm kairos-font-mono">—</span>
-      </div>
+      <div class="kairos-status-bar"><span class="kairos-status-item"><span class="kairos-status-dot pgm"></span> Command</span><span class="kairos-status-sep"></span><span class="kairos-status-item">Ctrl+K</span></div>
     </div>
   </div>
 </div>
